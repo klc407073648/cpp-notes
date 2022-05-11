@@ -1,0 +1,4 @@
+1.编号proto文件
+2.protoc ./person.proto --cpp_out=./ 生成文件
+3.g++ -g -o test_person test_person.cpp ./person.pb.cc -I. -lprotobuf -pthread -std=c++11
+4../test_person 

@@ -1,0 +1,139 @@
+GET _search
+{
+  "query": {
+    "match_all": {}
+  }
+}
+
+#标准分词器
+GET /_analyze
+{
+  "analyzer": "standard", 
+  "text": "黑马程序员"
+}
+
+#智能切分,粗粒度
+GET /_analyze
+{
+  "analyzer": "ik_smart",
+  "text": "黑马程序员学习java太棒了"
+}
+
+#最细切分，细粒度
+GET /_analyze
+{
+  "analyzer": "ik_max_word",
+  "text": "黑马程序员学习java太棒了"
+}
+
+#测试扩展词条和停用词条
+GET /_analyze
+{
+  "analyzer": "ik_smart",
+  "text": "传智播客的奥利给"
+}
+
+GET /_analyze
+{
+  "analyzer": "ik_smart",
+  "text": "云原生的奥利给啊"
+}
+
+#创建索引库
+PUT /student
+{
+  "mappings": {
+    "properties": {
+      "name":{
+        "type": "keyword"
+      },
+      "age":{
+        "type": "integer"
+      },
+      "school":{
+        "type": "text", 
+        "analyzer": "ik_smart"
+      }
+    }
+  }
+}
+
+#查看索引库
+GET /student
+
+#删除索引库
+DELETE /student
+
+#更新索引库
+PUT /student/_mapping
+{
+  "properties":{
+    "id":{
+      "type":"integer"
+    }
+  }
+}
+
+#新增文档
+POST /student/_doc/1
+{
+  "age": "25",
+  "id": "1001",
+  "name": "Jason",
+  "school": "南京理工大学"
+}
+
+POST /student/_doc/2
+{
+  "age": "24",
+  "id": "0005",
+  "name": "Hellen",
+  "school": "东南大学"
+}
+
+POST /student/_doc/3
+{
+  "age": "27",
+  "id": "1011",
+  "name": "Steven",
+  "school": "南京大学"
+}
+
+#查询文档
+GET /student/_doc/1
+
+GET /student/_doc/2
+
+GET /student/_doc/3
+
+#修改文档
+#增量修改
+POST /student/_update/1
+{
+  "doc":{
+  "id": "1003"
+  }
+}
+
+#全量修改
+PUT /student/_doc/1
+{
+  "age": "25",
+  "id": "1007",
+  "name": "Bob",
+  "school": "南京理工大学"
+}
+
+#删除文档
+DELETE /student/_doc/3
+
+#动态映射
+PUT /student/_doc/1
+{
+  "age": "25",
+  "id": "1007",
+  "name": "Bob",
+  "school": "南京理工大学",
+  "city":"南京",
+  "sex": "male"
+}

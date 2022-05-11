@@ -1,0 +1,9 @@
+total 52
+drwxr-xr-x.  2 root root    95 May 26 06:39 .
+drwxr-xr-x. 20 root root  4096 May 26 06:35 ..
+-rwxrwxrwx.  1 root root     0 May 26 06:39 klc.txt
+-rwxr-xr-x.  1 root root 25776 May 26 06:39 main
+-rw-r--r--.  1 root root   260 May 26 06:39 main.cpp
+-rw-r--r--.  1 root root    57 May 26 06:36 Makefile
+-rw-r--r--.  1 root root  7436 May 26 06:37 util.cpp
+-rw-r--r--.  1 root root  2854 May 26 06:35 util.h

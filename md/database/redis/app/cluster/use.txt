@@ -1,0 +1,21 @@
+1.首先安装ruby
+[root@192 src]#yum install ruby
+[root@192 src]# ruby -v
+ruby 2.0.0p648 (2015-12-16) [x86_64-linux]
+[root@192 src]# gem -v
+2.0.14.1
+ 
+ 
+ 
+2.打开六个窗口分别启动服务器
+cd /home/believe123/myproject/redis/cluster/
+ 
+redis-server ./redis-6379.conf
+redis-server ./redis-6380.conf
+redis-server ./redis-6381.conf
+redis-server ./redis-6382.conf
+redis-server ./redis-6383.conf
+redis-server ./redis-6384.conf
+ 
+3.创建集群
+redis-cli --cluster create 127.0.0.1:6379 127.0.0.1:6380 127.0.0.1:6381 127.0.0.1:6382 127.0.0.1:6383 127.0.0.1:6384 --cluster-replicas 1

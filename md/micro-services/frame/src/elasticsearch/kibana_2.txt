@@ -1,0 +1,280 @@
+GET /student/_search
+{
+  "query": {
+    "match_all": {}
+  }
+}
+
+GET /student/_search
+{
+  "query": {
+    "term": {
+      "id": {
+        "value": "1007"
+      }
+    }
+  }
+}
+
+GET /student/_search
+{
+  "query": {
+    "match": {
+      "all": "male"
+    }
+  }
+}
+
+GET /student
+
+## 创建hotel索引库
+PUT /hotel
+{
+  "mappings": {
+    "properties": {
+      "id": {
+        "type": "keyword"
+      },
+      "name": {
+        "type": "text",
+        "analyzer": "ik_max_word",
+        "copy_to": "all"
+      },
+      "address": {
+        "type": "keyword",
+        "index": false 
+      },
+      "price": {
+        "type": "integer"
+      },
+      "score": {
+        "type": "integer"
+      },
+      "brand": {
+        "type": "keyword",
+        "copy_to": "all"
+      },
+      "city": {
+        "type": "keyword"
+      },
+      "starName": {
+        "type": "keyword"
+      },
+      "business": {
+        "type": "keyword",
+        "copy_to": "all"
+      },
+      "pic": {
+        "type": "keyword",
+        "index": false 
+      },
+      "location": {
+        "type": "geo_point"
+      },
+      "all": {
+        "type": "text",
+        "analyzer": "ik_max_word"
+      }
+    }
+  }
+};
+
+GET /hotel
+
+DELETE /hotel
+
+POST /student/_doc/1
+{
+  "age": "25",
+  "id": "1001",
+  "name": "Jason",
+  "school": "南京理工大学"
+}
+
+POST /hotel/_doc/36934
+{
+  "id": "36934",
+  "name": "7天连锁酒店(上海宝山路地铁站店)",
+  "address": "静安交通路40号",
+  "price": "336",
+  "score": "37",
+  "brand": "7天酒店",
+  "city": "上海",
+  "starName": "二钻",
+  "business": "四川北路商业区",
+  "pic": "https://m.tuniucdn.com/fb2/t1/G1/M00/3E/40/Cii9EVkyLrKIXo1vAAHgrxo_pUcAALcKQLD688AAeDH564_w200_h200_c1_t0.jpg",
+  "location": { 
+    "lat": "31.251433",
+    "lon": "121.47522"
+  }
+}
+
+POST /hotel/_doc/56392
+{
+  "id": "56392",
+  "name": "上海银星皇冠假日酒店",
+  "address": "番禺路400号",
+  "price": "809",
+  "score": "47",
+  "brand": "皇冠假日",
+  "city": "上海",
+  "starName": "五星级",
+  "business": "徐家汇地区",
+  "pic": "https://m.tuniucdn.com/fb3/s1/2n9c/37ucQ38K3UFdcRqntJ8M5dt884HR_w200_h200_c1_t0.jpg",
+  "location": { 
+    "lat": "31.202768",
+    "lon": "121.429524"
+  }
+}
+
+POST /hotel/_doc/61083
+{
+  "id": "61083",
+  "name": "上海滴水湖皇冠假日酒店",
+  "address": "自由贸易试验区临港新片区南岛1号",
+  "price": "971",
+  "score": "44",
+  "brand": "皇冠假日",
+  "city": "上海",
+  "starName": "五钻",
+  "business": "滴水湖临港地区",
+  "pic": "https://m.tuniucdn.com/fb3/s1/2n9c/312e971Rnj9qFyR3pPv4bTtpj1hX_w200_h200_c1_t0.jpg",
+  "location": { 
+    "lat": "30.890867",
+    "lon": "121.937241"
+  }
+}
+
+POST /hotel/_doc/1937347815
+{
+  "id": "1937347815",
+  "name": "北京望京凯悦酒店",
+  "address": "广顺南大街8号院2号楼",
+  "price": "617",
+  "score": "46",
+  "brand": "凯悦",
+  "city": "北京",
+  "starName": "五钻",
+  "business": "望京/酒仙桥/798地区",
+  "pic": "https://m.tuniucdn.com/fb3/s1/2n9c/2gLT4ZgJ8ZuS7sSmXzYoCXnV248p_w200_h200_c1_t0.jpg",
+  "location": { 
+    "lat": "39.991546",
+    "lon": "116.476288"
+  }
+}
+
+POST /hotel/_doc/2062643512
+{
+  "id": "2062643512",
+  "name": "深圳国际会展中心希尔顿酒店",
+  "address": "展丰路80号",
+  "price": "285",
+  "score": "46",
+  "brand": "希尔顿",
+  "city": "深圳",
+  "starName": "五钻",
+  "business": "深圳国际会展中心商圈",
+  "pic": "https://m.tuniucdn.com/fb3/s1/2n9c/2SHUVXNrN5NsXsTUwcd1yaHKbrGq_w200_h200_c1_t0.jpg",
+  "location": { 
+    "lat": "22.705335",
+    "lon": "113.77794"
+  }
+}
+
+GET /hotel/_search
+{
+  "query": {
+    "match_all": {}
+  }
+}
+
+GET /hotel/_search
+{
+  "query": {
+    "match": {
+      "all" : "深圳北京"
+    }
+  }
+}
+
+GET /hotel/_search
+{
+  "query": {
+    "multi_match": {
+      "query": "深圳北京",
+      "fields": ["brand","name","business"]
+    }
+  }
+}
+
+GET /hotel/_search
+{
+  "query": {
+    "term": {
+      "city": {
+      "value": "深圳"
+      }
+    }
+  }
+}
+
+
+GET /hotel/_search
+{
+  "query": {
+    "term": {
+      "city": {
+      "value": "深圳北京"
+      }
+    }
+  }
+}
+
+
+GET /hotel/_search
+{
+  "query": {
+    "range": {
+      "price": {
+      "gte": 700,
+      "lte": 1000
+      }
+    }
+  }
+}
+
+GET /hotel/_search
+{
+  "query": {
+    "range": {
+      "price": {
+      "gte": 700,
+      "lte": 1000
+      }
+    }
+  },
+  "sort": [
+    {
+      "score": {
+        "order": "desc"
+      }
+    }
+  ]
+}
+
+GET /hotel/_search
+{
+  "query": {
+    "function_score": {
+      "query": {"match": {
+        "all": "上海"
+      }},
+      "functions": [
+        {"filter": {"term":{"brand":"7天酒店"}},
+        "weight":2
+        }
+      ], 
+      "boost_mode": "sum"
+    }
+  }
+}

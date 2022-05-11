@@ -1,0 +1,6 @@
+[root@192 mytest]# ./readv
+12345HelloWorldIamJason
+24 bytes read.
+buf1: 12345
+buf2: HelloWor
+buf3: ldIamJason

@@ -1,0 +1,4 @@
+[root@192 mytest]# ./rw_test
+rsize = 15
+wsize = 15
+

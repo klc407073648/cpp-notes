@@ -1,0 +1,16 @@
+启动顺序，先主机，后从机，最后哨兵
+
+cd /home/believe123/myproject/redis/sentinel/
+
+分别开三个窗口，启动主从机
+redis-server ./redis-6379.conf
+redis-server ./redis-6380.conf
+redis-server ./redis-6381.conf
+
+分别开三个窗口，启动三个哨兵
+redis-sentinel ./sentinel-26379.conf
+redis-sentinel ./sentinel-26380.conf
+redis-sentinel ./sentinel-26381.conf
+
+当主机宕机时，例如6379下线，6381被投票选举为主机，等待6379上线的时，它就变成了6381的从机。
+

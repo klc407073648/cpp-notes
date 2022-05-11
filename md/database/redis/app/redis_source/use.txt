@@ -1,0 +1,22 @@
+Linux下安装redis:
+1.下载安装版本包 redis-6.0.5.tar.gz
+2. cd /home/believe123/myproject/redis/
+   tar -zxvf redis-6.0.5.tar.gz
+   make install
+3. 安装报错解决：Linux报错server.c:xxxx:xx: error: ‘xxxxxxxx’ has no member named ‘xxxxx’
+    #升级到 5.3及以上版本
+    yum -y install centos-release-scl
+    yum -y install devtoolset-9-gcc devtoolset-9-gcc-c++ devtoolset-9-binutils
+    scl enable devtoolset-9 bash
+
+    注意：scl命令启用只是临时的，推出xshell或者重启就会恢复到原来的gcc版本。
+如果要长期生效的话，执行如下：
+
+    echo "source /opt/rh/devtoolset-9/enable" >>/etc/profile
+    注：执行完此命令后，重新打开xshell窗口就是新版的gcc了。
+
+参考网址：
+https://www.runoob.com/redis/redis-install.html
+https://blog.csdn.net/AJ_007/article/details/106316033
+
+	

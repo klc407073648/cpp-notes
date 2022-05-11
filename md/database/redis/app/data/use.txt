@@ -1,0 +1,17 @@
+先cd 到 redis-6379.conf的dir目录
+redis-server ./redis-6379.conf
+
+Redis数据备份与恢复
+127.0.0.1:6379> set name klc
+OK
+127.0.0.1:6379> set num 1001
+OK
+127.0.0.1:6379> keys *
+1) "num"
+2) "name"
+127.0.0.1:6379> save       //数据备份
+OK
+127.0.0.1:6379> flushall     //清除数据
+
+重新启动redis，会从dump-6379.rdb文件中加载数据
+redis-server ./redis-6379.conf

@@ -1,0 +1,58 @@
+GET /hotel/_search
+{
+  "size": 0, 
+  "aggs": {
+    "brandAgg": {
+      "terms": {
+        "field": "brand",
+        "order": {
+          "_count": "asc"
+        },
+        "size": 20
+      }
+    }
+  }
+}
+
+GET /hotel/_search
+{
+  "query": {
+    "range": {
+      "price": {
+        "lte": 500 
+      }
+    }
+  }, 
+  "size": 0, 
+  "aggs": {
+    "brandAgg": {
+      "terms": {
+        "field": "brand",
+        "size": 20
+      }
+    }
+  }
+}
+
+GET /hotel/_search
+{
+  "size": 0, 
+  "aggs": {
+    "brandAgg": { 
+      "terms": { 
+        "field": "brand", 
+        "size": 20,
+        "order": {
+          "scoreAgg.avg": "desc"
+        }
+      },
+      "aggs": { 
+        "scoreAgg": {
+          "stats": {
+            "field": "score" 
+          }
+        }
+      }
+    }
+  }
+}
