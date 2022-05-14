@@ -1,12 +1,14 @@
 # 幂等性设计
 
-本节主要介绍分布式系统中幂等性设计的内容。
+> 本节主要介绍分布式系统中幂等性设计的内容。
+
+[[toc]]
 
 # 参考资料
 
-[幂等性解决方案](https://zhuanlan.zhihu.com/p/337245010)
+* [幂等性解决方案](https://zhuanlan.zhihu.com/p/337245010)
 
-[分布式系统的接口幂等性设计](https://www.cnblogs.com/jack87224088/p/8688948.html)
+* [分布式系统的接口幂等性设计](https://www.cnblogs.com/jack87224088/p/8688948.html)
 
 # 幂等概念
 

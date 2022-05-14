@@ -3,22 +3,28 @@ module.exports = {
     dest: "docs",
     ga: "UA-85414008-1",
     base: "/",
+    //vuepress Markdown 拓展 配置
     markdown: {
-        lineNumbers: true,
+        lineNumbers: true, // 行号
         externalLinks: {
-            target: '_blank', rel: 'noopener noreferrer'
+            target: '_blank', rel: 'noopener noreferrer'  // 外部链接
+        },
+        anchor: { permalink: false }, // markdown-it-anchor 
+        toc: {
+            includeLevel:[1, 2, 3, 4]  // markdown-it-toc 生成markdown目录层次
         }
     },
     locales: {
         "/": {
             lang: "zh-CN",
-            title: "Still Believe Space",
-            description: "包含：C++ 基础, 算法, 数据库,MySQL, ElasticSearch, Redis, 编程四大件, 微服务 , 中间件, ZeroMQ, 部署工具, Docker, k8s, Istio, Linux, , 实践|项目,  开源项目, 个人项目, 读书笔记, 面试题, 优质文章, 博客推荐..."
+            title: "C++ 全栈知识体系",
+            description: "包含：C++ 基础, 算法, 数据库,MySQL, ElasticSearch, Redis, 编程四大件, 微服务 , 中间件, ZeroMQ, 部署工具, Docker, k8s, Istio, Linux, 实践|项目,  开源项目, 个人项目, 读书笔记, 面试题, 优质文章, 博客推荐..."
         }
     },
     head: [["link", {rel: "icon", href: `/favicon.ico`}]],
     plugins: [
         ['@vuepress/back-to-top', true],
+        ['vuepress-plugin-code-copy',true],
         ['@vuepress/medium-zoom', {
             selector: 'img',
             options: {
@@ -27,7 +33,7 @@ module.exports = {
         }]
     ],
     themeConfig: {
-        docsRepo: "stibel/tech-arch-doc",
+        docsRepo: "stibel/cpp-notes",
         editLinks: true,
         sidebarDepth:0,
         locales: {
@@ -177,6 +183,18 @@ module.exports = {
                                 items: [
                                     {text: '重构改善既有代码的设计 详解', link: '/md/book-note/refactor/refactor-chapter-1.md'}
                                 ]
+                            },
+                            {
+                                text: 'Effective C++:改善程序与设计的55个具体做法',
+                                items: [
+                                    {text: 'Effective C++:改善程序与设计的55个具体做法 详解', link: '/md/book-note/effectivecpp/effectivecpp-chapter-2-1.md'}
+                                ]
+                            },
+                            {
+                                text: 'STL源码剖析',
+                                items: [
+                                    {text: 'STL源码剖析 详解', link: '/md/book-note/stlsource/stlsource-chapter-1.md'}
+                                ]
                             }
                         ]
                     },
@@ -205,6 +223,12 @@ module.exports = {
                         ]
                     },
                     {
+                        text: '在线技术文档',
+                        items: [
+                            {text: '官网技术文档', link: '/md/tech-doc/online/doc.md'}
+                        ]
+                    },
+                    {
                         text: '关于', link: '/md/about/me/about-me.md'
                     }
                 ],
@@ -223,6 +247,7 @@ module.exports = {
                     "/md/article/": genSidebar4Article(),
                     "/md/other/": genSidebar4other(),
                     "/md/knowledge/": genSidebar4knowledge(),
+                    "/md/tech-doc/": genSidebar4techdos(),
                     "/md/about/": genSidebar4About(),
                 }
             }
@@ -590,6 +615,48 @@ function genSidebar4booknote(){
                 "refactor/refactor-chapter-11.md",
                 "refactor/refactor-chapter-12.md"          
             ]
+        },
+        {
+            title: "Effective C++:改善程序与设计的55个具体做法 详解",
+            collapsable: false,
+            sidebarDepth: 0, 
+            children: [
+                "effectivecpp/effectivecpp-chapter-2-1.md",
+                "effectivecpp/effectivecpp-chapter-2-2.md",
+                "effectivecpp/effectivecpp-chapter-2-3.md",
+                "effectivecpp/effectivecpp-chapter-3.md",
+                "effectivecpp/effectivecpp-chapter-4-1.md",
+                "effectivecpp/effectivecpp-chapter-4-2.md",
+                "effectivecpp/effectivecpp-chapter-5-1.md",
+                "effectivecpp/effectivecpp-chapter-5-2.md",
+                "effectivecpp/effectivecpp-chapter-6.md",
+                "effectivecpp/effectivecpp-chapter-7.md"        
+            ]
+        },
+        {
+            title: "STL源码剖析 详解",
+            collapsable: false,
+            sidebarDepth: 0, 
+            children: [
+                "stlsource/stlsource-chapter-1.md",
+                "stlsource/stlsource-chapter-2.md",
+                "stlsource/stlsource-chapter-3-1.md",
+                "stlsource/stlsource-chapter-3-2.md",
+                "stlsource/stlsource-chapter-4-1.md",
+                "stlsource/stlsource-chapter-4-2.md",
+                "stlsource/stlsource-chapter-4-3.md",
+                "stlsource/stlsource-chapter-4-4.md",
+                "stlsource/stlsource-chapter-4-5.md",
+                "stlsource/stlsource-chapter-4-6.md",
+                "stlsource/stlsource-chapter-4-7.md",
+                "stlsource/stlsource-chapter-5-1.md",
+                "stlsource/stlsource-chapter-5-2.md",
+                "stlsource/stlsource-chapter-5-3.md",
+                "stlsource/stlsource-chapter-6-1.md",
+                "stlsource/stlsource-chapter-6-2.md",
+                "stlsource/stlsource-chapter-7.md",
+                "stlsource/stlsource-chapter-8.md"       
+            ]
         }
     ];
      
@@ -632,7 +699,7 @@ function genSidebar4Article(){
      
 }
 
-// About page
+// other page
 function genSidebar4other(){
     return [
         {
@@ -646,7 +713,7 @@ function genSidebar4other(){
     ];
 }
 
-// About page
+// knowledge page
 function genSidebar4knowledge(){
     return [
         {
@@ -659,6 +726,22 @@ function genSidebar4knowledge(){
         }
     ];
 }
+
+// tech-doc page
+function genSidebar4techdos(){
+    return [
+        {
+            title: "技术文档",
+            collapsable: false,
+            sidebarDepth: 0, 
+            children: [
+                "online/doc.md"            
+            ]
+        }
+    ];
+     
+}
+
 // About page
 function genSidebar4About(){
     return [

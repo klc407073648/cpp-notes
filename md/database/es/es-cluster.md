@@ -1,6 +1,8 @@
 # 集群
 
-主要介绍elasticsearch集群的相关内容。
+> 主要介绍elasticsearch集群的相关内容。
+
+[[toc]]
 
 # 参考资料
 

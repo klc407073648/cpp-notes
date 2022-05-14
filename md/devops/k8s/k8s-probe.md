@@ -1,11 +1,7 @@
 
 #  Kubernetes 检测探针学习
 
-涉及的内容有：
-
-* Kubernetes单机基础实践
-
-
+[[toc]]
 
 ### 学习内容
 

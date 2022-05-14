@@ -1,9 +1,12 @@
 # centos下面使用cppcheck
 
+[[toc]]
+
 1.github官网下载tar.gz包
 
 2.安装过程
-```
+
+```bash
 tar -zxvf cppcheck-2.6.tar.gz
 cd ./cppcheck-2.6
 mkdir build
@@ -16,7 +19,7 @@ make install SRCDIR=. DESTDIR=../cppcheck_output/ CFGDIR=../cfg
 
 3.测试
 
-```
+```bash
 cd /home/klc/code/cppcheck/cppcheck-2.6/cppcheck_output/usr/local/bin/
 ./cppcheck --enable=all  FunctionStudy/systemFunUse/util.cpp
 ```

@@ -1,5 +1,7 @@
 # 第9章 简化条件表达式
 
+[[toc]]
+
 **Decompose Conditional(分解条件表达式)**
 你有一个复杂的条件(if-then-else)语句
 从if then else三个段落中分别提炼出独立函数

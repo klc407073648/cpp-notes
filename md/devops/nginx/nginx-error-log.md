@@ -1,14 +1,6 @@
 # Nginx错误日志配置及信息详解
 
-## 目录
-
-[Nginx错误日志(error_log)配置及信息详解](https://www.cnblogs.com/czlun/articles/7010601.html)
-
-## 目录
-
-* [1.Nginx错误日志信息介绍](#-Nginx错误日志信息介绍)
-* [2.Nginx配置错误日志过程介绍](#-2.Nginx配置错误日志过程介绍)
-
+[[toc]]
 
 ## 1.Nginx错误日志信息介绍
 

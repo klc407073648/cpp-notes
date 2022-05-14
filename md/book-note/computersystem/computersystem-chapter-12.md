@@ -1,5 +1,7 @@
 # 第12章 并发编程
 
+[[toc]]
+
 # 参考资料
 
 * [《深入理解计算机系统》学习笔记整理（CSAPP 学习笔记）](https://www.cnblogs.com/xsqblogs/p/14688428.html)
@@ -62,7 +64,7 @@
 
 针对这种困境的一个解决办法就是<font color='red'>I/O多路复用技术</font>。基本思想就是使用select函数，要求内核挂起进程，只有在一个或多个I/O事件发生后，才将控制返回给应用程序。
 
-```c
+```cpp
  #include <sys/time.h>
  #include <sys/types.h>
  #include <unistd.h>
@@ -136,7 +138,7 @@ Posix线程(Pthreads)是C程序中处理线程的一个标准接口。Pthreads�
 * 对等线程输出“Hello，world!”并且终止
 * 当主线程检测到对等线程终止后，它就调用exit终止该进程。线程的代码和本地数据都被封装在一个线程例程中，每个线程例程都以一个通用指针作为输入，并返回一个通用指针。如果想要传递多个参数给线程例程那应该将参数放到一个结构中，并传递一个指向该结构的指针。
 
-```c
+```cpp
 #include"csapp.h"
 
 void *thread(void *vargp)
@@ -160,7 +162,7 @@ void *thread(void *vargp)
 
 线程通过调用pthread_create函数来创建其他线程。、
 
-```c
+```cpp
 #include <pthread.h>
 //第一个参数为指向线程标识符的指针。
 //第二个参数用来设置线程属性。
@@ -185,7 +187,7 @@ pthread_self获取自己的线程ID
 3. 某个对等线程调用Linux的exit函数，该函数终止进程以及所有与该进程相关的线程
 4. 另一个对等线程通过以当前线程ID作为参数调用pthread_cancel函数来终止当前线程。
 
-```c
+```cpp
 #include <pthread.h>
 
 void pthread_exit(void *retval);
@@ -195,7 +197,7 @@ int pthread_cancel(pthread_t thread);
 
 线程通过pthread_join函数等待其他线程终止。
 
-```c
+```cpp
 #include <pthread.h>
 
 int pthread_join(pthread_t tid, void **thread_return);
@@ -211,7 +213,7 @@ pthread_join函数会阻塞，直到线程tid终止，将线程例程返回的�
 
 默认情况下，线程被创建成可结合的，为了避免内存泄露，每个可结合线程都要么被其他线程显式地收回要么调用pthread_detach函数被分离。
 
-```c
+```cpp
 #include <pthread.h>
 
 int pthread_detach(pthread_t thread);
@@ -225,7 +227,7 @@ pthread_detach函数分离可结合线程tid，线程能够以pthread_self()为�
 
 pthread_once函数允许你初始化与线程例程相关的状态。
 
-```c
+```cpp
 #include<pthread.h>
 
 pthread_once_t once_control=PTHREAD_ONCE_INIT;
@@ -277,7 +279,7 @@ once_control变量是一个全局或者静态变量，总是被初始化为PTHRE
 
 badcnt.c的程序如下：
 
-```c
+```cpp
 // 
 /* WARING: This code is buggy */  
 #include "csapp.h"  
@@ -362,7 +364,7 @@ P和V的定义确保一个正在运行的程序绝不可能进入一个状态，
 
 Posix标准顶一个很多操作信号量的函数：
 
-```c
+```cpp
  #include <semaphore.h>
 //若成功为0，出错为-1
 //sem ：指向信号量对象
@@ -387,7 +389,7 @@ sem_init函数将信号量sem初始化为value，每个信号量在使用前必�
 
 我们可以用信号量正确同步上面程序的计数器，如下程序：
 
-```c
+```cpp
 //首先声明一个信号量mutex
 volatile long cnt;
 sem_t mutex;
@@ -428,7 +430,7 @@ for(i=0;i<niters;i++){
 
 下图给出一个第一类读者-写者问题的解答。这个解答很微妙。
 
-```c
+```cpp
 int readcnt;
 sem_t mutex,w;
 void reader(void)

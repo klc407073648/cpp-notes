@@ -1,5 +1,7 @@
 # Linux下git安装以及配置
 
+[[toc]]
+
 ## 参考资料
 
 * [linux配置Git公钥](https://blog.csdn.net/chujing2309/article/details/100758680)

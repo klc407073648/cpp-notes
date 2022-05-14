@@ -1,6 +1,7 @@
 
 # ZeroMQ的经典例子
-第一章我们简单试用了ZMQ的若干通信模式：请求-应答模式、发布-订阅模式、管道模式。这一章我们将学习更多在实际开发中会使用到的东西：
+
+> 第一章我们简单试用了ZMQ的若干通信模式：请求-应答模式、发布-订阅模式、管道模式。这一章我们将学习更多在实际开发中会使用到的东西：
 
 本章涉及的内容有：
 
@@ -11,6 +12,8 @@
 *  请求-应答模式中使用套接字标识
 
 ---
+
+[[toc]]
 
 ## 节点协调
 
@@ -41,7 +44,7 @@
 
 **psenvsub: Pub-sub envelope publisher**
 
-```c++
+```cpp
 
     while (1) {
         //  Write two messages, each with an envelope and content
@@ -77,7 +80,7 @@
 
 我们可以运行一个示例来证明这一点，用第一章中的wuclient和wuserver具体，在wuclient中进行套接字连接前加入这一行：
 
-```c++
+```cpp
     subscriber.setsockopt(ZMQ_IDENTITY, "Hello", 5);
 ```
 
@@ -187,7 +190,7 @@ ROUTER是怎么标识消息的来源的？答案当然是套接字的标识。�
 
 **identity.cpp**
 
-```c++
+```cpp
 #include <zmq.hpp>
 #include "zhelpers.hpp"
 

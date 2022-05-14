@@ -1,5 +1,7 @@
 # Docker学习
 
+[[toc]]
+
 ## 参考资料
 
 * [使用docker部署一个简单的c/c++程序的方法](https://freexyz.cn/server/60289.html)
@@ -7,7 +9,7 @@
 
 ## 一、首先建立一个 hello-world.cpp 文件
 
-```c++
+```cpp
 #include <iostream>
 using namespace std;
 

@@ -1,5 +1,7 @@
 # 第3章 代码的坏味道
 
+[[toc]]
+
 # 参考资料
 
 * [《重构-改善既有代码的设计》读书笔记](https://www.cnblogs.com/karoc/archive/2011/09/16/2179125.html)

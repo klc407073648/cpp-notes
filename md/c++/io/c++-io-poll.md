@@ -1,5 +1,7 @@
 # poll 函数
 
+[[toc]]
+
 ## 概述
 
 该函数提供的功能与select类似，不过在处理流设备时，它能够提供额外的信息。
@@ -9,7 +11,7 @@
 
 函数内容详解:
 
-```c++
+```cpp
 #include <poll.h>
 int poll(struct pollfd *fdarray, unsigned long nfds, int timeout);
 

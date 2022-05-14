@@ -1,8 +1,10 @@
 # struct结构体学习
 
+[[toc]]
+
 在结构体中，定义初始化函数:
 
-```c++
+```cpp
 #include<iostream>
 #include<stdio.h>
 #include<string>

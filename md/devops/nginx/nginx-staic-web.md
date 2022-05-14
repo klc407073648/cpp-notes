@@ -1,20 +1,15 @@
 # 在centOs 上搭建nginx来部署静态页面网站
 
-## 目录
+[[toc]]
 
-* [1. Nginx简介](#-1.Nginx简介)
-* [2. 安装以及使用](#-2.安装以及使用)
-* [2.1 安装以及启动](#-2.1安装以及启动)
-* [2.2 配置服务器的访问地址](#-2.2配置服务器的访问地址)
-* [2.3 新建一个目录路径，创建index.html](#-2.3新建一个目录路径，创建index.html)
-* [2.4 重启nginx，访问](#-2.4重启nginx，访问)
+## Nginx简介
 
-
-## 1.Nginx简介
 轻量级、高性能的HTTP及反向代理服务器，占用内存少，并发能力强。
 
-## 2.安装以及使用
-## 2.1安装以及启动
+## 安装以及使用
+
+### 安装以及启动
+
 ```
 yum install nginx -y
 nginx -v
@@ -22,7 +17,7 @@ nginx -v
 
 nginx 
 
-## 2.2配置服务器的访问地址
+## 配置服务器的访问地址
 启动好的nginx服务器默认访问的是它自己的目录，即/usr/share/nginx/html目录，可以在/etc/nginx/nginx.conf配置文件中配置你自己的项目目录，并让nginx正确访问。
 
 主要修改以下字段：
@@ -51,7 +46,7 @@ nginx 
 }
 
 ```
-## 2.3新建一个目录路径，创建index.html
+### 新建一个目录路径，创建index.html
 ```html
 // index.html代码为
 <!DOCTYPE html>
@@ -66,7 +61,7 @@ Hello world！
 
 ```
 
-## 2.4重启nginx，访问
+## 重启nginx，访问
 
 ```
 nginx -s reload

@@ -1,5 +1,7 @@
 # ngx-admin安装
 
+[[toc]]
+
 ## 参考资料
 
 * [源码地址](https://github.com/akveo/ngx-admin)

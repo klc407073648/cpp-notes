@@ -1,5 +1,8 @@
 # elasticsearch
-主要介绍elasticsearch的数据搜索功能。
+
+> 主要介绍elasticsearch的数据搜索功能。
+
+[[toc]]
 
 # 参考资料
 

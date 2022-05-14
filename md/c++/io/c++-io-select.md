@@ -1,5 +1,7 @@
 # select 函数
 
+[[toc]]
+
 ## 概述
 
 该函数**允许进程指示内核**等待多个事件中的任何一个发生，并只在有一个或多个事件发生或经历一段指定时间后才唤醒它。
@@ -9,7 +11,7 @@
 
 函数内容详解:
 
-```c++
+```cpp
 #include <sys/select.h>
 /* According to earlier standards */
 #include <sys/time.h>

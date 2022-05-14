@@ -1,5 +1,8 @@
 # elasticsearch
-主要介绍elasticsearch的数据存储功能，包括索引库操作和文档操作。
+
+> 主要介绍elasticsearch的数据存储功能，包括索引库操作和文档操作。
+
+[[toc]]
 
 # 参考资料
 

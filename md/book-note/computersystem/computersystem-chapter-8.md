@@ -1,5 +1,7 @@
 # 第8章 异常控制流
 
+[[toc]]
+
 # 参考资料
 
 * [《深入理解计算机系统》学习笔记整理（CSAPP 学习笔记）](https://www.cnblogs.com/xsqblogs/p/14688428.html)
@@ -283,7 +285,7 @@ Linux 提供了一种叫做 **/proc 文件系统**的机制来允许用户模式
 
 strerror 函数返回一个文本串，描述了和某个 errno 值相关联的错误。**使用 strerror 来查看错误**
 
-```c
+```cpp
 '调用 Unix fork 时检查错误'
 if((pid = fork()) < 0) //如果发生错误，此时 errno 已经被设置为对应值了
 {
@@ -298,7 +300,7 @@ if((pid = fork()) < 0) //如果发生错误，此时 errno 已经被设置为对
 
 对于一个给定的基本函数，定义一个首字母大写的包装函数来检查错误。
 
-```c
+```cpp
 '错误报告函数'
 void unix_error(char *msg)
 {
@@ -324,7 +326,7 @@ pid_t Fork(void)
 1. **getpid 函数：**返回调用进程的 PID（类型为 **pid_t**，在 type.h 中定义了 pid_t 为 int）。
 2. **getppid 函数：**返回它的父进程的 PID。
 
-```c++
+```cpp
 #include<sys/types.h>
 #include<unistd.h>
 
@@ -344,7 +346,7 @@ pid getppid(void);
 
 **终止进程**
 
-```c++
+```cpp
 #include <stdlib.h>
 void exit(int status); // status 指定进程终止时的退出状态。
 ```
@@ -359,7 +361,7 @@ fork 函数**只被调用一次，但是会返回两次**：一次返回是在�
 
 因为 fork 创建的子进程的 PID 总是非零的，所以可以根据返回值是否为 0 来分辨是当前是在父进程还是在子进程。
 
-```c++
+```cpp
 #include <sys/types.h>
 #include <unistd.h>
 pid_t fork(void); //子进程返回 0，父进程返回子进程的 PID，如果出错，返回 -1   
@@ -390,7 +392,7 @@ pid_t fork(void); //子进程返回 0，父进程返回子进程的 PID，如果
 
 一个进程可以通过调用 **waitpid 函数**来等待它的子进程终止或停止。
 
-```c++
+```cpp
 #include <sys/types.h>
 #include <sys/wait.h>
 pid_t waitpid(pid_t pid, int *statusp, int options);  //如果成功，返回对应的已终止的子进程的 PID；如果其他错误，返回 -1
@@ -439,7 +441,7 @@ waitpid 函数比较复杂。默认情况下 **options = 0**，此时 waitpid �
 
 **wait 函数**是 waitpid 函数的简单版本。
 
-```c++
+```cpp
 #include <sys/types.h>
 #include <sys/wait.h>
 pid_t wait(int *statusp);  //如果成功，返回子进程的 PID，如果出错，返回 -1
@@ -451,14 +453,14 @@ pid_t wait(int *statusp);  //如果成功，返回子进程的 PID，如果出�
 
 * 如果请求的休眠时间量到了，sleep 返回 **0**，否则返回**还剩下的要休眠的秒数**（当 sleep 函数被一个信号中断而过早地返回，会发生这种情况）。
 
-```c++
+```cpp
 #include <unistd.h>
 unsigned int sleep(unsigned int secs); //返回还要休眠的秒数
 ```
 
 **pause函数**:pause 函数让调用函数休眠，**直到该进程收到一个信号**。
 
-```c++
+```cpp
 #include <unistd.h>
 int pause(void);
 ```
@@ -469,7 +471,7 @@ int pause(void);
 
 **execve函数**：execve 函数在当前进程的上下文中加载并运行一个新程序（是程序不是进程）。
 
-```c++
+```cpp
 #include <unistd.h>
 int execve(const char *filename, const char *argv[], const char *envp[]); //如果成功，则不返回，如果错误，返回 -1。
 ```
@@ -490,7 +492,7 @@ execve 函数调用加载器加载了 filename 后，设置用户栈，并将控
 
 **main 函数**:main 函数有以下形式的原型，两种是等价的。
 
-```c++
+```cpp
 int main(int argc, char **argv, char **envp);
 int main(int argc, char *argv[], char *envp[]);
 ```
@@ -509,7 +511,7 @@ argc 和 argv 的值都是从命令行中获取的，如果命令行中只有该
 
 操作环境变量数组的函数：
 
-```c++
+```cpp
 #include <stdlib.h>
 char *getenv(const char *name);  //在环境变量列表中搜索字符串 "name=value"，如果搜到了返回指向 value 的指针，否则返回 NULL
 int setenv(const char *name, const char *newvalue, int overwrite);  //若成功返回 0，否则返回 -1。如果环境变量列表中包含一个形如 ”name=value" 的字符串，setnv 会用 newvalue 替代原来的 value，如果不存在，直接添加一个 "name=newvalue" 到数组中。
@@ -540,7 +542,7 @@ shell 会打印一个命令行提示符，等待用户在 stdin 上输入命令�
 
 **shell 的 main 例程**
 
-```c++
+```cpp
 #include "csapp.h"
 #define MAXARGS   128
 
@@ -564,7 +566,7 @@ int main()
 
 **解释并执行一个命令行**
 
-```c++
+```cpp
 /* eval - Evaluate a command line */
 void eval(char *cmdline)
 {
@@ -666,7 +668,7 @@ Unix 系统提供了大量向进程发送信号的机制。这些机制都是基
 
 默认情况下，子进程和它的父进程同属于一个进程组。
 
-```c++
+```cpp
 #include<unistd.h>
 pid_t getpgrp(void);   // 返回调用进程的进程组 ID
 int setpgid(pid_t pid, pid_t pgid);     // 将进程 pid 的进程组改为 pgid。若成功返回 0，错误返回 -1。
@@ -708,7 +710,7 @@ shell 为每个作业创建一个独立的进程组，进程组 ID 通常取作�
 
 进程可以通过调用 kill 函数发送信号给其他进程（包括自己）。
 
-```c++
+```cpp
 #include<sys/types.h>
 #include<signal.h>
 int kill(pid_t pid, int sig);  //若成功则返回 0，若错误则返回 -1
@@ -724,7 +726,7 @@ int kill(pid_t pid, int sig);  //若成功则返回 0，若错误则返回 -1
 
 进程可以通过调用 **alarm 函数**向他自己发送 SIGALRM 信号。
 
-```c++
+```cpp
 #include<unistd.h>
 unsigned int alarm(unsigned int secs);  //返回前一次闹钟剩余的描述，如果以前没有设定闹钟，就返回 0。
 ```
@@ -758,7 +760,7 @@ alarm 函数安排内核在 **secs 秒后**发送一个 **SIGALRM 信号**给调
 
 signal 是在 C 标准库的头文件 signal.h 中定义的。
 
-```c++
+```cpp
 #include<signal.h>  
 typedef void (*sighandler_t)(int); 
 sighandler_t signal(int signum, sighandler_t handler); //若成功返回指向前次处理程序的指针，若出错则返回 SIG_ERR（不设置 errno）。
@@ -774,7 +776,7 @@ signal 函数接受两个参数：信号值和函数指针，可以通过下列�
 
 **sigaction函数的功能是检查或修改与指定信号相关联的处理动作**
 
-```c++
+```cpp
 int sigaction(int signum, const struct sigaction *act,struct sigaction *oldact);
 ```
 
@@ -785,7 +787,7 @@ int sigaction(int signum, const struct sigaction *act,struct sigaction *oldact);
 
  **struct sigaction结构体介绍**
 
-```c++
+```cpp
 struct sigaction {
     void (*sa_handler)(int);
     void (*sa_sigaction)(int, siginfo_t *, void *);
@@ -813,7 +815,7 @@ struct sigaction {
 
 **一个信号处理程序的例子**
 
-```c++
+```cpp
 #include "csapp"
 void sigint_handler(int sig)  //定义了一个信号处理程序
 {
@@ -845,7 +847,7 @@ sigprocmask 函数改变当前阻塞的信号集合（blocked 位向量），具
 2. SIG_UNBLOCK：从 blocked 中删除 set 中的信号（blocked = blocked & ~set)。
 3. SIG_SETMASK：block = set。
 
-```c++
+```cpp
 #include<signal.h>
 int sigprocmask(int how, const sigset_t *set, sigset_t *oldset);  
 ```
@@ -861,7 +863,7 @@ int sigprocmask(int how, const sigset_t *set, sigset_t *oldset);
 3. sigaddset 把信号 signum 添加到 set 中；
 4. sigdelset 把信号 signum 从 set 中删除。如果 signum 是 set 的成员返回 1，不是返回 0。
 
-```c++
+```cpp
 int sigemptyset(sigset_t *set);
 int sigfillset(sigset_t *set);
 int sigaddset(sigset_t *set, int signum);
@@ -870,7 +872,7 @@ int sigdelset(segset_t *set, int signum);
 
 **一个临时阻塞 SIGINT 信号的例子**
 
-```c++
+```cpp
 sigset_t mask, prev_mask;
 Sigemptyset(&mask);   
 Sigaddset(&mask, SIGINT);  //将 SIGINT 信号添加到 set 集合中
@@ -892,7 +894,7 @@ C 语言提供了一种用户级异常控制流形式，称为**非本地跳转*
 
 **sigjmp函数**
 
-```c++
+```cpp
 #include<setjmp.h>   //c 标准库中的头文件
 int setjmp(jmp_buf env);  //返回 0，setjmp 的返回值不能被赋值给变量，但可以用在条件语句的测试中
 int sigsetjmp(sigjmp_buf env, int savesigs);
@@ -906,7 +908,7 @@ setjmp 函数在 env 缓冲区中保存当前调用环境，以供后面的 long
 
 **longjmp函数**
 
-```c++
+```cpp
 void longjmp(jmp_buf env, int retval);
 void siglongjmp(sigjmp_buf env, int retval);
 ```

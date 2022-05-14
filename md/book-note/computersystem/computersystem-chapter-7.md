@@ -1,5 +1,7 @@
 # 第7章 链接
 
+[[toc]]
+
 # 参考资料
 
 * [《深入理解计算机系统》（CSAPP）读书笔记 —— 第七章 链接](https://blog.csdn.net/qq_16933601/article/details/113396898)

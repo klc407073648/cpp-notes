@@ -2,7 +2,7 @@
 
 > 本文包含写时拷贝技术的内容。
 
-[TOC]
+[[toc]]
 
 抛砖引玉：
 
@@ -42,7 +42,7 @@ STL标准模板库中的string类，就是一个具有写时才拷贝技术的�
 
 **测试程序**
 
-```c++
+```cpp
 #include<iostream>
 #include<stdio.h>
 #include<string>
@@ -70,7 +70,7 @@ main()
 
 执行结果：
 
-```c++
+```cpp
 [root@iZuf61kbf845xt6tz10abgZ code]# g++ -o stringTest stringTest.cpp
 
 理论上：

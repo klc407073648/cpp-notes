@@ -1,5 +1,7 @@
 # epoll 函数
 
+[[toc]]
+
 ## 概述
 
 1. epoll是Linux下多路复用I/O接口select/poll的增强版本，它能显著提高程序**在大量并发连接中只有少量活跃的情况下的系统CPU利用率**。因为它会**复用文件描述符集合来传递结果而不用迫使开发者每次等待事件之前都必须重新准备要被侦听的文件描述符集合**。
@@ -10,14 +12,14 @@
 
 1. 创建一个epoll句柄，参数size用来告诉内核监听的文件描述符的个数，跟内存大小有关。
 
-```c++
+```cpp
 #include <sys/epoll.h>
 int epoll_create(int size)		size: 监听数目
 ```
 
 2. 控制某个epoll监控的文件描述符上的事件: 注册、修改、删除。
 
-```c++
+```cpp
 #include <sys/epoll.h>
 int epoll_ctl(int epfd, int op, int fd, struct epoll_event *event)
 		epfd: epoll_creat的句柄
@@ -50,7 +52,7 @@ int epoll_ctl(int epfd, int op, int fd, struct epoll_event *event)
 
 3. 等待所监控文件描述符上有事件的产生，类似于select()调用。
 
-```c++
+```cpp
 #include <sys/epoll.h>
 int epoll_wait(int epfd, struct epoll_event *events, int maxevents, int timeout)
 	events: 	用来存内核得到事件的集合，

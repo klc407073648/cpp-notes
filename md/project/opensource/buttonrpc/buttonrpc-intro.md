@@ -1,5 +1,7 @@
 # buttonrpc
 
+[[toc]]
+
 # 参考资料
 
 [buttonrpc源码](https://github.com/button-chen/buttonrpc_cpp14)
@@ -93,7 +95,7 @@ void Deleter(zmq::socket_t* sock)
 
  
 
-```c++
+```cpp
 #include <iostream>
 #include <memory>
 

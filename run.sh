@@ -2,7 +2,7 @@
 
 echo '----pull codes----'
 
-cd /opt/tech-arch-doc/
+cd /opt/cpp-notes/
 
 git pull
 

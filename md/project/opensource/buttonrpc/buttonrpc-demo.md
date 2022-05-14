@@ -1,8 +1,10 @@
 # rpc开发程序
 
+[[toc]]
+
 ## 客户端
 
-```c++
+```cpp
 #include <string>
 #include <iostream>
 #include <ctime>
@@ -76,7 +78,7 @@ int main()
 
 ## 服务端
 
-```c++
+```cpp
 #include <string>
 #include <iostream>
 #include "buttonrpc.hpp"

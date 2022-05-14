@@ -1,14 +1,17 @@
 
 # 第一章 ZeroMQ基础
 
-本章介绍了ZeroMQ基础知识和基本模型的使用方法，涉及的内容有：
+> 本章介绍了ZeroMQ基础知识和基本模型的使用方法，涉及的内容有：
 
 * 基础知识(ZMQ简介、学习内容、使用方法)
 * 请求回应模型（Request-Reply）
 * 发布订阅模型（Publish-Subscribe）
 * 推拉模型（Push-Pull）
 * 一对一结对模型（Exclusive-Pair）
+
 ---
+
+[[toc]]
 
 ## 基础知识
 
@@ -83,7 +86,7 @@ sudo make -j4 install
 ![1](/_images/middleware/zeromq/chapter1_1.png)
 
 **hwclient: Hello World client** 
-```c++
+```cpp
 //
 //  Hello World client in C++
 //  Connects REQ socket to tcp://localhost:5555
@@ -119,7 +122,7 @@ int main()
 }
 ```
 **hwserver.cpp: Hello World server**
-```c++
+```cpp
 //
 //  Hello World server in C++
 //  Binds REP socket to tcp://*:5555
@@ -187,7 +190,7 @@ server Send World 2
 ![2](/_images/middleware/zeromq/chapter1_4.png)
 
 **wuclient: Weather update client**
-```c++
+```cpp
 //
 //  Weather update client in C++
 //  Connects SUB socket to tcp://localhost:5556
@@ -237,7 +240,7 @@ int main(int argc, char *argv[])
 ```
 
 **wuserver: Weather update server**
-```c++
+```cpp
 //
 //  Weather update server in C++
 //  Binds PUB socket to tcp://*:5556
@@ -311,7 +314,7 @@ Average temperature for zipcode '10001 ' was 20F
 
 **taskvent: Parallel task ventilator**
 
-```c++
+```cpp
 //
 //  Task ventilator in C++
 //  Binds PUSH socket to tcp://localhost:5557
@@ -373,7 +376,7 @@ int main (int argc, char *argv[])
 
 **taskwork: Parallel task worker**
 
-```c++
+```cpp
 //
 //  Task worker in C++
 //  Connects PULL socket to tcp://localhost:5557
@@ -427,7 +430,7 @@ int main (int argc, char *argv[])
 
 **tasksink: Parallel task sink**
 
-```c++
+```cpp
 //
 //  Task sink in C++
 //  Binds PULL socket to tcp://localhost:5558
@@ -507,7 +510,7 @@ Total elapsed time: 2572 msec
 
 **mtrelay: Multithreaded relay in C**
 
-```c++
+```cpp
 //
 //  Multithreaded relay in C++
 //

@@ -1,6 +1,7 @@
 
 # 第二章 ZeroMQ进阶
-第一章我们简单试用了ZMQ的若干通信模式：请求-应答模式、发布-订阅模式、管道模式。这一章我们将学习更多在实际开发中会使用到的东西：
+
+> 第二章我们简单试用了ZMQ的若干通信模式：请求-应答模式、发布-订阅模式、管道模式。这一章我们将学习更多在实际开发中会使用到的东西：
 
 本章涉及的内容有：
 
@@ -22,6 +23,8 @@
 * ZMQ多线程编程
 * 瞬时套接字和持久套接字
 ---
+
+[[toc]]
 
 ## 零的哲学
 
@@ -137,7 +140,7 @@ HTTP请求使用CR-LF（换行符）作为信息帧的间隔，而ZMQ则使用�
 
 我们提过ZMQ是通过后台的I/O线程进行消息传输的。**一个I/O线程已经足以处理多个套接字的数据传输要求**，当然，那些极端的应用程序除外。这也就是我们在创建上下文时传入的1所代表的意思：
 
-```c++
+```cpp
 zmq::context_t context(1);
 ```
 
@@ -212,7 +215,7 @@ s_send (void *socket, char *string) {
 ```
 
 同理，C++的对应处理函数来自zhelpers.hpp
-```c++
+```cpp
 static std::string
 s_recv (zmq::socket_t & socket) {
 
@@ -262,7 +265,7 @@ ZMQ支持多帧消息，即在一条消息中保存多个消息帧。关于消�
 我们先不使用zmq_poll()，而用NOBLOCK（非阻塞）的方式来实现从多个套接字读取消息的功能。下面将气象信息服务和并行处理这两个示例结合起来：
 
 **msreader: Multiple socket reader**
-```c++
+```cpp
 //
 //  Reading from multiple sockets in C++
 //  This version uses a simple recv loop
@@ -319,7 +322,7 @@ int main (int argc, char *argv[])
 
 **mspoller: Multiple socket poller**
 
-```c++
+```cpp
 //
 //  Reading from multiple sockets in C++
 //  This version uses zmq_poll()
@@ -374,7 +377,7 @@ ZMQ消息可以包含多个帧，这在实际应用中非常常见，特别是�
 
 下面的代码演示如何发送多帧消息：
 
-```c++
+```cpp
 s_sendmore(publisher, "music");
         
 s_send(publisher, "<Rain>");
@@ -383,7 +386,7 @@ s_send(publisher, "<Rain>");
 
 然后我们看看如何接收并处理这些消息，**这段代码对单帧消息和多帧消息都适用：**
 
-```c++
+```cpp
  while (1) 
  {
     zmq::message_t message;
@@ -437,7 +440,7 @@ ZMQ装置比起其他中间件的优势在于，你可以将它放在网络中�
 
 **wuproxy: Weather update proxy**
 
-```c++
+```cpp
 //
 //  Weather proxy device C++
 //
@@ -507,7 +510,7 @@ int main (int argc, char *argv[])
 请求-应答代理会将两个套接字分别绑定到前端和后端，供客户端和服务端套接字连接。在使用该装置之前，还需要对客户端和服务端的代码进行调整。
 
 **rrclient: Request-reply client**
-```c++
+```cpp
 //   Request-reply client in C++
 //   Connects REQ socket to tcp://localhost:5559
 //   Sends "Hello" to server, expects "World" back
@@ -536,7 +539,7 @@ int main (int argc, char *argv[])
 ```
 
 **rrserver: Request-reply service**
-```c++
+```cpp
 //
 //   Request-reply service in C++
 //   Connects REP socket to tcp://localhost:5560
@@ -573,7 +576,7 @@ int main (int argc, char *argv[])
 ```
 
 **rrbroker: Request-reply broker**
-```c++
+```cpp
 //
 //  Simple request-reply broker in C++
 //
@@ -651,7 +654,7 @@ ZMQ提供了一些内置的装置，不过大多数人需要自己手动编写�
 
 可以使用zmq_device()来启动一个装置，需要传递两个套接字给它：
 
-```c++
+```cpp
 zmq_device(ZMQ_QUEUE, frontend, backend);
 ```
 
@@ -659,7 +662,7 @@ zmq_device(ZMQ_QUEUE, frontend, backend);
 
 **msgqueue: Message queue broker**
 
-```c++
+```cpp
 //
 //  Simple message queuing broker in C++
 //  Same as request-reply broker but using QUEUE device
@@ -701,7 +704,7 @@ int main (int argc, char *argv[])
 以下是多线程版的Hello World服务：
 
 **mtserver: Multithreaded service**
-```c++
+```cpp
 /*
     Multithreaded Hello World server in C++
 */
@@ -785,7 +788,7 @@ int main()
 
 下面这行代码就可以为套接字设置标识，从而建立了一个持久的套接字：
 
-```c++
+```cpp
 subscriber.setsockopt(ZMQ_IDENTITY, "Hello", 5);
 ```
 

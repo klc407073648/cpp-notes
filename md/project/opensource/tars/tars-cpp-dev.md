@@ -1,6 +1,8 @@
 # TarsCPP开发环境部署
 
-本节主要介绍Tars Cpp服务开发和编译时需要的开发环境。
+> 本节主要介绍Tars Cpp服务开发和编译时需要的开发环境。
+
+[[toc]]
 
 ## 参考资料
 
@@ -109,7 +111,7 @@ touch makefile
 
 同步与异步主要代码：
 
-```c++
+```cpp
 int iRet = prx->testHello(sReq, sRsp);
 cout<<"iRet:"<<iRet<<" sReq:"<<sReq<<" sRsp:"<<sRsp<<endl;
 
@@ -140,7 +142,7 @@ ServerConfig的成员变量都是静态的，在服务框架初始化时会自�
 
 在CalcImp中增加处理函数
 
-```C++
+```cpp
 bool CalcImp::setStr(const std::string& command, const std::string& params, std::string& result)
 {
 	TLOGDEBUG("CalcImp::setStr:"<<params<<endl);
@@ -157,7 +159,7 @@ bool CalcImp::showStr(const std::string& command, const std::string& params, std
 
 在CalcImp的初始化中注册函数：
 
-```C++
+```cpp
 void CalcImp::initialize()
 {
     //initialize servant here:
@@ -191,7 +193,7 @@ Hello 					/* servant for server */
 
 实际使用时，通过 通信器 Communicator 拿到代理对应的服务信息，然后进行调用。
 
-```c++
+```cpp
 Communicator comm;
 
     try

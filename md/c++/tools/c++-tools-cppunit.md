@@ -1,12 +1,15 @@
 # cppunit使用
 
+[[toc]]
+
+```bash
 cd /home/tools/cppunit/
 tar  -zxf cppunit-1.12.1.tar.gz
 cd ./cppunit-1.12.1/
 ./configure
 make
 make install
-
+```
 
 
 [root@VM-0-10-centos cppunit]# export LD_LIBRARY_PATH=/usr/local/lib

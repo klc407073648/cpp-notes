@@ -1,5 +1,7 @@
 # 第10章 系统级I/O
 
+[[toc]]
+
 # 参考资料
 
 * [《深入理解计算机系统》学习笔记整理（CSAPP 学习笔记）](https://www.cnblogs.com/xsqblogs/p/14688428.html)
@@ -38,7 +40,7 @@ Linux 内核使用 **Unix I/O 来作为处理文件的接口**，它以一种统
 
 对应函数如下：
 
-```c++
+```cpp
 int open(char *filename, int flags, mode_t mode); //若成功则返回文件描述符，若出错返回 -1
 int close(int fd); // fd 是一个文件描述符
 ssize_t read(int fd, void *buf, size_t n);          //若成功则返回读的字节数，若 EOF 则返回 0，若出错返回 -1
@@ -72,7 +74,7 @@ Linux 将所有的文件组织成一个目录层次结构，由**根目录 (/)**
 
 进程通过调用 **open 函数**打开一个已存在的文件或创建一个新文件。
 
-```c++
+```cpp
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
@@ -115,7 +117,7 @@ fd=open("foo.txt",O_CREAT|O_TRUNC|O_WRONLY,DEF_MODE)   //因此文件拥有者�
 
 进程通过 **close 函数**关闭一个打开的文件，关闭一个已关闭的描述符会出错。
 
-```c++
+```cpp
 #include <unistd.h>
 int close(int fd); // fd 是一个文件描述符
 ```
@@ -126,7 +128,7 @@ int close(int fd); // fd 是一个文件描述符
 
 应用程序通过调用 read 和 write 函数来执行输入和输出。
 
-```c++
+```cpp
 #include<unistd.h>
 ssize_t read(int fd, void *buf, size_t n);          //若成功则返回读的字节数，若 EOF 则返回 0，若出错返回 -1
 ssize_t write(int fd, const void *buf, size_t n);   //若成功返回写的字节数，若出错返回 -1
@@ -151,7 +153,7 @@ read 和 write 传送的字节少于 n （称为**不足值**）的情况：
 
 通过 stat 和 fstat 函数可以读取文件的元数据。
 
-```c++
+```cpp
 #include <sys/stat.h>
 #include <unistd.h>
 int stat(const char *filename, struct stat *buf);
@@ -176,7 +178,7 @@ Linux 在 sys/stat.h 中定义了宏谓词（谓词函数）来确定 st_mode �
 
 **opendir 函数**
 
-```c++
+```cpp
 #include<sys/types.h>
 #include<dirent.h>
 DIR *opendir(const char *name); //若成功，返回指向目录流的指针；若出错，返回 NULL
@@ -186,7 +188,7 @@ DIR *opendir(const char *name); //若成功，返回指向目录流的指针；�
 
 **readdir 函数**
 
-```c++
+```cpp
 #include<dirent.h>
 struct dirent *readdir(DIR *dirp);//若成功，返回指向下一个目录项的指针；若没有更多的目录项或出错，返回 NULL
 ```
@@ -197,7 +199,7 @@ struct dirent *readdir(DIR *dirp);//若成功，返回指向下一个目录项�
 
 每个目录项都是一个结构:
 
-```c++
+```cpp
 struct dirent{
     ino_t d_ino;//文件位置
     char d_name[256];//文件名
@@ -206,7 +208,7 @@ struct dirent{
 
 **closedir 函数**
 
-```c++
+```cpp
 #include<dirent.h>
 int closedir(DIR *dirp);
 ```
@@ -250,7 +252,7 @@ C 语言定义了一个**标准 I/O 库**，为程序员提供了 Unix I/O 的�
 
 标准 I/O 库将一个打开的文件模型化为一个流，一个流就是一个指向 FILE 类型的结构的指针。每个 ANSI C 程序开始时都有三个打开的流：stdin, stdout, stderr
 
-```c++
+```cpp
 #include<stdio.h>
 extern FILE *stdin;   //标准输入（描述符为0）
 extern FILE *stdout;  //标准输出（描述符为1）

@@ -1,12 +1,14 @@
 # log4cpp使用
 
-1.下载代码
+[[toc]]
+
+## 下载代码
 
 ```
 git clone https://git.code.sf.net/p/log4cpp/codegit log4cpp-codegit
 ```
 
-2.编译与安装
+## 编译与安装
 
 ```
 cd log4cpp-codegit/  
@@ -17,7 +19,7 @@ make check
 make install
 ```
 
-3.配置环境变量
+## 配置环境变量
 
 ```
 vi /etc/profile
@@ -27,12 +29,12 @@ export LD_LIBRARY_PATH
 
 source /etc/profile   使其生效
 ```
-4.测试代码
+## 测试代码
 
-4.1不使用配置文件的测试代码：
+### 不使用配置文件的测试代码：
 g++ test_main.cpp -o test_main -llog4cpp -lpthread
 
-```
+```cpp
 #include <log4cpp/Category.hh>
 #include <log4cpp/FileAppender.hh>
 #include <log4cpp/BasicLayout.hh>
@@ -75,9 +77,9 @@ int main()
 
 ```
 
-4.2:使用配置文件
+### 使用配置文件
 
-4.2.1配置内容：
+#### 配置内容：
 
 ```
 ############################## log4cpp.conf ########################################################
@@ -102,10 +104,9 @@ log4j.appender.A2.layout=org.apache.log4j.PatternLayout
 log4j.appender.A2.layout.ConversionPattern=The message '%m' at time %d%n 
 ##################################################################################################
 ```
-4.2.2测试代码：
+#### 测试代码：
 
-
-```
+```cpp
 #include <log4cpp/PropertyConfigurator.hh>
 #include <log4cpp/Category.hh>
 int main() {

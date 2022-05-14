@@ -1,5 +1,7 @@
 # Centos下mysql安装以及使用
 
+[[toc]]
+
 ## 参考资料
 
 * [centos7安装mysql5.7（rpm安装版）](https://www.cnblogs.com/helf/p/11244711.html)
@@ -8,7 +10,7 @@
 
 ## mysql下载以及安装
 
-```
+```bash
 wget http://repo.mysql.com/mysql57-community-release-el7-10.noarch.rpm
 
 rpm -Uvh mysql57-community-release-el7-10.noarch.rpm
@@ -29,7 +31,8 @@ yum install mysql-devel   解决mysql.h库
 ## rpm版本安装
 
 参考链接：
-```
+
+```bash
 tar -xvf mysql-5.7.33-1.el7.x86_64.rpm-bundle.tar
 rpm -ivh mysql-community-common-5.7.33-1.el7.x86_64.rpm
 rpm -ivh mysql-community-libs-5.7.33-1.el7.x86_64.rpm
@@ -37,7 +40,8 @@ rpm -ivh mysql-community-client-5.7.33-1.el7.x86_64.rpm
 rpm -ivh mysql-community-server-5.7.33-1.el7.x86_64.rpm (yum  install    numactl)
 rpm -ivh mysql-community-devel-5.7.33-1.el7.x86_64.rpm 
 ```
-```
+
+```bash
 mysql -u root -p
 vi  /etc/my.cnf
 systemctl restart mysqld.service

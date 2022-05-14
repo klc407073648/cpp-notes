@@ -1,19 +1,6 @@
 # C++11新特性
 
-## 目录
-
-* auto类型推导
-* decltype类型推导
-* 使用using 定义别名
-* 支持函数模板的默认模板参数
-* tuple元组
-* 列表初始化
-* lambda匿名函数
-* for循环
-* constexpr
-* 右值引用
-* nullptr
-* 
+[[toc]]
 
 ## auto类型推导
 
@@ -66,7 +53,7 @@ decltype(exp) varname;
 
 ### decltype 的实际应用
 
-```c++
+```cpp
 #include <vector>
 using namespace std;
 template <typename T>
@@ -102,7 +89,7 @@ private:
 
 C++11 的 using 写法只是 typedef 的等价物。
 
-```c++
+```cpp
 template <typename Val>
 using str_map_t = std::map<std::string, Val>;
 
@@ -127,7 +114,7 @@ void testUsing()
 
 C++11 支持为函数模板中的参数设置默认值，在实际使用过程中，我们可以选择使用默认值，也可以尝试由编译器自行推导得到，还可以亲自指定各个模板参数的类型。
 
-```c++
+```cpp
 template <typename R = int, typename T, typename U>
 R func(T v1,U v2)
 {
@@ -152,7 +139,7 @@ tuple 最大的特点是：<font color='red'>实例化的对象可以存储任�
 
 tuple 的应用场景很广泛，例如当需要存储多个不同类型的元素时，可以使用 tuple；当函数需要返回多个数据时，可以将这些数据存储在 tuple 中，函数只需返回一个 tuple 对象即可。
 
-```c++
+```cpp
 void testTuple()
 {
     std::tuple<int, char> first;                             // 1)   first{}
@@ -175,7 +162,7 @@ void testTuple()
 
 在 C++11 中，初始化列表的适用性被大大增加了。它现在可以用于任何类型对象的初始化，请看下面的代码。
 
-```c++
+```cpp
 class Foo
 {
 public:
@@ -231,7 +218,7 @@ C++11 标准终于引入了 lambda，本节将带领大家系统地学习 lambda
 
  C++ 11 标准为 for 循环添加了一种全新的语法格式，如下所示：
 
-```c++
+```cpp
 for (declaration : expression){
     //循环体
 }
@@ -239,7 +226,7 @@ for (declaration : expression){
 
 示例：
 
-```c++
+```cpp
 void testForLoop()
 {
     char arc[] = "abcdefg";
@@ -263,7 +250,7 @@ constexpr 关键字的功能是<font color='red'>使指定的常量表达式获�
 
 C++11 标准中，定义变量时可以用 constexpr 修饰，从而使该变量获得在编译阶段即可计算出结果的能力。
 
-```c++
+```cpp
 constexpr int num = 1 + 2 + 3;
 int url[num] = {1,2,3,4,5,6};
 cout<< url[1] << endl;
@@ -277,7 +264,7 @@ lvalue 是“loactor value”的缩写，可意为存储在内存中、有明确
 
 和声明左值引用一样，右值引用也<font color='red'>必须立即进行初始化操作，且只能使用右值进行初始化。</font>
 
-```c++
+```cpp
 int num = 10;
 //int && a = num;  //右值引用不能初始化为左值
 int && a = 10;
@@ -289,7 +276,7 @@ cout << a << endl;
 
 C++11最重要的一个改进之一就是引入了move语义，这样在一些对象的构造时可以获取到已有的资源（如内存）而不需要通过拷贝，申请新的内存，这样移动而非拷贝将会大幅度提升性能。
 
-```c++
+```cpp
 //-fno-elide-constructions 关闭了g++编译器会省略函数返回值时临时对象的拷贝的优化。
 class demo{
 public:
@@ -334,7 +321,7 @@ void testMove()
 
 完美转发：函数模板可以将自己的参数“完美”地转发给内部调用的其它函数。所谓完美，即不仅能准确地转发参数的值，还能保证被转发参数的左、右值属性不变。
 
-```c++
+```cpp
 //重载被调用函数，查看完美转发的效果
 void otherdef(int & t) {
     cout << "lvalue\n";
@@ -366,7 +353,7 @@ void testForward(){
 
 C++11 标准下，相比 NULL 和 0，使用 nullptr 初始化空指针可以令我们编写的程序更加健壮。
 
-```c++
+```cpp
 void isnull(void *c){
     cout << "void*c" << endl;
 }

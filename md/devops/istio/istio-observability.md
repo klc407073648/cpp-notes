@@ -1,5 +1,7 @@
 # 可观察性
 
+[[toc]]
+
 # Grafana
 
 Grafana 是一款<font color='red'>开源的指标数据可视化工具，有着功能齐全的度量仪表盘、图表等时序数据展示面板</font>，支持 Zabbix、InfluentDB、Prometheus、Elasticsearch、MySQL 等数据源的指标展示，详情查看：[Grafana 支持的数据源类型](https://grafana.com/docs/grafana/latest/features/datasources/#supported-data-sources/)。

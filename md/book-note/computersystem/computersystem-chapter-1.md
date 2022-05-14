@@ -1,5 +1,7 @@
 # 第1章 计算机系统漫游
 
+[[toc]]
+
 # 参考资料
 
 * [《深入理解计算机系统》学习笔记整理（CSAPP 学习笔记）](https://www.cnblogs.com/xsqblogs/p/14688428.html)
@@ -8,7 +10,7 @@
 
 通过跟踪hello程序的生命周期来开始对系统的学习。
 
-```c
+```cpp
 #include<stdio.h>
 
 int main()

@@ -1,5 +1,7 @@
 # gitbook使用
 
+[[toc]]
+
 # 参考资料
 
 * [简单实用 | 用Gitbook做笔记 / 写书过程全记录](https://blog.csdn.net/weixin_41024483/article/details/100090621)

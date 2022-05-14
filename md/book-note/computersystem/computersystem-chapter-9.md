@@ -1,5 +1,7 @@
 # 第9章 虚拟内存
 
+[[toc]]
+
 # 参考资料
 
 * [《深入理解计算机系统》学习笔记整理（CSAPP 学习笔记）](https://www.cnblogs.com/xsqblogs/p/14688428.html)
@@ -345,7 +347,7 @@ execve函数在当前进程中加载并运行包含在可执行目标文件a.out
 
 Linux程序可以使用mmap函数来创建新的虚拟内存区域，并将对象映射到这些区域中。
 
-```c++
+```cpp
 #include <unistd.h>
 #include <sys/mman.h>
 void* **mmap**(void* start, size_t length, int prot, int flags, int fd, off_t offset) ;
@@ -379,7 +381,7 @@ mmap函数要求内核创建一个新的虚拟存储器区域，最好是从地�
 
 例如：
 
-```c++
+```cpp
 bufp = mmap(-1, size, PROT_READ, MAP_PRIVATE | MAP_ANON, 0, 0) ;
 ```
 
@@ -387,7 +389,7 @@ bufp = mmap(-1, size, PROT_READ, MAP_PRIVATE | MAP_ANON, 0, 0) ;
 
 munmap函数删除虚拟内存区域：
 
-```c++
+```cpp
 #include <unistd.h>
 #include <sys/mman.h>
 int munmap(void* start, size_t length) ;
@@ -477,7 +479,7 @@ C语言使用Mark & Sweep 垃圾收集器来处理的时候是必须保守的，
 
 **经典的scanf错误**
 
-```c++
+```cpp
  scanf("%d", val); //经典的 scanf 错误：试图将一个字写到 val 的值表示的地址处。                  
 ```
 
@@ -493,7 +495,7 @@ bss 段（如未初始化的全局变量）总是被加载器初始化为 0，�
 
 如果不检查输入串的大小就写到栈中的目标缓冲区就可能导致缓冲区溢出错误。
 
-```c++
+```cpp
 gets(buf);  //可能发生缓冲区溢出错误
 fgets(buf); //fgets 限制了输入串的大小，避免了上述错误  
 ```

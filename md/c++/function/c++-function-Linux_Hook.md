@@ -1,12 +1,12 @@
 # Linux系统调用Hook
 
+[[toc]]
+
 # 参考资料
 
-[Linux系统调用Hook姿势总结](https://blog.csdn.net/tianxuhong/article/details/50974400)
-
-[LD_PRELOAD用法](https://www.cnblogs.com/saolv/p/9761371.html)
-
-[动态链接库dlopen的函数的使用](https://blog.csdn.net/woyebuzhidao888/article/details/46634591)
+* [Linux系统调用Hook姿势总结](https://blog.csdn.net/tianxuhong/article/details/50974400)
+* [LD_PRELOAD用法](https://www.cnblogs.com/saolv/p/9761371.html)
+* [动态链接库dlopen的函数的使用](https://blog.csdn.net/woyebuzhidao888/article/details/46634591)
 
 # 系统调用Hook简介
 
@@ -47,7 +47,7 @@ Linux用的C语言库使用的是glibc，存在一个libc.so.6的文件。默认
 
 正常程序main.c:
 
-```c++
+``` cpp
 #include <stdio.h>
 #include <string.h>
 
@@ -67,7 +67,7 @@ int main(int argc, char *argv[])
 
 用于劫持函数的.so代码hook.c:
 
-```c++
+``` cpp
 #include <stdio.h>
 #include <string.h>
 #include <dlfcn.h>

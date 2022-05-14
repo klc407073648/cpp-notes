@@ -1,10 +1,12 @@
 # C++11特性:bind和function函数使用
 
+[[toc]]
+
 ## std::bind
 
 std::bind 的函数原型: 
 
-```c++
+``` cpp
 simple(1): 	
 template <class Fn, class... Args>
   /* unspecified */ bind (Fn&& fn, Args&&... args);
@@ -33,7 +35,7 @@ template <class Ret, class Fn, class... Args>
 [bindTest.cpp](./src/functionAndbind/bindTest.cpp)
 
 执行结果: 
-```
+```bash
 [root@192 function和bind函数学习]# ./bindTest
 fn_five(): 5
 fn_half(10): 5
@@ -55,7 +57,7 @@ bound_member_fn_add(30,50): 80
 [functionTest.cpp](./src/functionAndbind/functionTest.cpp)
 
 执行结果: 
-```
+```bash
 [root@192 function和bind函数学习]# ./functionTest
 fun1 add:15
 fun2 sub():5

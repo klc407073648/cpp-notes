@@ -1,32 +1,6 @@
 # C++知识
 
-## 参考资料
-
-## 目录
-
-TortoiseGit小乌龟 + git 实现版本管理
-
-* [1. 基类析构函数为什么要定义为虚函数？](#-基类析构函数为什么要定义为虚函数？)
-* [2. 深拷贝和浅拷贝](#-深拷贝和浅拷贝)
-* [3. new与malloc有什么区别？](#-new与malloc有什么区别？)
-* [4. C++重载、重定义、重写的区别](#-C++重载、重定义、重写的区别)
-* [5. 构造函数和析构函数能否重载？](#-构造函数和析构函数能否重载？)
-* [6. c++如何避免内存泄漏](#-c++如何避免内存泄漏)
-* [7. const](#-const)
-* [8. C++中指针和引用的区别](#-C++中指针和引用的区别)
-* [9. 拷贝构造函数的参数类型必须是引用](#-拷贝构造函数的参数类型必须是引用)
-* [10. 为什么内联函数，构造函数，静态成员函数不能为virtual函数？](#-为什么内联函数，构造函数，静态成员函数不能为virtual函数？)
-* [11. 迭代器失效的场景](#-迭代器失效的场景)
-* [12. C++虚函数表和虚函数指针机制](#-C++虚函数表和虚函数指针机制)
-* [13. C++中类成员的访问权限](#-C++中类成员的访问权限)
-* [14. C++class和struct有什么区别](#-C++class和struct有什么区别)
-* [15. C/C++源文件生成可执行文件过程](#-C/C++源文件生成可执行文件过程)
-* [16. C++，什么是右值引用，跟左值有什么区别？](#-C++，什么是右值引用，跟左值有什么区别？)
-* [17. include头文件的顺序以及双引号””和尖括号的区别？](#-include头文件的顺序以及双引号””和尖括号的区别？)
-* [18. 什么时候会发生段错误](#-什么时候会发生段错误)
-* [19. C++STL的内存优化](#-C++STL的内存优化)
-* [20. C++互斥锁、自旋锁、读写锁、悲观锁、乐观锁的应用场景](#-C++互斥锁、自旋锁、读写锁、悲观锁、乐观锁的应用场景)
-
+[[toc]]
 
 ## C++问题记录
 
@@ -55,7 +29,7 @@ TortoiseGit小乌龟 + git 实现版本管理
 举例如下: 
 如果CA(const CA& C) 中没有使用str=new char[a]进行深拷贝，return 0的时候，调用B的析构函数释放char *str的内容，再次调用A的析构函数就会
 报错。
-```c++
+```cpp
 #include <iostream>
 using namespace std;
 class CA
@@ -177,7 +151,7 @@ double Add( double a , double b )
 
 ```
 
-```c++
+```cpp
 class A
 {
 public :
@@ -348,7 +322,7 @@ https://zhuanlan.zhihu.com/p/30996101
 
 对于序列式容器，例如vector、deque；由于序列式容器是组合式容器，当当前元素的iterator被删除后，其后的所有元素的迭代器都会失效，这是因为vector，deque都是连续存储的一段空间，所以当对其进行erase操作时，其后的每一个元素都会向前移一个位置。
 
-```c++
+```cpp
 #include<iostream>
 #include<vector>
 
@@ -386,7 +360,7 @@ int main()
 给出的报错信息是: vector iterator not incrementable.
 
 已经失效的迭代器不能进行++操作，所以程序中断了。不过vector的erase操作可以返回下一个有效的迭代器，所以只要我们每次执行删除操作的时候，将下一个有效迭代器返回就可以顺利执行后续操作了，代码修改如下: 
-```c++
+```cpp
 void vectorTest()
 {
     vector<int> vec;
@@ -429,7 +403,7 @@ deque迭代器失效总结:
 
 对于关联容器(如map, set,multimap,multiset)，删除当前的iterator，仅仅会使当前的iterator失效，只要在erase时，递增当前iterator即可。这是因为map之类的容器，使用了红黑树来实现，插入、删除一个结点不会对其他结点造成影响。erase迭代器只是被删元素的迭代器失效，但是返回值为void，所以要采用erase(iter++)的方式删除迭代器。
 
-```c++
+```cpp
 void mapTest()
 {
     map<int, int>m;
@@ -454,7 +428,7 @@ int main()
 
 ```
 修改后:
-```c++
+```cpp
     void mapTest()
 {
     map<int, int>m;
@@ -501,7 +475,7 @@ C1虚函数表里面的内容是:
 
 ![C2](/_images/interview/C++知识/C2.png)
 
-```C++
+```cpp
 pc1->f1();
 
 //编译器处理后
@@ -696,7 +670,7 @@ STL内存管理使用二级内存配置器。
 
 模板的声明
 
-```c++
+```cpp
 // 类模板
 template <class T1, class T2>
 class A{
@@ -712,7 +686,7 @@ T max(const T lhs, const T rhs){
 ```
 
 全特化
-```c++
+```cpp
 // 全特化类模板
 template <>
 class A<int, double>{
@@ -729,7 +703,7 @@ int max(const int lhs, const int rhs){
 注意类模板的全特化时在类名后给出了"模板实参"，但函数模板的函数名后没有给出"模板实参"。 这是因为编译器根据int max(const int, const int)的函数签名可以推导出来它是T max(const T, const T)的特化。
 
 特化的歧义:
-```c++
+```cpp
 template <class T>
 void f(){ T d; }
 
@@ -748,7 +722,7 @@ void f<int>(){ int d; }
 ```
 
 偏特化
-```c++
+```cpp
 template <class T2>
 class A<int, T2>{
     ...
@@ -769,7 +743,7 @@ reinterpret_cast | 仅重新解释类型，但没有进行二进制的转换
 ### const_cast
 通常被用来将对象的常量性移除，它也是唯一有此能力的C++-style转型操作符
 
-```c++
+```cpp
 class C{};
 const C* a = new C;
 C* b = const_cast<C*>(a);
@@ -782,7 +756,7 @@ C* b = const_cast<C*>(a);
 * 无法将const转为non-const，这个只有const-cast才可办到
 
 
-```c++
+```cpp
 int n = 6;
 double d = static_cast<double>(n);    
 
@@ -801,7 +775,7 @@ Derived* b = static_cast<Derived*>(a);//把父类指针转换为子类指针,但
 * 不过，与static_cast不同的是在隐式转换的相反过程中，dynamic_cast会检查操作是否有效，它会检查转换是否会返回一个被请求的有效的完整对象。检查在运行时进行，如果被转换的指针不是一个被请求的有效完整的对象指针，返回值为NULL;
 
 
-```c++
+```cpp
 class Base{
 public:
     virtual dummy(){}
@@ -820,7 +794,7 @@ Deriver* d2 = dynamic_cast<Derived>(b2);//失败，返回NULL
 
 reinterpert_cast意图执行低级转换，实际动作（及结果）可能取决于编译器，这也就表示它不可移植。例如将一个 pointer to int 转型为一个 int ，这一类型在底层代码以外很少见。
 
-```c++
+```cpp
 class A{};
 class B{};
 

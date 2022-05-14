@@ -1,8 +1,9 @@
 # Istio
 
-istio是kubernetes好帮手，可以帮kubernetes实现服务治理功能。
+> istio是kubernetes好帮手，可以帮kubernetes实现服务治理功能。
+> kubernetes可以帮助istio实现
 
-kubernetes可以帮助istio实现
+[[toc]]
 
 * 数据平面
   * 利用一个pod可以运行多个容器的特点，实现数据平面功能

@@ -1,5 +1,7 @@
 # istio 安装
 
+[[toc]]
+
 ## 参考资料
 
 * [istio-handbook](https://www.servicemesher.com/istio-handbook/practice/setup-istio.html)

@@ -1,5 +1,5 @@
 {
-  "name": "tech-arch-doc",
+  "name": "cpp-notes",
   "version": "2.0.1",
   "private": true,
   "scripts": {
@@ -9,6 +9,10 @@
   "devDependencies": {
     "@vuepress/plugin-back-to-top": "^1.0.3",
     "@vuepress/plugin-medium-zoom": "^1.0.4",
-    "vuepress": "^1.0.2"
+    "vuepress": "^1.0.2",
+    "vuepress-plugin-container": "^2.1.5"
+  },
+  "dependencies": {
+    "vuepress-plugin-code-copy": "^1.0.6"
   }
 }

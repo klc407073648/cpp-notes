@@ -1,6 +1,8 @@
 # elasticsearch与mysql之间的数据同步
 
-主要介绍elasticsearch与mysql之间的数据同步。
+> 主要介绍elasticsearch与mysql之间的数据同步。
+
+[[toc]]
 
 # 参考资料
 

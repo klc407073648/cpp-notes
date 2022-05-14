@@ -1,5 +1,7 @@
 # Robot Framework自动化测试框架搭建
 
+[[toc]]
+
 # 参考资料
 
 * [Python3+RIDE+Robot Framework自动化测试框架搭建](https://www.cnblogs.com/panda-sweets/p/13641269.html)

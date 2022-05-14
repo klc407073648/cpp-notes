@@ -1,9 +1,11 @@
 # hiredis使用
 
-1.hiredis下载
+[[toc]]
+
+## hiredis下载
 https://github.com/redis/hiredis/releases    下载最新版本hiredis-0.14.1.tar.gz
 
-2.安装hiredis
+## 安装hiredis
 
 ssh 远程登录虚机，将下载的版本包放置指定目录
 ```
@@ -14,7 +16,7 @@ make
 make install //将.h和.so拷贝到指定路径下，便于调用
 ```
 
-3.测试能否正常使用
+## 测试能否正常使用
 
 首先执行
 ```

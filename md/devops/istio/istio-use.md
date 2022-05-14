@@ -1,6 +1,8 @@
 # istio 使用
 
-Bookinfo 是 [Istio](https://www.servicemesher.com/istio-handbook/GLOSSARY.html#istio) 社区官方推荐的示例应用之一。它可以用来演示多种 [Istio](https://www.servicemesher.com/istio-handbook/GLOSSARY.html#istio) 的特性，并且它是一个异构的微服务应用。该应用由四个单独的微服务构成。 这个应用模仿了在线书店，可以展示书店中书籍的信息。例如页面上会显示一本书的描述，书籍的细节（ ISBN、页数等），以及关于这本书的一些评论。
+> Bookinfo 是 [Istio](https://www.servicemesher.com/istio-handbook/GLOSSARY.html#istio) 社区官方推荐的示例应用之一。它可以用来演示多种 [Istio](https://www.servicemesher.com/istio-handbook/GLOSSARY.html#istio) 的特性，并且它是一个异构的微服务应用。该应用由四个单独的微服务构成。 这个应用模仿了在线书店，可以展示书店中书籍的信息。例如页面上会显示一本书的描述，书籍的细节（ ISBN、页数等），以及关于这本书的一些评论。
+
+[[toc]]
 
 Bookinfo 应用分为四个单独的微服务， 这些服务对 [Istio](https://www.servicemesher.com/istio-handbook/GLOSSARY.html#istio) 并无依赖，但是构成了一个有代表性的服务网格的例子：它由多个不同语言编写的服务构成，并且其中有一个应用会包含多个版本。
 
