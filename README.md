@@ -30,15 +30,15 @@ C++ 知识碎片化, 容易遗忘, 想建立一个博客记录学习的知识内
 
 项目首页:
 
-![网站首页](/_images/网站首页.png)
+![网站首页](https://github.com/klc407073648/cpp-notes/tree/master/.vuepress/public/_images/网站首页.png)
 
 微服务框架:
 
-![网站首页](/_images/微服务框架.png)
+![网站首页](https://github.com/klc407073648/cpp-notes/tree/master/.vuepress/public/_images/微服务框架.png)
 
 读书笔记:
 
-![网站首页](/_images/读书笔记.png)
+![网站首页](https://github.com/klc407073648/cpp-notes/tree/master/.vuepress/public/_images/读书笔记.png)
 
 ## 技术栈
 

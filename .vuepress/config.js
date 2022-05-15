@@ -103,7 +103,7 @@ module.exports = {
                             {text: '数据结构与算法', link: '/md/programming/network/network-physical.md'},
                             {text: '计算机网络', link: '/md/programming/network/network-physical.md'},
                             {text: '操作系统', link: '/md/programming/network/network-physical.md'},
-                            {text: '设计模式', link: '/md/programming/network/network-physical.md'}
+                            {text: '设计模式', link: '/md/programming/designpattern/designpattern-overview'}
                         ]
                     },
                     {
@@ -195,6 +195,12 @@ module.exports = {
                                 items: [
                                     {text: 'STL源码剖析 详解', link: '/md/book-note/stlsource/stlsource-chapter-1.md'}
                                 ]
+                            },
+                            {
+                                text: 'Linux多线程服务端编程——使用muduo C++ 网络库',
+                                items: [
+                                    {text: 'Linux多线程服务端编程——使用muduo C++ 网络库 详解', link: '/md/book-note/muduo/muduo-chapter-1.md'}
+                                ]
                             }
                         ]
                     },
@@ -214,6 +220,12 @@ module.exports = {
                         text: '其他(待整理)', 
                         items: [
                             {text: '其他', link: '/md/other/todo.md'}
+                        ]
+                    },
+                    {
+                        text: 'ToDo 清单', 
+                        items: [
+                            {text: 'ToDo 清单', link: '/md/todo/todo.md'}
                         ]
                     },
                     {
@@ -396,6 +408,17 @@ function genSidebar4Program(){
                 "network/network-application.md",
                 "network/network-concept.md"              
             ]
+        },
+        {
+            title: "设计模式",
+            collapsable: false,
+            sidebarDepth: 0, 
+            children: [
+                "designpattern/designpattern-overview.md",
+                "designpattern/designpattern-singleton.md",
+                "designpattern/designpattern-observer.md",
+                "designpattern/designpattern-factory.md"             
+            ]
         }
     ];
      
@@ -464,6 +487,10 @@ function genSidebar4Devops(){
             collapsable: false,
             sidebarDepth: 0, 
             children: [
+                "linux/linux-signal.md", 
+                "linux/linux-thread.md",
+                "linux/linux-process.md", 
+                "linux/linux-process-thread-syn.md",
                 "linux/linux-cmd-tips.md", 
                 "linux/linux-output-with-color.md"
             ]
@@ -656,6 +683,26 @@ function genSidebar4booknote(){
                 "stlsource/stlsource-chapter-6-2.md",
                 "stlsource/stlsource-chapter-7.md",
                 "stlsource/stlsource-chapter-8.md"       
+            ]
+        },
+        {
+            title: "Linux多线程服务端编程——使用muduo C++ 网络库 详解",
+            collapsable: false,
+            sidebarDepth: 0, 
+            children: [
+                "muduo/muduo-chapter-1.md",
+                "muduo/muduo-chapter-2.md",
+                "muduo/muduo-chapter-3.md",
+                "muduo/muduo-chapter-4.md",
+                "muduo/muduo-chapter-5.md",
+                "muduo/muduo-chapter-6.md",
+                "muduo/muduo-chapter-7.md",
+                "muduo/muduo-chapter-8.md",
+                "muduo/muduo-chapter-9.md",
+                "muduo/muduo-chapter-10.md",
+                "muduo/muduo-chapter-11.md",
+                "muduo/muduo-chapter-12.md",
+                "muduo/muduo-chapter-13.md"     
             ]
         }
     ];
