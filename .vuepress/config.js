@@ -11,7 +11,7 @@ module.exports = {
         },
         anchor: { permalink: false }, // markdown-it-anchor 
         toc: {
-            includeLevel:[1, 2, 3, 4]  // markdown-it-toc 生成markdown目录层次
+            includeLevel: [1, 2, 3, 4]  // markdown-it-toc 生成markdown目录层次
         }
     },
     locales: {
@@ -21,21 +21,21 @@ module.exports = {
             description: "包含：C++ 基础, 算法, 数据库,MySQL, ElasticSearch, Redis, 编程四大件, 微服务 , 中间件, ZeroMQ, 部署工具, Docker, k8s, Istio, Linux, 实践|项目,  开源项目, 个人项目, 读书笔记, 面试题, 优质文章, 博客推荐..."
         }
     },
-    head: [["link", {rel: "icon", href: `/favicon.ico`}]],
+    head: [["link", { rel: "icon", href: `/favicon.ico` }]],
     plugins: [
         ['@vuepress/back-to-top', true],
-        ['vuepress-plugin-code-copy',true],
+        ['vuepress-plugin-code-copy', true],
         ['@vuepress/medium-zoom', {
             selector: 'img',
             options: {
-              margin: 16
+                margin: 16
             }
         }]
     ],
     themeConfig: {
         docsRepo: "stibel/cpp-notes",
         editLinks: true,
-        sidebarDepth:0,
+        sidebarDepth: 0,
         locales: {
             "/": {
                 label: "简体中文",
@@ -49,25 +49,25 @@ module.exports = {
                             {
                                 text: 'C++ 函数学习',
                                 items: [
-                                    {text: '函数学习', link: '/md/c++/function/c++-function-functionAndbind.md'}
+                                    { text: '函数学习', link: '/md/c++/function/c++-function-functionAndbind.md' }
                                 ]
                             },
                             {
                                 text: 'C++ 知识点',
                                 items: [
-                                    {text: '知识点', link: '/md/c++/tips/c++-tips-copy-on-write.md'}
+                                    { text: '知识点', link: '/md/c++/tips/c++-tips-copy-on-write.md' }
                                 ]
                             },
                             {
                                 text: 'C++ IO框架',
                                 items: [
-                                    {text: 'IO框架 详解', link: '/md/c++/io/c++-io-reuse.md'}
+                                    { text: 'IO框架 详解', link: '/md/c++/io/c++-io-reuse.md' }
                                 ]
                             },
                             {
                                 text: 'C++ 常用库学习',
                                 items: [
-                                    {text: '常用库学习 详解', link: '/md/c++/tools/c++-tools-cppcheck.md'}
+                                    { text: '常用库学习 详解', link: '/md/c++/tools/c++-tools-cppcheck.md' }
                                 ]
                             }
                         ]
@@ -75,8 +75,8 @@ module.exports = {
                     {
                         text: '算法',
                         items: [
-                            {text: '领域算法', link: '/md/algorithm/domain/alg-domain-bloom-filter.md'},
-                            {text: '分布式算法', link: '/md/algorithm/distribute/alg-distribute-raft.md'},
+                            { text: '领域算法', link: '/md/algorithm/domain/alg-domain-bloom-filter.md' },
+                            { text: '分布式算法', link: '/md/algorithm/distribute/alg-distribute-raft.md' },
                         ]
                     },
                     {
@@ -85,14 +85,14 @@ module.exports = {
                             {
                                 text: 'SQL 数据库',
                                 items: [
-                                    {text: 'MySQL', link: '/md/database/mysql/mysql-basic-concept.md'}
+                                    { text: 'MySQL', link: '/md/database/mysql/mysql-basic-concept.md' }
                                 ]
                             },
                             {
                                 text: 'NoSQL 数据库',
                                 items: [
-                                    {text: 'Redis', link: '/md/database/redis/redis-basic-application.md'},
-                                    {text: 'ElasticSearch', link: '/md/database/es/es-install.md'}
+                                    { text: 'Redis', link: '/md/database/redis/redis-basic-application.md' },
+                                    { text: 'ElasticSearch', link: '/md/database/es/es-install.md' }
                                 ]
                             }
                         ]
@@ -100,28 +100,28 @@ module.exports = {
                     {
                         text: '编程四大件',
                         items: [
-                            {text: '数据结构与算法', link: '/md/programming/network/network-physical.md'},
-                            {text: '计算机网络', link: '/md/programming/network/network-physical.md'},
-                            {text: '操作系统', link: '/md/programming/network/network-physical.md'},
-                            {text: '设计模式', link: '/md/programming/designpattern/designpattern-overview'}
+                            { text: '数据结构与算法', link: '/md/programming/network/network-physical.md' },
+                            { text: '计算机网络', link: '/md/programming/network/network-physical.md' },
+                            { text: '操作系统', link: '/md/programming/network/network-physical.md' },
+                            { text: '设计模式', link: '/md/programming/designpattern/designpattern-overview' }
                         ]
                     },
                     {
                         text: '开发',
                         items: [
-                            {text: '开发', link: '/md/develop/todo.md'},
+                            { text: '开发', link: '/md/develop/todo.md' },
                         ]
                     },
                     {
                         text: '微服务',
                         items: [
-                            {text: '微服务框架', link: '/md/micro-services/frame/frame-architecture.md'}
+                            { text: '微服务框架', link: '/md/micro-services/frame/frame-architecture.md' }
                         ]
                     },
                     {
                         text: '架构|中间件',
                         items: [
-                            {text: 'ZeroMQ', link: '/md/middleware/zeromq/zeromq-demo.md'}
+                            { text: 'ZeroMQ', link: '/md/middleware/zeromq/zeromq-demo.md' }
                         ]
                     },
                     {
@@ -130,76 +130,76 @@ module.exports = {
                             {
                                 text: '工具',
                                 items: [
-                                    {text: 'Linux', link: '/md/devops/linux/linux-cmd-tips.md'},
-                                    {text: 'Nginx', link: '/md/devops/nginx/nginx-study-note.md'},
+                                    { text: 'Linux', link: '/md/devops/linux/linux-cmd-tips.md' },
+                                    { text: 'Nginx', link: '/md/devops/nginx/nginx-study-note.md' },
                                 ]
                             },
                             {
                                 text: '部署',
                                 items: [
-                                    {text: 'Docker', link: '/md/devops/docker/docker.md'},
-                                    {text: 'Kubernetes', link: '/md/devops/k8s/k8s.md'},
-                                    {text: 'Service Mesh Istio', link: '/md/devops/istio/istio-basic.md'},
+                                    { text: 'Docker', link: '/md/devops/docker/docker.md' },
+                                    { text: 'Kubernetes', link: '/md/devops/k8s/k8s.md' },
+                                    { text: 'Service Mesh Istio', link: '/md/devops/istio/istio-basic.md' },
                                 ]
                             }
                         ]
                     },
                     {
-                        text: '实践|项目', 
+                        text: '实践|项目',
                         items: [
                             {
                                 text: '实践',
                                 items: [
-                                    {text: 'Docker-MySQL', link: '/md/project/practice/Docker-MySQL.md'}
+                                    { text: 'Docker-MySQL', link: '/md/project/practice/Docker-MySQL.md' }
                                 ]
                             },
                             {
                                 text: '开源项目学习',
                                 items: [
-                                    {text: '开源协程库 libco', link: '/md/project/opensource/libco/libco.md'},
-                                    {text: 'buttonrpc', link: '/md/project/opensource/buttonrpc/buttonrpc-basic.md'},
-                                    {text: 'Tars', link: '/md/project/opensource/tars/tars-brief.md'}
+                                    { text: '开源协程库 libco', link: '/md/project/opensource/libco/libco.md' },
+                                    { text: 'buttonrpc', link: '/md/project/opensource/buttonrpc/buttonrpc-basic.md' },
+                                    { text: 'Tars', link: '/md/project/opensource/tars/tars-brief.md' }
                                 ]
                             },
                             {
                                 text: '个人github项目总结',
                                 items: [
-                                    {text: 'build_lib', link: '/md/project/person/build_lib/build_lib.md'}
+                                    { text: 'build_lib', link: '/md/project/person/build_lib/build_lib.md' }
                                 ]
                             }
                         ]
                     },
                     {
-                        text: '读书笔记', 
+                        text: '读书笔记',
                         items: [
                             {
                                 text: '深入理解计算机系统',
                                 items: [
-                                    {text: '深入理解计算机系统 详解', link: '/md/book-note/computersystem/computersystem-chapter-1.md'}
+                                    { text: '深入理解计算机系统 详解', link: '/md/book-note/computersystem/computersystem-chapter-1.md' }
                                 ]
                             },
                             {
                                 text: '重构改善既有代码的设计',
                                 items: [
-                                    {text: '重构改善既有代码的设计 详解', link: '/md/book-note/refactor/refactor-chapter-1.md'}
+                                    { text: '重构改善既有代码的设计 详解', link: '/md/book-note/refactor/refactor-chapter-1.md' }
                                 ]
                             },
                             {
                                 text: 'Effective C++:改善程序与设计的55个具体做法',
                                 items: [
-                                    {text: 'Effective C++:改善程序与设计的55个具体做法 详解', link: '/md/book-note/effectivecpp/effectivecpp-chapter-2-1.md'}
+                                    { text: 'Effective C++:改善程序与设计的55个具体做法 详解', link: '/md/book-note/effectivecpp/effectivecpp-chapter-2-1.md' }
                                 ]
                             },
                             {
                                 text: 'STL源码剖析',
                                 items: [
-                                    {text: 'STL源码剖析 详解', link: '/md/book-note/stlsource/stlsource-chapter-1.md'}
+                                    { text: 'STL源码剖析 详解', link: '/md/book-note/stlsource/stlsource-chapter-1.md' }
                                 ]
                             },
                             {
                                 text: 'Linux多线程服务端编程——使用muduo C++ 网络库',
                                 items: [
-                                    {text: 'Linux多线程服务端编程——使用muduo C++ 网络库 详解', link: '/md/book-note/muduo/muduo-chapter-1.md'}
+                                    { text: 'Linux多线程服务端编程——使用muduo C++ 网络库 详解', link: '/md/book-note/muduo/muduo-chapter-1.md' }
                                 ]
                             }
                         ]
@@ -207,37 +207,50 @@ module.exports = {
                     {
                         text: '面试',
                         items: [
-                            {text: '面试题', link: '/md/interview/cplusplus-knowledge.md'}
+                            {
+                                text: '八股文',
+                                items: [
+                                    { text: '八股文 详解', link: '/md/interview/knowledge/cplusplus-knowledge.md' }
+                                ]
+                            },
+                            {
+                                text: 'LeetCode编程题',
+                                items: [
+                                    { text: '数据结构', link: '/md/interview/code/data-structure/data-structure-overview.md' },
+                                    { text: '刷题套路', link: '/md/interview/code/question-routine/question-routine-backtrack.md' },
+                                    { text: '题型分类', link: '/md/interview/code/question-type/question-type-array.md' }
+                                ]
+                            }
                         ]
                     },
                     {
                         text: '优质文章|博客推荐',
                         items: [
-                            {text: '分布式相关', link: '/md/article/distribute/article-distributed-cellular.md'}
+                            { text: '分布式相关', link: '/md/article/distribute/article-distributed-cellular.md' }
                         ]
                     },
                     {
-                        text: '其他(待整理)', 
+                        text: '其他(待整理)',
                         items: [
-                            {text: '其他', link: '/md/other/todo.md'}
+                            { text: '其他', link: '/md/other/todo.md' }
                         ]
                     },
                     {
-                        text: 'ToDo 清单', 
+                        text: 'ToDo 清单',
                         items: [
-                            {text: 'ToDo 清单', link: '/md/todo/todo.md'}
+                            { text: 'ToDo 清单', link: '/md/todo/todo.md' }
                         ]
                     },
                     {
                         text: '专业知识',
                         items: [
-                            {text: '专业知识', link: '/md/knowledge/todo.md'}
+                            { text: '专业知识', link: '/md/knowledge/todo.md' }
                         ]
                     },
                     {
                         text: '在线技术文档',
                         items: [
-                            {text: '官网技术文档', link: '/md/tech-doc/online/doc.md'}
+                            { text: '官网技术文档', link: '/md/tech-doc/online/doc.md' }
                         ]
                     },
                     {
@@ -273,9 +286,9 @@ function genSidebar4Cplusplus() {
         {
             title: "C++ 函数学习",
             collapsable: false,
-            sidebarDepth: 0, 
+            sidebarDepth: 0,
             children: [
-                "function/c++-function-functionAndbind.md", 
+                "function/c++-function-functionAndbind.md",
                 "function/c++-function-Linux_Hook.md",
                 "function/c++-function-parseCmdLine.md",
                 "function/c++-function-scopeFun.md",
@@ -288,7 +301,7 @@ function genSidebar4Cplusplus() {
         {
             title: "C++ 知识点",
             collapsable: false,
-            sidebarDepth: 0, 
+            sidebarDepth: 0,
             children: [
                 "tips/c++-tips-copy-on-write.md",
                 "tips/c++-tips-forward-declaration.md",
@@ -298,7 +311,7 @@ function genSidebar4Cplusplus() {
         {
             title: "C++ IO框架",
             collapsable: false,
-            sidebarDepth: 0, 
+            sidebarDepth: 0,
             children: [
                 "io/c++-io-reuse.md",
                 "io/c++-io-select.md",
@@ -310,7 +323,7 @@ function genSidebar4Cplusplus() {
         {
             title: "C++ 常用库",
             collapsable: false,
-            sidebarDepth: 0, 
+            sidebarDepth: 0,
             children: [
                 "tools/c++-tools-cppcheck.md",
                 "tools/c++-tools-cppunit.md",
@@ -326,26 +339,42 @@ function genSidebar4Cplusplus() {
 }
 
 // Database page
-function genSidebar4Database(){
+function genSidebar4Database() {
     return [
         {
             title: "SQL - MySQL",
             collapsable: false,
-            sidebarDepth: 0, 
+            sidebarDepth: 0,
             children: [
                 "mysql/mysql-basic-concept.md",
+                "mysql/mysql-basic-3nf.md",
+                "mysql/mysql-basic-datatype-constraint.md",
+                "mysql/mysql-basic-view.md",
                 "mysql/mysql-basic-use.md",
-                "mysql/mysql-index-design.md"
+                "mysql/mysql-basic-tips.md",
+                "mysql/mysql-basic-cursor.md",
+                "mysql/mysql-group-query.md",
+                "mysql/mysql-join-query.md",
+                "mysql/mysql-sub-query.md",
+                "mysql/mysql-store-procedure.md",
+                "mysql/mysql-cond-judge.md",
+                "mysql/mysql-index-design.md",
+                "mysql/mysql-index-content.md",
+                "mysql/mysql-db-devide.md",
+                "mysql/mysql-store-engine.md",
+                "mysql/mysql-performance-opt.md",
+                "mysql/mysql-sql-execute.md",
+                "mysql/mysql-sql-parse.md",
             ]
         },
         {
             title: "NoSQL - Redis",
             collapsable: false,
-            sidebarDepth: 0, 
+            sidebarDepth: 0,
             children: [
-                "redis/redis-basic-application.md", 
-                "redis/redis-persistence.md", 
-                "redis/redis-transaction-operation.md", 
+                "redis/redis-basic-application.md",
+                "redis/redis-persistence.md",
+                "redis/redis-transaction-operation.md",
                 "redis/redis-delete-policy.md",
                 "redis/redis-master-slave-replication.md",
                 "redis/redis-sentinel-mode.md",
@@ -356,11 +385,11 @@ function genSidebar4Database(){
         {
             title: "NoSQL - ElasticSearch",
             collapsable: false,
-            sidebarDepth: 0, 
+            sidebarDepth: 0,
             children: [
-                "es/es-install.md", 
-                "es/es-cluster-deployment.md", 
-                "es/es-cluster.md", 
+                "es/es-install.md",
+                "es/es-cluster-deployment.md",
+                "es/es-cluster.md",
                 "es/es-data-analysis-process.md",
                 "es/es-data-search.md",
                 "es/es-data-store.md",
@@ -371,66 +400,66 @@ function genSidebar4Database(){
 }
 
 // Alg page
-function genSidebar4Alg(){
+function genSidebar4Alg() {
     return [
         {
             title: "领域算法",
             collapsable: false,
-            sidebarDepth: 0, 
+            sidebarDepth: 0,
             children: [
-                "domain/alg-domain-bloom-filter.md"            
+                "domain/alg-domain-bloom-filter.md"
             ]
         },
         {
             title: "分布式算法",
             collapsable: false,
-            sidebarDepth: 0, 
+            sidebarDepth: 0,
             children: [
-                "distribute/alg-distribute-raft.md"              
+                "distribute/alg-distribute-raft.md"
             ]
         }
     ];
-     
+
 }
 
 // Program page
-function genSidebar4Program(){
+function genSidebar4Program() {
     return [
         {
             title: "计算机网络",
             collapsable: false,
-            sidebarDepth: 0, 
+            sidebarDepth: 0,
             children: [
                 "network/network-physical.md",
                 "network/network-data-link.md",
                 "network/network-network.md",
                 "network/network-transport.md",
                 "network/network-application.md",
-                "network/network-concept.md"              
+                "network/network-concept.md"
             ]
         },
         {
             title: "设计模式",
             collapsable: false,
-            sidebarDepth: 0, 
+            sidebarDepth: 0,
             children: [
                 "designpattern/designpattern-overview.md",
                 "designpattern/designpattern-singleton.md",
                 "designpattern/designpattern-observer.md",
-                "designpattern/designpattern-factory.md"             
+                "designpattern/designpattern-factory.md"
             ]
         }
     ];
-     
+
 }
 
 //develop page
-function genSidebar4develop(){
+function genSidebar4develop() {
     return [
         {
             title: "开发",
             collapsable: false,
-            sidebarDepth: 0, 
+            sidebarDepth: 0,
             children: [
                 "todo.md"
             ]
@@ -439,19 +468,19 @@ function genSidebar4develop(){
 }
 
 // micro-services page
-function genSidebar4microServices(){
+function genSidebar4microServices() {
     return [
         {
             title: "微服务框架",
             collapsable: false,
-            sidebarDepth: 0, 
+            sidebarDepth: 0,
             children: [
                 "frame/frame-architecture.md",
                 "frame/frame-distributed-search.md",
                 "frame/frame-distributed-transaction.md",
                 "frame/frame-gateway.md",
                 "frame/frame-idempotent-design.md",
-                "frame/frame-message-queue.md",         
+                "frame/frame-message-queue.md",
                 "frame/frame-multi-level-cache.md",
                 "frame/frame-protection.md",
                 "frame/frame-registration-discovery.md",
@@ -459,16 +488,16 @@ function genSidebar4microServices(){
             ]
         }
     ];
-     
+
 }
 
 // middleware page
-function genSidebar4middleware(){
+function genSidebar4middleware() {
     return [
         {
             title: "ZeroMQ",
             collapsable: false,
-            sidebarDepth: 0, 
+            sidebarDepth: 0,
             children: [
                 "zeromq/zeromq-demo.md",
                 "zeromq/zeromq-part1.md",
@@ -476,67 +505,67 @@ function genSidebar4middleware(){
                 "zeromq/zeromq-part3.md"
             ]
         }
-    ];  
+    ];
 }
 
 // Devops page
-function genSidebar4Devops(){
+function genSidebar4Devops() {
     return [
         {
             title: "Linux",
             collapsable: false,
-            sidebarDepth: 0, 
+            sidebarDepth: 0,
             children: [
-                "linux/linux-signal.md", 
+                "linux/linux-signal.md",
                 "linux/linux-thread.md",
-                "linux/linux-process.md", 
+                "linux/linux-process.md",
                 "linux/linux-process-thread-syn.md",
-                "linux/linux-cmd-tips.md", 
+                "linux/linux-cmd-tips.md",
                 "linux/linux-output-with-color.md"
             ]
         },
         {
             title: "Web服务器 - nginx",
             collapsable: false,
-            sidebarDepth: 0, 
+            sidebarDepth: 0,
             children: [
                 "nginx/nginx-study-note.md",
-                "nginx/nginx-staic-web.md", 
-                "nginx/nginx-reverse-proxy-server.md", 
+                "nginx/nginx-staic-web.md",
+                "nginx/nginx-reverse-proxy-server.md",
                 "nginx/nginx-error-log.md"
             ]
         },
         {
             title: "容器化 - Docker",
             collapsable: false,
-            sidebarDepth: 0, 
+            sidebarDepth: 0,
             children: [
-                "docker/docker.md", 
+                "docker/docker.md",
                 "docker/docker-use.md"
             ]
         },
         {
             title: "容器编排 - Kubernetes",
             collapsable: false,
-            sidebarDepth: 0, 
+            sidebarDepth: 0,
             children: [
-                "k8s/k8s.md", 
-                "k8s/k8s-base-use.md", 
-                "k8s/k8s-cmd.md", 
-                "k8s/k8s-probe.md", 
+                "k8s/k8s.md",
+                "k8s/k8s-base-use.md",
+                "k8s/k8s-cmd.md",
+                "k8s/k8s-probe.md",
                 "k8s/k8s-note.md"
             ]
         },
         {
             title: "服务网格 - Service Mesh Istio",
             collapsable: false,
-            sidebarDepth: 0, 
+            sidebarDepth: 0,
             children: [
                 "istio/istio-basic.md",
-                "istio/istio-install.md", 
-                "istio/istio-use.md", 
-                "istio/istio-architecture-resolution.md", 
-                "istio/istio-observability.md", 
+                "istio/istio-install.md",
+                "istio/istio-use.md",
+                "istio/istio-architecture-resolution.md",
+                "istio/istio-observability.md",
                 "istio/istio-k8s-install.md"
             ]
         }
@@ -544,12 +573,12 @@ function genSidebar4Devops(){
 }
 
 // project page
-function genSidebar4project(){
+function genSidebar4project() {
     return [
         {
             title: "实践",
             collapsable: false,
-            sidebarDepth: 0, 
+            sidebarDepth: 0,
             children: [
                 "practice/Docker-MySQL.md",
                 "practice/Docker-Redis.md",
@@ -565,7 +594,7 @@ function genSidebar4project(){
         {
             title: "开源项目 - libco",
             collapsable: false,
-            sidebarDepth: 0, 
+            sidebarDepth: 0,
             children: [
                 "opensource/libco/libco.md"
             ]
@@ -573,7 +602,7 @@ function genSidebar4project(){
         {
             title: "开源项目 - buttonrpc",
             collapsable: false,
-            sidebarDepth: 0, 
+            sidebarDepth: 0,
             children: [
                 "opensource/buttonrpc/buttonrpc-basic.md",
                 "opensource/buttonrpc/buttonrpc-intro.md",
@@ -583,7 +612,7 @@ function genSidebar4project(){
         {
             title: "开源项目 - Tars",
             collapsable: false,
-            sidebarDepth: 0, 
+            sidebarDepth: 0,
             children: [
                 "opensource/tars/tars-brief.md",
                 "opensource/tars/tars-basic.md",
@@ -594,23 +623,23 @@ function genSidebar4project(){
             ]
         },
         {
-            title: "个人github项目 - build_lib",
+            title: "个人项目 - build_lib",
             collapsable: false,
-            sidebarDepth: 0, 
+            sidebarDepth: 0,
             children: [
                 "person/build_lib/build_lib.md"
             ]
         }
-    ];  
+    ];
 }
 
 // book-note page
-function genSidebar4booknote(){
+function genSidebar4booknote() {
     return [
         {
             title: "深入理解计算机系统 详解",
             collapsable: false,
-            sidebarDepth: 0, 
+            sidebarDepth: 0,
             children: [
                 "computersystem/computersystem-chapter-1.md",
                 "computersystem/computersystem-chapter-2.md",
@@ -622,13 +651,13 @@ function genSidebar4booknote(){
                 "computersystem/computersystem-chapter-9.md",
                 "computersystem/computersystem-chapter-10.md",
                 "computersystem/computersystem-chapter-11.md",
-                "computersystem/computersystem-chapter-12.md"          
+                "computersystem/computersystem-chapter-12.md"
             ]
         },
         {
             title: "重构改善既有代码的设计 详解",
             collapsable: false,
-            sidebarDepth: 0, 
+            sidebarDepth: 0,
             children: [
                 "refactor/refactor-chapter-1.md",
                 "refactor/refactor-chapter-2.md",
@@ -640,13 +669,13 @@ function genSidebar4booknote(){
                 "refactor/refactor-chapter-9.md",
                 "refactor/refactor-chapter-10.md",
                 "refactor/refactor-chapter-11.md",
-                "refactor/refactor-chapter-12.md"          
+                "refactor/refactor-chapter-12.md"
             ]
         },
         {
             title: "Effective C++:改善程序与设计的55个具体做法 详解",
             collapsable: false,
-            sidebarDepth: 0, 
+            sidebarDepth: 0,
             children: [
                 "effectivecpp/effectivecpp-chapter-2-1.md",
                 "effectivecpp/effectivecpp-chapter-2-2.md",
@@ -657,13 +686,13 @@ function genSidebar4booknote(){
                 "effectivecpp/effectivecpp-chapter-5-1.md",
                 "effectivecpp/effectivecpp-chapter-5-2.md",
                 "effectivecpp/effectivecpp-chapter-6.md",
-                "effectivecpp/effectivecpp-chapter-7.md"        
+                "effectivecpp/effectivecpp-chapter-7.md"
             ]
         },
         {
             title: "STL源码剖析 详解",
             collapsable: false,
-            sidebarDepth: 0, 
+            sidebarDepth: 0,
             children: [
                 "stlsource/stlsource-chapter-1.md",
                 "stlsource/stlsource-chapter-2.md",
@@ -682,13 +711,13 @@ function genSidebar4booknote(){
                 "stlsource/stlsource-chapter-6-1.md",
                 "stlsource/stlsource-chapter-6-2.md",
                 "stlsource/stlsource-chapter-7.md",
-                "stlsource/stlsource-chapter-8.md"       
+                "stlsource/stlsource-chapter-8.md"
             ]
         },
         {
             title: "Linux多线程服务端编程——使用muduo C++ 网络库 详解",
             collapsable: false,
-            sidebarDepth: 0, 
+            sidebarDepth: 0,
             children: [
                 "muduo/muduo-chapter-1.md",
                 "muduo/muduo-chapter-2.md",
@@ -702,57 +731,96 @@ function genSidebar4booknote(){
                 "muduo/muduo-chapter-10.md",
                 "muduo/muduo-chapter-11.md",
                 "muduo/muduo-chapter-12.md",
-                "muduo/muduo-chapter-13.md"     
+                "muduo/muduo-chapter-13.md"
             ]
         }
     ];
-     
+
 }
 
 // interview page
-function genSidebar4interview(){
+function genSidebar4interview() {
     return [
         {
-            title: "面试题",
+            title: "八股文",
             collapsable: false,
-            sidebarDepth: 0, 
+            sidebarDepth: 0,
             children: [
-                "c11-feature.md",
-                "computer-network.md",
-                "cookie-session-token.md",
-                "cplusplus-knowledge.md",
-                "database.md",
-                "operating-system.md",         
-                "programming-questions.md",
-                "STL.md"
+                "knowledge/c11-feature.md",
+                "knowledge/computer-network.md",
+                "knowledge/cookie-session-token.md",
+                "knowledge/cplusplus-knowledge.md",
+                "knowledge/database.md",
+                "knowledge/operating-system.md",
+                "knowledge/programming-questions.md",
+                "knowledge/STL.md"
+            ]
+        },
+        {
+            title: "数据结构",
+            collapsable: false,
+            sidebarDepth: 0,
+            children: [
+                "code/data-structure/data-structure-overview.md",
+                "code/data-structure/data-structure-use.md"
+            ]
+        },
+        {
+            title: "刷题套路",
+            collapsable: false,
+            sidebarDepth: 0,
+            children: [
+                "code/question-routine/question-routine-backtrack.md",
+                "code/question-routine/question-routine-bfs.md",
+                "code/question-routine/question-routine-binsearch.md",
+                "code/question-routine/question-routine-dfs.md",
+                "code/question-routine/question-routine-dp.md",
+                //"code/question-routine/question-routine-graph.md",
+                "code/question-routine/question-routine-hashmap.md",
+                "code/question-routine/question-routine-list.md",
+                "code/question-routine/question-routine-slidingwindow.md",
+                "code/question-routine/question-routine-stack.md",
+                "code/question-routine/question-routine-two-pointer.md"
+            ]
+        }, {
+            title: "题型分类",
+            collapsable: false,
+            sidebarDepth: 0,
+            children: [
+                "code/question-type/question-type-array.md",
+                "code/question-type/question-type-list.md",
+                "code/question-type/question-type-quest.md",
+                "code/question-type/question-type-string.md",
+                "code/question-type/question-type-tips.md",
+                "code/question-type/question-type-tree.md"
             ]
         }
     ];
-     
+
 }
 
 // article page
-function genSidebar4Article(){
+function genSidebar4Article() {
     return [
         {
             title: "分布式相关",
             collapsable: false,
-            sidebarDepth: 0, 
+            sidebarDepth: 0,
             children: [
-                "distribute/article-distributed-cellular.md"            
+                "distribute/article-distributed-cellular.md"
             ]
         }
     ];
-     
+
 }
 
 // other page
-function genSidebar4other(){
+function genSidebar4other() {
     return [
         {
             title: "其他",
             collapsable: false,
-            sidebarDepth: 0, 
+            sidebarDepth: 0,
             children: [
                 "todo.md"
             ]
@@ -761,12 +829,12 @@ function genSidebar4other(){
 }
 
 // knowledge page
-function genSidebar4knowledge(){
+function genSidebar4knowledge() {
     return [
         {
             title: "专业知识",
             collapsable: false,
-            sidebarDepth: 0, 
+            sidebarDepth: 0,
             children: [
                 "todo.md"
             ]
@@ -775,27 +843,27 @@ function genSidebar4knowledge(){
 }
 
 // tech-doc page
-function genSidebar4techdos(){
+function genSidebar4techdos() {
     return [
         {
             title: "技术文档",
             collapsable: false,
-            sidebarDepth: 0, 
+            sidebarDepth: 0,
             children: [
-                "online/doc.md"            
+                "online/doc.md"
             ]
         }
     ];
-     
+
 }
 
 // About page
-function genSidebar4About(){
+function genSidebar4About() {
     return [
         {
             title: "关于",
             collapsable: false,
-            sidebarDepth: 0, 
+            sidebarDepth: 0,
             children: [
                 "me/about-me.md"
             ]
