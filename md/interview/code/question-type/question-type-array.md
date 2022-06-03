@@ -1,4 +1,6 @@
-## 全排列
+# 数组题型
+
+[[toc]]
 
 ![全排列](/_images/interview/code/question-type/array/全排列.png)
 

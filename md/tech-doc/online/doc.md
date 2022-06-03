@@ -72,3 +72,28 @@
 
 
 [鸠摩搜索——书籍搜索引擎](https://www.jiumodiary.com/)
+
+
+
+# 文档笔记工具
+
+- [印象笔记](https://www.yinxiang.com/)
+- [有道笔记](https://note.youdao.com/)
+- [OneNote](https://www.onenote.com/)
+- [幕布](https://mubu.com/)
+- [为知笔记](https://www.wiz.cn/)
+- [石墨文档](https://shimo.im/)
+- [Simplenote](https://simplenote.com/)
+- [语雀](https://www.yuque.com/)
+
+# 编程学习
+
+- [哔哩哔哩](https://www.bilibili.com/)
+- [cppreference](http://zh.cppreference.com/)
+- [中国大学MOOC](https://www.icourse163.org/)
+- [牛客网](www.nowcoder.com)
+- [codecademy](https://www.codecademy.com/)
+- [Coursera](https://www.coursera.org/)
+- [StackOverFlow](https://stackoverflow.com/)
+- [LeetCode](https://leetcode-cn.com/)
+- [LintCode](https://www.lintcode.com/)

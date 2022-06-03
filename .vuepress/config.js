@@ -119,9 +119,21 @@ module.exports = {
                         ]
                     },
                     {
-                        text: '架构|中间件',
+                        text: '架构',
+                        items: [
+                            { text: '架构基础', link: '/md/arch/frame/arch-frame-evolution.md' }
+                        ]
+                    },
+                    {
+                        text: '中间件',
                         items: [
                             { text: 'ZeroMQ', link: '/md/middleware/zeromq/zeromq-demo.md' }
+                        ]
+                    },
+                    {
+                        text: '方法论|概念',
+                        items: [
+                            { text: '理论|概念', link: '/md/method/concept/doc.md' }
                         ]
                     },
                     {
@@ -264,7 +276,9 @@ module.exports = {
                     "/md/programming/": genSidebar4Program(),
                     "/md/develop/": genSidebar4develop(),
                     "/md/micro-services/": genSidebar4microServices(),
+                    "/md/arch/": genSidebar4arch(),
                     "/md/middleware/": genSidebar4middleware(),
+                    "/md/method/": genSidebar4method(),
                     "/md/devops/": genSidebar4Devops(),
                     "/md/project/": genSidebar4project(),
                     "/md/book-note/": genSidebar4booknote(),
@@ -491,6 +505,21 @@ function genSidebar4microServices() {
 
 }
 
+// arch page
+function genSidebar4arch() {
+    return [
+        {
+            title: "架构基础",
+            collapsable: false,
+            sidebarDepth: 0,
+            children: [
+                "frame/arch-frame-evolution.md",
+                "frame/arch-frame-service.md"
+            ]
+        }
+    ];
+}
+
 // middleware page
 function genSidebar4middleware() {
     return [
@@ -508,6 +537,20 @@ function genSidebar4middleware() {
     ];
 }
 
+// method page
+function genSidebar4method() {
+    return [
+        {
+            title: "理论|概念",
+            collapsable: false,
+            sidebarDepth: 0,
+            children: [
+                "concept/doc.md"
+            ]
+        }
+    ];
+}
+
 // Devops page
 function genSidebar4Devops() {
     return [
@@ -516,6 +559,7 @@ function genSidebar4Devops() {
             collapsable: false,
             sidebarDepth: 0,
             children: [
+                "linux/linux-cmd.md",
                 "linux/linux-signal.md",
                 "linux/linux-thread.md",
                 "linux/linux-process.md",
@@ -541,7 +585,8 @@ function genSidebar4Devops() {
             sidebarDepth: 0,
             children: [
                 "docker/docker.md",
-                "docker/docker-use.md"
+                "docker/docker-use.md",
+                "docker/docker-cmd.md"
             ]
         },
         {

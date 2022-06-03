@@ -13,6 +13,13 @@ features:
 footer: MIT License 2.0 | © 2022-present stibel
 ---
 
+![](https://img.shields.io/badge/c++-学习路线-brightgreen.svg)
+![](https://img.shields.io/badge/数据库-MySQL,ElasticSearch,Redis-green.svg)
+![](https://img.shields.io/badge/微服务-Docker,k8s,Istio-yellow.svg)
+![](https://img.shields.io/badge/面试题-100+-orange.svg)
+![](https://img.shields.io/badge/中间件-ZeroMQ-blue.svg)
+![](https://img.shields.io/badge/读书笔记-muduo-red.svg)
+
 # C++ 全栈知识体系
 
 > 一个记录C++知识的学习网站！
@@ -20,7 +27,9 @@ footer: MIT License 2.0 | © 2022-present stibel
 > 包含内容:C++ 基础, 算法, 数据库,MySQL, ElasticSearch, Redis, 编程四大件, 微服务 , 中间件, ZeroMQ, 部署工具, Docker, k8s, Istio, Linux,
 > 实践|项目,  开源项目, 个人项目, 读书笔记, 面试题, 优质文章, 博客推荐...
 
-地址：[https://stibel.icu/](https://stibel.icu/)
+网站地址：[http://www.stibel.icu/](http://www.stibel.icu/)
+
+github链接：[https://github.com/klc407073648/cpp-notes](https://github.com/klc407073648/cpp-notes)
 
 ## 项目背景
 
@@ -68,3 +77,11 @@ vuepress build
 ```
 
 4. 部署: 将docs下的文件copy至nginx服务器即可
+
+## 微信公众号
+
+欢迎交流学习:
+
+直接搜: StillBelieve 或者 可以扫下面图片
+
+![微信公众号](/_images/微信公众号.png)
