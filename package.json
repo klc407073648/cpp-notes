@@ -7,12 +7,14 @@
     "build": "vuepress build"
   },
   "devDependencies": {
-    "@vuepress/plugin-back-to-top": "^1.0.3",
+    "@vuepress/plugin-back-to-top": "^1.9.7",
     "@vuepress/plugin-medium-zoom": "^1.0.4",
     "vuepress": "^1.0.2",
+    "vuepress-plugin-baidu-autopush": "^1.0.1",
     "vuepress-plugin-container": "^2.1.5"
   },
   "dependencies": {
-    "vuepress-plugin-code-copy": "^1.0.6"
+    "vuepress-plugin-code-copy": "^1.0.6",
+    "vuepress-plugin-copyright": "^1.0.2"
   }
 }

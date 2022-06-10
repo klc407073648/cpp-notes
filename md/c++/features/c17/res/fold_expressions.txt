@@ -1,0 +1,6 @@
+[root@iZuf61kbf845xt6tz10abgZ c17]# g++ -std=c++17 fold_expressions.cpp -o fold_expressions
+[root@iZuf61kbf845xt6tz10abgZ c17]# ./fold_expressions
+123abc
+6
+2
+hello world

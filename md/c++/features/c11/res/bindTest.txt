@@ -1,0 +1,8 @@
+[root@192 function和bind函数学习]# ./bindTest
+fn_five(): 5
+fn_half(10): 5
+fn_invert(10,2): 0.2
+fn_rounding(10,3): 3
+bound_member_fn():ten_two.multiply() 20
+bound_member_data():ten_two.a 10
+bound_member_fn_add(30,50): 80

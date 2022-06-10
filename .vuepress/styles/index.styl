@@ -14,8 +14,35 @@ blockquote
   & > p
     margin 0
 
+// markdown h1
+h1
+  font-size 2rem
+  padding-bottom 1rem
+  border-bottom 1px solid $borderColor
+
 // markdown h2
 h2
   font-size 1.65rem
-  padding-bottom 1rem
-  border-bottom 1px solid $borderColor
+  border-bottom 0px solid $borderColor
+
+// custom block for tip
+.custom-block
+  .custom-block-title
+    font-weight 600
+    margin-bottom -0.4rem
+  &.tip, &.warning, &.danger
+    padding .1rem 1.5rem
+    border-left-width .5rem
+    border-left-style solid
+    margin 1rem 0
+  &.tip
+    background-color #dfefff
+    border-color #428eb9
+
+// logo
+.navbar
+  .logo
+    height $navbarHeight - 1.6rem
+    min-width $navbarHeight - 1.6rem
+    margin-right 0rem
+    vertical-align top

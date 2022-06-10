@@ -45,7 +45,6 @@
 
 ![2](/_images/database/mysql/数据库排行.png)
 
-
 # 关系型数据库管理系统
 
 数据库管理系统（Relational Database Management System，简称RDBMS）是**为管理关系型数据库而设计的软件系统，如果大家想要使用关系型数据库就需要安装数据库管理系统**，其实就是一个应用软件。

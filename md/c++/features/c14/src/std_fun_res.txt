@@ -1,0 +1,24 @@
+[root@iZuf61kbf845xt6tz10abgZ c14]# ./std_lib
+make_unique_fun
+threadSafe_fun
+thread->get:2
+print_sequence_fun
+The sequence of size 7: 9 2 5 1 9 1 6
+The sequence of size 20: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19
+The sequence of size 10: 0 1 2 3 4 5 6 7 8 9
+The sequence of size 3: 0 1 2
+(1, 2, 3, 4)
+exchange_fun
+exchange before:
+vec1:
+1 2
+vec2:
+3 4
+exchange after:
+vec1:
+3 4
+vec2:
+3 4 
+quoted_fun
+origin Str:hello world
+quoted Str:"hello world"

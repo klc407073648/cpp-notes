@@ -21,7 +21,21 @@ module.exports = {
             description: "包含：C++ 基础, 算法, 数据库,MySQL, ElasticSearch, Redis, 编程四大件, 微服务 , 中间件, ZeroMQ, 部署工具, Docker, k8s, Istio, Linux, 实践|项目,  开源项目, 个人项目, 读书笔记, 面试题, 优质文章, 博客推荐..."
         }
     },
-    head: [["link", { rel: "icon", href: `/favicon.ico` }]],
+    head: [
+        ["link", { rel: "icon", href: `/favicon.ico` }],
+        // 添加百度统计代码
+        ['script', {},
+            `
+            var _hmt = _hmt || [];
+            (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?1c71fc16572da6aad12188a3de4122fc";
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+            })();
+            `
+        ]
+    ],
     plugins: [
         ['@vuepress/back-to-top', true],
         ['vuepress-plugin-code-copy', true],
@@ -30,7 +44,17 @@ module.exports = {
             options: {
                 margin: 16
             }
-        }]
+        }],
+        ['copyright', {
+            noCopy: false, // 允许复制内容
+            minLength: 100, // 如果长度超过 100 个字符
+            authorName: "https://stibel.icu",
+            // clipboardComponent: "请注明文章出处, [Java 全栈知识体系](https://pdai.tech)"
+        }],
+        /*['sitemap', {
+            hostname: 'https://stibel.icu'
+        }],*/
+        ['vuepress-plugin-baidu-autopush', {}]
     ],
     themeConfig: {
         docsRepo: "stibel/cpp-notes",
@@ -56,6 +80,12 @@ module.exports = {
                                 text: 'C++ 知识点',
                                 items: [
                                     { text: '知识点', link: '/md/c++/tips/c++-tips-copy-on-write.md' }
+                                ]
+                            },
+                            {
+                                text: 'C++ 新版本特性',
+                                items: [
+                                    { text: '新版本特性 详解', link: '/md/c++/features/c++-features-index.md' }
                                 ]
                             },
                             {
@@ -242,18 +272,6 @@ module.exports = {
                         ]
                     },
                     {
-                        text: '其他(待整理)',
-                        items: [
-                            { text: '其他', link: '/md/other/todo.md' }
-                        ]
-                    },
-                    {
-                        text: 'ToDo 清单',
-                        items: [
-                            { text: 'ToDo 清单', link: '/md/todo/todo.md' }
-                        ]
-                    },
-                    {
                         text: '专业知识',
                         items: [
                             { text: '专业知识', link: '/md/knowledge/todo.md' }
@@ -284,7 +302,6 @@ module.exports = {
                     "/md/book-note/": genSidebar4booknote(),
                     "/md/interview/": genSidebar4interview(),
                     "/md/article/": genSidebar4Article(),
-                    "/md/other/": genSidebar4other(),
                     "/md/knowledge/": genSidebar4knowledge(),
                     "/md/tech-doc/": genSidebar4techdos(),
                     "/md/about/": genSidebar4About(),
@@ -302,7 +319,6 @@ function genSidebar4Cplusplus() {
             collapsable: false,
             sidebarDepth: 0,
             children: [
-                "function/c++-function-functionAndbind.md",
                 "function/c++-function-Linux_Hook.md",
                 "function/c++-function-parseCmdLine.md",
                 "function/c++-function-scopeFun.md",
@@ -332,6 +348,18 @@ function genSidebar4Cplusplus() {
                 "io/c++-io-poll.md",
                 "io/c++-io-epoll.md",
                 "io/c++-io-reactor-proactor.md"
+            ]
+        },
+        {
+            title: "C++ 新版本特性",
+            collapsable: false,
+            sidebarDepth: 0,
+            children: [
+                "features/c++-features-index.md",
+                "features/c11/c++-features-c11.md",
+                "features/c14/c++-features-c14.md",
+                "features/c17/c++-features-c17.md",
+                "features/c20/c++-features-c20.md"
             ]
         },
         {
@@ -859,20 +887,6 @@ function genSidebar4Article() {
 
 }
 
-// other page
-function genSidebar4other() {
-    return [
-        {
-            title: "其他",
-            collapsable: false,
-            sidebarDepth: 0,
-            children: [
-                "todo.md"
-            ]
-        }
-    ];
-}
-
 // knowledge page
 function genSidebar4knowledge() {
     return [
@@ -910,7 +924,10 @@ function genSidebar4About() {
             collapsable: false,
             sidebarDepth: 0,
             children: [
-                "me/about-me.md"
+                "me/about-me.md",
+                "me/about-blog-changelist.md",
+                "me/about-content-style.md",
+                "me/about-todolist.md"
             ]
         }
     ];

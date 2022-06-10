@@ -1,0 +1,6 @@
+[root@iZuf61kbf845xt6tz10abgZ c17]# ./structured_bindings
+YongDu, 26, man
+YongDu, 26, man
+YongDu, 26
+DuYong, 26
+dycc, 26

@@ -1,0 +1,277 @@
+{
+	"id": "ed5c568a-690d-45c8-87e9-8ec7001d0629",
+	"name": "用户中心接口测试",
+	"timestamp": "2022-06-05T10:43:59.875Z",
+	"collection_id": "dfd1379f-807b-4d4c-baf9-fe278e939c0e",
+	"folder_id": "4aa7052e-5618-4a37-b368-4498b0e066dc",
+	"environment_id": "24edb3b7-826b-4d29-9cf1-e1ef70323260",
+	"totalPass": 14,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "a3e08b43-401b-4f58-a5ba-3757e95faf74",
+			"name": "非空校验",
+			"url": "http://81.68.132.31:8082/api/user/register",
+			"time": 39,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Test response Json Object": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test response Json Object": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				39
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Test response Json Object": true
+				}
+			]
+		},
+		{
+			"id": "20dd0dfd-d76a-478e-9625-77e8a684f594",
+			"name": "账号长度校验",
+			"url": "http://81.68.132.31:8082/api/user/register",
+			"time": 15,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Test response Json Object": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test response Json Object": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				15
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Test response Json Object": true
+				}
+			]
+		},
+		{
+			"id": "8e18f154-953b-4cda-a455-0db8723ac113",
+			"name": "密码长度校验",
+			"url": "http://81.68.132.31:8082/api/user/register",
+			"time": 16,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Test response Json Object": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test response Json Object": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				16
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Test response Json Object": true
+				}
+			]
+		},
+		{
+			"id": "e2116bbc-370f-416c-b3f2-640483e9fa02",
+			"name": "账号重复性校验",
+			"url": "http://81.68.132.31:8082/api/user/register",
+			"time": 20,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Test response Json Object": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test response Json Object": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				20
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Test response Json Object": true
+				}
+			]
+		},
+		{
+			"id": "4fee1652-7be5-4c74-bab7-28cd71a4e50f",
+			"name": "账号特殊字符校验",
+			"url": "http://81.68.132.31:8082/api/user/register",
+			"time": 16,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Test response Json Object description": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test response Json Object description": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				16
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Test response Json Object description": true
+				}
+			]
+		},
+		{
+			"id": "26c409a6-3b6a-4c71-b31a-cffbf2f5773d",
+			"name": "密码和校验密码相同性校验",
+			"url": "http://81.68.132.31:8082/api/user/register",
+			"time": 16,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Test response Json Object description": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test response Json Object description": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				16
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Test response Json Object description": true
+				}
+			]
+		},
+		{
+			"id": "4bd64305-0f74-473e-ab48-2cb6b00c0f76",
+			"name": "星球编号校验",
+			"url": "http://81.68.132.31:8082/api/user/register",
+			"time": 15,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Test response Json Object description": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test response Json Object description": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				15
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Test response Json Object description": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 137,
+	"collection": {
+		"requests": [
+			{
+				"id": "a3e08b43-401b-4f58-a5ba-3757e95faf74",
+				"method": "POST"
+			},
+			{
+				"id": "20dd0dfd-d76a-478e-9625-77e8a684f594",
+				"method": "POST"
+			},
+			{
+				"id": "8e18f154-953b-4cda-a455-0db8723ac113",
+				"method": "POST"
+			},
+			{
+				"id": "e2116bbc-370f-416c-b3f2-640483e9fa02",
+				"method": "POST"
+			},
+			{
+				"id": "4fee1652-7be5-4c74-bab7-28cd71a4e50f",
+				"method": "POST"
+			},
+			{
+				"id": "26c409a6-3b6a-4c71-b31a-cffbf2f5773d",
+				"method": "POST"
+			},
+			{
+				"id": "4bd64305-0f74-473e-ab48-2cb6b00c0f76",
+				"method": "POST"
+			}
+		]
+	}
+}

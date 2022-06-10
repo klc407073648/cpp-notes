@@ -1,67 +1,69 @@
-# C++11特性:bind和function函数使用
+# C++14特性
 
 [[toc]]
 
-## std::bind
+# 参考资料
 
-std::bind 的函数原型: 
+* [cpp14](https://en.cppreference.com/w/cpp/14)
 
-``` cpp
-simple(1): 	
-template <class Fn, class... Args>
-  /* unspecified */ bind (Fn&& fn, Args&&... args);
+# 特性概览
 
-with return type (2): 
-template <class Ret, class Fn, class... Args>
-  /* unspecified */ bind (Fn&& fn, Args&&... args);
-```
-作用: 返回基于fn的函数对象，但其参数绑定到args。
+![c++14](/_images/c++/features/c++14.png)
 
-每个参数都可以绑定到一个值或占位符: 
+# 变量模板
 
-* 如果绑定到一个值，则调用返回的函数对象将始终使用该值作为参数。
-* 如果是一个占位符，则调用返回的函数对象会转发一个传递给调用的参数（该参数的顺序号由占位符指定）。
+在C++14中:
 
-**使用std::bind要注意的地方**
+* lambda表达式参数可以为auto类型，类似于函数模板;
+* 可以对捕获列表的捕获变量“赋值”。
 
-1. bind预先绑定的参数需要传具体的变量或值进去，对于预先绑定的参数，是pass-by-value的。除非该参数被std::ref或者std::cref包装，才pass-by-reference。
-2. 对于不事先绑定的参数，需要传std::placeholders进去，从_1开始，依次递增。placeholder是pass-by-reference的；
-3. bind的返回值是可调用实体，可以直接赋给std::function对象； 
-4. 对于绑定的指针、引用类型的参数，使用者需要保证在可调用实体调用之前，这些参数是可用的；
-5. 类的this可以通过对象或者指针来绑定
+<<< @/md/c++/features/c14/src/variable_templates.cpp
 
-测试程序: 
+# 别名模板
 
-[bindTest.cpp](./src/functionAndbind/bindTest.cpp)
+<<< @/md/c++/features/c14/src/alias_templates.cpp
 
-执行结果: 
-```bash
-[root@192 function和bind函数学习]# ./bindTest
-fn_five(): 5
-fn_half(10): 5
-fn_invert(10,2): 0.2
-fn_rounding(10,3): 3
-bound_member_fn():ten_two.multiply() 20
-bound_member_data():ten_two.a 10
-bound_member_fn_add(30,50): 80
-```
+# 泛型lambda和lambda初始化捕获
 
-## std::function
- 
-`类模版std::function是一种通用、多态的函数封装`。std::function的实例可以对任何可以调用的目标实体进行存储、复制、和调用操作，这些目标实体包括`普通函数、Lambda表达式、bind表达式、函数指针以及其它函数对象`。std::function对象是对C++中现有的可调用实体的一种类型安全的包装（我们知道像函数指针这类可调用实体，是类型不安全的）。
+<<< @/md/c++/features/c14/src/lamdba.cpp
 
-通过std::function对C++中各种可调用实体（普通函数、Lambda表达式、函数指针、以及其它函数对象等）的封装，形成一个新的可调用的std::function对象；让我们不再纠结那么多的可调用实体。
+# 放松对constexpr函数的限制
 
-测试程序: 
+C++11中的常量表达式函数：
 
-[functionTest.cpp](./src/functionAndbind/functionTest.cpp)
+* 函数体只有单一的return返回语句;
+* 函数必须有返回值(不能是void函数)
+* 在使用前必须有定义
+* return返回语句表达式中不能使用非常量表达式的函数，全局数据，且必须是一个常量表达式
 
-执行结果: 
-```bash
-[root@192 function和bind函数学习]# ./functionTest
-fun1 add:15
-fun2 sub():5
-fun3 Lam:50
-fun4 Math::div:2
-fun5 Math::print_sum:15
-```
+<<< @/md/c++/features/c14/src/constexpr_fun.cpp
+
+# deprecated标记
+
+C++14中增加了[[deprecated]]标记，可以修饰类、函数、变量等，当程序中使用了被其修饰的模块时，编译器会产生告警，提示用户该标记标记的内容将来可能会被废弃，尽量不要使用。
+
+<<< @/md/c++/features/c14/src/deprecated.cpp
+
+# 二进制字面量和数位分隔符
+
+<<< @/md/c++/features/c14/src/literals_digit.cpp
+
+# 库相关
+
+* std::make_unique
+  * C++11中没有std::make_unique，在C++14中实现了这个方法
+* std::shared_timed_mutex和std::shared_lock
+  * C++14中通过std::shared_timed_mutex和std::shared_lock实现读写锁，保证多个线程可以同时读，但是写线程必须独立运行，写操作不能和读操作同时进行。
+* std::integer_sequence
+  * 表示一个编译时的整数序列。在用作函数模板的实参时,能推导参数包Ints并将它用于包展开。
+* std::exchange
+  * 使用new_value 替换 obj 的值，并返回 obj 的旧值。（右边替换左边，返回左边的初值）;T 必须满足可移动构造 (MoveConstructible) 的要求。而且必须能移动赋值 U 类型对象给 T 类型对象。
+  <<< @/md/c++/features/c14/src/std_exchange.cpp
+* std::quoted
+  * 用于给字符串添加双引号
+
+<<< @/md/c++/features/c14/src/std_fun.cpp
+
+执行结果：
+
+<<< @/md/c++/features/c14/res/std_fun.txt

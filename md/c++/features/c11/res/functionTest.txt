@@ -1,0 +1,6 @@
+[root@192 function和bind函数学习]# ./functionTest
+fun1 add:15
+fun2 sub():5
+fun3 Lam:50
+fun4 Math::div:2
+fun5 Math::print_sum:15
