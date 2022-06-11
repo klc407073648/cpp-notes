@@ -2,7 +2,7 @@
 home: true
 heroImage: /_images/sea.jpeg
 actionText: 快速开始 →
-actionLink: /md/c++/function/c++-function-functionAndbind.md
+actionLink: /md/c++/function/c++-function-Linux_Hook.md
 features:
 - title: 夯实基础
   details: Stay Hungry, Stay Foolish
@@ -30,6 +30,8 @@ footer: MIT License 2.0 | © 2022-present stibel
 网站地址：[http://www.stibel.icu/](http://www.stibel.icu/)
 
 github链接：[https://github.com/klc407073648/cpp-notes](https://github.com/klc407073648/cpp-notes)
+
+QQ交流群：108649122 (网站错误反馈————欢迎批评指正，最好标注错误内容出处 :wink:)
 
 ## 项目背景
 

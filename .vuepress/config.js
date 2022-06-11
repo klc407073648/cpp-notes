@@ -73,7 +73,7 @@ module.exports = {
                             {
                                 text: 'C++ 函数学习',
                                 items: [
-                                    { text: '函数学习', link: '/md/c++/function/c++-function-functionAndbind.md' }
+                                    { text: '函数学习', link: '/md/c++/function/c++-function-Linux_Hook.md' }
                                 ]
                             },
                             {
