@@ -1,0 +1,6 @@
+[root@iZuf61kbf845xt6tz10abgZ c17]# ./virtual_shape
+Shape::Shape
+Circle::Circle
+Circle::calcArea:50.24
+Circle::~Circle
+Shape::~Shape

@@ -23,18 +23,22 @@ module.exports = {
     },
     head: [
         ["link", { rel: "icon", href: `/favicon.ico` }],
+        ["meta", { name: "referrer", content: 'strict-origin-when-cross-origin' }],
         // 添加百度统计代码
-        ['script', {},
-            `
-            var _hmt = _hmt || [];
-            (function() {
+        /*
+        ['script', 
+          {},
+          `var _hmt = _hmt || [];
+          (function() {
             var hm = document.createElement("script");
             hm.src = "https://hm.baidu.com/hm.js?1c71fc16572da6aad12188a3de4122fc";
             var s = document.getElementsByTagName("script")[0]; 
             s.parentNode.insertBefore(hm, s);
-            })();
-            `
+          })();`,
         ]
+        */
+        // baidu statstic
+        ["script", {src: "https://hm.baidu.com/hm.js?1c71fc16572da6aad12188a3de4122fc"}]
     ],
     plugins: [
         ['@vuepress/back-to-top', true],
@@ -70,6 +74,12 @@ module.exports = {
                     {
                         text: 'C++',
                         items: [
+                            {
+                                text: 'C++ 基础',
+                                items: [
+                                    { text: '基础', link: '/md/c++/basic/c++-basic-use.md' }
+                                ]
+                            },
                             {
                                 text: 'C++ 函数学习',
                                 items: [
@@ -132,7 +142,7 @@ module.exports = {
                         items: [
                             { text: '数据结构与算法', link: '/md/programming/network/network-physical.md' },
                             { text: '计算机网络', link: '/md/programming/network/network-physical.md' },
-                            { text: '操作系统', link: '/md/programming/network/network-physical.md' },
+                            { text: '操作系统', link: '/md/programming/system/doc.md' },
                             { text: '设计模式', link: '/md/programming/designpattern/designpattern-overview' }
                         ]
                     },
@@ -163,7 +173,8 @@ module.exports = {
                     {
                         text: '方法论|概念',
                         items: [
-                            { text: '理论|概念', link: '/md/method/concept/doc.md' }
+                            { text: '理论|概念', link: '/md/method/concept/doc.md' },
+                            { text: '编码规范', link: '/md/method/code-style/md/Google_C++_Style_Guide.md' }
                         ]
                     },
                     {
@@ -174,6 +185,8 @@ module.exports = {
                                 items: [
                                     { text: 'Linux', link: '/md/devops/linux/linux-cmd-tips.md' },
                                     { text: 'Nginx', link: '/md/devops/nginx/nginx-study-note.md' },
+                                    { text: 'Shortcut', link: '/md/devops/shortcut/linux.md' },
+                                    { text: 'Tools', link: '/md/devops/tools/tools.md' }
                                 ]
                             },
                             {
@@ -243,6 +256,12 @@ module.exports = {
                                 items: [
                                     { text: 'Linux多线程服务端编程——使用muduo C++ 网络库 详解', link: '/md/book-note/muduo/muduo-chapter-1.md' }
                                 ]
+                            },
+                            {
+                                text: '大型网站技术架构——核心原理与案例分析',
+                                items: [
+                                    { text: '大型网站技术架构——核心原理与案例分析 详解', link: '/md/book-note/websiteTechArch/websiteTechArch-index.md' }
+                                ]
                             }
                         ]
                     },
@@ -268,7 +287,8 @@ module.exports = {
                     {
                         text: '优质文章|博客推荐',
                         items: [
-                            { text: '分布式相关', link: '/md/article/distribute/article-distributed-cellular.md' }
+                            { text: '分布式相关', link: '/md/article/distribute/article-distributed-cellular.md' },
+                            { text: '成长相关', link: '/md/article/grow/Stay_hungry_Stay_foolish.md' }
                         ]
                     },
                     {
@@ -314,6 +334,15 @@ module.exports = {
 // C++ page
 function genSidebar4Cplusplus() {
     return [
+        {
+            title: "C++ 基础",
+            collapsable: false,
+            sidebarDepth: 0,
+            children: [
+                "basic/c++-basic-use.md",
+                "basic/c++-basic-oop.md"
+            ]
+        },
         {
             title: "C++ 函数学习",
             collapsable: false,
@@ -481,6 +510,14 @@ function genSidebar4Program() {
             ]
         },
         {
+            title: "操作系统",
+            collapsable: false,
+            sidebarDepth: 0,
+            children: [
+                "system/doc.md"
+            ]
+        },
+        {
             title: "设计模式",
             collapsable: false,
             sidebarDepth: 0,
@@ -575,6 +612,14 @@ function genSidebar4method() {
             children: [
                 "concept/doc.md"
             ]
+        },
+        {
+            title: "编码规范",
+            collapsable: false,
+            sidebarDepth: 0,
+            children: [
+                "code-style/Google_C++_Style_Guide.md"
+            ]
         }
     ];
 }
@@ -605,6 +650,25 @@ function genSidebar4Devops() {
                 "nginx/nginx-staic-web.md",
                 "nginx/nginx-reverse-proxy-server.md",
                 "nginx/nginx-error-log.md"
+            ]
+        },
+        {
+            title: "常用快捷键",
+            collapsable: false,
+            sidebarDepth: 0,
+            children: [
+                "shortcut/linux.md",
+                "shortcut/vim.md",
+                "shortcut/vscode.md",
+                "shortcut/idea.md"
+            ]
+        },
+        {
+            title: "工具",
+            collapsable: false,
+            sidebarDepth: 0,
+            children: [
+                "tools/tools.md"
             ]
         },
         {
@@ -806,6 +870,22 @@ function genSidebar4booknote() {
                 "muduo/muduo-chapter-12.md",
                 "muduo/muduo-chapter-13.md"
             ]
+        },
+        {
+            title: "大型网站技术架构——核心原理与案例分析 详解",
+            collapsable: false,
+            sidebarDepth: 0,
+            children: [
+                "websiteTechArch/websiteTechArch-index.md",
+                "websiteTechArch/websiteTechArch-chapter-1-1.md",
+                "websiteTechArch/websiteTechArch-chapter-1-2.md",
+                "websiteTechArch/websiteTechArch-chapter-1-3.md",
+                "websiteTechArch/websiteTechArch-chapter-2-1.md",
+                "websiteTechArch/websiteTechArch-chapter-2-2.md",
+                "websiteTechArch/websiteTechArch-chapter-2-3.md",
+                "websiteTechArch/websiteTechArch-chapter-2-4.md",
+                "websiteTechArch/websiteTechArch-chapter-2-5.md"
+            ]
         }
     ];
 
@@ -881,6 +961,15 @@ function genSidebar4Article() {
             sidebarDepth: 0,
             children: [
                 "distribute/article-distributed-cellular.md"
+            ]
+        },
+        {
+            title: "成长相关",
+            collapsable: false,
+            sidebarDepth: 0,
+            children: [
+                "grow/Stay_hungry_Stay_foolish.md",
+                "grow/Stay_hungry_Stay_young.md"
             ]
         }
     ];
