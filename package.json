@@ -7,8 +7,10 @@
     "build": "vuepress build"
   },
   "devDependencies": {
+    "@vuepress/plugin-active-header-links": "^1.9.7",
     "@vuepress/plugin-back-to-top": "^1.9.7",
     "@vuepress/plugin-medium-zoom": "^1.0.4",
+    "@vuepress/plugin-search": "^1.9.7",
     "vuepress": "^1.0.2",
     "vuepress-plugin-baidu-autopush": "^1.0.1",
     "vuepress-plugin-container": "^2.1.5"

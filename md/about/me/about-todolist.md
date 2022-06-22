@@ -22,3 +22,6 @@
 - []  c++ ide 全家桶
 - []  常用工具介绍，jenkins,postman等
 - []  后期参考 JAVA全栈做成小方框  资源导航内容
+- []  考虑谷歌统计和百度统计：https://juejin.cn/post/7051509977273335821
+yarn add -D @vuepress/plugin-google-analytics
+

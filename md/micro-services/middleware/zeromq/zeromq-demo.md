@@ -92,7 +92,7 @@
 
 首先让我们回顾一下经典的请求-应答模型，尝试用它建立一个不断增长的巨型服务网络。最基本的请求-应答模型是：
 
-![11](/_images/middleware/zeromq/chapter3_11.png)
+![11](/_images/micro-services/middleware/zeromq/chapter3_11.png)
 
 这个模型支持多个REP套接字，但如果我们想支持多个REQ套接字，就需要增加一个中间件，它通常是ROUTER和DEALER的结合体，简单将两个套接字之间的信息进行搬运，因此可以用现成的ZMQ_QUEUE装置来实现：
 
@@ -129,7 +129,7 @@ Figure # - Stretched request-reply
 
 上述结构中，对REP的路由我们使用了DEADER自带的负载均衡算法。但是，我们想用LRU算法来进行路由，这就要用到ROUTER-REQ模式：
 
-![12](/_images/middleware/zeromq/chapter3_12.png)
+![12](/_images/micro-services/middleware/zeromq/chapter3_12.png)
 
 这个ROUTER-ROUTER的LRU队列不能简单地在两个套接字间搬运消息，以下代码会比较复杂，不过在请求-应答模式中复用性很高。具体代码参见lruqueue.cpp。
 
@@ -139,19 +139,19 @@ Figure # - Stretched request-reply
 
 现在我们就将完整的请求-应答流程走一遍，我们将client套接字的标识设为“CLIENT”，worker的设为“WORKER”。以下是client发送的消息：
 
-![13](/_images/middleware/zeromq/chapter3_13.png)
+![13](/_images/micro-services/middleware/zeromq/chapter3_13.png)
 
 代理从ROUTER中获取到的消息格式如下：
 
-![14](/_images/middleware/zeromq/chapter3_14.png)
+![14](/_images/micro-services/middleware/zeromq/chapter3_14.png)
 
 代理会从LRU队列中获取一个空闲woker的地址，作为信封附加在消息之上，传送给ROUTER。注意要添加一个空帧。
 
-![15](/_images/middleware/zeromq/chapter3_15.png)
+![15](/_images/micro-services/middleware/zeromq/chapter3_15.png)
 
 REQ（worker）收到消息时，会将信封和空帧移去：
 
-![16](/_images/middleware/zeromq/chapter3_16.png)
+![16](/_images/micro-services/middleware/zeromq/chapter3_16.png)
 
 可以看到，worker收到的消息和client端ROUTER收到的消息是一致的。worker需要将该消息中的信封保存起来，只对消息内容做操作。
 
@@ -180,11 +180,11 @@ ROUTER是怎么标识消息的来源的？答案当然是套接字的标识。�
 
 这是一个瞬时的套接字，ROUTER会自动生成一个UUID来标识消息的来源。
 
-![3](/_images/middleware/zeromq/chapter3_3.png)
+![3](/_images/micro-services/middleware/zeromq/chapter3_3.png)
 
 这是一个持久的套接字，标识由消息来源自己指定。
 
-![4](/_images/middleware/zeromq/chapter3_4.png)
+![4](/_images/micro-services/middleware/zeromq/chapter3_4.png)
 
 下面让我们在实例中观察上述两种操作。下列程序会打印出ROUTER从两个REP套接字中获得的消息，其中一个没有指定标识，另一个指定了“Hello”作为标识。
 
@@ -252,7 +252,7 @@ I: (4BFA-5A56) simulating a crash
 Connecting to hello world server...
 client Send I'm client Hello. 0
 ```
-![3](/_images/middleware/zeromq/chapter4_1.png)
+![3](/_images/micro-services/middleware/zeromq/chapter4_1.png)
 
 ### 基本的可靠队列（简单海盗模式）
 
@@ -262,7 +262,7 @@ client Send I'm client Hello. 0
 
 在第三章中，队列装置的基本算法是最近最少使用算法。那么，如果worker死亡或阻塞，我们需要做些什么？答案是很少很少。我们已经在client中加入了重试的机制，所以，使用基本的LRU队列就可以运作得很好了。这种做法也符合ZMQ的逻辑，所以我们可以通过在点对点交互中插入一个简单的队列装置来扩展它：
 
-![2](/_images/middleware/zeromq/chapter4_2.png)
+![2](/_images/micro-services/middleware/zeromq/chapter4_2.png)
 
 执行结果：
 ```
@@ -290,7 +290,7 @@ client Send I'm client Hello. 0
 
 我们使用一个名为“偏执的海盗模式”来解决上述两个问题。
 
-![3](/_images/middleware/zeromq/chapter4_3.png)
+![3](/_images/micro-services/middleware/zeromq/chapter4_3.png)
 ```
 ./ppqueue
 ./ppwork

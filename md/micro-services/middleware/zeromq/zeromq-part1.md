@@ -83,7 +83,7 @@ sudo make -j4 install
 
 备注:ZMQ不会关心发送消息的内容，只要知道它所包含的字节数。所以，程序员需要做一些工作，保证对方节点能够正确读取这些消息。因此，使用zhelpers.hpp，一个供C++语言使用的ZMQ功能函数库，封装了一些基础的函数例如s_send、s_recv等。
 
-![1](/_images/middleware/zeromq/chapter1_1.png)
+![1](/_images/micro-services/middleware/zeromq/chapter1_1.png)
 
 **hwclient: Hello World client** 
 ```cpp
@@ -187,7 +187,7 @@ server Send World 2
 
 经典的消息模式是单向数据分发：服务端将更新事件发送给一组客户端。让我们看一个天气信息发布的例子，包括邮编、温度、相对湿度。我们生成这些随机信息，用来模拟气象站所做的那样。
 
-![2](/_images/middleware/zeromq/chapter1_4.png)
+![2](/_images/micro-services/middleware/zeromq/chapter1_4.png)
 
 **wuclient: Weather update client**
 ```cpp
@@ -308,7 +308,7 @@ Average temperature for zipcode '10001 ' was 20F
 *结果收集器会在末端接收所有worker的处理结果，进行汇总。
 现实中，worker可能散落在不同的计算机中，利用GPU（图像处理单元）进行复杂计算。
 
-![3](/_images/middleware/zeromq/chapter1_5.png)
+![3](/_images/micro-services/middleware/zeromq/chapter1_5.png)
 
 下面是任务分发器的代码，它会生成100个任务，任务内容是让收到的worker延迟若干毫秒。
 
@@ -504,7 +504,7 @@ Total elapsed time: 2572 msec
 
 下面的示例演示了三个线程之间需要如何进行同步：
 
-![4](/_images/middleware/zeromq/chapter2_13.png)
+![4](/_images/micro-services/middleware/zeromq/chapter2_13.png)
 
 我们使用PAIR套接字和inproc协议。
 

@@ -97,7 +97,7 @@ zmq_bind (socket, "ipc://myserver.ipc");
 
 发送和接收消息使用的是zmq_send()和zmq_recv()这两个函数。虽然函数名称看起来很直白，但由于ZMQ的I/O模式和传统的TCP协议有很大不同，因此还是需要花点时间去理解的。
 
-![1](/_images/middleware/zeromq/chapter2_1.png)
+![1](/_images/micro-services/middleware/zeromq/chapter2_1.png)
 
 让我们看一看**TCP套接字和ZMQ套接字之间在传输数据方面的区别:**
 
@@ -106,7 +106,7 @@ zmq_bind (socket, "ipc://myserver.ipc");
 * ZMQ套接字可以和多个套接字进行连接（如果套接字类型允许的话）。TCP协议只能进行点对点的连接，而ZMQ则可以进行一对多（类似于无线广播）、多对多（类似于邮局）、多对一（类似于信箱），当然也包括一对一的情况。
 * ZMQ套接字可以发送消息给多个端点（扇出模型），或从多个端点中接收消息（扇入模型）
 
-![2](/_images/middleware/zeromq/chapter2_2.png)
+![2](/_images/micro-services/middleware/zeromq/chapter2_2.png)
 
 所以，向套接字写入一个消息时可能会将消息发送给很多节点，相应的，套接字又会从所有已建立的连接中接收消息。zmq_recv()方法使用了公平队列的算法来决定接收哪个连接的消息。
 
@@ -126,11 +126,11 @@ ZMQ提供了一组单播传输协议（inporc, ipc, tcp），和两个广播协�
 
 ZMQ不只是一个数据传输的工具，而是在现有通信协议之上建立起来的新架构。它的数据帧和现有的协议并不兼容，如下面是一个HTTP请求和ZMQ请求的对比，同样使用的是TCP/IPC协议：
 
-![3](/_images/middleware/zeromq/chapter2_3.png)
+![3](/_images/micro-services/middleware/zeromq/chapter2_3.png)
 
 HTTP请求使用CR-LF（换行符）作为信息帧的间隔，而ZMQ则使用指定长度来定义帧：
 
-![4](/_images/middleware/zeromq/chapter2_4.png)
+![4](/_images/micro-services/middleware/zeromq/chapter2_4.png)
 
 所以说，你的确是可以用ZMQ来写一个类似于HTTP协议的东西，但是这并不是HTTP。
 
@@ -420,11 +420,11 @@ s_send(publisher, "<Rain>");
 
 ZMQ网络也是一样，如果规模不断增长，就一定会需要中间件。ZMQ中，我们称其为“装置”。在构建ZMQ软件的初期，我们会画出几个节点，然后将它们连接起来，不使用中间件：
 
-![5](/_images/middleware/zeromq/chapter2_6.png)
+![5](/_images/micro-services/middleware/zeromq/chapter2_6.png)
 
 随后，我们对这个结构不断地进行扩充，将装置放到特定的位置，进一步增加节点数量：
 
-![6](/_images/middleware/zeromq/chapter2_7.png)
+![6](/_images/micro-services/middleware/zeromq/chapter2_7.png)
 
 ZMQ装置没有具体的设计规则，但一般会有**一组“前端”端点和一组“后端”端点。**装置是无状态的，因此可以被广泛地部署在网络中。你可以在进程中启动一个线程来运行装置，或者直接在一个进程中运行装置。ZMQ内部也提供了基本的装置实现可供使用。
 
@@ -485,7 +485,7 @@ int main (int argc, char *argv[])
 
 我们称这个装置为代理，因为它既是订阅者，又是发布者。这就意味着，添加该装置时不需要更改其他程序的代码，只需让外网订阅者知道新的网络地址即可。
 
-![7](/_images/middleware/zeromq/chapter2_8.png)
+![7](/_images/micro-services/middleware/zeromq/chapter2_8.png)
 
 可以注意到，这段程序能够正确处理多帧消息，会将它完整的转发给订阅者。如果我们在发送时不指定ZMQ_SNDMORE选项，那么下游节点收到的消息就可能是破损的。编写装置时应该要保证能够正确地处理多帧消息，否则会造成消息的丢失。
 
@@ -505,7 +505,7 @@ int main (int argc, char *argv[])
 
 下方的简图描述了一个请求-应答模式，REQ和ROUTER通信，DEALER再和REP通信。ROUTER和DEALER之间我们则需要进行消息转发：
 
-![8](/_images/middleware/zeromq/chapter2_10.png)
+![8](/_images/micro-services/middleware/zeromq/chapter2_10.png)
 
 请求-应答代理会将两个套接字分别绑定到前端和后端，供客户端和服务端套接字连接。在使用该装置之前，还需要对客户端和服务端的代码进行调整。
 
@@ -641,7 +641,7 @@ int main (int argc, char *argv[])
 
 **使用请求-应答代理可以让你的C/S网络结构更易于扩展：**客户端不知道服务端的存在，服务端不知道客户端的存在。网络中唯一稳定的组件是中间的代理装置：
 
-![9](/_images/middleware/zeromq/chapter2_11.png)
+![9](/_images/micro-services/middleware/zeromq/chapter2_11.png)
 
 ## 内置装置
 
@@ -774,7 +774,7 @@ int main()
 
 示例中的“工作”仅仅是1秒钟的停留，我们可以在worker中进行任意的操作，包括与其他节点进行通信。消息的流向是这样的：REQ-ROUTER-queue-DEALER-REP。
 
-![10](/_images/middleware/zeromq/chapter2_12.png)
+![10](/_images/micro-services/middleware/zeromq/chapter2_12.png)
 
 ## 瞬时套接字和持久套接字
 

@@ -41,6 +41,14 @@ module.exports = {
         ["script", {src: "https://hm.baidu.com/hm.js?1c71fc16572da6aad12188a3de4122fc"}]
     ],
     plugins: [
+        ['@vuepress/active-header-links', {
+            sidebarLinkSelector: '.sidebar-link',
+            headerAnchorSelector: '.header-anchor'
+        }], //页面滚动时自动激活侧边栏链接的插件
+        ['@vuepress/search', {
+            search: true,
+            searchMaxSuggestions: 10
+        }],
         ['@vuepress/back-to-top', true],
         ['vuepress-plugin-code-copy', true],
         ['@vuepress/medium-zoom', {
@@ -51,7 +59,7 @@ module.exports = {
         }],
         ['copyright', {
             noCopy: false, // 允许复制内容
-            minLength: 100, // 如果长度超过 100 个字符
+            minLength: 50, // 如果长度超过 100 个字符
             authorName: "https://stibel.icu",
             // clipboardComponent: "请注明文章出处, [Java 全栈知识体系](https://pdai.tech)"
         }],
@@ -153,21 +161,26 @@ module.exports = {
                         ]
                     },
                     {
-                        text: '微服务',
-                        items: [
-                            { text: '微服务框架', link: '/md/micro-services/frame/frame-architecture.md' }
-                        ]
-                    },
-                    {
                         text: '架构',
                         items: [
                             { text: '架构基础', link: '/md/arch/frame/arch-frame-evolution.md' }
                         ]
                     },
                     {
-                        text: '中间件',
+                        text: '微服务|中间件',
                         items: [
-                            { text: 'ZeroMQ', link: '/md/middleware/zeromq/zeromq-demo.md' }
+                            {
+                                text: '微服务框架',
+                                items: [
+                                    { text: '理论基础', link: '/md/micro-services/frame/frame-architecture.md' }
+                                ]
+                            },
+                            {
+                                text: '中间件',
+                                items: [
+                                    { text: 'ZeroMQ', link: '/md/micro-services/middleware/zeromq/zeromq-demo.md' }
+                                ]
+                            },
                         ]
                     },
                     {
@@ -225,6 +238,25 @@ module.exports = {
                         ]
                     },
                     {
+                        text: '面试',
+                        items: [
+                            {
+                                text: '八股文',
+                                items: [
+                                    { text: '八股文 详解', link: '/md/interview/knowledge/cplusplus-knowledge.md' }
+                                ]
+                            },
+                            {
+                                text: 'LeetCode编程题',
+                                items: [
+                                    { text: '数据结构', link: '/md/interview/code/data-structure/data-structure-overview.md' },
+                                    { text: '刷题套路', link: '/md/interview/code/question-routine/question-routine-backtrack.md' },
+                                    { text: '题型分类', link: '/md/interview/code/question-type/question-type-array.md' }
+                                ]
+                            }
+                        ]
+                    },
+                    {
                         text: '读书笔记',
                         items: [
                             {
@@ -266,35 +298,10 @@ module.exports = {
                         ]
                     },
                     {
-                        text: '面试',
-                        items: [
-                            {
-                                text: '八股文',
-                                items: [
-                                    { text: '八股文 详解', link: '/md/interview/knowledge/cplusplus-knowledge.md' }
-                                ]
-                            },
-                            {
-                                text: 'LeetCode编程题',
-                                items: [
-                                    { text: '数据结构', link: '/md/interview/code/data-structure/data-structure-overview.md' },
-                                    { text: '刷题套路', link: '/md/interview/code/question-routine/question-routine-backtrack.md' },
-                                    { text: '题型分类', link: '/md/interview/code/question-type/question-type-array.md' }
-                                ]
-                            }
-                        ]
-                    },
-                    {
                         text: '优质文章|博客推荐',
                         items: [
                             { text: '分布式相关', link: '/md/article/distribute/article-distributed-cellular.md' },
                             { text: '成长相关', link: '/md/article/grow/Stay_hungry_Stay_foolish.md' }
-                        ]
-                    },
-                    {
-                        text: '专业知识',
-                        items: [
-                            { text: '专业知识', link: '/md/knowledge/todo.md' }
                         ]
                     },
                     {
@@ -315,14 +322,12 @@ module.exports = {
                     "/md/develop/": genSidebar4develop(),
                     "/md/micro-services/": genSidebar4microServices(),
                     "/md/arch/": genSidebar4arch(),
-                    "/md/middleware/": genSidebar4middleware(),
                     "/md/method/": genSidebar4method(),
                     "/md/devops/": genSidebar4Devops(),
                     "/md/project/": genSidebar4project(),
                     "/md/book-note/": genSidebar4booknote(),
                     "/md/interview/": genSidebar4interview(),
                     "/md/article/": genSidebar4Article(),
-                    "/md/knowledge/": genSidebar4knowledge(),
                     "/md/tech-doc/": genSidebar4techdos(),
                     "/md/about/": genSidebar4About(),
                 }
@@ -550,7 +555,7 @@ function genSidebar4develop() {
 function genSidebar4microServices() {
     return [
         {
-            title: "微服务框架",
+            title: "理论基础",
             collapsable: false,
             sidebarDepth: 0,
             children: [
@@ -565,6 +570,17 @@ function genSidebar4microServices() {
                 "frame/frame-registration-discovery.md",
                 "frame/frame-study-route.md"
             ]
+        },
+        {
+            title: "ZeroMQ",
+            collapsable: false,
+            sidebarDepth: 0,
+            children: [
+                "middleware/zeromq/zeromq-demo.md",
+                "middleware/zeromq/zeromq-part1.md",
+                "middleware/zeromq/zeromq-part2.md",
+                "middleware/zeromq/zeromq-part3.md"
+            ]
         }
     ];
 
@@ -574,29 +590,12 @@ function genSidebar4microServices() {
 function genSidebar4arch() {
     return [
         {
-            title: "架构基础",
+            title: "理论基础",
             collapsable: false,
             sidebarDepth: 0,
             children: [
                 "frame/arch-frame-evolution.md",
                 "frame/arch-frame-service.md"
-            ]
-        }
-    ];
-}
-
-// middleware page
-function genSidebar4middleware() {
-    return [
-        {
-            title: "ZeroMQ",
-            collapsable: false,
-            sidebarDepth: 0,
-            children: [
-                "zeromq/zeromq-demo.md",
-                "zeromq/zeromq-part1.md",
-                "zeromq/zeromq-part2.md",
-                "zeromq/zeromq-part3.md"
             ]
         }
     ];
@@ -974,20 +973,6 @@ function genSidebar4Article() {
         }
     ];
 
-}
-
-// knowledge page
-function genSidebar4knowledge() {
-    return [
-        {
-            title: "专业知识",
-            collapsable: false,
-            sidebarDepth: 0,
-            children: [
-                "todo.md"
-            ]
-        }
-    ];
 }
 
 // tech-doc page
