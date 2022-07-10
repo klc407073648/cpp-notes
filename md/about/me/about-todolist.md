@@ -25,3 +25,6 @@
 - []  考虑谷歌统计和百度统计：https://juejin.cn/post/7051509977273335821
 yarn add -D @vuepress/plugin-google-analytics
 
+https://github.com/macrozheng/mall-learning
+https://www.csdn.net/tags/MtTaMg2sMDUyLWJsb2cO0O0O.html
+https://blog.csdn.net/m0_51505198/article/details/121242591

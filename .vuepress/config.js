@@ -38,7 +38,7 @@ module.exports = {
         ]
         */
         // baidu statstic
-        ["script", {src: "https://hm.baidu.com/hm.js?1c71fc16572da6aad12188a3de4122fc"}]
+        ["script", { src: "https://hm.baidu.com/hm.js?1c71fc16572da6aad12188a3de4122fc" }]
     ],
     plugins: [
         ['@vuepress/active-header-links', {
@@ -184,10 +184,46 @@ module.exports = {
                         ]
                     },
                     {
-                        text: '方法论|概念',
+                        text: '方法论',
                         items: [
-                            { text: '理论|概念', link: '/md/method/concept/doc.md' },
-                            { text: '编码规范', link: '/md/method/code-style/md/Google_C++_Style_Guide.md' }
+                            {
+                                text: '概念',
+                                items: [
+                                    { text: '正向代理和反向代理的区别', link: '/md/method/concept/concept-agent.md' },
+                                    { text: '计算机专有名词', link: '/md/method/concept/concept-communication.md' }
+                                ]
+                            },
+                            {
+                                text: '理论',
+                                items: [
+                                    { text: '事务理论 - ACID', link: '/md/method/theory/theory-acid.md' },
+                                    { text: '分布式理论 - CAP', link: '/md/method/theory/theory-cap.md' },
+                                    { text: '分布式理论 - BASE', link: '/md/method/theory/theory-base.md' },
+                                ]
+                            },
+                            {
+                                text: '架构设计原则',
+                                items: [
+                                    { text: '合适、简单、演化原则', link: '/md/method/arch-principle/arch-principle-design.md' },
+                                    { text: '正交四原则', link: '/md/method/arch-principle/arch-principle-four.md' },
+                                    { text: 'SOLID 原则', link: '/md/method/arch-principle/arch-principle-solid.md' },
+                                    { text: '分层架构MVC', link: '/md/method/arch-principle/arch-principle-mvc.md' },
+                                    { text: 'DDD领域驱动设计：贫血模型和充血模型', link: '/md/method/arch-principle/arch-principle-anemia-model.md' }
+                                ]
+                            },
+                            {
+                                text: '技术选型',
+                                items: [
+                                    { text: '常用的技术框架', link: '/md/method/tech/tech-select.md' },
+                                    { text: '如何写一个自己的项目', link: '/md/method/tech/tech-per-prj.md' }
+                                ]
+                            },
+                            {
+                                text: '代码规范',
+                                items: [
+                                    { text: 'Google C++ 编码规范', link: '/md/method/code-style/code-style-google-c++.md' }
+                                ]
+                            }
                         ]
                     },
                     {
@@ -257,7 +293,7 @@ module.exports = {
                         ]
                     },
                     {
-                        text: '读书笔记',
+                        text: '读书与笔记',
                         items: [
                             {
                                 text: '深入理解计算机系统',
@@ -605,11 +641,43 @@ function genSidebar4arch() {
 function genSidebar4method() {
     return [
         {
-            title: "理论|概念",
+            title: "概念",
             collapsable: false,
             sidebarDepth: 0,
             children: [
-                "concept/doc.md"
+                "concept/concept-agent.md",
+                "concept/concept-communication.md"
+            ]
+        },
+        {
+            title: "理论",
+            collapsable: false,
+            sidebarDepth: 0,
+            children: [
+                "theory/theory-acid.md",
+                "theory/theory-cap.md",
+                "theory/theory-base.md",
+            ]
+        },
+        {
+            title: "架构设计原则",
+            collapsable: false,
+            sidebarDepth: 0,
+            children: [
+                "arch-principle/arch-principle-design.md",
+                "arch-principle/arch-principle-four.md",
+                "arch-principle/arch-principle-solid.md",
+                "arch-principle/arch-principle-mvc.md",
+                "arch-principle/arch-principle-anemia-model.md"
+            ]
+        },
+        {
+            title: "技术选型",
+            collapsable: false,
+            sidebarDepth: 0,
+            children: [
+                "tech/tech-select.md",
+                "tech/tech-per-prj.md"
             ]
         },
         {
@@ -617,7 +685,7 @@ function genSidebar4method() {
             collapsable: false,
             sidebarDepth: 0,
             children: [
-                "code-style/Google_C++_Style_Guide.md"
+                "code-style/code-style-google-c++.md"
             ]
         }
     ];
@@ -898,14 +966,12 @@ function genSidebar4interview() {
             collapsable: false,
             sidebarDepth: 0,
             children: [
-                "knowledge/c11-feature.md",
                 "knowledge/computer-network.md",
                 "knowledge/cookie-session-token.md",
                 "knowledge/cplusplus-knowledge.md",
                 "knowledge/database.md",
                 "knowledge/operating-system.md",
-                "knowledge/programming-questions.md",
-                "knowledge/STL.md"
+                "knowledge/programming-questions.md"
             ]
         },
         {
