@@ -1,4 +1,4 @@
-# 在centOs 上搭建nginx来部署静态页面网站
+# Nginx应用 - 在centOs 上搭建nginx来部署静态页面网站
 
 [[toc]]
 

@@ -1,4 +1,4 @@
-# Linux编程——线程
+# Linux - 线程
 
 [[toc]]
 

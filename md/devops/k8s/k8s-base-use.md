@@ -1,5 +1,5 @@
 
-#  Kubernetes 基础应用
+#  Kubernetes - 基础应用
 
 > Kubernetes单机基础实践
 

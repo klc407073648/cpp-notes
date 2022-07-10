@@ -1,4 +1,4 @@
-# 集群
+# ElasticSearch集群 - 概念
 
 > 主要介绍elasticsearch集群的相关内容。
 

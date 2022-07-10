@@ -10,9 +10,9 @@
 # 配置过程
 
 ```
-[root@iZuf61kbf845xt6tz10abgZ mytest]# git config --global user.name "klc407073648"
-[root@iZuf61kbf845xt6tz10abgZ mytest]# git config --global user.email "407073648@qq.com"
-[root@iZuf61kbf845xt6tz10abgZ mytest]# ssh-keygen -t rsa -C "407073648@qq.com"
+[root@iZuf61kbf845xt6tz10abgZ mytest]# git config --global user.name "klc12345678"
+[root@iZuf61kbf845xt6tz10abgZ mytest]# git config --global user.email "12345678@qq.com"
+[root@iZuf61kbf845xt6tz10abgZ mytest]# ssh-keygen -t rsa -C "12345678@qq.com"
 Generating public/private rsa key pair.
 Enter file in which to save the key (/root/.ssh/id_rsa):
 Enter passphrase (empty for no passphrase):
@@ -20,7 +20,7 @@ Enter same passphrase again:
 Your identification has been saved in /root/.ssh/id_rsa.
 Your public key has been saved in /root/.ssh/id_rsa.pub.
 The key fingerprint is:
-SHA256:RZtIY5QjEMNPQ0ALHidRScOlqkWgVeS9sgfTdPc0iA4 407073648@qq.com
+SHA256:RZtIY5QjEMNPQ0ALHidRScOlqkWgVeS9sgfTdPc0iA4 12345678@qq.com
 The key's randomart image is:
 +---[RSA 2048]----+
 |. *X&Bo.=..      |
@@ -37,7 +37,7 @@ The key's randomart image is:
 [root@iZuf61kbf845xt6tz10abgZ .ssh]# ls
 authorized_keys  id_rsa  id_rsa.pub  known_hosts
 [root@iZuf61kbf845xt6tz10abgZ .ssh]# cat id_rsa.pub
-ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDfETihkb8YyUL5CQVDD4k+bHM3woZAkqUGEXpiCGh+BycGQ+nufH9QpvbHdGGhjxxe7t+kUgnc964nhx+a9Mrsq9nX1Kp0zppYV7L2vxaAClw4210NA50v2a17wOgnGVe59HIBwnxvgrY2E1qcHSkl/9AHulZwigOwTWXX9PL/E6ESElANLUpYzjR1GNrfMxQmjvDgiwy6b/xXW7ObHEKvoBBZ/UfgwlC4D30gRP+0WeoncsNOxRXk6uiSQcrmvLiE3dyoRbMUf7+6/SoYjewIUzl8ZCVH8YsV2WZWBrDbjeUEhxmZA7hbrfZf3qFHoXjMfr//UQqQo3htvGto90mT 407073648@qq.com
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDfETihkb8YyUL5CQVDD4k+bHM3woZAkqUGEXpiCGh+BycGQ+nufH9QpvbHdGGhjxxe7t+kUgnc964nhx+a9Mrsq9nX1Kp0zppYV7L2vxaAClw4210NA50v2a17wOgnGVe59HIBwnxvgrY2E1qcHSkl/9AHulZwigOwTWXX9PL/E6ESElANLUpYzjR1GNrfMxQmjvDgiwy6b/xXW7ObHEKvoBBZ/UfgwlC4D30gRP+0WeoncsNOxRXk6uiSQcrmvLiE3dyoRbMUf7+6/SoYjewIUzl8ZCVH8YsV2WZWBrDbjeUEhxmZA7hbrfZf3qFHoXjMfr//UQqQo3htvGto90mT 12345678@qq.com
 
 将上述公钥内容，配置到码云或github
 ```

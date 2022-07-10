@@ -1,4 +1,4 @@
-# 容器技术Docker、Docker-Compose、k8s的演变
+# Docker - 容器技术Docker、Docker-Compose、k8s的演变
 
 > 越来越多的应用开始容器化以及上云，可能有些人直接接触的就是k8s(Kubernetes)的概念以及操作了，但是理清一下容器化技术的一些演变过程，是一件很有意思的事情，同时也可以加强我们对容器化技术的深入理解和具体场景下运用哪种技术。
 
@@ -42,8 +42,6 @@
 Docker | 单机部署简单应用 
 Docker-Compose | 单机/少数机器部署应用 
 k8s | 集群部署高可用应用 
-
-
 
 #  Docker Compose 文件转换为 Kubernetes 资源
 

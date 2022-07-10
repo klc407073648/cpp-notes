@@ -1,4 +1,4 @@
-## TBD
+# 日常使用 - 在线技术文档
 
 [[toc]]
 
@@ -64,11 +64,6 @@
 [百度](https://www.baidu.com/)
 [谷歌](https://www.google.com)
 [bing](https://www.bing.com/)
-
-
-
-
-
 
 
 [鸠摩搜索——书籍搜索引擎](https://www.jiumodiary.com/)

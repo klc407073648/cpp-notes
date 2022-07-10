@@ -151,9 +151,7 @@ Serving book on http://localhost:4000
 
 ```
 
-
-
-![11](/_images/project/practice/gitbook/生成web界面.png)
+![11](/_images/project/practice/tools/gitbook/生成web界面.png)
 
 # gitbook制作
 

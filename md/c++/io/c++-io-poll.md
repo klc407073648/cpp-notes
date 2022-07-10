@@ -1,4 +1,4 @@
-# poll 函数
+# C++ IO - poll 函数
 
 [[toc]]
 

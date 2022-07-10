@@ -1,4 +1,4 @@
-# Redis哨兵模式
+# Redis - 哨兵模式
 
 [[toc]]
 

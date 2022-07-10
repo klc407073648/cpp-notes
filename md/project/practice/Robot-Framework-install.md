@@ -130,8 +130,8 @@ chormeTest
     Close Browser
 ```
 
-![1](/_images/project/practice/RF/百度测试.png)
+![1](/_images/project/practice/tools/RF/百度测试.png)
 
 定位元素位置：可以[参考](https://www.cnblogs.com/yu2000/p/7141769.html)
 
-![2](/_images/project/practice/RF/定位元素.png)
+![2](/_images/project/practice/tools/RF/定位元素.png)

@@ -49,4 +49,4 @@ The key's randomart image is:
 
 github配置公钥：
 
-![1](/_images/project/practice/Git/公钥配置.png)
+![1](/_images/project/practice/tools/Git/公钥配置.png)

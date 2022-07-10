@@ -1,4 +1,4 @@
-# 安装elasticsearch
+# ElasticSearch应用 - 安装
 
 [[toc]]
 

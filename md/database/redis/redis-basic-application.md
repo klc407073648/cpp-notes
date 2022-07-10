@@ -1,4 +1,4 @@
-# Redis简介
+# Redis - 简介
 
 > Redis (REmote DIctionary Server) 是用 C 语言开发的一个开源的<font color='red'>**高性能键值对（ key-value）数据库**</font>。它是一种NoSQL（Not-Only SQL，泛指非关系型的数据库），作为关系型数据库的补充。常用的NoSQL数据库：Redis,memcache,HBase,MongoDB。
 

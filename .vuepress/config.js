@@ -296,38 +296,19 @@ module.exports = {
                         text: '读书与笔记',
                         items: [
                             {
-                                text: '深入理解计算机系统',
+                                text: '书籍推荐',
                                 items: [
-                                    { text: '深入理解计算机系统 详解', link: '/md/book-note/computersystem/computersystem-chapter-1.md' }
+                                    { text: '推荐书籍目录', link: '/md/book-note/book-note-index.md' },
                                 ]
                             },
                             {
-                                text: '重构改善既有代码的设计',
+                                text: '读书笔记',
                                 items: [
-                                    { text: '重构改善既有代码的设计 详解', link: '/md/book-note/refactor/refactor-chapter-1.md' }
-                                ]
-                            },
-                            {
-                                text: 'Effective C++:改善程序与设计的55个具体做法',
-                                items: [
-                                    { text: 'Effective C++:改善程序与设计的55个具体做法 详解', link: '/md/book-note/effectivecpp/effectivecpp-chapter-2-1.md' }
-                                ]
-                            },
-                            {
-                                text: 'STL源码剖析',
-                                items: [
-                                    { text: 'STL源码剖析 详解', link: '/md/book-note/stlsource/stlsource-chapter-1.md' }
-                                ]
-                            },
-                            {
-                                text: 'Linux多线程服务端编程——使用muduo C++ 网络库',
-                                items: [
-                                    { text: 'Linux多线程服务端编程——使用muduo C++ 网络库 详解', link: '/md/book-note/muduo/muduo-chapter-1.md' }
-                                ]
-                            },
-                            {
-                                text: '大型网站技术架构——核心原理与案例分析',
-                                items: [
+                                    { text: '深入理解计算机系统 详解', link: '/md/book-note/computersystem/computersystem-chapter-1.md' },
+                                    { text: '重构改善既有代码的设计 详解', link: '/md/book-note/refactor/refactor-chapter-1.md' },
+                                    { text: 'Effective C++:改善程序与设计的55个具体做法 详解', link: '/md/book-note/effectivecpp/effectivecpp-chapter-2-1.md' },
+                                    { text: 'STL源码剖析 详解', link: '/md/book-note/stlsource/stlsource-chapter-1.md' },
+                                    { text: 'Linux多线程服务端编程——使用muduo C++ 网络库 详解', link: '/md/book-note/muduo/muduo-chapter-1.md' },
                                     { text: '大型网站技术架构——核心原理与案例分析 详解', link: '/md/book-note/websiteTechArch/websiteTechArch-index.md' }
                                 ]
                             }
@@ -341,9 +322,11 @@ module.exports = {
                         ]
                     },
                     {
-                        text: '在线技术文档',
+                        text: '日常使用',
                         items: [
-                            { text: '官网技术文档', link: '/md/tech-doc/online/doc.md' }
+                            { text: '官方技术文档', link: '/md/daily-use/doc/daily-use-doc.md' },
+                            { text: '在线工具集', link: '/md/daily-use/tools/daily-use-tools.md' },
+                            { text: '程序员常用软件汇总', link: '/md/daily-use/software/daily-use-software.md' }
                         ]
                     },
                     {
@@ -364,7 +347,7 @@ module.exports = {
                     "/md/book-note/": genSidebar4booknote(),
                     "/md/interview/": genSidebar4interview(),
                     "/md/article/": genSidebar4Article(),
-                    "/md/tech-doc/": genSidebar4techdos(),
+                    "/md/daily-use/": genSidebar4dailyUse(),
                     "/md/about/": genSidebar4About(),
                 }
             }
@@ -430,21 +413,6 @@ function genSidebar4Cplusplus() {
                 "features/c14/c++-features-c14.md",
                 "features/c17/c++-features-c17.md",
                 "features/c20/c++-features-c20.md"
-            ]
-        },
-        {
-            title: "C++ 常用库",
-            collapsable: false,
-            sidebarDepth: 0,
-            children: [
-                "tools/c++-tools-cppcheck.md",
-                "tools/c++-tools-cppunit.md",
-                "tools/c++-tools-fastcgi.md",
-                "tools/c++-tools-hiredis.md",
-                "tools/c++-tools-jsoncpp.md",
-                "tools/c++-tools-log4cpp.md",
-                "tools/c++-tools-mysql.md",
-                "tools/c++-tools-poco.md"
             ]
         }
     ]
@@ -583,6 +551,21 @@ function genSidebar4develop() {
             children: [
                 "todo.md"
             ]
+        },
+        {
+            title: "常用开发库",
+            collapsable: false,
+            sidebarDepth: 0,
+            children: [
+                "library/library-cppcheck.md",
+                "library/library-cppunit.md",
+                "library/library-fastcgi.md",
+                "library/library-hiredis.md",
+                "library/library-jsoncpp.md",
+                "library/library-log4cpp.md",
+                "library/library-mysql.md",
+                "library/library-poco.md"
+            ]
         }
     ];
 }
@@ -596,15 +579,15 @@ function genSidebar4microServices() {
             sidebarDepth: 0,
             children: [
                 "frame/frame-architecture.md",
+                "frame/frame-study-route.md",
+                "frame/frame-registration-discovery.md",
+                "frame/frame-gateway.md",
+                "frame/frame-message-queue.md",
+                "frame/frame-protection.md",
                 "frame/frame-distributed-search.md",
                 "frame/frame-distributed-transaction.md",
-                "frame/frame-gateway.md",
-                "frame/frame-idempotent-design.md",
-                "frame/frame-message-queue.md",
                 "frame/frame-multi-level-cache.md",
-                "frame/frame-protection.md",
-                "frame/frame-registration-discovery.md",
-                "frame/frame-study-route.md"
+                "frame/frame-idempotent-design.md"
             ]
         },
         {
@@ -731,14 +714,6 @@ function genSidebar4Devops() {
             ]
         },
         {
-            title: "工具",
-            collapsable: false,
-            sidebarDepth: 0,
-            children: [
-                "tools/tools.md"
-            ]
-        },
-        {
             title: "容器化 - Docker",
             collapsable: false,
             sidebarDepth: 0,
@@ -780,16 +755,30 @@ function genSidebar4Devops() {
 function genSidebar4project() {
     return [
         {
-            title: "实践",
+            title: "实践 - Docker",
             collapsable: false,
             sidebarDepth: 0,
             children: [
-                "practice/Docker-MySQL.md",
-                "practice/Docker-Redis.md",
-                "practice/Git.md",
-                "practice/gitbook-use.md",
-                "practice/git-config-key.md",
-                "practice/Jenkins.md",
+                "practice/docker/jenkins/practice-docker-jenkins.md",
+                "practice/docker/mysql/practice-docker-mysql.md",
+                "practice/docker/redis/practice-docker-redis.md"
+            ]
+        },
+        {
+            title: "实践 - 工具类",
+            collapsable: false,
+            sidebarDepth: 0,
+            children: [
+                "practice/tools/practice-tools-git-config-key.md",
+                "practice/tools/practice-tools-git.md",
+                "practice/tools/practice-tools-gitbook.md"
+            ]
+        },
+        {
+            title: "实践 - 实用型",
+            collapsable: false,
+            sidebarDepth: 0,
+            children: [
                 "practice/ngx-admin-install.md",
                 "practice/Robot-Framework-install.md",
                 "practice/nginx-image-server-cfg.md"
@@ -840,6 +829,14 @@ function genSidebar4project() {
 // book-note page
 function genSidebar4booknote() {
     return [
+        {
+            title: "书籍推荐",
+            collapsable: false,
+            sidebarDepth: 0,
+            children: [
+                "book-note-index.md"
+            ]
+        },
         {
             title: "深入理解计算机系统 详解",
             collapsable: false,
@@ -1041,15 +1038,30 @@ function genSidebar4Article() {
 
 }
 
-// tech-doc page
-function genSidebar4techdos() {
+// daily-use page
+function genSidebar4dailyUse() {
     return [
         {
-            title: "技术文档",
+            title: "在线技术文档",
             collapsable: false,
             sidebarDepth: 0,
             children: [
-                "online/doc.md"
+                "doc/daily-use-doc.md"
+            ]
+        },
+        {
+            title: "在线工具集",
+            collapsable: false,
+            sidebarDepth: 0,
+            children: [
+                "tools/daily-use-tools.md"
+            ]
+        },{
+            title: "程序员常用软件汇总",
+            collapsable: false,
+            sidebarDepth: 0,
+            children: [
+                "software/daily-use-software.md"
             ]
         }
     ];

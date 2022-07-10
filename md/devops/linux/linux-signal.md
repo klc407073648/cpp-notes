@@ -1,4 +1,4 @@
-# Linux编程——信号
+# Linux - 信号
 
 [[toc]]
 

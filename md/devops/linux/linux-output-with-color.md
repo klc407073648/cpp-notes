@@ -1,4 +1,4 @@
-## Linux使echo命令输出结果带颜色
+# Linux - 使echo命令输出结果带颜色
 
 [[toc]]
 

@@ -1,4 +1,4 @@
-# istio 安装
+# Istio - 安装
 
 [[toc]]
 

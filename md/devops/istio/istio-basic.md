@@ -1,4 +1,4 @@
-# Istio
+# Istio - 基础
 
 > istio是kubernetes好帮手，可以帮kubernetes实现服务治理功能。
 > kubernetes可以帮助istio实现

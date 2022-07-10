@@ -1,4 +1,4 @@
-# elasticsearch
+# ElasticSearch数据 - 存储
 
 > 主要介绍elasticsearch的数据存储功能，包括索引库操作和文档操作。
 
