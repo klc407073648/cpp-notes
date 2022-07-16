@@ -111,12 +111,6 @@ module.exports = {
                                 items: [
                                     { text: 'IO框架 详解', link: '/md/c++/io/c++-io-reuse.md' }
                                 ]
-                            },
-                            {
-                                text: 'C++ 常用库学习',
-                                items: [
-                                    { text: '常用库学习 详解', link: '/md/c++/tools/c++-tools-cppcheck.md' }
-                                ]
                             }
                         ]
                     },
@@ -148,7 +142,7 @@ module.exports = {
                     {
                         text: '编程四大件',
                         items: [
-                            { text: '数据结构与算法', link: '/md/programming/network/network-physical.md' },
+                            { text: '数据结构与算法', link: '/md/programming/data-structure/data-structure-overview.md' },
                             { text: '计算机网络', link: '/md/programming/network/network-physical.md' },
                             { text: '操作系统', link: '/md/programming/system/doc.md' },
                             { text: '设计模式', link: '/md/programming/designpattern/designpattern-overview' }
@@ -157,7 +151,7 @@ module.exports = {
                     {
                         text: '开发',
                         items: [
-                            { text: '开发', link: '/md/develop/todo.md' },
+                            { text: '开发 - 常用库', link: '/md/develop/library/library-cppcheck.md' },
                         ]
                     },
                     {
@@ -205,8 +199,9 @@ module.exports = {
                                 text: '架构设计原则',
                                 items: [
                                     { text: '合适、简单、演化原则', link: '/md/method/arch-principle/arch-principle-design.md' },
+                                    { text: '高内聚、低耦合', link: '/md/method/arch-principle/arch-principle-high-cohesion.md' },
                                     { text: '正交四原则', link: '/md/method/arch-principle/arch-principle-four.md' },
-                                    { text: 'SOLID 原则', link: '/md/method/arch-principle/arch-principle-solid.md' },
+                                    { text: 'SOLID 原则', link: '/md/method/arch-principle/arch-principle-solid-detail.md' },
                                     { text: '分层架构MVC', link: '/md/method/arch-principle/arch-principle-mvc.md' },
                                     { text: 'DDD领域驱动设计：贫血模型和充血模型', link: '/md/method/arch-principle/arch-principle-anemia-model.md' }
                                 ]
@@ -234,8 +229,7 @@ module.exports = {
                                 items: [
                                     { text: 'Linux', link: '/md/devops/linux/linux-cmd-tips.md' },
                                     { text: 'Nginx', link: '/md/devops/nginx/nginx-study-note.md' },
-                                    { text: 'Shortcut', link: '/md/devops/shortcut/linux.md' },
-                                    { text: 'Tools', link: '/md/devops/tools/tools.md' }
+                                    { text: 'Shortcut', link: '/md/devops/shortcut/linux.md' }
                                 ]
                             },
                             {
@@ -254,7 +248,9 @@ module.exports = {
                             {
                                 text: '实践',
                                 items: [
-                                    { text: 'Docker-MySQL', link: '/md/project/practice/Docker-MySQL.md' }
+                                    { text: '实践 - Docker', link: '/md/project/practice/docker/jenkins/practice-docker-jenkins.md' },
+                                    { text: '实践 - 工具类', link: '/md/project/practice/tools/practice-tools-git-config-key.md' },
+                                    { text: '实践 - 实用型', link: '/md/project/practice/ngx-admin-install.md' }
                                 ]
                             },
                             {
@@ -506,6 +502,52 @@ function genSidebar4Alg() {
 function genSidebar4Program() {
     return [
         {
+            title: "数据结构基础",
+            collapsable: false,
+            sidebarDepth: 0,
+            children: [
+                "data-structure/data-structure-overview.md",
+                "data-structure/data-structure-array-vector.md",
+                "data-structure/data-structure-list.md",
+                "data-structure/data-structure-hashtable.md",
+                "data-structure/data-structure-stack.md",
+                "data-structure/data-structure-queue.md",
+                "data-structure/data-structure-tree-overview.md",
+                "data-structure/data-structure-tree-search.md",
+                "data-structure/data-structure-tree-balance.md",
+                "data-structure/data-structure-tree-redblack.md",
+                "data-structure/data-structure-tree-trie.md",
+                "data-structure/data-structure-graph-overview.md",
+                "data-structure/data-structure-graph-bfs-dfs.md",
+                "data-structure/data-structure-use.md",
+            ]
+        },
+        {
+            title: "算法思想",
+            collapsable: false,
+            sidebarDepth: 0,
+            children: [
+                "algorithm/core/algorithm-core-overview.md",
+            ]
+        },
+        {
+            title: "常见排序算法",
+            collapsable: false,
+            sidebarDepth: 0,
+            children: [
+                "algorithm/sort/algorithm-sort-bubble.md",
+                "algorithm/sort/algorithm-sort-select.md",
+                "algorithm/sort/algorithm-sort-insert.md",
+                "algorithm/sort/algorithm-sort-shell.md",
+                "algorithm/sort/algorithm-sort-merge.md",
+                "algorithm/sort/algorithm-sort-quick.md",
+                "algorithm/sort/algorithm-sort-heap.md",
+                "algorithm/sort/algorithm-sort-counting.md",
+                "algorithm/sort/algorithm-sort-bucket.md",
+                "algorithm/sort/algorithm-sort-radix.md"
+            ]
+        },
+        {
             title: "计算机网络",
             collapsable: false,
             sidebarDepth: 0,
@@ -580,8 +622,8 @@ function genSidebar4microServices() {
             children: [
                 "frame/frame-architecture.md",
                 "frame/frame-study-route.md",
-                "frame/frame-registration-discovery.md",
                 "frame/frame-gateway.md",
+                "frame/frame-registration-discovery.md",
                 "frame/frame-message-queue.md",
                 "frame/frame-protection.md",
                 "frame/frame-distributed-search.md",
@@ -648,8 +690,9 @@ function genSidebar4method() {
             sidebarDepth: 0,
             children: [
                 "arch-principle/arch-principle-design.md",
+                "arch-principle/arch-principle-high-cohesion.md",
                 "arch-principle/arch-principle-four.md",
-                "arch-principle/arch-principle-solid.md",
+                "arch-principle/arch-principle-solid-detail.md",
                 "arch-principle/arch-principle-mvc.md",
                 "arch-principle/arch-principle-anemia-model.md"
             ]
@@ -692,7 +735,7 @@ function genSidebar4Devops() {
             ]
         },
         {
-            title: "Web服务器 - nginx",
+            title: "Nginx",
             collapsable: false,
             sidebarDepth: 0,
             children: [
@@ -731,8 +774,7 @@ function genSidebar4Devops() {
                 "k8s/k8s.md",
                 "k8s/k8s-base-use.md",
                 "k8s/k8s-cmd.md",
-                "k8s/k8s-probe.md",
-                "k8s/k8s-note.md"
+                "k8s/k8s-probe.md"
             ]
         },
         {

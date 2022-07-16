@@ -1,4 +1,4 @@
-# Kubernetes - 命令技巧大全
+# Kubernetes - 命令
 
 > Kubectl 命令是操作 kubernetes 集群的最直接和最 skillful 的途径，这个60多MB大小的二进制文件，到底有啥能耐呢？请看下文：
 

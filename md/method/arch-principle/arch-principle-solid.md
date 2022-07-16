@@ -1,4 +1,4 @@
-# 架构设计 - 
+# 架构设计 - SOLID 原则
 
 
 [[toc]]
@@ -94,11 +94,17 @@ Shipping的getCost(order)
 
 ## LSP 里式替换原则
 
-> 里式替换原则（Liskov Substitution Principle）：**子类对象（object of subtype/derived class）能够替换程序（program）中父类对象（object of base/parent class）出现的任何地方，并且保证原来程序的逻辑行为（behavior）不变及正确性不被破坏**。
+> 里式替换原则（Liskov Substitution Principle）：**子类对象（object of subtype/derived class）能够替换程序（program）中父类对象（object of base/parent class）出现的任何地方，并且保证原来程序的逻辑行为（behavior）不变（正确性不被破坏）**。
 
 > If S is a subtype of T, then objects of type T may be replaced with objects of type S, without breaking the program。
 
-里式替换原则是用来指导，继承关系中子类该如何设计的一个原则。理解里式替换原则，最核心的就是理解“design by contract，按照协议来设计”这几个字。父类定义了函数的“约定”（或者叫协议），那子类可以改变函数的内部实现逻辑，但不能改变函数原有的“约定”,因为如果违反父类的约点，在用子类替换父类的时候程序可能会出错。
+里式替换原则是用来指导，继承关系中子类该如何设计的一个原则。
+
+理解里式替换原则，最核心的就是理解“design by contract，按照契约来设计”这几个字。
+
+父类定义了函数的“约定”（或者叫协议），那子类可以改变函数的内部实现逻辑，但不能改变函数原有的“约定”,因为如果违反父类的约点，在用子类替换父类的时候程序可能会出错。
+
+拿父类的单元测试来测试子类
 
 这里的约定包括：
 

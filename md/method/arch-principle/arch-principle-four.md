@@ -125,7 +125,6 @@
 
 > 需求1： 存在一个学生的列表，查找一个年龄等于18岁的学生
 
-
 ```cpp
 Student* findByAge(vector<Student> students)
 { 
