@@ -199,11 +199,9 @@ module.exports = {
                                 text: '架构设计原则',
                                 items: [
                                     { text: '合适、简单、演化原则', link: '/md/method/arch-principle/arch-principle-design.md' },
-                                    { text: '高内聚、低耦合', link: '/md/method/arch-principle/arch-principle-high-cohesion.md' },
                                     { text: '正交四原则', link: '/md/method/arch-principle/arch-principle-four.md' },
                                     { text: 'SOLID 原则', link: '/md/method/arch-principle/arch-principle-solid-detail.md' },
-                                    { text: '分层架构MVC', link: '/md/method/arch-principle/arch-principle-mvc.md' },
-                                    { text: 'DDD领域驱动设计：贫血模型和充血模型', link: '/md/method/arch-principle/arch-principle-anemia-model.md' }
+                                    { text: 'DDD领域驱动设计', link: '/md/method/arch-principle/arch-principle-ddd.md' }
                                 ]
                             },
                             {
@@ -573,10 +571,29 @@ function genSidebar4Program() {
             collapsable: false,
             sidebarDepth: 0,
             children: [
-                "designpattern/designpattern-overview.md",
-                "designpattern/designpattern-singleton.md",
-                "designpattern/designpattern-observer.md",
-                "designpattern/designpattern-factory.md"
+                "designpattern/designpattern-create-singleton.md",
+                "designpattern/designpattern-create-factory.md",
+                "designpattern/designpattern-create-abstract-factory.md",
+                "designpattern/designpattern-create-builder.md",
+                "designpattern/designpattern-create-prototype.md",
+                "designpattern/designpattern-structure-facade.md",
+                "designpattern/designpattern-structure-adapter.md",
+                "designpattern/designpattern-structure-bridge.md",
+                "designpattern/designpattern-structure-composite.md",
+                "designpattern/designpattern-structure-decorator.md",
+                "designpattern/designpattern-structure-flyweight.md",
+                "designpattern/designpattern-structure-proxy.md",
+                "designpattern/designpattern-behave-chain-of-responsibility.md",
+                "designpattern/designpattern-behave-strategy.md",
+                "designpattern/designpattern-behave-template.md",
+                "designpattern/designpattern-behave-command.md",
+                "designpattern/designpattern-behave-observer.md",
+                "designpattern/designpattern-behave-visitor.md",
+                "designpattern/designpattern-behave-state.md",
+                "designpattern/designpattern-behave-interpreter.md",
+                "designpattern/designpattern-behave-iterator.md",
+                "designpattern/designpattern-behave-mediator.md",
+                "designpattern/designpattern-behave-memento.md"
             ]
         }
     ];
@@ -694,7 +711,10 @@ function genSidebar4method() {
                 "arch-principle/arch-principle-four.md",
                 "arch-principle/arch-principle-solid-detail.md",
                 "arch-principle/arch-principle-mvc.md",
-                "arch-principle/arch-principle-anemia-model.md"
+                "arch-principle/arch-principle-clean-arch.md",
+                "arch-principle/arch-principle-anemia-model.md",
+                "arch-principle/arch-principle-ddd.md",
+                "arch-principle/arch-principle-arch-develop.md",
             ]
         },
         {

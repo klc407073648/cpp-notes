@@ -158,3 +158,47 @@ flavors), Fortran, VHDL 生成注释文档。
 容甚至是文件夹与文件夹之间的文件差异。
 
 * 官网：[https://winmerge.org/downloads/](https://winmerge.org/downloads/)
+
+# 资讯
+
+## Github-全球领先的软件开发平台
+
+> GitHub是基于Git版本控制系统而打造的开源代码仓库，是全世界最好用也是最大的代码仓库。
+
+* 官网：[https://github.com/](https://github.com/)
+
+## Stack Overflow-开发人员学习、共享、建立职业的地方
+
+> Stack Overflow是一个与程序相关的IT技术问答网站。用户可以在网站免费提交问题，浏览问题，索引相关内容，在创建主页的时候使用简单的HTML。在问题页面，不会弹出任何广告，销售信息，JavaScript 窗口等。
+
+* 官网：[https://stackoverflow.com/](https://stackoverflow.com/)
+
+## 开源中国社区-中文开源技术交流社区
+
+> 开源中国成立于2008年8月，是目前国内最大的开源技术社区，拥有超过200万会员，形成了由开源软件库、代码分享、资讯、协作翻译、码云、众包、招聘等几大模块内容，为IT开发者提供了一个发现、使用、并交流开源技术的平台。
+
+* 官网：[https://www.oschina.net/](https://www.oschina.net/)
+
+## CSDN -专业IT技术社区
+
+> CSDN是中国专业IT社区 (Chinese Software Developer Network) 的简称，CSDN创立于1999年，致力于为中国软件开发者提供知识传播、在线学习、职业发展等全生命周期服务。
+
+* 官网：[https://www.csdn.net/](https://www.csdn.net/)
+
+## InfoQ-在线新闻/社区网站
+
+> 软件正在改变世界！InfoQ（Information Queue）是一个在线新闻/社区网站，旨在通过促进软件开发领域知识与创新的传播，为软件开发者提供帮助。
+
+* 官网：[https://www.infoq.cn/](https://www.infoq.cn/)
+
+## 掘金-帮助开发者成长社区
+
+> 掘金是一个帮助开发者成长的社区，是一个面向互联网技术人的内容分享平台。
+
+* 官网：[https://juejin.cn/](https://juejin.cn/)
+
+## 51CTO-专注于IT人职业成长平台
+
+> 51CTO 成立于2005年，目前已建成为专注于IT人职业成长平台；拥有1500万注册用户，覆盖了中国主流城市大多数IT从业人群，是国内排名第一的服务IT技术人员的专业性服务平台。
+
+* 官网：[http://www.51cto.com](http://www.51cto.com)
