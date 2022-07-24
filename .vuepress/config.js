@@ -571,6 +571,7 @@ function genSidebar4Program() {
             collapsable: false,
             sidebarDepth: 0,
             children: [
+                "designpattern/designpattern-overview",
                 "designpattern/designpattern-create-singleton.md",
                 "designpattern/designpattern-create-factory.md",
                 "designpattern/designpattern-create-abstract-factory.md",
@@ -600,7 +601,7 @@ function genSidebar4Program() {
 
 }
 
-//develop page
+// develop page
 function genSidebar4develop() {
     return [
         {
