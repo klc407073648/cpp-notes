@@ -1,8 +1,8 @@
 # 行为型 - 状态(State)
 
-​[[toc]]
-
 > 状态模式(State pattern): 允许对象在内部状态改变时改变它的行为, 对象看起来好象改了它的类。
+
+​[[toc]]
 
 # 抛砖引玉
 
@@ -20,7 +20,7 @@ State 模式就是被用来解决上面列出的两个问题的， 在 State 模
 
 State 模式典型的结构图为：
 
-![](_images/programming/designpattern/behave/State.png)
+![](/_images/programming/designpattern/behave/State.png)
 
 
 # 代码实现

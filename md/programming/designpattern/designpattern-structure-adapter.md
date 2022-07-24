@@ -1,8 +1,8 @@
 # 结构型 - 适配器(Adapter)
 
-​[[toc]]
-
 > 适配器模式(Adapter pattern): 将一个类的接口, 转换成客户期望的另一个接口。 适配器让原本接口不兼容的类可以合作无间。 对象适配器使用组合, 类适配器使用多重继承。
+
+​[[toc]]
 
 # 抛砖引玉
 
@@ -19,11 +19,11 @@ Adapter 模式解决的问题在生活中经常会遇到：
 
 Adapter 类模式结构图为：
 
-![](_images/programming/designpattern/structure/Adapter_class.png)
+![](/_images/programming/designpattern/structure/Adapter_class.png)
 
 Adapter 对象模式结构图为：
 
-![](_images/programming/designpattern/structure/Adapter_object.png)
+![](/_images/programming/designpattern/structure/Adapter_object.png)
 
 在 Adapter 模式的结构图中可以看到，**类模式的 Adapter 采用继承的方式复用 Adaptee的接口，而在对象模式的 Adapter 中我们则采用组合的方式实现 Adaptee 的复用**。
 

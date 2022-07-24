@@ -1,8 +1,8 @@
 # 创建型 - 生成器(Builder)
 
-​[[toc]]
-
 > 生成器模式(Builder pattern) : 封装一个对象的构造过程，并允许按步骤构造。
+
+​[[toc]]
 
 # 抛砖引玉
 
@@ -12,7 +12,7 @@ Builder 模式要解决的也正是这样的问题：当我们要创建的对象
 
 Builder 模式典型的结构图为：
 
-![](_images/programming/designpattern/create/Builder.png)
+![](/_images/programming/designpattern/create/Builder.png)
 
 Builder 模式的关键是其中的 Director 对象并不直接返回对象，而是通过一步步（ BuildPartA， BuildPartB， BuildPartC）来一步步进行对象的创建。当然这里 Director 可以提供一个默认的返回对象的接口（即返回通用的复杂对象的创建， 即不指定或者特定唯一指定 BuildPart 中的参数）。
 

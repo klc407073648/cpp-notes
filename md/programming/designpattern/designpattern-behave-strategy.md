@@ -1,8 +1,8 @@
 # 行为型 - 策略(Strategy)
 
-​[[toc]]
-
 > 策略模式(strategy pattern): 定义了算法族, 分别封闭起来, 让它们之间可以互相替换, 此模式让算法的变化独立于使用算法的客户。
+
+​[[toc]]
 
 # 抛砖引玉
 
@@ -12,7 +12,7 @@ Strategy 模式**将逻辑（算法） 封装到一个类（ Context）里面，
 
 Strategy 模式典型的结构图为：
 
-![](_images/programming/designpattern/behave/Strategy.png)
+![](/_images/programming/designpattern/behave/Strategy.png)
 
 这里的关键就是将算法的逻辑抽象接口（ DoAction）封装到一个类中（ Context），再通过委托的方式将具体的算法实现委托给具体的 Strategy 类来实现（ ConcreteStrategeA类）。
 

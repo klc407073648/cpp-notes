@@ -1,12 +1,14 @@
 # 行为型 - 备忘录(Memento)
 
+> 备忘录模式(Memento pattern): 要在不破坏封装行的前提下，捕获并保存一个类的内部状态，这样就可以利用该保存的状态实施恢复操作。
+
 ​[[toc]]
 
-> 备忘录模式(Memento pattern): 要在不破坏封装行的前提下，捕获并保存一个类的内部状态，这样就可以利用该保存的状态实施恢复操作。
+# 概念
 
 Memento 模式典型的结构图为：
 
-![](_images/programming/designpattern/behave/Memento.png)
+![](/_images/programming/designpattern/behave/Memento.png)
 
 
 # 代码实现

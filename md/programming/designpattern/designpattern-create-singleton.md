@@ -1,12 +1,14 @@
 # 创建型 - 单例模式(Singleton pattern)
 
+> 单例模式(Singleton): 保证一个类仅有一个实例,并提供一个访问它的全局控制点. 比如在加载配置文件时, 可使用该模式。
+
 ​[[toc]]
 
-> 单例模式(Singleton): 保证一个类仅有一个实例,并提供一个访问它的全局控制点. 比如在加载配置文件时, 可使用该模式。
+# 概念
 
 Singleton 模式典型的结构图为：
 
-![](_images/programming/designpattern/create/Singleton.png)
+![](/_images/programming/designpattern/create/Singleton.png)
 
 # 最基础的实现
 

@@ -1,8 +1,8 @@
 # 行为型 - 责任链(Chain Of Responsibility)
 
-​[[toc]]
-
 > (Chain of responsibility pattern): 通过责任链模式, 你可以为某个请求创建一个对象链. 每个对象依序检查此请求并对其进行处理或者将它传给链中的下一个对象。
+
+​[[toc]]
 
 # 抛砖引玉
 
@@ -32,7 +32,7 @@ MFC提供了消息的处理的链式处理策略，处理消息的请求将**沿
 
 Chain of responsibility 模式型的结构图为：
 
-![](_images/programming/designpattern/behave/ChainOfResponsibility.png)
+![](/_images/programming/designpattern/behave/ChainOfResponsibility.png)
 
 Chain of Responsibility 模式中 ConcreteHandler 将自己的后继对象（向下传递消息的对象）记录在自己的后继表中，当一个请求到来时， ConcreteHandler 会先检查看自己有没有匹配的处理程序，如果有就自己处理，否则传递给它的后继。当然这里示例程序中为了简化，ConcreteHandler 只是简单的检查看自己有没有后继，有的话将请求传递给后继进行处理，没有的话就自己处理。
 

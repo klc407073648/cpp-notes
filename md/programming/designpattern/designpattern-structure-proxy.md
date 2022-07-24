@@ -1,8 +1,8 @@
 # 结构型 - 代理(Proxy)
 
-​[[toc]]
-
 > 代理模式(Proxy pattern): 为另一个对象提供一个替身或占位符以控制对这个对象的访问。
+
+​[[toc]]
 
 # 抛砖引玉
 
@@ -18,7 +18,7 @@ Proxy 模式可以解决的常见问题：
 
 Proxy 模式典型的结构图为：
 
-![](_images/programming/designpattern/structure/Proxy.png)
+![](/_images/programming/designpattern/structure/Proxy.png)
 
 
 # 代码实现

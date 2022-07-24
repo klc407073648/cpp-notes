@@ -1,12 +1,14 @@
 # 行为型 - 迭代器(Iterator)
 
+> Iterator 模式也正是用来**解决对一个聚合对象的遍历问题**，将对聚合的遍历封装到一个类中进行，这样就避免了暴露这个聚合对象的内部表示的可能。
+
 ​[[toc]]
 
-> Iterator 模式也正是用来**解决对一个聚合对象的遍历问题**，将对聚合的遍历封装到一个类中进行，这样就避免了暴露这个聚合对象的内部表示的可能。
+# 概念
 
 Iterator 模式典型的结构图为：
 
-![](_images/programming/designpattern/behave/Iterator.png)
+![](/_images/programming/designpattern/behave/Iterator.png)
 
 Iterator 模式中定义的对外接口可以视客户成员的便捷定义，但是基本的接口在图中的Iterator 中已经给出了（参考 STL 的 Iterator 就知道了）。———— 迭代器可以用于对统一类型的处理，Java 使用Iterable<T>来作入参类型，可以忽略到底是数组还是链表。
 

@@ -1,9 +1,8 @@
 # 行为型 - 访问者(Visitor)
 
-​[[toc]]
-
 > 访问者模式(visitor pattern): 当你想要为一个对象的组合增加新的能力, 且封装并不重要时, 就使用访问者模式。
 
+​[[toc]]
 
 # 抛砖引玉
 
@@ -13,7 +12,7 @@ Visitor 模式则提供了一种解决方案：将更新（变更）封装到一
 
 Visitor 模式的结构图为：
 
-![](_images/programming/designpattern/behave/Visitor.png)
+![](/_images/programming/designpattern/behave/Visitor.png)
 
 Visitor 模式在不破坏类的前提下， 为类提供增加新的新操作。 Visitor 模式的关键是双分派（ Double-Dispatch） 的技术【注释 1】。 C++语言支持的是单分派。
 

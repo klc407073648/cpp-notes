@@ -1,12 +1,14 @@
 # 行为型 - 中介者(Mediator)
 
+> 中介者模式(Mediator pattern) : 使用中介者模式来集中相关对象之间复杂的沟通和控制方式。
+
 ​[[toc]]
 
-> 中介者模式(Mediator pattern) : 使用中介者模式来集中相关对象之间复杂的沟通和控制方式。
+# 概念
 
 Mediator 模式典型的结构图为：
 
-![](_images/programming/designpattern/behave/Mediator.png)
+![](/_images/programming/designpattern/behave/Mediator.png)
 
 Mediator 模式中，每个 Colleague 维护一个 Mediator，当要进行交互，例如图中ConcreteColleagueA 和 ConcreteColleagueB 之间的交互就可以通过 ConcreteMediator 提供的DoActionFromAtoB 来处理， ConcreteColleagueA 和 ConcreteColleagueB 不必维护对各自的引用，甚至它们也不知道各个的存在。 **Mediator 通过这种方式将多对多的通信简化为了一（ Mediator） 对多（ Colleague）的通信**。
 

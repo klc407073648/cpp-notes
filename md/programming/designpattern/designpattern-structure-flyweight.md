@@ -1,8 +1,8 @@
 # 结构型 - 享元(Flyweight)
 
-​[[toc]]
-
 > 享元模式(Flyweight Pattern): 利用共享的方式来支持大量细粒度的对象，这些对象一部分内部状态是相同的。 它让某个类的一个实例能用来提供许多"虚拟实例"。
+
+​[[toc]]
 
 # 抛砖引玉
 
@@ -14,7 +14,7 @@
 
 Flyweight 模式典型的结构图为：
 
-![](_images/programming/designpattern/structure/Flyweight.png)
+![](/_images/programming/designpattern/structure/Flyweight.png)
 
 从上图可以看出， Flyweight 模式中有一个类似 Factory 模式的对象构造工厂FlyweightFactory，当客户程序员（ Client）需要一个对象时候就会向 FlyweightFactory 发出请求对象的消息 GetFlyweight（）消息， FlyweightFactory 拥有一个管理、存储对象的“仓库”（或者叫对象池， vector 实现）， GetFlyweight（）消息会遍历对象池中的对象，如果已经存在则直接返回给 Client，否则创建一个新的对象返回给 Client。当然可能也有不想被共享的对象（例如结构图中的 UnshareConcreteFlyweight），但不在本模式的讲解范围，故在实现中不给出。
 

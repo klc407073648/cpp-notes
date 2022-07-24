@@ -1,8 +1,8 @@
 # 行为型 - 观察者(Observer)
 
-​[[toc]]
-
 > 观察者模式(Observer): 定义了一种一对多的依赖关系,让多个观察者对象同时监听某一主题对象,在它的状态发生变化时,会通知所有的观察者。
+
+​[[toc]]
 
 # 抛砖引玉
 
@@ -15,7 +15,7 @@ Observer 模式要解决的问题为：建立一个一（ Subject）对多（ Ob
 
 Observer 模式典型的结构图为：
 
-![](_images/programming/designpattern/behave/Observer.png)
+![](/_images/programming/designpattern/behave/Observer.png)
 
 具体思路解析：
 
@@ -63,7 +63,7 @@ ConcreteObserverA observer....new
 
 Observer 是影响极为深远的模式之一，也是在大型系统开发过程中要用到的模式之一。除了 MFC、 Struts 提供了 MVC 的实现框架， 在 Java 语言中还提供了专门的接口实现 Observer模式：通过专门的类 Observable 及 Observer 接口来实现 MVC 编程模式， 其 UML 图可以表示为
 
-![](_images/programming/designpattern/behave/MVC的UML图.png)
+![](/_images/programming/designpattern/behave/MVC的UML图.png)
 
 这里的 Observer 就是观察者， **Observable 则充当目标 Subject 的角色。Observer 模式也称为发布－订阅（ publish-subscribe），目标就是通知的发布者，观察者则是通知的订阅者（接受通知）**。
 ​

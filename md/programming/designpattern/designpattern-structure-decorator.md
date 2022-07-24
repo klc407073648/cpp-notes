@@ -1,8 +1,8 @@
 # 结构型 - 装饰(Decorator)
 
-​[[toc]]
-
 > 装饰者模式(Decorator pattern): 动态地将责任附加到对象上, 若要扩展功能, 装饰者提供了比继承更有弹性的替代方案。
+
+​[[toc]]
 
 # 抛砖引玉
 
@@ -12,7 +12,7 @@
 
 Decorator 模式典型的结构图为：
 
-![](_images/programming/designpattern/structure/Decorator.png)
+![](/_images/programming/designpattern/structure/Decorator.png)
 
 在结构图中 ， ConcreteComponent 和 Decorator 需要有同样的接口 ，因此ConcreteComponent 和 Decorator 有着一个共同的父类。
 

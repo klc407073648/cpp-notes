@@ -1,8 +1,8 @@
-# 行为型 - 模板(Template Method)
+# 行为型 - 模板模式(Template)
+
+> 模板模式(Template) : 在一个方法中定义一个算法的骨架, 而将一些步骤延迟到子类中. 模板方法使得子类可以在不改变算法结构的情况下, 重新定义算法中的某些步骤。 
 
 ​[[toc]]
-
-> 模板模式(Template pattern) : 将逻辑（算法）框架放在抽象基类中，并定义好细节的接口，子类中实现细节。
 
 # 抛砖引玉
 
@@ -14,7 +14,7 @@ Strategy 模式解决的是和 Template 模式类似的问题， 但是 Strategy
 
 Template 模式典型的结构图为：
 
-![](_images/programming/designpattern/behave/Template.png)
+![](/_images/programming/designpattern/behave/Template.png)
 
 Template 模式实际上就是利用面向对象中`多态`的概念实现算法实现细节和高层接口的`松耦合`。可以看到 Template 模式采取的是继承方式实现这一点的，由于继承是一种强约束性的条件，因此也给 Template 模式带来一些许多不方便的地方。
 

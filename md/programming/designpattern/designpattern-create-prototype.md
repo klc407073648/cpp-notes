@@ -1,8 +1,8 @@
 # 创建型 - 原型模式(Prototype)
 
-​[[toc]]
-
 > 原型模式(Prototype pattern) : 使用原型实例指定要创建对象的类型，通过复制这个原型来创建新对象。
+
+​[[toc]]
 
 # 抛砖引玉
 
@@ -12,7 +12,7 @@ Prototype 模式也正是提供了自我复制的功能，就是说新对象的�
 
 Prototype 模式典型的结构图为：
 
-![](_images/programming/designpattern/create/Prototype.png)
+![](/_images/programming/designpattern/create/Prototype.png)
 
 Prototype 模式提供了一个通过已存在对象进行新对象创建的接口（ Clone）， Clone（）实现和具体的实现语言相关，在 C++中我们将通过拷贝构造函数实现之。
 

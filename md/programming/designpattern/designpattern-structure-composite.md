@@ -1,12 +1,14 @@
 # 结构型 - 组合(Composite)
 
+> 组合模式(composite pattern): 允许你将对象组合成树形结构来表现"整体/部分"层次结构. 组合能让客户以一致的方式处理个别对象以及对象组合
+
 ​[[toc]]
 
-> 组合模式(composite pattern): 允许你将对象组合成树形结构来表现"整体/部分"层次结构. 组合能让客户以一致的方式处理个别对象以及对象组合
+# 概念
 
 Composite 模式典型的结构图为：
 
-![](_images/programming/designpattern/structure/Composite.png)
+![](/_images/programming/designpattern/structure/Composite.png)
 
 组件(Component)类是组合类(Composite)和叶子类(Leaf)的父类，可以把组合类看成是树的中间节点。 组合对象拥有一个或者多个组件对象，因此组合对象的操作可以委托给组件对象去处理，而组件对象可以是另一个组合对象或者叶子对象。
 

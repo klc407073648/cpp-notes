@@ -1,8 +1,8 @@
 # 结构型 - 外观(Facade)
 
-​[[toc]]
-
 > 外观模式(Facade pattern) : 它提供了一个统一的接口，用来访问子系统中的一群接口，从而让子系统更容易使用。
+
+​[[toc]]
 
 # 抛砖引玉
 
@@ -14,7 +14,7 @@
 
 Facade 模式典型的结构图为：
 
-![](_images/programming/designpattern/structure/Facade.png)
+![](/_images/programming/designpattern/structure/Facade.png)
 
 Façade 模式的想法、 思路和实现都非常简单， 但是其思想却是非常有意义的。 并且 Façade 设计模式在实际的开发设计中也是**应用最广、最多的模式之一**。
 

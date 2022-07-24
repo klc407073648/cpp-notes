@@ -1,8 +1,8 @@
 # 创建型 - 抽象工厂(Abstract Factory)
 
-​[[toc]]
-
 > 抽象工厂(Abstract Factory) : 抽象工厂模式创建的是对象家族，也就是很多对象而不是一个对象，并且这些对象是相关的，也就是说必须一起创建出来。而工厂方法模式只是用于创建一个对象，这和抽象工厂模式有很大不同。
+
+​[[toc]]
 
 # 抛砖引玉
 
@@ -16,7 +16,7 @@ AbstractFactory 模式就是用来解决这类问题的：要创建一组相关�
 
 AbstractFactory 模式典型的结构图为：
 
-![](_images/programming/designpattern/create/AbstractFactory.png)
+![](/_images/programming/designpattern/create/AbstractFactory.png)
 
 ## 代码实现
 

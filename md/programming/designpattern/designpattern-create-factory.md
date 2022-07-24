@@ -1,8 +1,8 @@
 # 创建型 - 工厂模式(Factory)
 
-​[[toc]]
-
 > 工厂模式(Factory): 定义一个用以创建对象的接口, 让子类决定实例化哪个类. 当遇到需要根据某个前提条件创建不同的类实现时, 会实用工厂模式。
+
+​[[toc]]
 
 # 抛砖引玉
 
@@ -31,7 +31,7 @@
 
 Factory 模式典型的结构图1为：
 
-![](_images/programming/designpattern/create/Factory_1.png)
+![](/_images/programming/designpattern/create/Factory_1.png)
 
 图1的Factory 模式经常在系统开发中用到，但是这并不是 Factory 模式的最大威力所在（因为这可以通过其他方式解决这个问题）。 
 
@@ -39,7 +39,7 @@ Factory 模式不单是提供了创建对象的接口，其最重要的是延迟
 
 以下是这种情况的一个 Factory 的结构示意图2
 
-![](_images/programming/designpattern/create/Factory_2.png)
+![](/_images/programming/designpattern/create/Factory_2.png)
 
 图 2 中关键中 Factory 模式的应用并不是只是为了封装对象的创建，而是要把对象的创建放到子类中实现： Factory 中只是提供了对象创建的接口，其实现将放在 Factory 的子类ConcreteFactory 中进行。这是图 2 和图 1 的区别所在。
 
