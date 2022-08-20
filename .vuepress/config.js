@@ -3,9 +3,8 @@ const sidebar = require('./config/sidebar')
 const plugins = require('./config/plugins')
 const markdown = require('./config/markdown')
 
-
 module.exports = {
-    theme: '@vuepress/blog',
+    //theme: '@vuepress/blog',
     port: "3000",
     dest: "docs",
     ga: "UA-85414008-1",

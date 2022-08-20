@@ -232,11 +232,11 @@ module.exports =
     {
         text: '优质文章|博客推荐',
         items: [
-            { text: '并发', link: '/md/article/cocurrent/article-cocurrent-lock.md' },
+            { text: '并发', link: '/md/article/concurrent/article-concurrent-lock.md' },
             { text: '部署', link: '/md/article/deploy/article-deploy-blue-green.md' },
             { text: '分布式', link: '/md/article/distribute/article-distributed-cellular.md' },
             { text: '成长', link: '/md/article/grow/article-grow-Stay_hungry_Stay_foolish.md' },
-            { text: '问题解决', link: '/md/article/problem/article-problem-pstack.md' }
+            { text: '问题解决', link: '/md/article/problem/article-problem-top.md' }
         ]
     },
     {

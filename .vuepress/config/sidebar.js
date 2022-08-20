@@ -761,7 +761,7 @@ function genSidebar4Article() {
             collapsable: false,
             sidebarDepth: 0,
             children: [
-                "cocurrent/article-cocurrent-lock.md"
+                "concurrent/article-concurrent-lock.md"
             ]
         },
         {
