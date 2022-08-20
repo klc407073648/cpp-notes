@@ -1,4 +1,4 @@
-# 分布式单元化技术架构
+# 分布式 - 单元化技术架构
 
 > 本节主要介绍分布式单元化技术架构的内容。
 
@@ -6,9 +6,8 @@
 
 # 参考资料
 
-[分布式单元化技术架构](https://tech.antfin.com/community/articles/922)
-
-[2021阿里云峰会](https://baijiahao.baidu.com/s?id=1701019310498600569&wfr=spider&for=pc)
+* [分布式单元化技术架构](https://tech.antfin.com/community/articles/922)
+* [2021阿里云峰会](https://baijiahao.baidu.com/s?id=1701019310498600569&wfr=spider&for=pc)
 
 # 行业常见分布式架构
 

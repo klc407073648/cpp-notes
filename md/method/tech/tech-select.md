@@ -14,14 +14,36 @@
 * web框架选型：Drogon，Oat++   
    * 搜索条件: ` C++ web framework stars:>1000 pushed:>2022-04-01 language:C++`
 
+## 官网搜索
+
+1. 找Redis官网,C++语言的客户端连接库: [https://redis.io/docs/clients](https://redis.io/docs/clients)
+
+
 # 常用的技术框架
 
-**前端**：
+# 数据库选择
+
+* [数据库排名](https://db-engines.com/en/ranking)
+
+![数据库排名](/_images/method/tech/数据库排名.png)
+
+| 名称          | 模型     | 说明                                                         | 官网                       |
+| ------------- | -------- | ------------------------------------------------------------ | -------------------------- |
+| MySQL         | 关系型   | MySQL是一个关系型数据库管理系统，由瑞典MySQL AB 公司开发，目前属于 Oracle 旗下产品。 | https://www.mysql.com/     |
+| Redis         | 键值对   | 用 C 语言开发的一个开源的高性能键值对（ key-value）数据库    | https://redis.io/          |
+| Elasticsearch | 搜索引擎 | 分布式搜索和分析引擎                                         | https://www.elastic.co/cn/ |
+
+* 
+
+# 前端框架
+
+**前端技术选项网站**：
+
+* [openbase](https://openbase.com/)
+* [npmjs](https://www.npmjs.com/)
 
 * 三件套 + React + 组件库 Ant Design + Umi + Ant Design Pro（现成的管理系统）
 * Vue3 + Vite + Vant 移动端项目
-
-# 前端框架
 
 | 技术         | 说明                                    | 官网                                          |
 | ------------ | --------------------------------------- | --------------------------------------------- |
@@ -75,7 +97,6 @@
    - Boost：大量通用C++库的集合。
    - libev：功能齐全，高性能的时间循环，轻微地仿效libevent，但是不再像libevent一样有局限性，也修复了它的一些bug。
    - protobuf：协议缓冲，谷歌的数据交换格式。
-- mysql 数据库
 
 **部署**：服务器 / 容器（平台）
 

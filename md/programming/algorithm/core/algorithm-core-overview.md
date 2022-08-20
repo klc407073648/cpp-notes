@@ -2,12 +2,10 @@
 
 [[toc]]
 
-::: tip
-本文讨论的数据结构都是以C++语言来实现
-:::
+# 参考资料
 
-https://blog.csdn.net/CSDN2497242041/article/details/115474351
-https://blog.csdn.net/h21396577548/article/details/109481334
+* [最常用的五种算法设计思想 ](https://blog.csdn.net/CSDN2497242041/article/details/115474351)
+* [八大算法基础思想](https://blog.csdn.net/h21396577548/article/details/109481334)
 
 # 算法思想 
 
