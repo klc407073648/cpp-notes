@@ -46,6 +46,13 @@ module.exports =
         text: '数据库',
         items: [
             {
+                text: '数据库基础和原理',
+                items: [
+                    { text: '数据库原理', link: '/md/database/base/db-work-theory.md' },
+                    { text: 'SQL语言', link: '/md/database/sql/sql-overview.md' }
+                ]
+            },
+            {
                 text: 'SQL 数据库',
                 items: [
                     { text: 'MySQL', link: '/md/database/mysql/mysql-basic-concept.md' }
@@ -73,12 +80,16 @@ module.exports =
         text: '开发',
         items: [
             { text: '开发 - 常用库', link: '/md/develop/library/library-cppcheck.md' },
+            { text: '开发 - 工具安装', link: '/md/develop/tools/tools-install.md' },
         ]
     },
     {
         text: '架构',
         items: [
-            { text: '架构基础', link: '/md/arch/frame/arch-frame-evolution.md' }
+            { text: '架构基础', link: '/md/arch/frame/arch-frame-evolution.md' },
+            { text: 'HTTP框架', link: '/md/arch/frame/arch-frame-http.md' },
+            { text: 'ORM框架', link: '/md/arch/frame/arch-frame-orm.md' },
+            { text: 'RCP框架', link: '/md/arch/frame/arch-frame-rpc.md' }
         ]
     },
     {

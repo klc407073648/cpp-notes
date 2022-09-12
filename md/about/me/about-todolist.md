@@ -30,3 +30,5 @@ https://www.csdn.net/tags/MtTaMg2sMDUyLWJsb2cO0O0O.html
 https://blog.csdn.net/m0_51505198/article/details/121242591
 
 要领导思维考虑问题
+
+成长中演讲补充图片

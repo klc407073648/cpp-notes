@@ -91,6 +91,29 @@ function genSidebar4Cplusplus() {
 function genSidebar4Database() {
     return [
         {
+            title: "数据库原理",
+            collapsable: false,
+            sidebarDepth: 0,
+            children: [
+                "base/db-work-theory.md",
+                "base/MySQL.md",
+            ]
+        },
+        {
+            title: "SQL语言",
+            collapsable: false,
+            sidebarDepth: 0,
+            children: [
+                "sql/sql-overview.md",
+                "sql/sql-base.md",
+                "sql/sql-function.md",
+                "sql/sql-constraint.md",
+                "sql/sql-con-query.md",
+                "sql/sql-sub-query.md",
+                "sql/sql-multi-query.md",
+            ]
+        },
+        {
             title: "SQL - MySQL",
             collapsable: false,
             sidebarDepth: 0,
@@ -300,7 +323,16 @@ function genSidebar4develop() {
                 "library/library-jsoncpp.md",
                 "library/library-log4cpp.md",
                 "library/library-mysql.md",
-                "library/library-poco.md"
+                "library/library-poco.md",
+                "library/library-redis_plus_plus.md",
+            ]
+        },
+        {
+            title: "工具安装",
+            collapsable: false,
+            sidebarDepth: 0,
+            children: [
+                "tools/tools-install.md",
             ]
         }
     ];
@@ -351,6 +383,30 @@ function genSidebar4arch() {
             children: [
                 "frame/arch-frame-evolution.md",
                 "frame/arch-frame-service.md"
+            ]
+        },
+        {
+            title: "HTTP架构",
+            collapsable: false,
+            sidebarDepth: 0,
+            children: [
+                "frame/arch-frame-http.md"
+            ]
+        },
+        {
+            title: "ORM架构",
+            collapsable: false,
+            sidebarDepth: 0,
+            children: [
+                "frame/arch-frame-orm.md"
+            ]
+        },
+        {
+            title: "RPC框架",
+            collapsable: false,
+            sidebarDepth: 0,
+            children: [
+                "frame/arch-frame-rpc.md"
             ]
         }
     ];
