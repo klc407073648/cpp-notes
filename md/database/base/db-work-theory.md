@@ -9,11 +9,11 @@
 
 数据库被拆分成多种相互影响的组件。
 
-![](/_images/database/sql/base/global_overview.png)
+![](/_images/database/base/work-theory/global_overview.png)
 
 数据库架构:
 
-![](/_images/database/sql/base/数据库架构.png)
+![](/_images/database/base/work-theory/数据库架构.png)
 
 ## 核心组件
 
@@ -64,7 +64,7 @@
 
 ## 客户端管理器
 
-![](/_images/database/sql/base/client_manager.png)
+![](/_images/database/base/work-theory/client_manager.png)
 
 > 客户端管理器是处理客户端通信的。客户端可以是一个（网站）服务器或者一个最终用户或最终应用。客户端管理器通过一系列知名的API（JDBC, ODBC, OLE-DB …）提供不同的方式来访问数据库。
 
@@ -82,7 +82,7 @@
 
 # 查询管理器
 
-![](/_images/database/sql/base/query_manager.png)
+![](/_images/database/base/work-theory/query_manager.png)
 
 > **一个写得糟糕的查询可以转换成一个快速执行的代码**，代码执行的结果被送到客户端管理器。这个多步骤操作过程如下：
 
@@ -235,7 +235,7 @@ PERSON 表的索引会用来联接 TYPE_PERSON 表，但是 PERSON 表不会根�
 
 > 嵌套循环联接是最简单的。
 
-![](/_images/database/sql/base/nested_loop_join.png)
+![](/_images/database/base/work-theory/nested_loop_join.png)
 
 针对外关系的每一行,查看内关系里的所有行来寻找匹配的行
 
@@ -298,7 +298,7 @@ nested_loop_join_v2(file outer, file inner)
 
 > 哈希联接更复杂，不过在很多场合比嵌套循环联接成本低。
 
-![](/_images/database/sql/base/hash_join.png)
+![](/_images/database/base/work-theory/hash_join.png)
 
 哈希联接的核心思想是：
 
@@ -328,7 +328,7 @@ nested_loop_join_v2(file outer, file inner)
 
 > 合并联接是唯一产生排序的联接算法。
 
-![](/_images/database/sql/base/merge_join.png)
+![](/_images/database/base/work-theory/merge_join.png)
 
 注：这个简化的合并联接不区分内表或外表；两个表扮演同样的角色。但是真实的实现方式是不同的，比如当处理重复值时。
 
@@ -363,7 +363,7 @@ nested_loop_join_v2(file outer, file inner)
 
 # 数据管理器
 
-![](/_images/database/sql/base/data_manager.png)
+![](/_images/database/base/work-theory/data_manager.png)
 
 在这一步，查询管理器执行了查询，需要从表和索引获取数据，于是向数据管理器提出请求。但是有 2 个问题：
 
@@ -374,7 +374,7 @@ nested_loop_join_v2(file outer, file inner)
 
 ## 缓存管理器
 
-![](/_images/database/sql/base/cache_manager.png)
+![](/_images/database/base/work-theory/cache_manager.png)
 
 > 数据库的主要瓶颈是磁盘 I/O。为了提高性能，现代数据库使用缓存管理器。
 
@@ -417,7 +417,7 @@ LRU代表最近最少使用（Least Recently Used）算法，背后的原理是�
 
 图解：
 
-![](/_images/database/sql/base/LRU.png)
+![](/_images/database/base/work-theory/LRU.png)
 
 
 为了更好的理解，我假设缓冲区里的数据没有被闩锁锁住（就是说是可以被移除的）。在这个简单的例子里，缓冲区可以保存 3 个元素：
@@ -523,13 +523,13 @@ LRU代表最近最少使用（Least Recently Used）算法，背后的原理是�
 
 同样的，如果一块数据被加上排他锁，一个只需要读取该数据的事务必须等待排他锁释放才能给该数据加上共享锁。
 
-![](/_images/database/sql/base/lock_manager.png)
+![](/_images/database/base/work-theory/lock_manager.png)
 
 **死锁**
 
 但是使用锁会导致一种情况，2个事务永远在等待一块数据。在本图中：
 
-![](/_images/database/sql/base/dead_lock.png)
+![](/_images/database/base/work-theory/dead_lock.png)
 
 * 事务A 给 数据1 加上排他锁并且等待获取数据2
 * 事务B 给 数据2 加上排他锁并且等待获取数据1
@@ -558,7 +558,7 @@ LRU代表最近最少使用（Least Recently Used）算法，背后的原理是�
 * 成长阶段：事务可以获得锁，但不能释放锁。
 * 收缩阶段：事务可以释放锁（对于已经处理完而且不会再次处理的数据），但不能获得新锁。
 
-![](/_images/database/sql/base/Two-Phase-Lock.png)
+![](/_images/database/base/work-theory/Two-Phase-Lock.png)
 
 这两条简单规则背后的原理是：
 
@@ -610,7 +610,7 @@ LRU代表最近最少使用（Least Recently Used）算法，背后的原理是�
 
 > 为了防止写日志成为主要的瓶颈，数据库使用了日志缓冲区。
 
-![](/_images/database/sql/base/log_write_process.png)
+![](/_images/database/base/work-theory/log_write_process.png)
 
 当查询执行器要求做一次修改：
 

@@ -1,8 +1,8 @@
-# MySQL - 三范式
+# MySQL基础 - 三范式
 
 [[toc]]
 
-# 数据库设计之三范式的介绍
+# 概述
 
 > 范式: 对设计数据库提出的一些规范，目前有迹可寻的共有8种范式，一般遵守3范式即可。
 
@@ -10,7 +10,7 @@
 * 第二范式（2NF）: 满足 1NF，另外包含两部分内容，**一是表必须有一个主键；二是非主键字段必须完全依赖于主键，而不能只依赖于主键的一部分**。
 * 第三范式（3NF）: 满足 2NF，另外**非主键列必须直接依赖于主键，不能存在传递依赖**。即不能存在：非主键列 A 依赖于非主键列 B，非主键列 B 依赖于主键的情况。
 
-## 第一范式的介绍
+## 第一范式
 
 如图所示的表结构:
 
@@ -22,7 +22,7 @@
 
 * 这种表结构设计就没有达到 1NF，要符合 1NF 我们只需把列拆分，即：把 contact 字段拆分成 name 、id、age 等字段。
 
-## 第二范式的介绍
+## 第二范式
 
 如图所示的表结构:
 
@@ -43,7 +43,7 @@
 * 这种表结构设计就没有达到 2NF，因为 Discount（折扣），Quantity（数量）完全依赖于主键（OrderID），而 UnitPrice单价，ProductName产品名称 只依赖于 ProductID, 所以 OrderDetail 表不符合 2NF。
 * 我们可以把【OrderDetail】表拆分为【OrderDetail】（OrderID，ProductID，Discount，Quantity）和【Product】（ProductID，UnitPrice，ProductName）这样就符合第二范式了。
 
-## 第三范式的介绍
+## 第三范式
 
 如图所示的表结构:
 
@@ -61,7 +61,7 @@
 * 这种表结构设计就没有达到 3NF，因为 OrderDate，CustomerID，CustomerName，CustomerAddr，CustomerCity 等非主键列都完全依赖于主键（OrderID），所以符合 2NF。不过问题是 CustomerName，CustomerAddr，CustomerCity 直接依赖的是 CustomerID（非主键列），而不是直接依赖于主键，它是通过传递才依赖于主键，所以不符合 3NF。
 * 我们可以把【Order】表拆分为【Order】（OrderID，OrderDate，CustomerID）和【Customer】（CustomerID，CustomerName，CustomerAddr，CustomerCity）从而达到 3NF。
 
-# E-R模型的介绍
+# E-R模型
 
 > E-R模型即实体-关系模型，E-R模型就是描述数据库存储数据的结构模型。
 

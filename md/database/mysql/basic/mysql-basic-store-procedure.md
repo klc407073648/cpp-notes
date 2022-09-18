@@ -1,8 +1,8 @@
-# MySQL - 存储过程和函数
+# MySQL基础 - 存储过程和函数
 
 [[toc]]
 
-# 存储过程和函数概念
+# 概念
 
 > 创建存储过程和函数是指将经常使用的一组SQL语句的组合在一起，并将这些SQL语句当作一个整体存储在MySQL服务器中。存储过程和函数的区别在于函数必须有返回值，而存储过程没有；存储过程的参数可以使用in,out,inout类型，而函数的参数只有in类型的。
 
@@ -80,4 +80,3 @@ DROP FUNCTION IF EXISTS name_from_student;
 执行结果： 
 
 ![存储过程结果2](/_images/database/mysql/存储过程结果2.png)
-
