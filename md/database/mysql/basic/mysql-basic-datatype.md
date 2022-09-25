@@ -9,7 +9,7 @@
 > MySQL 支持所有标准 SQL 数值数据类型。
 > 这些类型包括严格数值数据类型(TINYINT, SMALLINT, MEDIUMINT, INT, BIGINT、DECIMAL 和 NUMERIC)，以及近似数值数据类型(FLOAT、REAL 和 DOUBLE PRECISION)。
 
-![MySQL数值类型](/_images/database/mysql/MySQL数值类型.png)
+![MySQL数值类型](/_images/database/mysql/basic/MySQL数值类型.png)
 
 ## 整型
 
@@ -28,7 +28,7 @@ FLOAT、DOUBLE 和 DECIMAL 都可以指定列宽，例如 DECIMAL(18, 9) 表示�
 > 表示时间值的日期和时间类型为DATETIME、DATE、TIMESTAMP、TIME和YEAR。
 > 每个时间类型有一个有效值范围和一个"零"值，当指定不合法的MySQL不能表示的值时使用"零"值。
 
-![MySQL日期和时间类型](/_images/database/mysql/MySQL日期和时间类型.png)
+![MySQL日期和时间类型](/_images/database/mysql/basic/MySQL日期和时间类型.png)
 
 MySQL 提供了两种相似的日期时间类型：DATETIME 和 TIMESTAMP。
 
@@ -56,7 +56,7 @@ MySQL 提供了 FROM_UNIXTIME() 函数把 UNIX 时间戳转换为日期，并提
 
 > 字符串类型指CHAR、VARCHAR、BINARY、VARBINARY、BLOB、TEXT、ENUM和SET。该节描述了这些类型如何工作以及如何在查询中使用这些类型。
 
-![MySQL字符串类型](/_images/database/mysql/MySQL字符串类型.png)
+![MySQL字符串类型](/_images/database/mysql/basic/MySQL字符串类型.png)
 
 主要有 CHAR 和 VARCHAR 两种类型，一种是定长的，一种是变长的。
 

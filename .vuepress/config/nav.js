@@ -55,7 +55,7 @@ module.exports =
             {
                 text: 'SQL 数据库',
                 items: [
-                    { text: 'MySQL', link: '/md/database/mysql/basic/mysql-basic-concept.md' }
+                    { text: 'MySQL', link: '/md/database/mysql/mysql-overview.md' }
                 ]
             },
             {

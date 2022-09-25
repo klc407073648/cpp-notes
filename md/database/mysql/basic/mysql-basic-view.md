@@ -212,7 +212,7 @@ INSERT INTO employee(ID, NAME, SEX, AGE,DEPARTMENT, SALARY, HOME, MARRY, HOBBY) 
 
 具体的表内容如下：
 
-![员工表数据](/_images/database/mysql/员工表数据.png)
+![员工表数据](/_images/database/mysql/basic/员工表数据.png)
 
 员工信息表和数据：
 
@@ -236,7 +236,7 @@ INSERT INTO employee_detail(ID,POS,EXPERENCE) VALUES(8,'销售总监','工作一
 
 具体的表内容如下：
 
-![员工信息表](/_images/database/mysql/员工信息表.png)
+![员工信息表](/_images/database/mysql/basic/员工信息表.png)
 
 单表上创建视图:
 
@@ -250,7 +250,7 @@ CREATE VIEW V_VIEW1(ID, NAME, SEX, AGE,DEPARTMENT) AS SELECT ID, NAME, SEX, AGE,
 SELECT * FROM V_VIEW1;
 ```
 
-![view1](/_images/database/mysql/view1.png)
+![view1](/_images/database/mysql/basic/view1.png)
 
 
 多表上创建视图:
@@ -265,7 +265,7 @@ CREATE VIEW V_VIEW2(ID, NAME, SEX, AGE,DEPARTMENT,POS,EXPERENCE) AS SELECT a.ID,
 SELECT * FROM V_VIEW2;
 ```
 
-![view2](/_images/database/mysql/view2.png)
+![view2](/_images/database/mysql/basic/view2.png)
 
 修改视图中的数据，会影响原有表数据变化，例如：
 
@@ -273,7 +273,7 @@ SELECT * FROM V_VIEW2;
 UPDATE V_VIEW2 SET POS='高级工程师' WHERE NAME='李楠';
 ```
 
-![update_view2](/_images/database/mysql/update_view2.png)
+![update_view2](/_images/database/mysql/basic/update_view2.png)
 
 修改原始表中的数据，会影响视图的变化，例如：
 
@@ -282,4 +282,4 @@ INSERT INTO employee(ID, NAME, SEX, AGE,DEPARTMENT, SALARY, HOME, MARRY, HOBBY) 
 INSERT INTO employee_detail(ID,POS,EXPERENCE) VALUES(9,'初级工程师','工作一年');
 ```
 
-![view3](/_images/database/mysql/view3.png)
+![view3](/_images/database/mysql/basic/view3.png)

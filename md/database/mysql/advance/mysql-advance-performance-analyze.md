@@ -6,7 +6,7 @@
 
 > MySQL 客户端连接成功后，通过 show [session|global] status 命令可以提供服务器状态信息。通过如下指令，可以查看当前数据库的INSERT、UPDATE、DELETE、SELECT的访问频次：
 
-```mysql
+```sql
 -- session 是查看当前会话 ;
 -- global 是查询全局数据 ;
 SHOW GLOBAL STATUS LIKE 'Com_______';
@@ -14,7 +14,7 @@ SHOW GLOBAL STATUS LIKE 'Com_______';
 
 查询结果：
 
-```mysql
+```sql
 mysql> SHOW GLOBAL STATUS LIKE 'Com_______';
 +---------------+-------+
 | Variable_name | Value |
@@ -45,7 +45,7 @@ mysql> SHOW GLOBAL STATUS LIKE 'Com_______';
 
 MySQL的慢查询日志默认没有开启，需要在MySQL的配置文件（/etc/my.cnf）中配置如下信息：
 
-```mysql
+```sql
 # 开启慢查询日志开关
 slow_query_log=1
 # 设置慢查询日志的时间为2秒，SQL语句执行时间超过2秒，就会视为慢查询，记录慢查询日志
@@ -56,7 +56,7 @@ long_query_time=2
 
 或者采用命令方式设置：
 
-<<< @/md/database/mysql/src/slow_query设置.txt
+<<< @/md/database/mysql/advance/src/slow_query.sql
 
 查看慢查询日志开关状态：
 `show variables like 'slow_query_log';`
@@ -65,7 +65,7 @@ long_query_time=2
 
 A. 执行如下SQL语句 ：
 
-```
+```sql
 mysql> select count(*) from tb_user;
 +----------+
 | count(*) |
@@ -120,7 +120,7 @@ profiling 默认关闭，可以通过set语句在session/global级别开启 prof
 
 操作示例:
 
-<<< @/md/database/mysql/src/profile测试内容.txt
+<<< @/md/database/mysql/advance/src/profile.sql
 
 ## explain
 
@@ -133,7 +133,7 @@ profiling 默认关闭，可以通过set语句在session/global级别开启 prof
 EXPLAIN SELECT 字段列表 FROM 表名 HWERE 条件;
 ```
 
-```
+```sql
 mysql> explain select * from tb_user where id = 1;
 +----+-------------+---------+------------+-------+---------------+---------+---------+-------+------+----------+-------+
 | id | select_type | table   | partitions | type  | possible_keys | key     | key_len | ref   | rows | filtered | Extra |

@@ -109,7 +109,7 @@ INSERT INTO `student` VALUES ('1007', 'Walln', '25', 'woman', '8', '60');
 
 数据表如下：
 
-![光标数据表](/_images/database/mysql/光标数据表.png)
+![光标数据表](/_images/database/mysql/basic/光标数据表.png)
 
 查询student表中所有奇数id和偶数id的总和，以及对应name的集合。
 
@@ -150,6 +150,6 @@ SELECT @id_ji,@id_ou,@name_ji,@name_ou;
 
 执行结果：
 
-![光标执行结果](/_images/database/mysql/光标执行结果.png)
+![光标执行结果](/_images/database/mysql/basic/光标执行结果.png)
 
 ​

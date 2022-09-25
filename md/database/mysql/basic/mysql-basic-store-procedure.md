@@ -56,7 +56,7 @@ DROP PROCEDURE IF EXISTS num_from_student;
 
 执行结果：
 
-![存储过程结果1](/_images/database/mysql/存储过程结果1.png)
+![存储过程结果1](/_images/database/mysql/basic/存储过程结果1.png)
 
 # 存储函数
 
@@ -79,4 +79,4 @@ DROP FUNCTION IF EXISTS name_from_student;
 
 执行结果： 
 
-![存储过程结果2](/_images/database/mysql/存储过程结果2.png)
+![存储过程结果2](/_images/database/mysql/basic/存储过程结果2.png)

@@ -13,7 +13,7 @@
 * 就算个人没有做什么操作，那总该是有其他的“人”帮我们做了一些事情。
     * —— MySQL 驱动在底层帮我们做了对数据库的连接，只有建立了连接了，才能够有后面的交互。看下图表示
 
-![MySQL 驱动](/_images/database/mysql/MySQL驱动.png)
+![MySQL 驱动](/_images/database/mysql/practice/MySQL驱动.png)
 
 MySQL 驱动 作用:
 
@@ -22,13 +22,13 @@ MySQL 驱动 作用:
     * 问题1: 系统肯定存在多人使用的场景，即存在多个请求同时去争抢连接的情况。
     * 问题2：web 系统一般都是部署在 tomcat 容器中的，而  tomcat  是可以并发处理多个请求的，这就会导致多个请求会去建立多个连接，然后使用完再都去关闭，这样会有什么问题呢？如下图
 
-![MySQL驱动建立连接](/_images/database/mysql/MySQL驱动建立连接.png)
+![MySQL驱动建立连接](/_images/database/mysql/practice/MySQL驱动建立连接.png)
 
 java 系统在通过 MySQL 驱动与数据库连接时是基于 TCP/IP 协议的，所以如果**每个请求都是新建连接和销毁连接，那这样势必会造成不必要的浪费和性能的下降**，即多线程请求时频繁的创建和销毁连接显然是不合理的。———— 解决方案：**引入数据库连接池**。
 
 数据库连接池：维护一定的连接数，方便系统获取连接，使用时去池子中获取，用完放回去就可以了。我们不需要关心连接的创建与销毁，也不需要关心线程池是怎么去维护这些连接的。
 
-![数据库连接池](/_images/database/mysql/数据库连接池.png)
+![数据库连接池](/_images/database/mysql/practice/数据库连接池.png)
 
 常见的数据库连接池有 Druid、C3P0、DBCP，连接池实现原理在这里就不深入讨论了，采用连接池大大节省了不断创建与销毁线程的开销，这就是有名的「池化」思想，不管是线程池还是 HTTP 连接池，都能看到它的身影。
 
@@ -38,7 +38,7 @@ java 系统在通过 MySQL 驱动与数据库连接时是基于 TCP/IP 协议的
 
 其实 MySQL 的架构体系中也已经提供了这样的一个池子，也是数据库连池。双方都是通过数据库连接池来管理各个连接的，这样**一方面线程之前不需要是争抢连接，更重要的是不需要反复的创建的销毁连接**。
 
-![数据库连接池2](/_images/database/mysql/数据库连接池2.png)
+![数据库连接池2](/_images/database/mysql/practice/数据库连接池2.png)
 
 至此系统和 MySQL 数据库之间的连接问题已经说明清楚了。那么 MySQL 数据库中的这些连接是怎么来处理的，又是谁来处理呢？
 
@@ -46,7 +46,7 @@ java 系统在通过 MySQL 驱动与数据库连接时是基于 TCP/IP 协议的
 
 网络中的连接都是由线程来处理的，所谓网络连接说白了就是一次请求，每次请求都会有相应的线程去处理的。同理，对于 SQL 语句的请求在 MySQL 中是由一个个的线程去处理的。
 
-![MySQL线程处理](/_images/database/mysql/MySQL线程处理.png)
+![MySQL线程处理](/_images/database/mysql/practice/MySQL线程处理.png)
 
 那这些线程会怎么去处理这些请求？会做哪些事情？
 
@@ -64,7 +64,7 @@ SELECT stuName,age,sex FROM students WHERE id=1
 
 但是这个SQL 是写给我们人看的，机器哪里知道你在说什么？这个时候解析器就上场了。他会将 SQL 接口传递过来的 SQL 语句进行解析，翻译成 MySQL 自己能认识的语言，至于怎么解析的就不需要在深究了，无非是自己一套相关的规则。
 
-![查询解析器](/_images/database/mysql/查询解析器.png)
+![查询解析器](/_images/database/mysql/practice/查询解析器.png)
 
 现在 SQL 已经被解析成 MySQL 认识的样子的。
     * 那下一步是不是就是执行吗？理论上是这样子的，但是 MySQL 的强大远不止于此，他还会帮我们选择最优的查询路径。
@@ -81,7 +81,7 @@ SELECT stuName,age,sex FROM students WHERE id=1
 
 MySQL 优化器 会计算 「IO 成本 + CPU」 成本最小的那个索引来执行
 
-![查询优化器](/_images/database/mysql/查询优化器.png)
+![查询优化器](/_images/database/mysql/practice/查询优化器.png)
 
 优化器执行选出最优索引等步骤后，会去调用存储引擎接口，开始去执行被  MySQL  解析过和优化过的 SQL 语句
 
@@ -94,7 +94,7 @@ MySQL 优化器 会计算 「IO 成本 + CPU」 成本最小的那个索引来�
 
 > 执行器是一个非常重要的组件，因为前面那些组件的操作最终必须通过执行器去调用存储引擎接口才能被执行。执行器最终最根据一系列的执行计划去调用存储引擎的接口去完成 SQL 的执行。
 
-![执行器](/_images/database/mysql/执行器.png)
+![执行器](/_images/database/mysql/practice/执行器.png)
 
 # 初识存储引擎
 
@@ -110,7 +110,7 @@ UPDATE students SET stuName = '小强' WHERE id = 1
 
 > Buffer Pool （缓冲池）是 **InnoDB 存储引擎**中非常重要的内存结构，顾名思义，缓冲池其实就是类似 Redis 一样的作用，起到一个缓存的作用。因为MySQL 的数据最终是存储在磁盘中的，如果没有这个 Buffer Pool  那么每次的数据库请求都会磁盘中查找，这样必然会存在 IO 操作，这肯定是无法接受的。但是有了 Buffer Pool 就是第一次在查询的时候会将查询的结果存到 Buffer Pool 中，这样后面再有请求的时候就会先从缓冲池中去查询，如果没有再去磁盘中查找，然后在放到 Buffer Pool 中，如下图
 
-![Buffer_Pool](/_images/database/mysql/Buffer_Pool.png)
+![Buffer_Pool](/_images/database/mysql/practice/Buffer_Pool.png)
 
 这条 SQL 语句的执行步骤如下:
 
@@ -130,7 +130,7 @@ UPDATE students SET stuName = '小强' WHERE id = 1
 
 Innodb 存储引擎的最大特点就是支持事务，如果本次更新失败，也就是事务提交失败，那么该事务中的所有的操作都必须回滚到执行前的样子，也就是说当事务失败的时候，也不会对原始数据有影响，如图
 
-![Buffer_Pool](/_images/database/mysql/undo_log.png)
+![Buffer_Pool](/_images/database/mysql/practice/undo_log.png)
 
 这里说句额外话，其实 MySQL 也是一个系统，就好比我们平时开发的 java 的功能系统一样，MySQL  使用的是自己相应的语言开发出来的一套系统而已，它根据自己需要的功能去设计对应的功能，它即然能做到哪些事情，那么必然是设计者们当初这么定义或者是根据实际的场景变更演化而来的。所以大家放平心态，把 MySQL 当作一个系统去了解熟悉他。
 
@@ -144,7 +144,7 @@ Innodb 存储引擎的最大特点就是支持事务，如果本次更新失败�
 
 redo 记录的是数据修改之后的值，不管事务是否提交都会记录下来，例如，此时将要做的是update students set stuName='小强' where id=1; 那么这条操作就会被记录到 redo log buffer 中？怎么又出来一个 redo log buffer ,很简单，MySQL 为了提高效率，所以将这些操作都先放在内存中去完成，然后会在某个时机将其持久化到磁盘中。
 
-![redo_log](/_images/database/mysql/redo_log.png)
+![redo_log](/_images/database/mysql/practice/redo_log.png)
 
 MySQL 的执行器调用存储引擎是怎么将一条 SQL 加载到缓冲池和记录哪些日志的，流程如下：
 
@@ -168,7 +168,7 @@ MySQL 的执行器调用存储引擎是怎么将一条 SQL 加载到缓冲池和
 
 将  redo Log Buffer 中的数据持久化到磁盘中，就是将 redo log buffer 中的数据写入到 redo log 磁盘文件中，一般情况下，redo log Buffer 数据写入磁盘的策略是立即刷入磁盘,如图
 
-![redo_log_2](/_images/database/mysql/redo_log_2.png)
+![redo_log_2](/_images/database/mysql/practice/redo_log_2.png)
 
 如果 redo log Buffer 刷入磁盘后，数据库服务器宕机了，那我们更新的数据怎么办？此时数据是在内存中，数据岂不是丢失了？不，这次数据就不会丢失了，因为 redo log buffer 中的数据已经被写入到磁盘了，已经被持久化了，就算数据库宕机了，在下次重启的时候 MySQL 也会将 redo 日志文件内容恢复到 Buffer Pool 中（这边我的理解是和  Redis  的持久化机制是差不多的，在  Redis  启动的时候会检查 rdb 或者是 aof 或者是两者都检查，根据持久化的文件来将数据恢复到内存中）
 
@@ -227,7 +227,7 @@ bin log 的刷盘是有相关的策略的，策略可以通过sync_bin log来修
 
 其实 MySQL 在提交事务的时候，不仅仅会将 redo log buffer  中的数据写入到redo log 文件中，同时也会将本次修改的数据记录到 bin log文件中，同时会将本次修改的bin log文件名和修改的内容在bin log中的位置记录到redo log中，最后还会在redo log最后写入 commit 标记，这样就表示本次事务被成功的提交了。
 
-![bin_log_1](/_images/database/mysql/bin_log_1.png)
+![bin_log_1](/_images/database/mysql/practice/bin_log_1.png)
 
 如果在数据被写入到bin log文件的时候，刚写完，数据库宕机了，数据会丢失吗？
 
@@ -237,7 +237,7 @@ bin log 的刷盘是有相关的策略的，策略可以通过sync_bin log来修
 
 其实 MySQL 会有一个后台线程，它会在某个时机将我们Buffer Pool中的脏数据刷到 MySQL 数据库中，这样就将内存和数据库的数据保持统一了。
 
-![bin_log_2](/_images/database/mysql/bin_log_2.png)
+![bin_log_2](/_images/database/mysql/practice/bin_log_2.png)
 
 # 总结
 

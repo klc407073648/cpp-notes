@@ -18,13 +18,13 @@
 
 对于InnoDB引擎来说，是按照聚簇索引的形式存储数据：
 
-![InnoDB引擎-1](/_images/database/mysql/InnoDB引擎-1.png)
+![InnoDB引擎-1](/_images/database/mysql/advance/InnoDB引擎-1.png)
 
 它的每个聚簇索引的叶子节点都包含主键值、事务ID、回滚指针(用于事务和MVCC)以及余下的列。从物理文件也可以看出 InnoDB的数据文件只有数据结构文件.frm和数据文件.ibd 其中.ibd中存放的是数据和索引信息 是存放在一起的。
 
 InnoDB的二级索引和主键索引也有很大的不同，二级索引存放的是主键值而不是行指针，减少了移动数据或者分裂时维护二级索引的开销，因为不需要更新索引的行指针。
 
-![InnoDB引擎-2](/_images/database/mysql/InnoDB引擎-2.png)
+![InnoDB引擎-2](/_images/database/mysql/advance/InnoDB引擎-2.png)
 
 聚簇索引的特点：
 
@@ -50,11 +50,11 @@ InnoDB的二级索引和主键索引也有很大的不同，二级索引存放�
 
 原始数据：
 
-![MyISAM引擎-1](/_images/database/mysql/MyISAM引擎-1.png)
+![MyISAM引擎-1](/_images/database/mysql/advance/MyISAM引擎-1.png)
 
 存储方式：
 
-![MyISAM引擎-2](/_images/database/mysql/MyISAM引擎-2.png)
+![MyISAM引擎-2](/_images/database/mysql/advance/MyISAM引擎-2.png)
 
 按照列值和行号来组织索引的，叶子节点中保存的实际上是指向存放数据块的指针。从物理文件中也可以看出MyISAM的索引文件.MYI和数据文件.MYD是分开存储的 是相对独立的。
 
@@ -63,7 +63,7 @@ InnoDB的二级索引和主键索引也有很大的不同，二级索引存放�
 2. 在id索引树上通过id值找到相应节点，从而得到节点的数据（叶子节点存的是索引值和数据地址，数据地址指向当前表myd数据文件具体的哪一行）
 3. 根据数据地址去myd文件里找到对应的数据返回。
 
-![MyISAM引擎-3](/_images/database/mysql/MyISAM引擎-3.png)
+![MyISAM引擎-3](/_images/database/mysql/advance/MyISAM引擎-3.png)
 
 # 两者的区别
 
@@ -89,7 +89,7 @@ InnoDB的二级索引和主键索引也有很大的不同，二级索引存放�
 
 示意图，test1的存储引擎为InnoDB，test2的存储引擎为MyISAM：
 
-![引擎示意图](/_images/database/mysql/引擎示意图.png)
+![引擎示意图](/_images/database/mysql/advance/引擎示意图.png)
 
 聚簇索引和非聚簇索引的存储方式区别：
 
@@ -100,11 +100,11 @@ InnoDB的二级索引和主键索引也有很大的不同，二级索引存放�
 
 对于采用聚簇索引的InnoDB引擎的主键索引B+Tree和MyISAM的主键索引树以及MyISAM的二级索引B+Tree都是采用这样的结构。
 
-![二级索引-1](/_images/database/mysql/二级索引-1.png)
+![二级索引-1](/_images/database/mysql/advance/二级索引-1.png)
 
 但是InnoDB的二级索引B+Tree却是这样的：
 
-![二级索引-2](/_images/database/mysql/二级索引-2.png)
+![二级索引-2](/_images/database/mysql/advance/二级索引-2.png)
 
 可以得出：
 　　在使用二级索引进行查询的时候，InnoDB首先通过二级索引B+Tree得到数据行的主键索引，然后再通过主键索引树查询数据。所以在二级索引，InnoDB的性能消耗比较大。
@@ -112,7 +112,7 @@ InnoDB的二级索引和主键索引也有很大的不同，二级索引存放�
 
 引用高性能MySQL的图能更加清晰的看到其差异：
 
-![聚簇索引](/_images/database/mysql/聚簇索引.png)
+![聚簇索引](/_images/database/mysql/advance/聚簇索引.png)
 
 从图中可以看出 InnoDB二级索引的叶子节点存放的是KEY字段+主键值，因此首先通过二级索引查找到的是主键值，再根据主键值在主键索引中查找到相应的数据文件。而MyISAM的二级索引存放的还是列值和行号的组合 叶子节点中保存的是指向物理数据的指针，因此它的主建索引和二级索引的结构并没有任何区别，只是说主键索引的索引值是唯一且非空的，而MyISAM引擎可以不设置主键。InnoDB引擎是必须设置主键的，需要依赖主键生成聚簇索引。 
 

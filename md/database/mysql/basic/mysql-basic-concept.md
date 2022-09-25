@@ -38,7 +38,7 @@
 
 MySQL体系结构：
 
-![](/_images/database/mysql/MySQL体系结构.png)
+![](/_images/database/mysql/basic/MySQL体系结构.png)
 
 * 连接层
 
@@ -73,7 +73,7 @@ MySQL体系结构：
 
 关系型数据库效果图:
 
-![1](/_images/database/mysql/关系型数据库.png)
+![1](/_images/database/mysql/basic/关系型数据库.png)
 
 关系型数据库中核心元素:
 
@@ -100,7 +100,7 @@ MySQL体系结构：
 
 数据库排行榜效果图:
 
-![2](/_images/database/mysql/数据库排行.png)
+![2](/_images/database/mysql/basic/数据库排行.png)
 
 # 关系型数据库管理系统
 
@@ -121,7 +121,7 @@ MySQL体系结构：
 
 关系型数据库管理系统的效果图:
 
-![3](/_images/database/mysql/关系型数据库管理系统.png)
+![3](/_images/database/mysql/basic/关系型数据库管理系统.png)
 
 说明:
 
@@ -132,7 +132,7 @@ MySQL体系结构：
 
 通信流程效果图：
 
-![4](/_images/database/mysql/通信流程.png)
+![4](/_images/database/mysql/basic/通信流程.png)
 
 # SQL简介
 

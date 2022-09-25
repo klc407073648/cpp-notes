@@ -119,6 +119,7 @@ function genSidebar4Database() {
             collapsable: false,
             sidebarDepth: 0,
             children: [
+                "mysql/mysql-overview.md",
                 "mysql/basic/mysql-basic-concept.md",
                 "mysql/basic/mysql-basic-3nf.md",
                 "mysql/basic/mysql-basic-datatype.md",
@@ -132,6 +133,7 @@ function genSidebar4Database() {
                 "mysql/advance/mysql-advance-performance-analyze.md",
                 "mysql/advance/mysql-advance-performance-opt.md",
                 "mysql/advance/mysql-advance-db-devide.md",
+                "mysql/advance/mysql-advance-lock.md",
                 "mysql/advance/mysql-advance-transaction.md",
                 "mysql/practice/mysql-practice-sql-execute.md",
                 "mysql/practice/mysql-practice-sql-parse.md",

@@ -72,7 +72,7 @@ E-R模型的使用场景:
 
 E-R模型的效果图：
 
-![E-R模型图](/_images/database/mysql/E-R模型图.png)
+![E-R模型图](/_images/database/mysql/basic/E-R模型图.png)
 
 说明:
 
@@ -85,7 +85,7 @@ E-R模型的效果图：
 
 一对一的关系:
 
-![一对一](/_images/database/mysql/一对一.png)
+![一对一](/_images/database/mysql/basic/一对一.png)
 
 说明:
 
@@ -94,7 +94,7 @@ E-R模型的效果图：
 
 一对多的关系:
 
-![一对多](/_images/database/mysql/一对多.png)
+![一对多](/_images/database/mysql/basic/一对多.png)
 
 说明:
 
@@ -102,7 +102,7 @@ E-R模型的效果图：
 
 多对多的关系:
 
-![多对多](/_images/database/mysql/多对多.png)
+![多对多](/_images/database/mysql/basic/多对多.png)
 
 说明:
 

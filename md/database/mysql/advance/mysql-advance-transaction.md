@@ -25,7 +25,7 @@
 
 操作实例：
 
-<<< @/md/database/mysql/src/事务基本操作.sql
+<<< @/md/database/mysql/advance/src/transaction.sql
 
 ## 四大特性ACID
 

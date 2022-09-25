@@ -49,7 +49,7 @@ CREATE TABLE 表名(
 
 示例演示:
 
-<<< @/md/database/mysql/src/engines.sql
+<<< @/md/database/mysql/advance/src/engines.sql
 
 # 三大存储引擎
 
