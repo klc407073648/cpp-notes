@@ -2,6 +2,25 @@
 
 [[toc]]
 
+# 技术
+
+前沿技术
+
+* 云原生:[https://www.jianshu.com/p/a37baa7c3eff](https://www.jianshu.com/p/a37baa7c3eff)
+    * Quasar Framework:[http://www.quasarchs.com/](http://www.quasarchs.com/)
+* 服务网格:[https://www.redhat.com/zh/topics/microservices/what-is-a-service-mesh](https://www.redhat.com/zh/topics/microservices/what-is-a-service-mesh)
+    * istio:[https://qithub.com/istio/istio](https://qithub.com/istio/istio)
+
+Java 专题资源
+
+* GitHub Java 专区:[https://github.com/topics/java](https://github.com/topics/java)
+* GitHub Java 合集:[https://qithub.com/akullpp/awesome-java](https://qithub.com/akullpp/awesome-java)
+* StackOverflow:[https://stackoverflow.com/questions/tagged/java](https://stackoverflow.com/questions/tagged/java)(解决问题必备)
+* 掘金 Java 专区:[https://juejin.cn/tag/Java](https://juejin.cn/tag/Java)
+* 美团技术团队:[https://tech.meituan.com/](https://tech.meituan.com/)
+* 阿里技术团队:[https://102.alibaba.com/tech/list/](https://102.alibaba.com/tech/list/)
+* 有赞技术团队:[https://tech.youzan.com/taq/back-end](https://tech.youzan.com/taq/back-end)
+
 # 资讯
 
 ## Github-全球领先的软件开发平台

@@ -1,0 +1,12 @@
+<user name="root" defaultAccount="true">
+    <property name="password">123456</property>
+    <property name="schemas">SHOPPING,ITCAST,ITCAST_RW2</property>
+    <!-- 表级 DML 权限设置 -->
+    <!--
+    <privileges check="true">
+    <schema name="DB01" dml="0110" >
+    <table name="TB_ORDER" dml="1110"></table>
+    </schema>
+    </privileges>
+    -->
+</user>

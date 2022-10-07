@@ -1,0 +1,12 @@
+<!-- 配置逻辑库 -->
+<schema name="ITCAST_RW" checkSQLschema="true" sqlMaxLimit="100" dataNode="dn7">
+</schema>
+
+<dataNode name="dn7" dataHost="dhost7" database="itcast" />
+
+<dataHost name="dhost7" maxCon="1000" minCon="10" balance="1" writeType="0" dbType="mysql" dbDriver="jdbc" switchType="1" slaveThreshold="100">
+    <heartbeat>select user()</heartbeat>
+    <writeHost host="master" url="jdbc:mysql://192.168.200.211:3306?useSSL=false&amp;serverTimezone=Asia/Shanghai&amp;characterEncoding=utf8" user="root" password="1234" >
+        <readHost host="slave" url="jdbc:mysql://192.168.200.212:3306?useSSL=false&amp;serverTimezone=Asia/Shanghai&amp;characterEncoding=utf8" user="root" password="1234" />
+    </writeHost>
+</dataHost>
