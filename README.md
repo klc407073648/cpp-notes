@@ -10,7 +10,7 @@ features:
   details: 碎片化知识总结，逐步完善自己的知识体系
 - title: 后端开发
   details: 以C++开发为主, 业余学习前端知识
-footer: MIT License 2.0 | © 2022-present stibel
+footer: 浙ICP备2021037738号-1 | © 2022-present stibel
 ---
 
 ![](https://img.shields.io/badge/c++-学习路线-brightgreen.svg)

@@ -1,4 +1,4 @@
-# MySQL进阶 - SQL性能分析
+# MySQL进阶 - 性能分析
 
 [[toc]]
 

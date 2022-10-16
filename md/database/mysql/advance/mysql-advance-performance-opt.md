@@ -1,4 +1,4 @@
-# MySQL进阶 - SQL性能优化
+# MySQL进阶 - 性能优化
 
 [[toc]]
 

@@ -1,118 +1,6 @@
-# MySQL进阶 - 视图/存储过程/触发器
+# MySQL基础 - 存储过程
 
 [[toc]]
-
-# 视图
-
-## 介绍
-
-视图（View）是一种虚拟存在的表。视图中的数据并不在数据库中实际存在，行和列数据来自定义视图的查询中使用的表，并且是在使用视图时动态生成的。
-
-通俗的讲，**视图只保存了查询的SQL逻辑，不保存查询结果**。所以我们在创建视图的时候，主要的工作就落在创建这条SQL查询语句上。
-
-## 语法
-
-1). 创建
-`CREATE [OR REPLACE] VIEW 视图名称[(列名列表)] AS SELECT语句 [ WITH [CASCADED | LOCAL ] CHECK OPTION ]`
-
-2). 查询
-
-`查看创建视图语句：SHOW CREATE VIEW 视图名称;`
-`查看视图数据：SELECT * FROM 视图名称 ...... ;`
-
-3). 修改
-
-```
-方式一：CREATE [OR REPLACE] VIEW 视图名称[(列名列表)] AS SELECT语句 [ WITH [ CASCADED | LOCAL ] CHECK OPTION ]
-方式二：ALTER VIEW 视图名称[(列名列表)] AS SELECT语句 [ WITH [ CASCADED | LOCAL ] CHECK OPTION ]
-```
-
-4). 删除
-`DROP VIEW [IF EXISTS] 视图名称 [,视图名称] ...`
-
-演示示例：
-
-<<< @/md/database/mysql/advance/src/view/view_1.sql
-
-上述我们演示了，视图应该如何创建、查询、修改、删除，那么我们能不能通过视图来插入、更新数据呢？ 接下来，做一个测试。
-
-```sql
-insert into stu_v_1 values(6,'Tom');
-insert into stu_v_1 values(17,'Tom22');
-```
-
-执行上述的SQL，我们会发现，id为6和17的数据都是可以成功插入的。 但是我们执行查询，查询出来的数据，却没有id为17的记录。
-
-![](/_images/database/mysql/advance/view_1.png)
-
-因为我们在创建视图的时候，指定的条件为 id<=10, id为17的数据，是不符合条件的，所以没有查询出来，但是这条数据确实是已经成功的插入到了基表中。
-
-如果我们定义视图时，如果指定了条件，然后我们在插入、修改、删除数据时，是否可以做到必须满足条件才能操作，否则不能够操作呢？ 答案是可以的，这就需要借助于视图的检查选项了。
-
-## 检查选项
-
-当使用WITH CHECK OPTION子句创建视图时，MySQL会通过视图检查正在更改的每个行，例如 插入，更新，删除，以使其符合视图的定义。 MySQL允许基于另一个视图创建视图，它还会检查依赖视图中的规则以保持一致性。为了确定检查的范围，mysql提供了两个选项： CASCADED 和 LOCAL
-，默认值为 CASCADED 。
- 
-1). CASCADED
-
-级联。
-
-比如，v2视图是基于v1视图的，如果在v2视图创建的时候指定了检查选项为 cascaded，但是v1视图创建时未指定检查选项。 则在执行检查时，不仅会检查v2，还会级联检查v2的关联视图v1。
-
-![](/_images/database/mysql/advance/检查选项_cascaded.png)
-
-2). LOCAL
-
-本地。
-
-比如，v2视图是基于v1视图的，如果在v2视图创建的时候指定了检查选项为 local ，但是v1视图创建时未指定检查选项。 则在执行检查时，知会检查v2，不会检查v2的关联视图v1。
-
-![](/_images/database/mysql/advance/检查选项_local.png)
-
-## 视图的更新
-
-要使视图可更新，视图中的行与基础表中的行之间必须存在一对一的关系。如果视图包含以下任何一项，则该视图不可更新：
-
-A. 聚合函数或窗口函数（SUM()、 MIN()、 MAX()、 COUNT()等）
-B. DISTINCT
-C. GROUP BY
-D. HAVING
-E. UNION 或者 UNION ALL
-
-示例演示:
-
-```sql
-create view stu_v_count as select count(*) from student;
-
--- 上述的视图中，就只有一个单行单列的数据，如果我们对这个视图进行更新或插入的，将会报错。
-insert into stu_v_count values(10);
-
--- 报错
-[SQL]insert into stu_v_count values(10);
-[Err] 1471 - The target table stu_v_count of the INSERT is not insertable-into
-```
-
-##  视图作用
-
-1. 简单
-    * 视图不仅可以简化用户对数据的理解，也可以简化他们的操作。那些被经常使用的查询可以被定义为视图，从而使得用户不必为以后的操作每次指定全部的条件。
-2. 安全
-    * 数据库可以授权，但不能授权到数据库特定行和特定的列上。通过视图用户只能查询和修改他们所能见到的数据。
-3. 数据独立
-    * 视图可帮助用户屏蔽真实表结构变化带来的影响。
-
-案例：
-
-1). 为了保证数据库表的安全性，开发人员在操作tb_user表时，只能看到的用户的基本字段，屏蔽手机号和邮箱两个字段。
-`create view tb_user_view as select id,name,profession,age,gender,status,createtime from tb_user;`
-
-![](/_images/database/mysql/advance/tb_user_view.png)
-
-2). 查询每个学生所选修的课程（三张表联查），这个功能在很多的业务中都有使用到，为了简化操作，定义一个视图。
-`create view tb_stu_course_view as select s.name student_name , s.no student_no , c.name course_name from student s,student_course sc , course c where s.id = sc.studentid and sc.courseid = c.id;`
-
-![](/_images/database/mysql/advance/tb_stu_course_view.png)
 
 # 存储过程
 
@@ -166,7 +54,7 @@ DROP PROCEDURE [ IF EXISTS ] 存储过程名称
 
 演示示例:
 
-<<< @/md/database/mysql/advance/src/view/procedure_1.sql
+<<< @/md/database/mysql/basic/src/procedure_1.sql
 
 ## 变量
 
@@ -198,7 +86,7 @@ SET @@[SESSION | GLOBAL] 系统变量名 = 值 ;
 
 演示示例:
 
-<<< @/md/database/mysql/advance/src/view/procedure_2.sql
+<<< @/md/database/mysql/basic/src/procedure_2.sql
 
 ### 用户定义变量
 
@@ -228,7 +116,7 @@ SELECT 字段名 INTO @var_name FROM 表名;
 
 演示示例：
 
-<<< @/md/database/mysql/advance/src/view/procedure_3.sql
+<<< @/md/database/mysql/basic/src/procedure_3.sql
 
 ### 局部变量
 
@@ -249,7 +137,7 @@ SELECT 字段名 INTO 变量名 FROM 表名 ... ;
 
 演示示例:
 
-<<< @/md/database/mysql/advance/src/view/procedure_4.sql
+<<< @/md/database/mysql/basic/src/procedure_4.sql
 
 ## if
 
@@ -271,7 +159,7 @@ END IF;
 
 2). 案例
 
-<<< @/md/database/mysql/advance/src/view/procedure_if.sql
+<<< @/md/database/mysql/basic/src/procedure_if.sql
 
 上述的需求我们虽然已经实现了，但是也存在一些问题，比如：score 分数我们是在存储过程中定义死的，而且最终计算出来的分数等级，我们也仅仅是最终查询展示出来而已。
 
@@ -299,11 +187,11 @@ END ;
 
 2). 案例一
 
-<<< @/md/database/mysql/advance/src/view/procedure_var_1.sql
+<<< @/md/database/mysql/basic/src/procedure_var_1.sql
 
 3). 案例二
 
-<<< @/md/database/mysql/advance/src/view/procedure_var_2.sql
+<<< @/md/database/mysql/basic/src/procedure_var_2.sql
 
 ## case
 
@@ -335,7 +223,7 @@ END CASE;
 
 2). 案例
 
-<<< @/md/database/mysql/advance/src/view/procedure_case.sql
+<<< @/md/database/mysql/basic/src/procedure_case.sql
 
 注意：如果判定条件有多个，多个条件之间，可以使用 and 或 or 进行连接。
 
@@ -354,7 +242,7 @@ END WHILE;
 
 2). 案例
 
-<<< @/md/database/mysql/advance/src/view/procedure_where.sql
+<<< @/md/database/mysql/basic/src/procedure_where.sql
 
 ## repeat
 
@@ -364,7 +252,7 @@ repeat是有条件的循环控制语句, 当满足until声明的条件的时候�
 
 2). 案例
 
-<<< @/md/database/mysql/advance/src/view/procedure_repeat.sql
+<<< @/md/database/mysql/basic/src/procedure_repeat.sql
 
 ## loop
 
@@ -390,7 +278,7 @@ ITERATE label; -- 直接进入下一次循环
 
 2). 案例
 
-<<< @/md/database/mysql/advance/src/view/procedure_loop.sql
+<<< @/md/database/mysql/basic/src/procedure_loop.sql
 
 ## 游标
 
@@ -409,7 +297,7 @@ D. 关闭游标
 
 2). 案例
 
-<<< @/md/database/mysql/advance/src/view/procedure_cursor_1.sql
+<<< @/md/database/mysql/basic/src/procedure_cursor_1.sql
 
 上述的存储过程，最终我们在调用的过程中，会报错，之所以报错是因为上面的while循环中，并没有退出条件。当游标的数据集获取完毕之后，再次获取数据，就会报错，从而终止了程序的执行。
 
@@ -442,7 +330,7 @@ condition_value 的取值：
 ```
 2). 案例
 
-<<< @/md/database/mysql/advance/src/view/procedure_cursor_2.sql
+<<< @/md/database/mysql/basic/src/procedure_cursor_2.sql
 
 
 具体的错误状态码，可以参考官方文档：
@@ -471,43 +359,4 @@ characteristic说明：
 
 2). 案例
 
-<<< @/md/database/mysql/advance/src/view/store_fun.sql
-
-# 触发器
-
-## 介绍
-
-触发器是与表有关的数据库对象，指在insert/update/delete之前(BEFORE)或之后(AFTER)，触发并执行触发器中定义的SQL语句集合。触发器的这种特性可以协助应用在数据库端确保数据的完整性, 日志记录 , 数据校验等操作 。
-
-使用别名OLD和NEW来引用触发器中发生变化的记录内容，这与其他的数据库是相似的。现在触发器还只支持行级触发，不支持语句级触发。
-
-| 触发器类型|  NEW 和 OLD| 
-| ----- |  ----- | 
-| INSERT 型触发器 | NEW 表示将要或者已经新增的数据| 
-| UPDATE 型触发器 | OLD 表示修改之前的数据 , NEW 表示将要或已经修改后的数据| 
-| DELETE 型触发器 | OLD 表示将要或者已经删除的数据| 
-
-## 语法
-
-1). 创建
-
-```sql
-CREATE TRIGGER trigger_name
-BEFORE/AFTER INSERT/UPDATE/DELETE
-ON tbl_name FOR EACH ROW -- 行级触发器
-BEGIN
-    trigger_stmt ;
-END;
-```
-
-2). 查看
-`SHOW TRIGGERS;`
-
-3). 删除
-`DROP TRIGGER [schema_name.]trigger_name ; -- 如果没有指定 schema_name，默认为当前数据库 。`
-
-## 案例
-
-通过触发器记录 tb_user 表的数据变更日志，将变更日志插入到日志表user_logs中, 包含增加,修改, 删除 ;
-
-<<< @/md/database/mysql/advance/src/view/trigger.sql
+<<< @/md/database/mysql/basic/src/store_fun.sql
