@@ -1,9 +1,9 @@
-A. 修改id为1的数据，将name修改为Jack
-	* update employee set name = 'Jack' where id = 1;
-B. 修改id为1的数据, 将name修改为Lucky, gender修改为 w
-	* update employee set name = 'Lucky' , gender = 'w' where id = 1;
-C. 将所有的员工入职日期修改为 2008-01-01
-	* update employee set entrydate = '2008-01-01';
+-- A. 修改id为1的数据，将name修改为Jack
+    update employee set name = 'Jack' where id = 1;
+-- B. 修改id为1的数据, 将name修改为Lucky, gender修改为 w
+    update employee set name = 'Lucky' , gender = 'w' where id = 1;
+-- C. 将所有的员工入职日期修改为 2008-01-01
+    update employee set entrydate = '2008-01-01';
 	
 mysql> update employee set name = 'Jack' where id = 1;
 Query OK, 1 row affected (0.00 sec)

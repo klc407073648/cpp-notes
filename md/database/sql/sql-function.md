@@ -1,12 +1,12 @@
 # SQL语言 - 函数
 
-> 函数 是指一段可以直接被另一段程序调用的程序或代码。
+> 函数是指一段可以直接被另一段程序调用的程序或代码。
 
 [[toc]]
 
 # 概述
 
-也就意味着，这一段程序或代码在MySQL中已经给我们提供了，我们要做的就是在合适的业务场景调用对应的函数完成对应的业务需求即可。 那么，函数到底在哪儿使用呢？
+函数是指一段可以直接被另一段程序调用的程序或代码。这一段程序或代码在MySQL中已经提供了，我们需要做的就是在合适的业务场景调用对应的函数完成对应的业务需求即可。 
 
 两个场景：
 
@@ -39,7 +39,7 @@ MySQL中的函数主要分为以下四类：
 
 使用示例：
 
-<<< @/md/database/sql/function/字符串函数.txt
+<<< @/md/database/sql/function/字符串函数.sql
 
 # 数值函数
 
@@ -53,7 +53,7 @@ MySQL中的函数主要分为以下四类：
 | RAND() | 返回0~1内的随机数 |
 | ROUND(x, y) | 求参数x的四舍五入值，保留y位小数 |
 
-<<< @/md/database/sql/function/数值函数.txt
+<<< @/md/database/sql/function/数值函数.sql
 
 # 日期函数
 
@@ -72,7 +72,7 @@ MySQL中的函数主要分为以下四类：
 
 例子：
 
-<<< @/md/database/sql/function/日期函数.txt
+<<< @/md/database/sql/function/日期函数.sql
 
 # 流程函数
 
@@ -87,4 +87,4 @@ MySQL中的函数主要分为以下四类：
 
 例子：
 
-<<< @/md/database/sql/function/流程函数.txt
+<<< @/md/database/sql/function/流程函数.sql

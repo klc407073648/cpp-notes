@@ -1,7 +1,7 @@
-A. 删除gender为女的员工
-	* delete from employee where gender = 'w';
-B. 删除所有员工
-	* delete from employee;
+-- A. 删除gender为女的员工
+      delete from employee where gender = 'w';
+-- B. 删除所有员工
+      delete from employee;
 	
 mysql> select * from employee;
 +------+--------+-------+--------+------+--------------------+------------+

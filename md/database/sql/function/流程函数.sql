@@ -1,12 +1,12 @@
-A. if
-	select ifnull('Ok','Default');
-B. ifnull
-	select ifnull('Ok','Default');
-	select ifnull('','Default');
-	select ifnull(null,'Default');
-C. case when then else end
-	需求: 查询emp表的员工姓名和工作地址 (北京/上海 ----> 一线城市 , 其他 ----> 二线城市)
-	select name,( case workaddress when '北京' then '一线城市' when '上海' then '一线城市' else '二线城市' end ) as '工作地址' from emp;
+-- A. if
+-- 	select ifnull('Ok','Default');
+-- B. ifnull
+-- 	select ifnull('Ok','Default');
+-- 	select ifnull('','Default');
+-- 	select ifnull(null,'Default');
+-- C. case when then else end
+-- 	需求: 查询emp表的员工姓名和工作地址 (北京/上海 ----> 一线城市 , 其他 ----> 二线城市)
+-- 	select name,( case workaddress when '北京' then '一线城市' when '上海' then '一线城市' else '二线城市' end ) as '工作地址' from emp;
 
 mysql> select ifnull('Ok','Default');
 +------------------------+

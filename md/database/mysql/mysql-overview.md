@@ -15,20 +15,22 @@
 # MySQL进阶
 
 * [MySQL进阶 - 存储引擎](/md/database/mysql/advance/mysql-advance-store-engine.md)
+* [MySQL进阶 - InnoDB引擎](/md/database/mysql/advance/mysql-advance-innodb.md)
 * [MySQL基础 - 索引基础](/md/database/mysql/advance/mysql-advance-index-basic.md)
 * [MySQL进阶 - 聚簇索引和非聚簇索引](/md/database/mysql/advance/mysql-advance-index-content.md)
 * [MySQL进阶 - 索引使用](/md/database/mysql/advance/mysql-advance-index-use.md)
 * [MySQL进阶 - SQL性能分析](/md/database/mysql/advance/mysql-advance-performance-analyze.md)
 * [MySQL进阶 - SQL性能优化](/md/database/mysql/advance/mysql-advance-performance-opt.md)
 * [MySQL进阶 - 锁](/md/database/mysql/advance/mysql-advance-lock.md)
-* [MySQL进阶 - 事务](/md/database/mysql/advance/mysql-advance-advance-transaction.md)
 * [MySQL进阶 - 触发器](/md/database/mysql/advance/mysql-advance-db-devide.md) 
+* [MySQL进阶 - 事务](/md/database/mysql/advance/mysql-advance-advance-transaction.md)
+* [MySQL进阶 - 管理工具](/md/database/mysql/advance/mysql-advance-manage.md) 
 
 # MySQL运维
 
-* [MySQL运维 - 日志](/md/database/mysql/operation/mysql-operation-log)
+* [MySQL运维 - 日志分析](/md/database/mysql/operation/mysql-operation-log)
 * [MySQL运维 - 主从复制](/md/database/mysql/operation/mysql-operation-master-slave.md)
-* [MySQL运维 - 分库分表](/md/database/mysql/operation/mysql-operation-db-table-separate.md)
+* [MySQL运维 - 分库分表](/md/database/mysql/operation/mysql-operation-db-devide.md)
 * [MySQL运维 - 读写分离](/md/database/mysql/operation/mysql-operation-rw-separate.md)  
 
 # MySQL实战

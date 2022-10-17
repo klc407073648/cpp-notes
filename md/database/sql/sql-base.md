@@ -47,7 +47,7 @@ USE 数据库名;
 
 **实际操作:**
 
-<<< @/md/database/sql/base/DDL-数据库操作.txt
+<<< @/md/database/sql/base/DDL-数据库操作.sql
 
 注意事项：
 
@@ -68,7 +68,7 @@ SHOW CREATE TABLE 表名;
 
 **实际操作:**
 
-<<< @/md/database/sql/base/DDL-表操作-查询.txt
+<<< @/md/database/sql/base/DDL-表操作-查询.sql
 
 **创建表结构：**
 
@@ -145,7 +145,7 @@ TRUNCATE TABLE 表名;
 5. 删除字段: 将emp表的字段username删除
 6. 修改表名: 将emp表的表名修改为 employee
 
-<<< @/md/database/sql/base/DDL-表操作-修改.txt
+<<< @/md/database/sql/base/DDL-表操作-修改.sql
 
 #### 表操作-删除
 
@@ -186,7 +186,7 @@ INSERT INTO 表名 VALUES (值1, 值2, ...), (值1, 值2, ...), (值1, 值2, ...
 
 **实际操作**
 
-<<< @/md/database/sql/base/DML-添加数据.txt
+<<< @/md/database/sql/base/DML-添加数据.sql
 
 **注意事项**
 
@@ -205,7 +205,7 @@ UPDATE emp SET name = 'Jack' WHERE id = 1;
 
 **实际操作**
 
-<<< @/md/database/sql/base/DML-更新数据.txt
+<<< @/md/database/sql/base/DML-更新数据.sql
 
 **注意事项**
 
@@ -220,7 +220,7 @@ DELETE FROM 表名 [ WHERE 条件 ];
 
 **实际操作**
 
-<<< @/md/database/sql/base/DML-删除数据.txt
+<<< @/md/database/sql/base/DML-删除数据.sql
 
 **注意事项**
 
@@ -288,7 +288,7 @@ SELECT * FROM 表名 WHERE name LIKE '/_张三' ESCAPE '/'
 
 **实际操作**
 
-<<< @/md/database/sql/base/DQL-基础查询.txt
+<<< @/md/database/sql/base/DQL-基础查询.sql
 
 ### 条件查询
 
@@ -318,7 +318,7 @@ SELECT 字段列表 FROM 表名 WHERE 条件列表;
 
 **实际操作**
 
-<<< @/md/database/sql/base/DQL-条件查询.txt
+<<< @/md/database/sql/base/DQL-条件查询.sql
 
 ### 聚合查询（聚合函数）
 
@@ -342,7 +342,7 @@ SELECT 聚合函数(字段列表) FROM 表名;
 
 **案例：**
 
-<<< @/md/database/sql/base/DQL-聚合函数案例.txt
+<<< @/md/database/sql/base/DQL-聚合函数案例.sql
 
 ### 分组查询
 
@@ -359,7 +359,7 @@ where 和 having 的区别：
 
 例子：
 
-<<< @/md/database/sql/base/DQL-分组查询.txt
+<<< @/md/database/sql/base/DQL-分组查询.sql
 
 **注意事项**
 
@@ -389,7 +389,7 @@ SELECT 字段列表 FROM 表名 ORDER BY 字段1 排序方式1, 字段2 排序�
 
 例子：
 
-<<< @/md/database/sql/base/DQL-排序查询.txt
+<<< @/md/database/sql/base/DQL-排序查询.sql
 
 **注意事项**
 
@@ -413,7 +413,7 @@ SELECT 字段列表 FROM 表名 LIMIT 起始索引, 查询记录数;
 
 例子：
 
-<<< @/md/database/sql/base/DQL-分页查询.txt
+<<< @/md/database/sql/base/DQL-分页查询.sql
 
 
 ### 执行顺序
@@ -424,7 +424,7 @@ SELECT 字段列表 FROM 表名 LIMIT 起始索引, 查询记录数;
 
 FROM -> WHERE -> GROUP BY -> HAVING > SELECT -> ORDER BY -> LIMIT
 
-<<< @/md/database/sql/base/DQL-执行顺序.txt
+<<< @/md/database/sql/base/DQL-执行顺序.sql
 
 ## DCL
 
@@ -458,7 +458,7 @@ DROP USER '用户名'@'主机名';
 
 例子：
 
-<<< @/md/database/sql/base/DCL-用户操作.txt
+<<< @/md/database/sql/base/DCL-用户操作.sql
 
 **注意事项**
 
@@ -494,7 +494,7 @@ REVOKE 权限列表 ON 数据库名.表名 FROM '用户名'@'主机名';
 
 例子：
 
-<<< @/md/database/sql/base/DCL-权限操作.txt
+<<< @/md/database/sql/base/DCL-权限操作.sql
 
 **注意事项**
 

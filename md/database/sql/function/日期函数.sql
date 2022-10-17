@@ -1,20 +1,20 @@
-A. curdate：当前日期
-	select curdate();
-B. curtime：当前时间
-	select curtime();
-C. now：当前日期和时间
-	select now();
-D. YEAR , MONTH , DAY：当前年、月、日
-	select YEAR(now());
-	select MONTH(now());
-	select DAY(now());
-E. date_add：增加指定的时间间隔
+-- A. curdate：当前日期
+ 	select curdate();
+-- B. curtime：当前时间
+ 	select curtime();
+-- C. now：当前日期和时间
+ 	select now();
+-- D. YEAR , MONTH , DAY：当前年、月、日
+ 	select YEAR(now());
+ 	select MONTH(now());
+ 	select DAY(now());
+-- E. date_add：增加指定的时间间隔
 	select date_add(now(), INTERVAL 70 YEAR );
-F. datediff：获取两个日期相差的天数
-	select datediff('2021-10-01', '2021-12-01');
-G. 查询所有员工的入职天数，并根据入职天数倒序排序。
-	思路： 入职天数，就是通过当前日期 - 入职日期，所以需要使用datediff函数来完成。
-	select name, datediff(curdate(), entrydate) as 'entrydays' from emp order by entrydays desc;
+-- F. datediff：获取两个日期相差的天数
+ 	select datediff('2021-10-01', '2021-12-01');
+-- G. 查询所有员工的入职天数，并根据入职天数倒序排序。
+-- 	思路： 入职天数，就是通过当前日期 - 入职日期，所以需要使用datediff函数来完成。
+ 	select name, datediff(curdate(), entrydate) as 'entrydays' from emp order by entrydays desc;
 	
 mysql> select curdate();
 +------------+

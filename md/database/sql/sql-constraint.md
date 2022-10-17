@@ -32,7 +32,7 @@
 
 注意：约束是作用于表中字段上的，可以在创建表/修改表的时候添加约束。
 
-<<< @/md/database/sql/constraint/约束演示.txt
+<<< @/md/database/sql/constraint/约束演示.sql
 
 ## 外键约束
 

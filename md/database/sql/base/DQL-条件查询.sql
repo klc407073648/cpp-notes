@@ -1,29 +1,29 @@
-A. 查询年龄等于 88 的员工
-	select * from emp where age = 88;
-B. 查询年龄小于 20 的员工信息
-	select * from emp where age < 20;
-C. 查询年龄小于等于 20 的员工信息
-	select * from emp where age <= 20;
-D. 查询没有身份证号的员工信息
-	select * from emp where idcard is null;
-E. 查询有身份证号的员工信息
-	select * from emp where idcard is not null;
-F. 查询年龄不等于 88 的员工信息
-	select * from emp where age != 88;
-	select * from emp where age <> 88;
-G. 查询年龄在15岁(包含) 到 20岁(包含)之间的员工信息
-	select * from emp where age >= 15 && age <= 20;
-	select * from emp where age >= 15 and age <= 20;
-H. 查询性别为 女 且年龄小于 25岁的员工信息
-	select * from emp where gender = '女' and age < 25;
-I. 查询年龄等于18 或 20 或 40 的员工信息
-	select * from emp where age = 18 or age = 20 or age =40;
-	select * from emp where age in(18,20,40);
-J. 查询姓名为两个字的员工信息 _ %
-	select * from emp where name like '__';
-K. 查询身份证号最后一位是X的员工信息
-	select * from emp where idcard like '%X';
-	select * from emp where idcard like '_________________X';
+-- A. 查询年龄等于 88 的员工
+  	select * from emp where age = 88;
+-- B. 查询年龄小于 20 的员工信息
+ 	select * from emp where age < 20;
+-- C. 查询年龄小于等于 20 的员工信息
+  	select * from emp where age <= 20;
+-- D. 查询没有身份证号的员工信息
+ 	select * from emp where idcard is null;
+-- E. 查询有身份证号的员工信息
+ 	select * from emp where idcard is not null;
+-- F. 查询年龄不等于 88 的员工信息
+  	select * from emp where age != 88;
+  	select * from emp where age <> 88;
+-- G. 查询年龄在15岁(包含) 到 20岁(包含)之间的员工信息
+ 	select * from emp where age >= 15 && age <= 20;
+  	select * from emp where age >= 15 and age <= 20;
+-- H. 查询性别为 女 且年龄小于 25岁的员工信息
+ 	select * from emp where gender = '女' and age < 25;
+-- I. 查询年龄等于18 或 20 或 40 的员工信息
+ 	select * from emp where age = 18 or age = 20 or age =40;
+ 	select * from emp where age in(18,20,40);
+-- J. 查询姓名为两个字的员工信息 _ %
+ 	select * from emp where name like '__';
+-- K. 查询身份证号最后一位是X的员工信息
+ 	select * from emp where idcard like '%X';
+ 	select * from emp where idcard like '_________________X';
 
 mysql> select * from emp where age = 88;
 +------+--------+-----------+--------+------+--------------------+-------------+------------+

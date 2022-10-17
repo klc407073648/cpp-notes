@@ -49,7 +49,7 @@ select * from emp where entrydate > (select entrydate from emp where name = '方
 
 查询结果:
 
-<<< @/md/database/sql/sub_query/标量子查询.txt
+<<< @/md/database/sql/sub_query/标量子查询.sql
 
 ## 列子查询
 
@@ -78,7 +78,7 @@ select * from emp where salary > any ( select salary from emp where dept_id = (s
 
 查询结果:
 
-<<< @/md/database/sql/sub_query/列子查询.txt
+<<< @/md/database/sql/sub_query/列子查询.sql
 
 ## 行子查询
 
@@ -95,7 +95,7 @@ select * from emp where (salary,managerid) = (select salary, managerid from emp 
 
 查询结果:
 
-<<< @/md/database/sql/sub_query/行子查询.txt
+<<< @/md/database/sql/sub_query/行子查询.sql
 
 ## 表子查询
 
@@ -113,4 +113,4 @@ select e.*, d.* from (select * from emp where entrydate > '2006-01-01') e left j
 
 查询结果:
 
-<<< @/md/database/sql/sub_query/表子查询.txt
+<<< @/md/database/sql/sub_query/表子查询.sql

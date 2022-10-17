@@ -1,19 +1,19 @@
 create table dept(
-id int auto_increment comment 'ID' primary key,
-name varchar(50) not null comment '部门名称'
+    id int auto_increment comment 'ID' primary key,
+    name varchar(50) not null comment '部门名称'
 )comment '部门表';
 
 INSERT INTO dept (id, name) VALUES (1, '研发部'), (2, '市场部'),(3, '财务部'), (4,'销售部'), (5, '总经办');
 
 create table emp(
-id int auto_increment comment 'ID' primary key,
-name varchar(50) not null comment '姓名',
-age int comment '年龄',
-job varchar(20) comment '职位',
-salary int comment '薪资',
-entrydate date comment '入职时间',
-managerid int comment '直属领导ID',
-dept_id int comment '部门ID'
+    id int auto_increment comment 'ID' primary key,
+    name varchar(50) not null comment '姓名',
+    age int comment '年龄',
+    job varchar(20) comment '职位',
+    salary int comment '薪资',
+    entrydate date comment '入职时间',
+    managerid int comment '直属领导ID',
+    dept_id int comment '部门ID'
 )comment '员工表';
 
 

@@ -23,3 +23,6 @@
 
 * [SQL语言 - 多表查询](/md/database/sql/sql-multi-query.md)
     * 详细阐述多表关系中，一对一、一对多，多对多的场景。 
+
+* [SQL语言 - 使用技巧](/md/database/sql/sql-tips.md)
+    * 介绍了别名、去重、条件查询、排序、分页查询和分组查询的使用技巧。 

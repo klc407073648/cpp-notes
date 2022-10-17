@@ -14,7 +14,7 @@ CREATE
         BEGIN
             DECLARE i INT;
             SET i = 0;
-            WHILE i >= 0 && i <=10000000 DO
+            WHILE i >= 0 && i <10000000 DO
                 INSERT INTO big_data (name,age,email) VALUES(concat('test',i), rand()*50, concat('test', i, '@163.com'));
                 SET i = i + 1;
             END WHILE;

@@ -1,4 +1,4 @@
-# MySQL进阶 - 性能分析
+# MySQL进阶 - SQL性能分析
 
 [[toc]]
 
@@ -78,7 +78,7 @@ mysql> select count(*) from big_data;
 +----------+
 | count(*) |
 +----------+
-| 10000001 |
+| 10000000 |
 +----------+
 1 row in set (2.78 sec)
 ```
@@ -91,7 +91,7 @@ B. 检查慢查询日志 ：
 root@1a11b56b97f7:/# tail -f /var/lib/mysql/1a11b56b97f7-slow.log
 # Time: 2022-09-10T05:48:27.412308Z
 # User@Host: root[root] @ localhost []  Id:    30
-# Query_time: 2.781475  Lock_time: 0.000132 Rows_sent: 1  Rows_examined: 10000001
+# Query_time: 2.781475  Lock_time: 0.000132 Rows_sent: 1  Rows_examined: 10000000
 SET timestamp=1662788907;
 select count(*) from big_data;
 ```

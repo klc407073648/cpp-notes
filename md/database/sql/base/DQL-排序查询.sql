@@ -1,10 +1,10 @@
-A. 根据年龄对公司的员工进行升序排序
-	select * from emp order by age asc;
-	select * from emp order by age;
-B. 根据入职时间, 对员工进行降序排序
-	select * from emp order by entrydate desc;
-C. 根据年龄对公司的员工进行升序排序 , 年龄相同 , 再按照入职时间进行降序排序
-	select * from emp order by age asc , entrydate desc;
+-- A. 根据年龄对公司的员工进行升序排序
+ 	  select * from emp order by age asc;
+ 	  select * from emp order by age;
+-- B. 根据入职时间, 对员工进行降序排序
+ 	  select * from emp order by entrydate desc;
+-- C. 根据年龄对公司的员工进行升序排序 , 年龄相同 , 再按照入职时间进行降序排序
+ 	  select * from emp order by age asc , entrydate desc;
 
 mysql> select * from emp order by age asc;
 +------+--------+-----------+--------+------+--------------------+-------------+------------+

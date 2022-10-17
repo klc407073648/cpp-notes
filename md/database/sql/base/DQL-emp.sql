@@ -1,14 +1,14 @@
 drop table if exists employee;
 
 create table emp(
-id int comment '编号',
-workno varchar(10) comment '工号',
-name varchar(10) comment '姓名',
-gender char(1) comment '性别',
-age tinyint unsigned comment '年龄',
-idcard char(18) comment '身份证号',
-workaddress varchar(50) comment '工作地址',
-entrydate date comment '入职时间'
+    id int comment '编号',
+    workno varchar(10) comment '工号',
+    name varchar(10) comment '姓名',
+    gender char(1) comment '性别',
+    age tinyint unsigned comment '年龄',
+    idcard char(18) comment '身份证号',
+    workaddress varchar(50) comment '工作地址',
+    entrydate date comment '入职时间'
 )comment '员工表';
 
 INSERT INTO emp (id, workno, name, gender, age, idcard, workaddress, entrydate) VALUES (1, '1', '柳岩', '女', 20, '123456789012345678', '北京', '2-01-01');

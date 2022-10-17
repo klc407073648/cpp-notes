@@ -35,7 +35,7 @@ select e.name,d.name from emp e , dept d where e.dept_id = d.id;
 select e.name, d.name from emp e inner join dept d on e.dept_id = d.id;
 ```
 
-<<< @/md/database/sql/con_query/内连接查询.txt
+<<< @/md/database/sql/con_query/内连接查询.sql
 
 ## 外连接查询
 
@@ -58,7 +58,7 @@ select d.name, e.* from dept d left join emp e on e.dept_id = d.id;  -- 这条�
 select d.name, e.* from emp as e right join dept as d on e.dept_id = d.id;
 ```
 
-<<< @/md/database/sql/con_query/外连接查询.txt
+<<< @/md/database/sql/con_query/外连接查询.sql
 
 左连接可以查询到没有dept的emp，右连接可以查询到没有emp的dept
 
@@ -82,7 +82,7 @@ select a.name , b.name from emp a , emp b where a.managerid = b.id;
 select a.name '员工', b.name '领导' from emp a left join emp b on a.managerid =b.id;
 ```
 
-<<< @/md/database/sql/con_query/自连接查询.txt
+<<< @/md/database/sql/con_query/自连接查询.sql
 
 ### 联合查询 union, union all
 
@@ -113,4 +113,4 @@ select * from emp where age > 50;
 select * from emp where salary < 5000 or age > 50;
 ```
 
-<<< @/md/database/sql/con_query/联合查询.txt
+<<< @/md/database/sql/con_query/联合查询.sql
