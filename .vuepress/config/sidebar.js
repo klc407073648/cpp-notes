@@ -132,14 +132,13 @@ function genSidebar4Database() {
                 "mysql/advance/mysql-advance-index-use.md",
                 "mysql/advance/mysql-advance-performance-analyze.md",
                 "mysql/advance/mysql-advance-performance-opt.md",
-                "mysql/advance/mysql-advance-performance-opt-two.md",
-                "mysql/advance/mysql-advance-trigger.md",
                 "mysql/advance/mysql-advance-lock.md",
+                "mysql/advance/mysql-advance-trigger.md",
                 "mysql/advance/mysql-advance-transaction.md",
                 "mysql/advance/mysql-advance-manage.md",
-                "mysql/operation/mysql-operation-db-devide.md",
                 "mysql/operation/mysql-operation-log.md",
                 "mysql/operation/mysql-operation-master-slave.md",
+                "mysql/operation/mysql-operation-db-devide.md",
                 "mysql/operation/mysql-operation-rw-separate.md",
                 "mysql/practice/mysql-practice-sql-execute.md",
                 "mysql/practice/mysql-practice-sql-parse.md",
@@ -428,8 +427,10 @@ function genSidebar4method() {
             collapsable: false,
             sidebarDepth: 0,
             children: [
-                "concept/concept-agent.md",
-                "concept/concept-communication.md"
+                "concept/concept-basic.md",
+                "concept/concept-tech-use.md",
+                "concept/concept-communication.md",
+                "concept/concept-agent.md"
             ]
         },
         {
@@ -625,6 +626,16 @@ function genSidebar4project() {
             children: [
                 "person/build_lib/build_lib.md"
             ]
+        },
+        {
+            title: "项目开发",
+            collapsable: false,
+            sidebarDepth: 0,
+            children: [
+                "develop/develop-process.md",
+                "develop/develop-opt.md",
+                "develop/develop-notice.md",
+            ]
         }
     ];
 }
@@ -771,7 +782,8 @@ function genSidebar4interview() {
                 "knowledge/cplusplus-knowledge.md",
                 "knowledge/database.md",
                 "knowledge/operating-system.md",
-                "knowledge/programming-questions.md"
+                "knowledge/programming-questions.md",
+                "knowledge/network-ip-address.md"
             ]
         },
         {
@@ -855,12 +867,21 @@ function genSidebar4Article() {
             ]
         },
         {
+            title: "知识",
+            collapsable: false,
+            sidebarDepth: 0,
+            children: [
+                "knowledge/article-knowledge-service-mesh.md"
+            ]
+        },
+        {
             title: "问题解决",
             collapsable: false,
             sidebarDepth: 0,
             children: [
                 "problem/article-problem-top.md",
-                "problem/article-problem-pstack.md"
+                "problem/article-problem-pstack.md",
+                "problem/article-problem-cache-update.md"
             ]
         }
     ];

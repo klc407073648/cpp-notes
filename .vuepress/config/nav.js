@@ -115,8 +115,7 @@ module.exports =
             {
                 text: '概念',
                 items: [
-                    { text: '正向代理和反向代理的区别', link: '/md/method/concept/concept-agent.md' },
-                    { text: '计算机专有名词', link: '/md/method/concept/concept-communication.md' }
+                    { text: '技术概念', link: '/md/method/concept/concept-basic.md' },
                 ]
             },
             {
@@ -196,6 +195,12 @@ module.exports =
                 items: [
                     { text: 'build_lib', link: '/md/project/person/build_lib/build_lib.md' }
                 ]
+            },
+            {
+                text: '项目开发',
+                items: [
+                    { text: '整体开发流程', link: '/md/project/develop/develop-process.md' }
+                ]
             }
         ]
     },
@@ -247,6 +252,7 @@ module.exports =
             { text: '部署', link: '/md/article/deploy/article-deploy-blue-green.md' },
             { text: '分布式', link: '/md/article/distribute/article-distributed-cellular.md' },
             { text: '成长', link: '/md/article/grow/article-grow-Stay_hungry_Stay_foolish.md' },
+            { text: '知识', link: '/md/article/knowledge/article-knowledge-service-mesh.md' },
             { text: '问题解决', link: '/md/article/problem/article-problem-top.md' }
         ]
     },
