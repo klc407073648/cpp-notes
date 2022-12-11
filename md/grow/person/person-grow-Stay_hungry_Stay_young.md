@@ -1,4 +1,4 @@
-# 张一鸣 - Stay hungry, Stay young
+# 个人成长 - 张一鸣(Stay hungry, Stay young)
 
 > 张一鸣在“2016今日头条Bootcamp”上对研发&产品部门应届毕业生发表了题目为“Stay hungry, Stay young”的演讲。
 

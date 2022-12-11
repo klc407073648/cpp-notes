@@ -1,4 +1,4 @@
-# 乔布斯 - Stay hungry, Stay foolish
+# 个人成长 - 乔布斯(Stay hungry, Stay foolish)
 
 > 乔布斯2005年6月在斯坦福大学毕业典礼上的演讲。
 
