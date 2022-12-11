@@ -22,7 +22,8 @@ function genSidebar4Cplusplus() {
                 "function/c++-function-share_ptrUse.md",
                 "function/c++-function-structUse.md",
                 "function/c++-function-typedefUse.md",
-                "function/c++-function-va_listFun.md"
+                "function/c++-function-va_listFun.md",
+                "function/c++-function-ptr.md"
             ]
         },
         {
@@ -812,6 +813,7 @@ function genSidebar4Article() {
             collapsable: false,
             sidebarDepth: 0,
             children: [
+                "article-overview.md",
                 "concurrent/article-concurrent-lock.md"
             ]
         },
