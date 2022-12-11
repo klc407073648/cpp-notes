@@ -1,6 +1,5 @@
 # centos_build_lib 镜像构建
 
-
 ## scons
 
 > 开放源码、以Python语言编码的自动化构建工具

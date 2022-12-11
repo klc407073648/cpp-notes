@@ -136,6 +136,15 @@ module.exports =
                 ]
             },
             {
+                text: '协议',
+                items: [
+                    { text: 'Http协议', link: '/md/method/protocol/protocol-http.md' },
+                    { text: 'SNMP协议', link: '/md/method/protocol/protocol-snmp.md' },
+                    { text: 'NETCONF协议', link: '/md/method/protocol/protocol-netconf.md' },
+                    { text: 'TLS协议', link: '/md/method/protocol/protocol-ssl-tls.md' }
+                ]
+            },
+            {
                 text: '技术选型',
                 items: [
                     { text: '常用的技术框架', link: '/md/method/tech/tech-select.md' },
@@ -254,6 +263,14 @@ module.exports =
             { text: '成长', link: '/md/article/grow/article-grow-Stay_hungry_Stay_foolish.md' },
             { text: '知识', link: '/md/article/knowledge/article-knowledge-service-mesh.md' },
             { text: '问题解决', link: '/md/article/problem/article-problem-top.md' }
+        ]
+    },
+    {
+        text: '成长',
+        items: [
+            { text: '个人成长', link: '/md/grow/person/person-better-than-others.md' },
+            { text: '产品', link: '/md/grow/product/product.md' },
+            { text: '团队', link: '/md/grow/team/team-system-arch.md' },
         ]
     },
     {

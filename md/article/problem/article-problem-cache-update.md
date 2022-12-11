@@ -1,4 +1,4 @@
-# 数据库与缓存不一致如何解决
+# 问题 - 数据库与缓存不一致如何解决
 
 > 更新缓存的的Design Pattern有四种：Cache aside, Read through, Write through, Write behind caching。
 

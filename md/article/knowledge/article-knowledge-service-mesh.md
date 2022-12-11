@@ -1,4 +1,4 @@
-# 服务网格
+# 知识 - 服务网格
 
 > Service Mesh 是微服务时代的 TCP/IP 协议。
 
@@ -7,7 +7,7 @@
 # 参考资料
 
 * [Service Mesh服务网格](https://zhuanlan.zhihu.com/p/61901608)
-* [Service Mesh](https://philcalcado.com/2017/08/03/pattern_![](/_images/article/knowledge/service_mesh.html) 
+* [Service Mesh](https://philcalcado.com/2017/08/03/pattern_service_mesh.html) 
 
 # 概述
 
