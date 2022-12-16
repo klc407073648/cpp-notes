@@ -11,7 +11,6 @@
     "@vuepress/plugin-back-to-top": "^1.9.7",
     "@vuepress/plugin-medium-zoom": "^1.0.4",
     "@vuepress/plugin-search": "^1.9.7",
-    "@vuepress/theme-blog": "^2.3.3",
     "vuepress": "^1.0.2",
     "vuepress-plugin-baidu-autopush": "^1.0.1",
     "vuepress-plugin-container": "^2.1.5"

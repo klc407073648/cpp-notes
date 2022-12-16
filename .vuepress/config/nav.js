@@ -61,7 +61,7 @@ module.exports =
             {
                 text: 'NoSQL 数据库',
                 items: [
-                    { text: 'Redis', link: '/md/database/redis/redis-basic-application.md' },
+                    { text: 'Redis', link: '/md/database/redis/basic/redis-basic-concept.md' },
                     { text: 'ElasticSearch', link: '/md/database/es/es-install.md' }
                 ]
             }
@@ -87,9 +87,8 @@ module.exports =
         text: '架构',
         items: [
             { text: '架构基础', link: '/md/arch/frame/arch-frame-evolution.md' },
-            { text: 'HTTP框架', link: '/md/arch/frame/arch-frame-http.md' },
             { text: 'ORM框架', link: '/md/arch/frame/arch-frame-orm.md' },
-            { text: 'RCP框架', link: '/md/arch/frame/arch-frame-rpc.md' }
+            { text: 'RPC框架', link: '/md/arch/frame/arch-frame-rpc.md' }
         ]
     },
     {
@@ -196,7 +195,8 @@ module.exports =
                 items: [
                     { text: '开源协程库 libco', link: '/md/project/opensource/libco/libco.md' },
                     { text: 'buttonrpc', link: '/md/project/opensource/buttonrpc/buttonrpc-basic.md' },
-                    { text: 'Tars', link: '/md/project/opensource/tars/tars-brief.md' }
+                    { text: 'Tars', link: '/md/project/opensource/tars/tars-brief.md' },
+                    { text: 'Redis实战hmdp', link: '/md/project/opensource/hmdp/hmdp-overview.md' }
                 ]
             },
             {

@@ -1,4 +1,12 @@
-# 编程中的idea
+# 个人成长 - 编程中的idea
+
+# github网页查看方式
+
+首先进入 `https://github.com/klc407073648/cpp-notes`
+
+然后，键盘输入句号 `。`
+
+![](/_images/grow/person/github快速查看.png)
 
 # 编程注意事项
 

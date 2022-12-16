@@ -4,9 +4,9 @@
 
 # 参考资料
 
-- [RPC原理及实现](https://www.jianshu.com/p/c113a9592044)
-- [RPC（三）《Implementing Remote Procedure Calls》译文](https://www.jianshu.com/p/91be39f72c74)
-- [wiki百科RPC](https://en.wikipedia.org/wiki/Remote_procedure_call)
+* [RPC原理及实现](https://www.jianshu.com/p/c113a9592044)
+* [RPC（三）《Implementing Remote Procedure Calls》译文](https://www.jianshu.com/p/91be39f72c74)
+* [wiki百科RPC](https://en.wikipedia.org/wiki/Remote_procedure_call)
 
 ::: danger
 probuf实现，gRpc

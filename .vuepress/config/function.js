@@ -128,13 +128,13 @@ function genSidebar4Database() {
             children: [
                 "redis/basic/redis-basic-concept.md",
                 "redis/basic/redis-basic-command.md",
-                "redis/redis-persistence.md",
-                "redis/redis-transaction-operation.md",
-                "redis/redis-delete-policy.md",
-                "redis/redis-master-slave-replication.md",
-                "redis/redis-sentinel-mode.md",
-                "redis/redis-cluster-application.md",
-                "redis/redis-enterprise-solution.md"
+                "redis/advance/redis-advance-persistence.md",
+                "redis/advance/redis-advance-transaction-operation.md",
+                "redis/advance/redis-advance-delete-policy.md",
+                "redis/advance/redis-advance-master-slave-replication.md",
+                "redis/advance/redis-advance-sentinel-mode.md",
+                "redis/application/redis-application-cluster.md",
+                "redis/application/redis-application-enterprise-solution.md"
             ]
         },
         {
@@ -369,14 +369,6 @@ function genSidebar4arch() {
             ]
         },
         {
-            title: "HTTP架构",
-            collapsable: false,
-            sidebarDepth: 0,
-            children: [
-                "frame/arch-frame-http.md"
-            ]
-        },
-        {
             title: "ORM架构",
             collapsable: false,
             sidebarDepth: 0,
@@ -433,6 +425,17 @@ function genSidebar4method() {
                 "arch-principle/arch-principle-anemia-model.md",
                 "arch-principle/arch-principle-ddd.md",
                 "arch-principle/arch-principle-arch-develop.md",
+            ]
+        },
+        {
+            title: "协议",
+            collapsable: false,
+            sidebarDepth: 0,
+            children: [
+                "protocol/protocol-http",
+                "protocol/protocol-snmp.md",
+                "protocol/protocol-netconf.md",
+                "protocol/protocol-ssl-tls.md",
             ]
         },
         {
@@ -593,6 +596,26 @@ function genSidebar4project() {
                 "opensource/tars/tars-go-dev.md",
                 "opensource/tars/tars-docker-dev.md",
                 "opensource/tars/tars-gateway-dev.md"
+            ]
+        },
+        {
+            title: "学习项目 - hmdp",
+            collapsable: false,
+            sidebarDepth: 0,
+            children: [
+                "opensource/hmdp/hmdp-overview.md",
+                "opensource/hmdp/hmdp-msglogin.md",
+                "opensource/hmdp/hmdp-shop-query-cache.md",
+                "opensource/hmdp/hmdp-seckill-opt.md",
+                "opensource/hmdp/hmdp-distribute-lock.md",
+                "opensource/hmdp/hmdp-redission.md",
+                "opensource/hmdp/hmdp-msg-queue.md",
+                "opensource/hmdp/hmdp-voucher-seckill.md",
+                "opensource/hmdp/hmdp-nearby-shop.md",
+                "opensource/hmdp/hmdp-uv-statisic.md",
+                "opensource/hmdp/hmdp-user-sign.md",
+                "opensource/hmdp/hmdp-friend-follow.md",
+                "opensource/hmdp/hmdp-talent-shop.md",
             ]
         },
         {
