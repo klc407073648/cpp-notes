@@ -90,6 +90,9 @@ A stub in distributed computing is a piece of code that converts parameters pass
 
 RPC框架的目标就是要2~8这些步骤都封装起来，让用户对这些细节透明。
 
+时序图如下：
+
+![rpc时序图](/_images/project/opensource/buttonrpc/rpc时序图.png)
 
 # 诞生背景
 

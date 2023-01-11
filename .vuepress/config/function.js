@@ -634,6 +634,7 @@ function genSidebar4project() {
                 "develop/develop-process.md",
                 "develop/develop-opt.md",
                 "develop/develop-notice.md",
+                "develop/uml/develop-uml.md",
             ]
         }
     ];
@@ -762,6 +763,18 @@ function genSidebar4booknote() {
                 "websiteTechArch/websiteTechArch-chapter-2-3.md",
                 "websiteTechArch/websiteTechArch-chapter-2-4.md",
                 "websiteTechArch/websiteTechArch-chapter-2-5.md"
+            ]
+        },
+        {
+            title: "代码大全2",
+            collapsable: false,
+            sidebarDepth: 0,
+            children: [
+                "codeComplete/codeComplete-chapter-1.md",
+                "codeComplete/codeComplete-chapter-2.md",
+                "codeComplete/codeComplete-chapter-3.md",
+                "codeComplete/codeComplete-chapter-4.md",
+                "codeComplete/codeComplete-chapter-5.md",
             ]
         }
     ];
@@ -1008,8 +1021,46 @@ function genSidebar4Grow() {
     ];
 }
 
+// Grow page
+function genSidebar4Vue() {
+    return [
+        {
+            title: "Vue 基础",
+            collapsable: false,
+            sidebarDepth: 0,
+            children: [
+                "basic/basic-concept.md",
+                "basic/basic-use.md", 
+                "basic/basic-template-syntax.md",
+                "basic/basic-data-bind.md", 
+                "basic/basic-mvvm.md",   
+                "basic/basic-event-handler.md",  
+                "basic/basic-compute-property.md",  
+                "basic/basic-watch-property.md",
+                "basic/basic-bind-style.md", 
+                "basic/basic-condition-render.md",  
+                "basic/basic-list-render.md", 
+                "basic/basic-filter.md",    
+                "basic/basic-inner-cmd.md", 
+                "basic/basic-custom-cmd.md",     
+                "basic/basic-lifecycle.md",  
+            ]
+        },
+        {
+            title: "组件化编程",
+            collapsable: false,
+            sidebarDepth: 0,
+            children: [
+                "component/component-basic.md",
+                "component/component-no-single-file-comp.md",
+                "component/component-single-file-comp.md",
+            ]
+        }
+    ];
+}
+
 module.exports = {
     genSidebar4Cplusplus, genSidebar4Database, genSidebar4Alg, genSidebar4Program, genSidebar4develop, genSidebar4microServices,
     genSidebar4arch, genSidebar4method, genSidebar4Devops, genSidebar4project, genSidebar4booknote, genSidebar4interview, genSidebar4Article,
-    genSidebar4dailyUse, genSidebar4About, genSidebar4Grow
+    genSidebar4dailyUse, genSidebar4About, genSidebar4Grow,genSidebar4Vue
 };

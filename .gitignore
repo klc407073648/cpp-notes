@@ -22,3 +22,5 @@ Thumbs.db
 node_modules/
 docs/
 md/about/me/about-todolist.md
+.vuepress/public/_images/images/
+.vuepress/components/

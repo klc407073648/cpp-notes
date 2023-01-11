@@ -11,6 +11,8 @@
 
 # 概览
 
+![](/_images/grow/person/stay_hungery_stay_foolish.png)
+
 > 斯蒂夫•保罗•乔布斯前任苹果电脑的首席执行官，创办人之一。同时也是Pixar动画公司的董事长及首席执行官。这篇毕业演讲我2006年第一次听到后，至今难忘。他以生命影响生命，语重心长，蕴含哲理，推己及人，活出自我！
 
 ## 故事 I：穿珠成链（connecting the dots）

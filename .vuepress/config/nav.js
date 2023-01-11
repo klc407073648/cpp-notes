@@ -233,7 +233,7 @@ module.exports =
         ]
     },
     {
-        text: '读书与笔记',
+        text: '读书笔记',
         items: [
             {
                 text: '书籍推荐',
@@ -244,18 +244,19 @@ module.exports =
             {
                 text: '读书笔记',
                 items: [
-                    { text: '深入理解计算机系统 详解', link: '/md/book-note/computersystem/computersystem-chapter-1.md' },
-                    { text: '重构改善既有代码的设计 详解', link: '/md/book-note/refactor/refactor-chapter-1.md' },
-                    { text: 'Effective C++:改善程序与设计的55个具体做法 详解', link: '/md/book-note/effectivecpp/effectivecpp-chapter-2-1.md' },
-                    { text: 'STL源码剖析 详解', link: '/md/book-note/stlsource/stlsource-chapter-1.md' },
-                    { text: 'Linux多线程服务端编程——使用muduo C++ 网络库 详解', link: '/md/book-note/muduo/muduo-chapter-1.md' },
-                    { text: '大型网站技术架构——核心原理与案例分析 详解', link: '/md/book-note/websiteTechArch/websiteTechArch-index.md' }
+                    { text: '深入理解计算机系统', link: '/md/book-note/computersystem/computersystem-chapter-1.md' },
+                    { text: '重构改善既有代码的设计', link: '/md/book-note/refactor/refactor-chapter-1.md' },
+                    { text: 'Effective C++:改善程序与设计的55个具体做法', link: '/md/book-note/effectivecpp/effectivecpp-chapter-2-1.md' },
+                    { text: 'STL源码剖析', link: '/md/book-note/stlsource/stlsource-chapter-1.md' },
+                    { text: 'Linux多线程服务端编程——使用muduo C++ 网络库', link: '/md/book-note/muduo/muduo-chapter-1.md' },
+                    { text: '大型网站技术架构——核心原理与案例分析', link: '/md/book-note/websiteTechArch/websiteTechArch-index.md' },
+                    { text: '代码大全2', link: '/md/book-note/codeComplete/codeComplete-chapter-1.md' }
                 ]
             }
         ]
     },
     {
-        text: '优质文章|博客推荐',
+        text: '文章记录',
         items: [
             { text: '并发', link: '/md/article/concurrent/article-concurrent-lock.md' },
             { text: '部署', link: '/md/article/deploy/article-deploy-blue-green.md' },
@@ -271,6 +272,14 @@ module.exports =
             { text: '个人成长', link: '/md/grow/person/person-better-than-others.md' },
             { text: '产品', link: '/md/grow/product/product.md' },
             { text: '团队', link: '/md/grow/team/team-system-arch.md' },
+        ]
+    },
+    {
+        text: '前端Vue学习',
+        items: [
+            { text: '基础', link: '/md/vue/basic/basic-concept.md' },
+            { text: '组件化编程', link: '/md/vue/component/component-basic.md' },
+            //{ text: '使用Vue脚手架', link: '/md/vue/team/team-system-arch.md' },
         ]
     },
     {
