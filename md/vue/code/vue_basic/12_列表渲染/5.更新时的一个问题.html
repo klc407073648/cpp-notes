@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>更新时的一个问题</title>
+		<script type="text/javascript" src="../js/vue.js"></script>
+	</head>
+	<body>
+		<!-- 准备好一个容器-->
+		<div id="root">
+			<h2>人员列表</h2>
+			<button @click="updateMei">更新马冬梅的信息</button>
+			<ul>
+				<li v-for="(p,index) of persons" :key="p.id">
+					{{p.name}}-{{p.age}}-{{p.sex}}
+				</li>
+			</ul>
+		</div>
+
+		<script type="text/javascript">
+			Vue.config.productionTip = false
+			
+			const vm = new Vue({
+				el:'#root',
+				data:{
+					persons:[
+						{id:'001',name:'马冬梅',age:30,sex:'女'},
+						{id:'002',name:'周冬雨',age:31,sex:'女'},
+						{id:'003',name:'周杰伦',age:18,sex:'男'},
+						{id:'004',name:'温兆伦',age:19,sex:'男'}
+					]
+				},
+				methods: {
+					updateMei(){
+						// this.persons[0].name = '马老师' //奏效
+						// this.persons[0].age = 50 //奏效
+						// this.persons[0].sex = '男' //奏效
+						// this.persons[0] = {id:'001',name:'马老师',age:50,sex:'男'} //不奏效
+						this.persons.splice(0,1,{id:'001',name:'马老师',age:50,sex:'男'})
+					}
+				}
+			}) 
+
+		</script>
+</html>

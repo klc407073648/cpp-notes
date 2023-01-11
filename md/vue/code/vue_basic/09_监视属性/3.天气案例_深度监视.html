@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>天气案例_深度监视</title>
+		<!-- 引入Vue -->
+		<script type="text/javascript" src="../js/vue.js"></script>
+	</head>
+	<body>
+		<!-- 
+				深度监视：
+						(1).Vue中的watch默认不监测对象内部值的改变（一层）。
+						(2).配置deep:true可以监测对象内部值改变（多层）。
+				备注：
+						(1).Vue自身可以监测对象内部值的改变，但Vue提供的watch默认不可以！
+						(2).使用watch时根据数据的具体结构，决定是否采用深度监视。
+		 -->
+		<!-- 准备好一个容器-->
+		<div id="root">
+			<h2>今天天气很{{info}}</h2>
+			<button @click="changeWeather">切换天气</button>
+			<hr/>
+			<h3>a的值是:{{numbers.a}}</h3>
+			<button @click="numbers.a++">点我让a+1</button>
+			<h3>b的值是:{{numbers.b}}</h3>
+			<button @click="numbers.b++">点我让b+1</button>
+			<button @click="numbers = {a:666,b:888}">彻底替换掉numbers</button>
+			{{numbers.c.d.e}}
+		</div>
+	</body>
+
+	<script type="text/javascript">
+		Vue.config.productionTip = false //阻止 vue 在启动时生成生产提示。
+		
+		const vm = new Vue({
+			el:'#root',
+			data:{
+				isHot:true,
+				numbers:{
+					a:1,
+					b:1,
+					c:{
+						d:{
+							e:100
+						}
+					}
+				}
+			},
+			computed:{
+				info(){
+					return this.isHot ? '炎热' : '凉爽'
+				}
+			},
+			methods: {
+				changeWeather(){
+					this.isHot = !this.isHot
+				}
+			},
+			watch:{
+				isHot:{
+					// immediate:true, //初始化时让handler调用一下
+					//handler什么时候调用？当isHot发生改变时。
+					handler(newValue,oldValue){
+						console.log('isHot被修改了',newValue,oldValue)
+					}
+				},
+				//监视多级结构中某个属性的变化
+				/* 'numbers.a':{
+					handler(){
+						console.log('a被改变了')
+					}
+				} */
+				//监视多级结构中所有属性的变化
+				numbers:{
+					deep:true,
+					handler(){
+						console.log('numbers改变了')
+					}
+				}
+			}
+		})
+
+	</script>
+</html>

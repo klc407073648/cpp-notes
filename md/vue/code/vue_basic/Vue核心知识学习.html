@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>初识Vue</title>
+		<!-- 引入Vue -->
+		<script type="text/javascript" src="../js/vue.js"></script>
+	</head>
+	<body>
+		
+		<!-- 准备好一个容器 -->
+		<div id="demo">
+			<h1>Hello，{{id}},{{name}},{{address}},{{phone}}</h1>
+			<br/>
+			id:<input type="text" name="id" :value="id">
+			<br/>
+			name:<input type="text" name="name" v-model="name">
+			<br/>
+			address:<input type="text" name="address" :value="address">
+			<br/>
+			phone:<input type="text" name="phone" :value="phone">
+			<br/>
+			<button @click="changeId">点击button</button>
+
+			<h1>fullInfo:{{fullInfo}}</h1>
+		</div>
+
+		<script type="text/javascript" >
+			Vue.config.productionTip = false //阻止 vue 在启动时生成生产提示。
+
+			//创建Vue实例
+			const vm = new Vue({
+				el:'#demo', 
+				data:{ 
+					id:'1001',
+					name:'Jason',
+					address:'北京',
+					phone:'123456'
+				},
+				methods: {
+					changeId(){
+						console.log("修改id");
+						console.log(this);
+						this.id++;
+					}
+				},
+				computed:{
+					fullInfo(){
+						return this.id + '-' + this.name + '-' + this.address + '-' + this.phone;
+					}
+				}
+			})
+
+		</script>
+	</body>
+</html>
