@@ -84,16 +84,14 @@ module.exports =
         ]
     },
     {
-        text: '架构',
+        text: '架构|微服务|中间件',
         items: [
-            { text: '架构基础', link: '/md/arch/frame/arch-frame-evolution.md' },
-            { text: 'ORM框架', link: '/md/arch/frame/arch-frame-orm.md' },
-            { text: 'RPC框架', link: '/md/arch/frame/arch-frame-rpc.md' }
-        ]
-    },
-    {
-        text: '微服务|中间件',
-        items: [
+            {
+                text: '架构',
+                items: [
+                    { text: '架构基础', link: '/md/micro-services/arch/frame/arch-frame-evolution.md' },
+                ]
+            },
             {
                 text: '微服务框架',
                 items: [
@@ -180,18 +178,10 @@ module.exports =
         ]
     },
     {
-        text: '实践|项目',
+        text: '项目',
         items: [
             {
-                text: '实践',
-                items: [
-                    { text: '实践 - Docker', link: '/md/project/practice/docker/jenkins/practice-docker-jenkins.md' },
-                    { text: '实践 - 工具类', link: '/md/project/practice/tools/practice-tools-git-config-key.md' },
-                    { text: '实践 - 实用型', link: '/md/project/practice/ngx-admin-install.md' }
-                ]
-            },
-            {
-                text: '开源项目学习',
+                text: '开源项目',
                 items: [
                     { text: '开源协程库 libco', link: '/md/project/opensource/libco/libco.md' },
                     { text: 'buttonrpc', link: '/md/project/opensource/buttonrpc/buttonrpc-basic.md' },
@@ -200,7 +190,7 @@ module.exports =
                 ]
             },
             {
-                text: '个人github项目总结',
+                text: '个人github项目',
                 items: [
                     { text: 'build_lib', link: '/md/project/person/build_lib/build_lib.md' }
                 ]
@@ -256,30 +246,44 @@ module.exports =
         ]
     },
     {
-        text: '文章记录',
+        text: '文章',
         items: [
             { text: '并发', link: '/md/article/concurrent/article-concurrent-lock.md' },
             { text: '部署', link: '/md/article/deploy/article-deploy-blue-green.md' },
             { text: '分布式', link: '/md/article/distribute/article-distributed-cellular.md' },
             { text: '成长', link: '/md/article/grow/article-grow-Stay_hungry_Stay_foolish.md' },
             { text: '知识', link: '/md/article/knowledge/article-knowledge-service-mesh.md' },
-            { text: '问题解决', link: '/md/article/problem/article-problem-top.md' }
+            { text: '问题', link: '/md/article/problem/article-problem-top.md' }
         ]
     },
     {
         text: '成长',
         items: [
-            { text: '个人成长', link: '/md/grow/person/person-better-than-others.md' },
+            { text: '个人', link: '/md/grow/person/person-better-than-others.md' },
             { text: '产品', link: '/md/grow/product/product.md' },
             { text: '团队', link: '/md/grow/team/team-system-arch.md' },
         ]
     },
     {
-        text: '前端Vue学习',
+        text: '前端学习',
         items: [
-            { text: '基础', link: '/md/vue/basic/basic-concept.md' },
-            { text: '组件化编程', link: '/md/vue/component/component-basic.md' },
-            //{ text: '使用Vue脚手架', link: '/md/vue/team/team-system-arch.md' },
+            {
+                text: 'Vue2学习',
+                items: [
+                    { text: 'Vue 基础', link: '/md/vue/vue2/basic/basic-concept.md' },
+					{ text: 'Vue 组件', link: '/md/vue/vue2/component/component-basic.md' },
+					{ text: 'Vue 脚手架', link: '/md/vue/vue2/CLI/cli-init.md' },
+					{ text: 'Vue中的Ajax', link: '/md/vue/vue2/ajax/ajax-basic.md' },
+					{ text: 'Vuex', link: '/md/vue/vue2/vuex/vuex-basic.md' },
+					{ text: 'Vue Router', link: '/md/vue/vue2/vue_router/vue-router-basic.md' },
+                ]
+            },
+            {
+                text: 'Vue3学习',
+                items: [
+                    { text: 'Vue3 - 学习', link: '/md/vue/vue3/vue3-use.md' }
+                ]
+            }
         ]
     },
     {

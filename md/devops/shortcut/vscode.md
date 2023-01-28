@@ -3,7 +3,7 @@
 
 [[toc]]
 
-```
+
 注释：
 　　a) 单行注释：[ctrl+k,ctrl+c] 或 ctrl+/
 　　b) 取消单行注释：[ctrl+k,ctrl+u] (按下ctrl不放，再按k + u)
@@ -18,8 +18,8 @@
 查找文件/安装vs code 插件地址：ctrl + p
 代码格式化：shift + alt +f
 新建一个窗口: ctrl + shift + n
-行增加缩进: ctrl + [
-行减少缩进: ctrl + ]
+**行增加缩进: ctrl + [ **
+**行减少缩进: ctrl + ] **
 快速定位到某一行: ctrl + g
 裁剪尾随空格(去掉一行的末尾那些没用的空格) : ctrl + shift + x
 字体放大/缩小: ctrl + ( + 或 - )
@@ -46,7 +46,7 @@
 当前文件替换：ctrl + h
 打开最近打开的文件：ctrl + r
 打开新的命令窗：ctrl + shift + c
-```
+
 
 
 # 编辑器与窗口管理

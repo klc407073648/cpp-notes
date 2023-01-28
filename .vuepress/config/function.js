@@ -325,7 +325,18 @@ function genSidebar4develop() {
 function genSidebar4microServices() {
     return [
         {
-            title: "理论基础",
+            title: "架构",
+            collapsable: false,
+            sidebarDepth: 0,
+            children: [
+                "arch/frame/arch-frame-evolution.md",
+                "arch/frame/arch-frame-service.md",
+                "arch/frame/arch-frame-orm.md",
+                "arch/frame/arch-frame-rpc.md"
+            ]
+        },
+        {
+            title: "微服务",
             collapsable: false,
             sidebarDepth: 0,
             children: [
@@ -342,7 +353,7 @@ function genSidebar4microServices() {
             ]
         },
         {
-            title: "ZeroMQ",
+            title: "中间件",
             collapsable: false,
             sidebarDepth: 0,
             children: [
@@ -356,7 +367,7 @@ function genSidebar4microServices() {
 
 }
 
-// arch page
+// arch page 并入微服务
 function genSidebar4arch() {
     return [
         {
@@ -653,7 +664,7 @@ function genSidebar4booknote() {
         },
         {
             title: "深入理解计算机系统 详解",
-            collapsable: false,
+            collapsable: true,
             sidebarDepth: 0,
             children: [
                 "computersystem/computersystem-chapter-1.md",
@@ -881,7 +892,7 @@ function genSidebar4Article() {
             ]
         },
         {
-            title: "问题解决",
+            title: "问题",
             collapsable: false,
             sidebarDepth: 0,
             children: [
@@ -989,7 +1000,7 @@ function genSidebar4About() {
 function genSidebar4Grow() {
     return [
         {
-            title: "个人成长",
+            title: "个人",
             collapsable: false,
             sidebarDepth: 0,
             children: [
@@ -1029,31 +1040,99 @@ function genSidebar4Vue() {
             collapsable: false,
             sidebarDepth: 0,
             children: [
-                "basic/basic-concept.md",
-                "basic/basic-use.md", 
-                "basic/basic-template-syntax.md",
-                "basic/basic-data-bind.md", 
-                "basic/basic-mvvm.md",   
-                "basic/basic-event-handler.md",  
-                "basic/basic-compute-property.md",  
-                "basic/basic-watch-property.md",
-                "basic/basic-bind-style.md", 
-                "basic/basic-condition-render.md",  
-                "basic/basic-list-render.md", 
-                "basic/basic-filter.md",    
-                "basic/basic-inner-cmd.md", 
-                "basic/basic-custom-cmd.md",     
-                "basic/basic-lifecycle.md",  
+                "vue-overview.md",
+                "vue2/basic/basic-concept.md",
+                "vue2/basic/basic-use.md", 
+                "vue2/basic/basic-template-syntax.md",
+                "vue2/basic/basic-data-bind.md", 
+                "vue2/basic/basic-mvvm.md",   
+                "vue2/basic/basic-event-handler.md",  
+                "vue2/basic/basic-compute-property.md",  
+                "vue2/basic/basic-watch-property.md",
+                "vue2/basic/basic-bind-style.md", 
+                "vue2/basic/basic-condition-render.md",  
+                "vue2/basic/basic-list-render.md", 
+                "vue2/basic/basic-filter.md",    
+                "vue2/basic/basic-inner-cmd.md", 
+                "vue2/basic/basic-custom-cmd.md",     
+                "vue2/basic/basic-lifecycle.md",  
             ]
         },
         {
-            title: "组件化编程",
+            title: "Vue 组件",
             collapsable: false,
             sidebarDepth: 0,
             children: [
-                "component/component-basic.md",
-                "component/component-no-single-file-comp.md",
-                "component/component-single-file-comp.md",
+                "vue2/component/component-basic.md",
+                "vue2/component/component-no-single-file-comp.md",
+                "vue2/component/component-single-file-comp.md",
+            ]
+        },
+        {
+            title: "Vue 脚手架",
+            collapsable: false,
+            sidebarDepth: 0,
+            children: [
+                "vue2/CLI/cli-init.md",
+                "vue2/CLI/cli-ref-props.md",
+                "vue2/CLI/cli-mixin.md",
+                "vue2/CLI/cli-plugin.md",
+                "vue2/CLI/cli-todolist-demo.md",
+                "vue2/CLI/cli-custom-event.md",
+                "vue2/CLI/cli-global-event-bus.md",
+                "vue2/CLI/cli-pub-sub.md",
+                "vue2/CLI/cli-transition.md",
+            ]
+        },
+        {
+            title: "Vue中的Ajax",
+            collapsable: false,
+            sidebarDepth: 0,
+            children: [
+                "vue2/ajax/ajax-basic.md",
+                "vue2/ajax/ajax-slot.md",
+                "vue2/ajax/ajax-github-demo.md",
+            ]
+        },
+        {
+            title: "Vuex",
+            collapsable: false,
+            sidebarDepth: 0,
+            children: [
+                "vue2/vuex/vuex-basic.md",
+                "vue2/vuex/vuex-use.md",
+            ]
+        },
+        {
+            title: "Vue Router",
+            collapsable: false,
+            sidebarDepth: 0,
+            children: [
+                "vue2/vue_router/vue-router-basic.md",
+                "vue2/vue_router/vue-router-use.md",
+                "vue2/vue_router/vue-router-multi.md",
+                "vue2/vue_router/vue-router-deliver-params.md",
+                "vue2/vue_router/vue-router-program.md",
+                "vue2/vue_router/vue-router-cache.md",
+                "vue2/vue_router/vue-router-life-hook.md",
+                "vue2/vue_router/vue-router-nav-guard.md",
+                "vue2/vue_router/vue-router-work-mode.md",
+            ]
+        },
+        {
+            title: "Vue3 学习",
+            collapsable: false,
+            sidebarDepth: 0,
+            children: [
+                "vue3/vue3-use.md",
+                "vue3/vue3-project.md",
+                "vue3/vue3-composition-api.md",
+                "vue3/vue3-responsive-principle.md",
+                "vue3/vue3-lifecycle.md",
+                "vue3/vue3-other-composition.md",
+                "vue3/vue3-options-composition.md",
+                "vue3/vue3-new-component.md",
+                "vue3/vue3-other.md",
             ]
         }
     ];
@@ -1061,6 +1140,6 @@ function genSidebar4Vue() {
 
 module.exports = {
     genSidebar4Cplusplus, genSidebar4Database, genSidebar4Alg, genSidebar4Program, genSidebar4develop, genSidebar4microServices,
-    genSidebar4arch, genSidebar4method, genSidebar4Devops, genSidebar4project, genSidebar4booknote, genSidebar4interview, genSidebar4Article,
+    genSidebar4method, genSidebar4Devops, genSidebar4project, genSidebar4booknote, genSidebar4interview, genSidebar4Article,
     genSidebar4dailyUse, genSidebar4About, genSidebar4Grow,genSidebar4Vue
 };
