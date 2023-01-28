@@ -68,7 +68,7 @@
 
 6. 代码案例
 
-<<< @/md/vue/code/vue_basic/12_列表渲染/10.总结数据监测.html
+<<< @/md/vue/code/vue_basic/12_列表渲染/10.总结Vue数据监测.html
 
 ## 收集表单数据
 
