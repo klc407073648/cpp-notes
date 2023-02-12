@@ -101,7 +101,13 @@ module.exports =
             {
                 text: '中间件',
                 items: [
-                    { text: 'ZeroMQ', link: '/md/micro-services/middleware/zeromq/zeromq-demo.md' }
+                    { text: 'ZeroMQ', link: '/md/micro-services/middleware/zeromq/zeromq-demo.md' },
+                    { text: 'Dubbo', link: '/md/micro-services/middleware/dubbo/dubbo.md' },
+                    { text: 'Consul', link: '/md/micro-services/middleware/consul/consul-basic.md' },
+                    { text: 'Apollo', link: '/md/micro-services/middleware/apollo/apollo-basic.md' },
+                    { text: 'Cat', link: '/md/micro-services/middleware/cat/cat-basic.md' },
+                    { text: 'Logstash', link: '/md/micro-services/middleware/logstash/logstash-basic.md' },
+                    { text: 'Kong', link: '/md/micro-services/middleware/kong/kong-basic.md' }
                 ]
             },
         ]
@@ -187,6 +193,12 @@ module.exports =
                     { text: 'buttonrpc', link: '/md/project/opensource/buttonrpc/buttonrpc-basic.md' },
                     { text: 'Tars', link: '/md/project/opensource/tars/tars-brief.md' },
                     { text: 'Redis实战hmdp', link: '/md/project/opensource/hmdp/hmdp-overview.md' }
+                ]
+            },
+            {
+                text: '学习项目',
+                items: [
+                    { text: 'SSM框架整合', link: '/md/project/study/ssm/spring/spring-basic.md' },
                 ]
             },
             {

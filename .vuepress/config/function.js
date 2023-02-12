@@ -353,7 +353,7 @@ function genSidebar4microServices() {
             ]
         },
         {
-            title: "中间件",
+            title: "中间件 - ZeroMQ",
             collapsable: false,
             sidebarDepth: 0,
             children: [
@@ -361,6 +361,69 @@ function genSidebar4microServices() {
                 "middleware/zeromq/zeromq-part1.md",
                 "middleware/zeromq/zeromq-part2.md",
                 "middleware/zeromq/zeromq-part3.md"
+            ]
+        },
+        {
+            title: "中间件 - Dubbo - RPC调用",
+            collapsable: false,
+            sidebarDepth: 0,
+            children: [
+                "middleware/dubbo/dubbo.md",
+            ]
+        },
+        {
+            title: "中间件 - Consul - 配置中心",
+            collapsable: false,
+            sidebarDepth: 0,
+            children: [
+                "middleware/consul/consul-basic.md",
+                "middleware/consul/consul-content.md",
+                "middleware/consul/consul-install-use.md",
+                "middleware/consul/consul-health.md",
+                "middleware/consul/consul-http-api.md",
+                "middleware/consul/consul-kv-store.md",
+            ]
+        },
+        {
+            title: "中间件 - Apollo - 配置中心",
+            collapsable: false,
+            sidebarDepth: 0,
+            children: [
+                "middleware/apollo/apollo-basic.md",
+                "middleware/apollo/apollo-design.md",
+                "middleware/apollo/apollo-docker.md",
+                "middleware/apollo/apollo-use.md",
+            ]
+        },
+        {
+            title: "中间件 - Cat - 监控平台",
+            collapsable: false,
+            sidebarDepth: 0,
+            children: [
+                "middleware/cat/cat-basic.md",
+                "middleware/cat/cat-docker-deploy.md",
+                "middleware/cat/cat-c++-client.md",
+            ]
+        },
+        {
+            title: "中间件 - Logstash - 数据处理管道",
+            collapsable: false,
+            sidebarDepth: 0,
+            children: [
+                "middleware/logstash/logstash-basic.md",
+                "middleware/logstash/logstash-work.md",
+                "middleware/logstash/logstash-docker-deploy.md",
+                "middleware/logstash/logstash-use.md",
+            ]
+        },
+        {
+            title: "中间件 - Kong - 服务网关",
+            collapsable: false,
+            sidebarDepth: 0,
+            children: [
+                "middleware/kong/kong-basic.md",
+                "middleware/kong/kong-plugin.md",
+                "middleware/kong/kong-install-use.md",
             ]
         }
     ];
@@ -549,36 +612,6 @@ function genSidebar4Devops() {
 function genSidebar4project() {
     return [
         {
-            title: "实践 - Docker",
-            collapsable: false,
-            sidebarDepth: 0,
-            children: [
-                "practice/docker/jenkins/practice-docker-jenkins.md",
-                "practice/docker/mysql/practice-docker-mysql.md",
-                "practice/docker/redis/practice-docker-redis.md"
-            ]
-        },
-        {
-            title: "实践 - 工具类",
-            collapsable: false,
-            sidebarDepth: 0,
-            children: [
-                "practice/tools/practice-tools-git-config-key.md",
-                "practice/tools/practice-tools-git.md",
-                "practice/tools/practice-tools-gitbook.md"
-            ]
-        },
-        {
-            title: "实践 - 实用型",
-            collapsable: false,
-            sidebarDepth: 0,
-            children: [
-                "practice/ngx-admin-install.md",
-                "practice/Robot-Framework-install.md",
-                "practice/nginx-image-server-cfg.md"
-            ]
-        },
-        {
             title: "开源项目 - libco",
             collapsable: false,
             sidebarDepth: 0,
@@ -627,6 +660,22 @@ function genSidebar4project() {
                 "opensource/hmdp/hmdp-user-sign.md",
                 "opensource/hmdp/hmdp-friend-follow.md",
                 "opensource/hmdp/hmdp-talent-shop.md",
+            ]
+        },
+        {
+            title: "学习项目 - SSM框架",
+            collapsable: false,
+            sidebarDepth: 0,
+            children: [
+                "study/ssm/spring/spring-basic.md",
+                "study/ssm/spring/spring-concept.md",
+                "study/ssm/spring/spring-integrate.md",
+                "study/ssm/spring/spring-aop.md",
+                "study/ssm/springmvc/springmvc-01.md",
+                "study/ssm/springmvc/springmvc-02.md",
+                "study/ssm/maven/maven.md",
+                "study/ssm/springboot/springboot.md",
+                "study/ssm/mybatisplus/mybatisplus.md",
             ]
         },
         {
