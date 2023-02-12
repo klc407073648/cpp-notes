@@ -1,0 +1,89 @@
+{
+    # 按照名字匹配
+    "template": "my-log-*",
+    # 排序
+    "order": 1,
+    # 索引分片等配置
+    "settings": {
+            "number_of_shards": 1,
+            "number_of_replicas": 0,
+            "refresh_interval": "60s",
+            "index.max_result_window":10000000,
+            "index.blocks.read_only_allow_delete":null
+    },
+    # 映射
+    "mappings": {
+            "_doc": {
+                    # 严格映射
+                    "dynamic":"strict",
+                    "properties": {
+
+                            "message": {
+                                    # 分词器
+                                    "analyzer": "ik_max_word",
+                                    "index": true,
+                                    "store": false,
+                                    "type": "text"
+                            },
+
+                            "data": {
+                                    "analyzer": "ik_max_word",
+                                    "index": true,
+                                    "store": false,
+                                    "type": "text"
+                            },
+
+                            "userId": {
+                                    "type": "long"
+                            },
+
+                            "logLevel": {
+                                    "store": false,
+                                    "type": "keyword"
+                            },
+                            "from": {
+                                    "store": false,
+                                    "type": "keyword"
+                            },
+
+                            ""      
+                            "@timestamp": {
+                                    "format": "strict_date_optional_time||yyyy-MM-dd HH:mm:ss.SSS||epoch_millis",
+                                    "type": "date"
+                            },
+
+                            "logstashTime": {
+                                    "format": "strict_date_optional_time||yyyy-MM-dd HH:mm:ss.SSS||epoch_millis",
+                                    "type": "date"
+                            },
+
+                            "logTime": {
+                                    "format": "strict_date_optional_time||yyyy-MM-dd HH:mm:ss.SSS||epoch_millis",
+                                    "type": "date"
+                            },
+
+                                    "type": "date"
+                            },
+
+                            "beat": {
+                                    "properties": {
+                                            "hostname": {
+                                                    "store": false,
+                                                    "type": "keyword"
+                                            },
+                                            "name": {
+                                                    "store": false,
+                                                    "type": "keyword"
+                                            },
+                                            "version": {
+                                                    "store": false,
+                                                    "type": "keyword"
+                                            }
+                                    }
+                            }
+
+                    }
+            }
+    }
+}
+
