@@ -1,4 +1,4 @@
-# Google C++ Style Guide
+# 编码规范 - Google C++ Style Guide
 
 [[toc]]
 
