@@ -4,7 +4,7 @@
 
 # 概述
 
-[](/_images/database/mysql/operation/分库分表.png)
+![](/_images/database/mysql/operation/分库分表.png)
 
 随着互联网及移动互联网的发展，应用系统的数据量也是成指数式增长，若采用单数据库进行数据存储，存在以下性能瓶颈：
 
@@ -14,7 +14,7 @@
 
 为了解决上述问题，需要对数据库进行分库分表处理。
 
-[](/_images/database/mysql/operation/分库分表处理.png)
+![](/_images/database/mysql/operation/分库分表处理.png)
 
 中心思想：将数据分散存储，使得单一数据库/表的数据量变小来缓解单一数据库的性能问题，从而达到提升数据库性能的目的。
 
@@ -22,7 +22,7 @@
 
 分库分表的形式，主要是两种：**垂直拆分和水平拆分**。而拆分的粒度，一般又分为**分库和分表**，所以组成的拆分策略最终如下：
 
-[](/_images/database/mysql/operation/拆分策略.png)
+![](/_images/database/mysql/operation/拆分策略.png)
 
 ## 垂直拆分
 
@@ -34,7 +34,7 @@
 
 ### 垂直分库
 
-[](/_images/database/mysql/operation/垂直分库.png)
+![](/_images/database/mysql/operation/垂直分库.png)
 
 垂直分库：以表为依据，根据业务将不同表拆分到不同库中。
 
@@ -46,7 +46,7 @@
 
 ### 垂直分表
 
-[](/_images/database/mysql/operation/垂直分表.png)
+![](/_images/database/mysql/operation/垂直分表.png)
 
 垂直分表：以字段为依据，根据字段属性将不同字段拆分到不同表中。
 
@@ -81,7 +81,7 @@
 
 ### 水平分库
 
-[](/_images/database/mysql/operation/水平分库.png)
+![](/_images/database/mysql/operation/水平分库.png)
 
 水平分库：以字段为依据，按照一定策略，将一个库的数据拆分到多个库中。
 
@@ -93,7 +93,7 @@
 
 ### 水平分表
 
-[](/_images/database/mysql/operation/水平分表.png)
+![](/_images/database/mysql/operation/水平分表.png)
 
 水平分表：以字段为依据，按照一定策略，将一个表的数据拆分到多个表中。
 

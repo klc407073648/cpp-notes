@@ -1,4 +1,4 @@
-# Spring框架学习
+# SSM框架 - Spring框架学习
 
 Spring框架主要的优势是在<font color='red'>**简化开发**</font>和 <font color='red'>**框架整合**</font>上，其主要内容包括以下几点：
 
@@ -37,7 +37,7 @@ Spring框架主要的优势是在<font color='red'>**简化开发**</font>和 <f
 
 Spring Framework的5版本目前没有最新的架构图，而最新的是4版本，所以接下来主要研究的是4的架构图
 
-![Spring框架](./imgaes/Spring框架.png)
+![Spring框架](/_images/project/study/ssm/spring/Spring框架.png)
 
 1.核心层
 

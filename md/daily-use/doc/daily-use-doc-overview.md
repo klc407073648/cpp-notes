@@ -76,9 +76,9 @@
 
 # 技术前沿
 
-- [InfoQ-在线新闻/社区网站](https://www.infoq.cn/）
-- [掘金-帮助开发者成长社区](https://juejin.cn/）
-- [知乎-有问题，就会有答案](www.zhihu.com）
+- [InfoQ-在线新闻/社区网站](https://www.infoq.cn/)
+- [掘金-帮助开发者成长社区](https://juejin.cn/)
+- [知乎-有问题，就会有答案](www.zhihu.com)
 
 # 知识总结
 

@@ -1,4 +1,4 @@
-# typedef 语句的使用
+# C++函数 - typedef 语句的使用
 
 [[toc]]
 

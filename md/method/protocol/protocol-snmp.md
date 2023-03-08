@@ -10,6 +10,11 @@
 
 ::: danger 
 TODO,待补充实践内容 
+https://blog.csdn.net/cj1314528/article/details/123171978
+https://blog.csdn.net/my_angle2016/article/details/124348744
+
+配置snmp服务端，然后客户端能访问到服务端状态；
+后续再去编写程序服务端侧，能够上报状态到NMS
 :::
 
 # 概念

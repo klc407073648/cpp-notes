@@ -1,4 +1,4 @@
-# SpringBoot
+# SSM框架 - SpringBoot
 
 ## 简介
 
@@ -10,23 +10,23 @@
 
 1. **创建工程，并在 `pom.xml` 配置文件中配置所依赖的坐标**
 
-<img src="/_images/project/study/springboot/SpringMVC坐标.png" alt="SpringMVC坐标" style="zoom:50%;" />
+<img src="/_images/project/study/ssm/springboot/SpringMVC坐标.png" alt="SpringMVC坐标" style="zoom:50%;" />
 
 2. **编写 `web3.0` 的配置类**
 
    作为 `web` 程序，`web3.0` 的配置类不能缺少，而这个配置类还是比较麻烦的，代码如下
 
-<img src="/_images/project/study/springboot/Web配置.png" alt="Web配置" style="zoom:50%;" />
+<img src="/_images/project/study/ssm/springboot/Web配置.png" alt="Web配置" style="zoom:50%;" />
 
 3. **编写 `SpringMVC` 的配置类**
 
-<img src="/_images/project/study/springboot/SpringMVC配置类.png" alt="SpringMVC配置类" style="zoom:50%;" />
+<img src="/_images/project/study/ssm/springboot/SpringMVC配置类.png" alt="SpringMVC配置类" style="zoom:50%;" />
 
 ​    做到这只是将工程的架子搭起来。要想被外界访问，最起码还需要提供一个 `Controller` 类，在该类中提供一个方法。
 
 4. **编写 `Controller` 类**
 
-<img src="/_images/project/study/springboot/Controller类.png" alt="Controller类" style="zoom:50%;" />
+<img src="/_images/project/study/ssm/springboot/Controller类.png" alt="Controller类" style="zoom:50%;" />
 
 从上面的 `SpringMVC` 程序开发可以看到，前三步都是在搭建环境，而且这三步基本都是固定的。
 
@@ -49,25 +49,25 @@
 * 选择 `Spring Initializr` ，用来创建 `SpringBoot` 工程
     * 以前选择的是 `Maven` ，选择 `Spring Initializr` 来快速构建 `SpringBoot` 工程。而在 `Module SDK` 这一项选择我们安装的 `JDK` 版本。
 
-<img src="/_images/project/study/springboot/SpringBoot创建新模块.png" alt="SpringBoot创建新模块" style="zoom:60%;" />
+<img src="/_images/project/study/ssm/springboot/SpringBoot创建新模块.png" alt="SpringBoot创建新模块" style="zoom:60%;" />
 
 * 对 `SpringBoot` 工程进行相关的设置
 
-  <img src="/_images/project/study/springboot/SpringBoot工程设置.png" alt="SpringBoot工程设置" style="zoom:67%;" />
+  <img src="/_images/project/study/ssm/springboot/SpringBoot工程设置.png" alt="SpringBoot工程设置" style="zoom:67%;" />
 
 * 选中 `Web`，然后勾选 `Spring Web`
 
   由于我们需要开发一个 `web` 程序，使用到了 `SpringMVC` 技术，所以按照下图红框进行勾选
 
-<img src="/_images/project/study/springboot/web设置勾选.png" alt="web设置勾选" style="zoom:60%;" />
+<img src="/_images/project/study/ssm/springboot/web设置勾选.png" alt="web设置勾选" style="zoom:60%;" />
 
 * 下图界面不需要任何修改，直接点击 `Finish` 完成 `SpringBoot` 工程的构建
 
-<img src="/_images/project/study/springboot/完成SpringBoot工程构建.png" alt="完成SpringBoot工程构建" style="zoom:70%;" />
+<img src="/_images/project/study/ssm/springboot/完成SpringBoot工程构建.png" alt="完成SpringBoot工程构建" style="zoom:70%;" />
 
 经过以上步骤后就创建了如下结构的模块，它会帮我们自动生成一个 `Application` 类，而该类一会再启动服务器时会用到
 
-<img src="/_images/project/study/springboot/生成Application.png" alt="生成Application" style="zoom:80%;" />
+<img src="/_images/project/study/ssm/springboot/生成Application.png" alt="生成Application" style="zoom:80%;" />
 
 #### 2.创建 Controller
 
@@ -90,13 +90,13 @@ public class BookController {
 
 只需运行项目 `com.itheima` 包下的 `Application` 类，就可以在控制台看出如下信息
 
-![](/_images/project/study/springboot/启动服务器.png)
+![](/_images/project/study/ssm/springboot/启动服务器.png)
 
 #### 4.进行测试
 
 使用 `Postman` 工具来测试程序
 
-![](/_images/project/study/springboot/Postman测试.png)
+![](/_images/project/study/ssm/springboot/Postman测试.png)
 
 通过上面的入门案例我们可以看到使用 `SpringBoot` 进行开发，使整个开发变得很简单，那它是如何做到的呢？
 
@@ -170,7 +170,7 @@ public class Application {
 
 做完 `SpringBoot` 的入门案例后，接下来对比一下 `Spring` 程序和 `SpringBoot` 程序。如下图
 
-<img src="/_images/project/study/springboot/Spring和SpringBoot对比.png" alt="Spring和SpringBoot对比" style="zoom:60%;" />
+<img src="/_images/project/study/ssm/springboot/Spring和SpringBoot对比.png" alt="Spring和SpringBoot对比" style="zoom:60%;" />
 
 ## SpringBoot工程快速启动
 
@@ -178,7 +178,7 @@ public class Application {
 
 后端可以将 `SpringBoot` 工程打成 `jar` 包，该 `jar` 包运行不依赖于 `Tomcat` 和 `Idea` 这些工具也可以正常运行，只需替换实际的 `Mysql` 数据库即可。如下图
 
-<img src="/_images/project/study/springboot/前后端项目.png" alt="前后端项目" style="zoom:50%;" />
+<img src="/_images/project/study/ssm/springboot/前后端项目.png" alt="前后端项目" style="zoom:50%;" />
 
 ### 打包
 
@@ -203,7 +203,7 @@ jar -jar springboot_01_quickstart-0.0.1-SNAPSHOT.jar
 
 执行上述命令就可以看到 `SpringBoot` 运行的日志信息
 
-<img src="/_images/project/study/springboot/命令行运行结果.png" alt="命令行运行结果" style="zoom:60%;" />
+<img src="/_images/project/study/ssm/springboot/命令行运行结果.png" alt="命令行运行结果" style="zoom:60%;" />
 
 ## SpringBoot概述
 
@@ -226,7 +226,7 @@ jar -jar springboot_01_quickstart-0.0.1-SNAPSHOT.jar
 
 使用 `Spring Initializr`  方式创建的 `Maven` 工程的的 `pom.xml` 配置文件中自动生成了很多包含 `starter` 的依赖，如下图
 
-<img src="/_images/project/study/springboot/起步依赖.png" alt="起步依赖" style="zoom:70%;" />
+<img src="/_images/project/study/ssm/springboot/起步依赖.png" alt="起步依赖" style="zoom:70%;" />
 
 这些依赖就是**启动依赖**。
 
@@ -234,11 +234,11 @@ jar -jar springboot_01_quickstart-0.0.1-SNAPSHOT.jar
 
 从上面的文件中可以看到指定了一个父工程，进入到父工程，发现父工程中又指定了一个父工程，如下图所示
 
-<img src="/_images/project/study/springboot/父工程.png" alt="父工程" style="zoom:80%;" />
+<img src="/_images/project/study/ssm/springboot/父工程.png" alt="父工程" style="zoom:80%;" />
 
 再进入到该父工程中，在该工程中我们可以看到配置内容结构如下图所示
 
-<img src="/_images/project/study/springboot/父工程配置内容.png" alt="父工程配置内容" style="zoom:80%;" />
+<img src="/_images/project/study/ssm/springboot/父工程配置内容.png" alt="父工程配置内容" style="zoom:80%;" />
 
 * `properties` 标签中定义了各个技术软件依赖的版本，避免了在使用不同软件技术时考虑版本的兼容问题。
 * `dependencyManagement` 标签是进行依赖版本锁定。
@@ -320,7 +320,7 @@ public class Springboot01QuickstartApplication {
 
 运行引导类，在日志信息中就可以看到使用的是 `jetty` 服务器
 
-![](/_images/project/study/springboot/jetty服务器.png)
+![](/_images/project/study/ssm/springboot/jetty服务器.png)
 
 **小结：**
 
@@ -427,7 +427,7 @@ enterprise:
 
 新创建一个名为 `springboot_03_read_data` 的 `SpringBoot` 工程，目录结构如下
 
-<img src="/_images/project/study/springboot/springboot_03_read_data环境.png" alt="springboot_03_read_data环境" style="zoom:80%;" />
+<img src="/_images/project/study/ssm/springboot/springboot_03_read_data环境.png" alt="springboot_03_read_data环境" style="zoom:80%;" />
 
 在 `com.itheima.controller` 包写创建名为 `BookController` 的控制器，内容如下
 
@@ -584,7 +584,7 @@ public class BookController {
 
 以后在工作中，对于开发环境、测试环境、生产环境的配置肯定都不相同，例如不同环境使用的mysql数据库地址肯定不同：
 
-<img src="/_images/project/study/springboot/多环境配置.png" alt="多环境配置" style="zoom:60%;" />
+<img src="/_images/project/study/ssm/springboot/多环境配置.png" alt="多环境配置" style="zoom:60%;" />
 
 来回的修改配置会很麻烦，而 `SpringBoot` 给开发者提供了多环境的快捷配置，需要切换环境时只需要改一个配置即可。
 
@@ -661,7 +661,7 @@ https://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-featu
 
 进入上面网站后会看到如下页面
 
-![](/_images/project/study/springboot/优先级.png)
+![](/_images/project/study/ssm/springboot/优先级.png)
 
 如果使用了多种方式配合同一个配置项，优先级高的生效。
 
@@ -742,11 +742,11 @@ public class UserServiceTest {
 
 * 创建新模块，选择 `Spring Initializr`，并配置模块相关基础信息
 
-<img src="/_images/project/study/springboot/SpringBoot整合mybatis.png" alt="SpringBoot整合mybatis" style="zoom:80%;" />
+<img src="/_images/project/study/ssm/springboot/SpringBoot整合mybatis.png" alt="SpringBoot整合mybatis" style="zoom:80%;" />
 
 * 选择当前模块需要使用的技术集（MyBatis、MySQL）
 
-  <img src="/_images/project/study/springboot/选择mybatis_mysql.png" alt="选择mybatis_mysql" style="zoom:80%;" />
+  <img src="/_images/project/study/ssm/springboot/选择mybatis_mysql.png" alt="选择mybatis_mysql" style="zoom:80%;" />
 
 2. 定义实体类
 

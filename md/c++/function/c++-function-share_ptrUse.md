@@ -1,4 +1,4 @@
-# C++智能指针——shared_ptr的使用
+# C++函数 - 智能指针shared_ptr的使用
 
 [[toc]]
 

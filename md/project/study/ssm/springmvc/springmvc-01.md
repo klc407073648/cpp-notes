@@ -1,4 +1,4 @@
-# SpringMVC
+# SSM框架 - SpringMVC基础
 
 > SpringMVC是隶属于Spring框架的一部分，主要是用来进行Web开发，是对Servlet进行了封装。
 
@@ -26,7 +26,7 @@ SSM整合是把所学习的SpringMVC+Spring+Mybatis整合在一起来完成业�
 
 三层架构
 
-![](/_images/project/study/springmvc/web三层架构.png)
+![](/_images/project/study/ssm/springmvc/web三层架构.png)
 
 * 浏览器发送一个请求给后端服务器，后端服务器现在是使用Servlet来接收请求和数据
 
@@ -46,7 +46,7 @@ SSM整合是把所学习的SpringMVC+Spring+Mybatis整合在一起来完成业�
 
 随着互联网的发展，上面的模式因为是同步调用，性能慢慢的跟不是需求，所以异步调用慢慢的走到了前台，是现在比较流行的一种处理方式。
 
-![](/_images/project/study/springmvc/mvc框架.png)
+![](/_images/project/study/ssm/springmvc/mvc框架.png)
 
 * 因为是异步调用，所以后端不需要返回view视图，将其去除
 * 前端如果通过异步调用的方式进行交互，后台就需要将返回的数据转换成json格式进行返回
@@ -155,7 +155,7 @@ public class ServletContainersInitConfig extends AbstractDispatcherServletInitia
 
 浏览器输入`http://localhost/save`进行访问，就能看到返回的结果数据:
 
-![1630430835628](/_images/project/study/springmvc/springmvc浏览器访问.png)
+![1630430835628](/_images/project/study/ssm/springmvc/springmvc浏览器访问.png)
 
 **注意事项**
 
@@ -192,7 +192,7 @@ public class ServletContainersInitConfig extends AbstractDispatcherServletInitia
 
 为了更好的使用SpringMVC,将SpringMVC的使用过程总共分两个阶段来分析，分别是`启动服务器初始化过程`和`单次请求过程`
 
-![](/_images/project/study/springmvc/SpringMVC的使用过程.png)
+![](/_images/project/study/ssm/springmvc/SpringMVC的使用过程.png)
 
 #### 启动服务器初始化过程
 
@@ -206,7 +206,7 @@ public class ServletContainersInitConfig extends AbstractDispatcherServletInitia
 
 3. 加载SpringMvcConfig配置类
 
-   ![](/_images/project/study/springmvc/加载SpringMvcConfig配置类.png)
+   ![](/_images/project/study/ssm/springmvc/加载SpringMvcConfig配置类.png)
 
 4. 执行@ComponentScan加载对应的bean
 
@@ -214,13 +214,13 @@ public class ServletContainersInitConfig extends AbstractDispatcherServletInitia
 
 5. 加载UserController，每个@RequestMapping的名称对应一个具体的方法
 
-   ![](/_images/project/study/springmvc/加载UserController.png)
+   ![](/_images/project/study/ssm/springmvc/加载UserController.png)
 
    * 此时就建立了 `/save` 和 save方法的对应关系
 
 6. 执行getServletMappings方法，设定SpringMVC拦截请求的路径规则
 
-   ![](/_images/project/study/springmvc/设定SpringMVC拦截请求的路径规则.png)
+   ![](/_images/project/study/ssm/springmvc/设定SpringMVC拦截请求的路径规则.png)
 
    * `/`代表所拦截请求的路径规则，只有被拦截后才能交给SpringMVC来处理请求
 
@@ -307,7 +307,7 @@ public class App{
 
 如果被排除了，该方法执行就会报bean未被定义的错误
 
-![](/_images/project/study/springmvc/bean未被定义的错误.png)
+![](/_images/project/study/ssm/springmvc/bean未被定义的错误.png)
 
 **注意:测试的时候，需要把SpringMvcConfig配置类上的@ComponentScan注解注释掉，否则不会报错**
 
@@ -373,7 +373,7 @@ public class ServletContainersInitConfig extends AbstractAnnotationConfigDispatc
 
 * PostMan是一款功能强大的网页调试与发送网页HTTP请求的Chrome插件。
 
-![](/_images/project/study/springmvc/PostMan.png)
+![](/_images/project/study/ssm/springmvc/PostMan.png)
 
 * 作用：常用于进行接口测试
 
@@ -462,7 +462,7 @@ public class UserController {
 http://localhost/commonParam?name=itcast
 ```
 
-![](/_images/project/study/springmvc/GET发送单个参数.png)
+![](/_images/project/study/ssm/springmvc/GET发送单个参数.png)
 
 接收参数：
 
@@ -487,7 +487,7 @@ public class UserController {
 http://localhost/commonParam?name=itcast&age=15
 ```
 
-![](/_images/project/study/springmvc/GET发送多个参数.png)
+![](/_images/project/study/ssm/springmvc/GET发送多个参数.png)
 
 接收参数：
 
@@ -517,7 +517,7 @@ build/plugins中tomcat配置里加上
 
 发送请求与参数:
 
-![](/_images/project/study/springmvc/POST发送参数.png)
+![](/_images/project/study/ssm/springmvc/POST发送参数.png)
 
 接收参数和GET一致，不用做任何修改
 
@@ -596,7 +596,7 @@ public class User {
 
 发送请求和参数:
 
-![](/_images/project/study/springmvc/POJO数据类型GET.png)
+![](/_images/project/study/ssm/springmvc/POJO数据类型GET.png)
 
 后台接收参数:
 
@@ -637,7 +637,7 @@ public class User {
 
 发送请求和参数:
 
-![](/_images/project/study/springmvc/嵌套POJO参数GET.png)
+![](/_images/project/study/ssm/springmvc/嵌套POJO参数GET.png)
 
 后台接收参数:
 
@@ -657,7 +657,7 @@ public String pojoParam(User user){
 
 发送请求和参数:
 
-![](/_images/project/study/springmvc/数组类型参数GET.png)
+![](/_images/project/study/ssm/springmvc/数组类型参数GET.png)
 
 后台接收参数:
 
@@ -675,7 +675,7 @@ public String pojoParam(User user){
 
 发送请求和参数:
 
-![](/_images/project/study/springmvc/集合类型参数GET.png)
+![](/_images/project/study/ssm/springmvc/集合类型参数GET.png)
 
 后台接收参数:
 
@@ -720,7 +720,7 @@ SpringMVC默认使用的是jackson来处理json的转换，所以需要在pom.xm
 
 ###### 步骤2:PostMan发送JSON数据
 
-![](/_images/project/study/springmvc/PostMan发送JSON数据.png)
+![](/_images/project/study/ssm/springmvc/PostMan发送JSON数据.png)
 
 ###### 步骤3:开启SpringMVC注解支持
 
@@ -749,7 +749,7 @@ public String listParamForJson(@RequestBody List<String> likes){
 
 ###### 步骤5:启动运行程序
 
-![](/_images/project/study/springmvc/JSON数据传递完成.png)
+![](/_images/project/study/ssm/springmvc/JSON数据传递完成.png)
 
 #### JSON对象数据
 
@@ -851,11 +851,11 @@ public String dataParam(Date date,
 
 `http://localhost/dataParam?date=2088/08/08&date1=2088-08-08&date2=2088/08/08 8:08:08`
 
-![](/_images/project/study/springmvc/PostMan发送日期数据.png)
+![](/_images/project/study/ssm/springmvc/PostMan发送日期数据.png)
 
 重新启动服务器，重新发送请求测试，SpringMVC就可以将日期时间的数据进行转换
 
-![](/_images/project/study/springmvc/后端解析日期数据.png)
+![](/_images/project/study/ssm/springmvc/后端解析日期数据.png)
 
 #### 知识点：@DateTimeFormat
 
@@ -898,7 +898,7 @@ public interface Converter<S, T> {
 
 Converter接口的实现类
 
-![](/_images/project/study/springmvc/Converter接口的实现类.png)
+![](/_images/project/study/ssm/springmvc/Converter接口的实现类.png)
 
 框架中有提供很多对应Converter接口的实现类，用来实现不同数据类型之间的转换,如:
 
@@ -949,7 +949,7 @@ public class UserController {
 
 `http://localhost/toJumpPage`
 
-![](/_images/project/study/springmvc/toJumpPage.png)
+![](/_images/project/study/ssm/springmvc/toJumpPage.png)
 
 #### 返回文本数据
 
@@ -974,7 +974,7 @@ public class UserController {
 
 此处不涉及到页面跳转，因为我们现在发送的是GET请求，可以使用浏览器也可以使用PostMan进行测试，输入地址`http://localhost/toText`访问
 
-![](/_images/project/study/springmvc/toText.png)
+![](/_images/project/study/ssm/springmvc/toText.png)
 
 #### 响应JSON数据
 
@@ -1001,7 +1001,7 @@ public class UserController {
 
 重新启动服务器，访问`http://localhost/toJsonPOJO`
 
-![](/_images/project/study/springmvc/toJsonPOJO.png)
+![](/_images/project/study/ssm/springmvc/toJsonPOJO.png)
 
 ##### 响应POJO集合对象
 
@@ -1034,7 +1034,7 @@ public class UserController {
 
 重新启动服务器，访问`http://localhost/toJsonList`
 
-![](/_images/project/study/springmvc/toJsonList.png)
+![](/_images/project/study/ssm/springmvc/toJsonList.png)
 
 #### 知识点：@ResponseBody
 
@@ -1169,7 +1169,7 @@ public String delete(**@PathVariable** Integer **id**){
 
 做完了RESTful的开发，你会发现**好麻烦**，麻烦在哪?
 
-![](/_images/project/study/springmvc/RESTful快速开发.png)
+![](/_images/project/study/ssm/springmvc/RESTful快速开发.png)
 
 * 问题1：每个方法的@RequestMapping注解中都定义了访问路径/books，重复性太高。
 * 问题2：每个方法的@RequestMapping注解中都要使用method属性定义请求方式，重复性太高。

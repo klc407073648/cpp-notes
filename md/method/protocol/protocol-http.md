@@ -6,8 +6,9 @@
 
 - [wiki百科http定义](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol)
 
-# HTTP概念
+# Wiki HTTP概念
 
+::: details
 > The Hypertext Transfer Protocol (HTTP) is an application layer protocol in the Internet protocol suite model for **distributed, collaborative, hypermedia information** systems.
 
 > 分布式、协作、超媒体信息系统
@@ -38,6 +39,7 @@
     * HTTP/1.1 communications therefore experience **less latency** as the establishment of TCP connections presents considerable overhead, specially under high traffic conditions.
 
 * TCP连接可重用；更低延迟
+* HTTP/1.1中规定一个域名可以有6个TCP连接。
 
 * HTTP/2 is a revision of previous HTTP/1.1 in order to maintain the same client–server model and the same protocol methods but with these differences in order:
     * to use a **compressed binary representation of metadata (HTTP headers) instead of a textual one**, so that headers require much less space;
@@ -51,11 +53,12 @@
 * 采用单个连接替代多个TCP连接(使用更少的TCP/IP连接数)
 * 允许在单个或多个 双向流 TCP 连接上通过交错排列块来多路传输多个资源。同时解决了第一个资源缓慢时的队头阻塞问题
     * [队头阻塞](https://zhuanlan.zhihu.com/p/330300133)
+
 * 可以让服务端应用给客户端发送新数据，而不需要客户端定期来请求
 
 * HTTP/3 is a revision of previous HTTP/2 in order to use QUIC + UDP transport protocols instead of TCP/IP connections also to slightly improve the average speed of communications and to avoid the occasional (very rare) problem of TCP/IP connection congestion that can temporarily block or slow down the data flow of all its streams (another form of "head of line blocking").
 
-* 使用QUIC+UDP传输协议而不是TCP/IP连接
+* 使用QUIC(Quick UDP Internet Connections)+UDP传输协议而不是TCP/IP连接
 * 略微提高通信的平均速度，并避免偶尔（非常罕见）出现的TCP/IP连接拥塞问题，该问题可能会暂时阻塞或减缓其所有流的数据流（另一种形式的“队头阻塞”）。
 
 * HTTP/2 使用了多路复用，一般来说同一域名下只需要使用一个 TCP 连接。当这个连接中出现了丢包的情况，那就会导致 HTTP/2 的表现情况反倒不如 HTTP/1 了。因为在出现丢包的情况下，整个 TCP 都要开始等待重传，也就导致了后面的所有数据都被阻塞了。
@@ -103,35 +106,84 @@ HTTP is a stateless protocol. A stateless protocol does not require the web serv
 Some web applications need to manage user sessions, so they implement states, or server side sessions, using for instance HTTP cookies[45] or hidden variables within web forms.
 
 To start an application user session, an interactive authentication via web application login must be performed. To stop a user session a logout operation must be requested by user. These kind of operations do not use HTTP authentication but a custom managed web application authentication.
+::: 
 
-## HTTP/1.1 请求和响应消息
+# HTTP协议详解
+
+## 概念
+
+HTTP协议，即**超文本传输协议(Hypertext transfer protocol)**。用于从万维网服务器传输超文本到本地浏览器的传送协议。
+
+HTTP协议是基于TCP的应用层协议，它不关心数据传输的细节，主要用来规定**客户端和服务端的数据传输格式**。最初用来向客户端传输HTML页面的内容。
+
+HTTP是基于**请求与响应模式的、无状态的、应用层的协议**。
+
+注意：无状态是指协议对于事务处理没有记忆能力，即Web服务器不保存发送请求的Web浏览器进程的任何信息。与Connection: keep-alive的区别，keep-alive表示TCP连接不会关闭。
+
+## HTTP请求报文
+
+HTTP请求报文由请求行、请求报头、空行和请求数据4个部分组成。如下图：
+
+![](/_images/method/protocol/http/HTTP请求报文.png)
 
 ### 请求方法
 
-![](/_images/method/protocol/http/request_method.png)
+HTTP请求方法有8种，分别是GET、POST、HEAD、PUT、DELETE、TRACE、CONNECT、 OPTIONS。对于移动开发最常用的就是GET和POST了。
+
+| 请求方法| 	 内容| 
+| ------------- |:-------------:|
+|GET	|请求获取Request-URI所标识的资源。|
+|POST	|在Request-URI所标识的资源后附加新的数据。|
+|HEAD	|请求获取由Request-URI所标识的资源的响应消息报头。|
+|PUT	|请求服务器存储一个资源，并用Request-URI作为其标识。|
+|DELETE	|请求服务器删除Request-URI所标识的资源。|
+|TRACE	|请求服务器回送收到的请求信息，主要用于测试或诊断。|
+|CONNECT	|HTTP 1.1协议中预留给能够将连接改为管道方式的代理服务器。|
+|OPTIONS	|请求查询服务器的性能，或者查询与资源相关的选项和需求。|
+
+以POST请求为例：
+
+第一行为请求行，最后一行为请求数据，倒数第二行为空行，中间的为请求报头。
+
+![](/_images/method/protocol/http/POST请求.png)
+
+## HTTP响应报文
+
+HTTP 的响应报文由状态行、响应报头、空行、响应正文组成，如下图所示：
+
+![](/_images/method/protocol/http/HTTP响应报文.png)
+
+响应示例：
+
+![](/_images/method/protocol/http/响应示例.png)
 
 ### 响应状态码
 
-```
-1XX (informational)
-The request was received, continuing process.
-2XX (successful)
-The request was successfully received, understood, and accepted.
-3XX (redirection)
-Further action needs to be taken in order to complete the request.
-4XX (client error)
-The request contains bad syntax or cannot be fulfilled.
-5XX (server error)
-The server failed to fulfill an apparently valid request.
-```
+::: details
+1XX (informational): The request was received, continuing process.
+2XX (successful): The request was successfully received, understood, and accepted.
+3XX (redirection): Further action needs to be taken in order to complete the request.
+4XX (client error): The request contains bad syntax or cannot be fulfilled.
+5XX (server error): The server failed to fulfill an apparently valid request.
+::: 
 
-* 1xx：表示临时响应并需要请求者继续执行操作的状态代码
-* 2xx：表示成功处理了请求的状态代码
-* 3xx：要完成请求，需要进一步操作（通常这些代码用来重定向）
-* 4xx：表示请求可能出错，妨碍了服务器的处理
-* 5xx：表示服务器在尝试处理请求时，发生内部错误
+状态码由3位数字组成，第一个数字定义了响应的类别，且有以下5种可能取值:
+* 1XX：指示信息，收到请求，需要请求者继续执行操作。
+* 2XX：请求成功，请求已被成功接收并处理。
+* 3XX：重定向，要完成请求必须进行更进一步的操作。
+* 4XX：客户端错误，请求有语法错误或请求无法实现。
+* 5XX：服务器错误，服务器不能实现合法的请求。
 
-### 例子
+常见的状态码如下：
+* 200 OK：客户端请求成功。
+* 301: 请求永久重定向
+* 400 Bad Request：客户端请求有语法错误，服务器无法理解。
+* 401 Unauthorized：请求未经授权，这个状态码必须和WWW-Authenticate报头域一起使用。
+* 403 Forbidden：服务器收到请求，但是拒绝提供服务。
+* 500 Internal Server Error：服务器内部错误，无法完成请求。
+* 503 Server Unavailable：服务器当前不能处理客户端的请求，一段时间后可能恢复正常。
+
+### GET请求和响应例子
 
 客户端请求
 ```
@@ -165,3 +217,25 @@ Connection: close
   </body>
 </html>
 ```
+
+HTTP不同版本比较：
+
+![](/_images/method/protocol/http/compare.png)
+
+# 常见问题
+
+## 队头阻塞解析
+
+TCP 是字节流协议，**TCP 层必须保证收到的字节数据是完整且有序的**，如果序列号较低的 TCP 段在网络传输中丢失了，即使序列号较高的 TCP 段已经被接收了，应用层也无法从内核中读取到这部分数据。
+
+HTTP1时，多个TCP连接发送packet:
+
+![](/_images/method/protocol/http/tcp_1.png)
+
+发送方发送了很多个 packet，每个 packet 都有自己的序号(即TCP 的序列号)，其中 packet #3 在网络中丢失了，即使 packet #4-6 被接收方收到后，由于内核中的 TCP 数据不是连续的，于是接收方的应用层就无法从内核中读取到，只有等到 packet #3 重传后，接收方的应用层才可以从内核中读取到数据。
+
+HTTP2时，1个TCP连接发送packet:
+
+![](/_images/method/protocol/http/tcp_2.png)
+
+HTTP/2 多个请求是跑在一个 TCP 连接中的，那么当 TCP 丢包时，整个 TCP 都要等待重传，那么就会阻塞该 TCP 连接中的所有请求，所以 HTTP/2 队头阻塞问题就是因为 TCP 协议导致的。

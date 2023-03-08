@@ -5,6 +5,7 @@
 # 参考资料
 
 * [cpp14](https://en.cppreference.com/w/cpp/14)
+* [C++14新特性](https://zhuanlan.zhihu.com/p/550561238)
 
 # 特性概览
 

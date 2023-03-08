@@ -1,4 +1,4 @@
-# SpringMVC
+# SSM框架 - SpringMVC应用
 
 # SSM整合
 
@@ -64,7 +64,7 @@
 
 可以使用Maven的骨架创建
 
-![](./images/Maven的骨架创建.png)
+![](/_images/project/study/ssm/springmvc/Maven的骨架创建.png)
 
 #### 步骤2:添加依赖
 
@@ -72,7 +72,7 @@ pom.xml添加SSM所需要的依赖jar包
 
 #### 步骤3:创建项目包结构
 
-![](./images/项目包结构.png)
+![](/_images/project/study/ssm/springmvc/项目包结构.png)
 
 * config目录存放的是相关的配置类
 * controller编写的是Controller类
@@ -301,7 +301,7 @@ SSM整合以及功能模块开发完成后，对于不同的请求，会返回�
 * 返回的数据是何种操作及是否操作成功: **封装操作结果到code属性中**
 * 操作失败后返回的错误信息: **封装特殊消息到message(msg)属性中**
 
-![](./images/返回结果数据.png)
+![](/_images/project/study/ssm/springmvc/返回结果数据.png)
 
 根据分析，可以设置统一数据返回结果类
 
@@ -389,7 +389,7 @@ public class BookController {
 
 ##### 步骤4:启动服务测试
 
-![](./images/测试统一返回结果.png)
+![](/_images/project/study/ssm/springmvc/测试统一返回结果.png)
 
 至此，返回结果就已经能以一种统一的格式返回给前端。前端根据返回的结果，先从中获取`code`,根据code判断，如果成功则取`data`属性的值，如果失败，则取`msg`中的值做提示。
 
@@ -417,7 +417,7 @@ public Result getById(@PathVariable Integer id) {
 
 重新启动运行项目，使用PostMan发送请求，当传入的id为1，则会出现如下效果：
 
-![](./images/查询单个图书异常.png)
+![](/_images/project/study/ssm/springmvc/查询单个图书异常.png)
 
 前端接收到这个信息后和之前我们约定的格式不一致，这个问题该如何解决?
 
@@ -517,7 +517,7 @@ public class ProjectExceptionAdvice {
 
 **说明:**此注解自带@ResponseBody注解与@Component注解，具备对应的功能
 
-![](./images/RestControllerAdvice.png)
+![](/_images/project/study/ssm/springmvc/RestControllerAdvice.png)
 
 #### 知识点2：@ExceptionHandler
 
@@ -691,7 +691,7 @@ public class ProjectExceptionAdvice {
 
 以后项目中的异常处理方式为:
 
-![](./images/异常处理方式.png)
+![](/_images/project/study/ssm/springmvc/异常处理方式.png)
 
 ## 前后台协议联调
 
@@ -707,11 +707,11 @@ public class ProjectExceptionAdvice {
 
 最终创建好的项目结构如下:
 
-![](./images/page项目结构.png)
+![](/_images/project/study/ssm/springmvc/page项目结构.png)
 
 1. 将`资料\SSM功能页面`下面的静态资源拷贝到webapp下。
 
-![](./images/page静态资源.png)
+![](/_images/project/study/ssm/springmvc/page静态资源.png)
 
 2. 因为添加了静态资源，SpringMVC会拦截，所有需要在SpringConfig的配置类中将静态资源进行放行。
 
@@ -755,7 +755,7 @@ public class ProjectExceptionAdvice {
 
 讲解拦截器的概念之前，先看一张图:
 
-![](./images/拦截器示意图.png)
+![](/_images/project/study/ssm/springmvc/拦截器示意图.png)
 
 (1)浏览器发送一个请求会先到Tomcat的web服务器
 
@@ -792,7 +792,7 @@ public class ProjectExceptionAdvice {
 - 归属不同：Filter属于Servlet技术，Interceptor属于SpringMVC技术
 - 拦截内容不同：Filter对所有访问进行增强，Interceptor仅针对SpringMVC的访问进行增强
 
-![](./images/拦截器和过滤器.png)
+![](/_images/project/study/ssm/springmvc/拦截器和过滤器.png)
 
 ### 拦截器入门案例
 
@@ -866,13 +866,13 @@ public class SpringMvcConfig{
 
 使用PostMan发送`http://localhost/books`
 
-![](./images/拦截器测试.png)
+![](/_images/project/study/ssm/springmvc/拦截器测试.png)
 
 注意：拦截器中的`preHandler`方法，如果返回true,则代表放行，会执行原始Controller类中要请求的方法，如果返回false，则代表拦截，后面的就不会再执行了。
 
 拦截器的执行流程:
 
-![](./images/拦截器执行流程.png)
+![](/_images/project/study/ssm/springmvc/拦截器执行流程.png)
 
 当有拦截器后，请求会先进入preHandle方法，
 
@@ -1008,7 +1008,7 @@ public class SpringMvcConfig implements WebMvcConfigurer {
 
 步骤3:运行程序，观察顺序
 
-![](./images/多个拦截器测试.png)
+![](/_images/project/study/ssm/springmvc/多个拦截器测试.png)
 
 拦截器执行的顺序是和配置顺序有关，先进后出。
 
@@ -1017,7 +1017,7 @@ public class SpringMvcConfig implements WebMvcConfigurer {
 * 当拦截器中出现对原始处理器的拦截，后面的拦截器均终止运行
 * 当拦截器运行中断，仅运行配置在前面的拦截器的afterCompletion操作
 
-![](./images/拦截器执行的顺序是和配置顺序.png)
+![](/_images/project/study/ssm/springmvc/拦截器执行的顺序是和配置顺序.png)
 
 * preHandle：与配置顺序相同，必定运行
 * postHandle:与配置顺序相反，可能不运行

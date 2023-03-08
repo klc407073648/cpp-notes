@@ -8,7 +8,7 @@
 
 MySQL支持一台主库同时向多台从库进行复制，从库同时也可以作为其他从服务器的主库，实现链状复制。
 
-[](/_images/database/mysql/operation/主从复制.png)
+![](/_images/database/mysql/operation/主从复制.png)
 
 MySQL 复制的优点主要包含以下三个方面：
 
@@ -20,7 +20,7 @@ MySQL 复制的优点主要包含以下三个方面：
 
 MySQL主从复制的核心就是 二进制日志，具体的过程如下：
 
-[](/_images/database/mysql/operation/原理.png)
+![](/_images/database/mysql/operation/原理.png)
 
 从上图来看，复制分成三步：
 
@@ -32,7 +32,7 @@ MySQL主从复制的核心就是 二进制日志，具体的过程如下：
 
 ### 准备
 
-[](/_images/database/mysql/operation/主从搭建.png)
+![](/_images/database/mysql/operation/主从搭建.png)
 
 准备好两台服务器之后，在上述的两台服务器中分别安装好MySQL，并完成基础的初始化准备(安装、密码配置等操作)工作。 其中：
 

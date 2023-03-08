@@ -1,5 +1,4 @@
-# Spring AOP
-
+# SSM框架 - Spring AOP
 
 # AOP简介
 
@@ -13,7 +12,7 @@ AOP(Aspect Oriented Programming)面向切面编程，一种编程范式，指导
 
 ## 核心概念
 
-![](/_images/project/study/spring/切面相关概念.png)
+![](/_images/project/study/ssm/spring/切面相关概念.png)
 
 * 连接点(JoinPoint)：程序执行过程中的任意位置，粒度为执行方法、抛出异常、设置变量等
   * 在SpringAOP中，理解为方法的执行
@@ -75,7 +74,7 @@ AOP(Aspect Oriented Programming)面向切面编程，一种编程范式，指导
 
 * 要被实例化bean对象的类中的方法和切入点进行匹配
 
-  ![](/_images/project/study/spring/方法和切入点匹配.png)
+  ![](/_images/project/study/ssm/spring/方法和切入点匹配.png)
 
   * 匹配失败，创建原始对象,如`UserDao`
     * 匹配失败说明不需要增强，直接调用原始对象的方法即可。
@@ -190,7 +189,7 @@ execution(public User com.itheima.service.UserService.findById(int))
 
 接下来，我们把案例中使用到的切入点表达式来分析下:
 
-![](/_images/project/study/spring/BookDao方法.png)
+![](/_images/project/study/ssm/spring/BookDao方法.png)
 
 ```java
 execution(void com.itheima.dao.BookDao.update())
@@ -253,7 +252,7 @@ AOP通知描述了抽取的共性功能，根据共性功能抽取的位置不�
 
 为了更好的理解这几种通知类型，我们来看一张图
 
-![](/_images/project/study/spring/通知类型示例.png)
+![](/_images/project/study/ssm/spring/通知类型示例.png)
 
 (1)前置通知：追加功能到方法执行前，类似于在代码1或者代码2添加内容
 
@@ -365,7 +364,7 @@ public class ProjectAdvice {
 
 ##### 步骤5:运行单元测试类
 
-![](/_images/project/study/spring/业务层调用万次执行时间.png)
+![](/_images/project/study/ssm/spring/业务层调用万次执行时间.png)
 
 **注意:**因为程序每次执行的时长是不一样的，所以运行多次最终的结果是不一样的。
 
@@ -406,7 +405,7 @@ public class ProjectAdvice {
 
 ##### 步骤7:运行单元测试类
 
-![](/_images/project/study/spring/万次执行时间显示具体方法名.png)
+![](/_images/project/study/ssm/spring/万次执行时间显示具体方法名.png)
 
 # AOP通知获取数据
 
@@ -477,7 +476,7 @@ public class MyAdvice {
 
 * pjp.proceed()方法是有两个构造方法，分别是:
 
-  ![](/_images/project/study/spring/proceed构造方法.png)
+  ![](/_images/project/study/ssm/spring/proceed构造方法.png)
 
   * 调用无参数的proceed，当原始方法有参数，会在调用的过程中自动传入参数
 
@@ -554,7 +553,7 @@ public class MyAdvice {
 
 (1)参数名的问题
 
-![](/_images/project/study/spring/参数名问题.png)
+![](/_images/project/study/ssm/spring/参数名问题.png)
 
 (2)afterReturning方法参数类型的问题
 
@@ -562,7 +561,7 @@ public class MyAdvice {
 
 (3)afterReturning方法参数的顺序问题
 
-![](/_images/project/study/spring/JoinPoint顺序.png)
+![](/_images/project/study/ssm/spring/JoinPoint顺序.png)
 
 
 ## 获取异常
@@ -700,13 +699,13 @@ public class BookDaoImpl implements BookDao {
 
 Spring为了管理事务，提供了一个平台事务管理器`PlatformTransactionManager`
 
-![](/_images/project/study/spring/PlatformTransactionManager.png)
+![](/_images/project/study/ssm/spring/PlatformTransactionManager.png)
 
 commit是用来提交事务，rollback是用来回滚事务。
 
 PlatformTransactionManager只是一个接口，Spring还为其提供了一个具体的实现:
 
-![](/_images/project/study/spring/DataSourceTransactionManager.png)
+![](/_images/project/study/ssm/spring/DataSourceTransactionManager.png)
 
 Mybatis内部采用的就是JDBC的事务，后期Spring整合Mybatis就采用的这个DataSourceTransactionManager事务管理器。
 
@@ -820,7 +819,7 @@ public class SpringConfig {
 
 1. 未开启Spring事务之前:
 
-![](/_images/project/study/spring/未开启Spring事务.png)
+![](/_images/project/study/ssm/spring/未开启Spring事务.png)
 
 * AccountDao的outMoney因为是修改操作，会开启一个事务T1
 * AccountDao的inMoney因为是修改操作，会开启一个事务T2
@@ -831,7 +830,7 @@ public class SpringConfig {
 
 2. 开启Spring的事务管理后
 
-![](/_images/project/study/spring/开启Spring的事务.png)
+![](/_images/project/study/ssm/spring/开启Spring的事务.png)
 
 * transfer上添加了@Transactional注解，在该方法上就会有一个事务T
 * AccountDao的outMoney方法的事务T1加入到transfer的事务T中
@@ -853,7 +852,7 @@ public class SpringConfig {
 
 ### 事务配置
 
-![](/_images/project/study/spring/事务配置参数.png)
+![](/_images/project/study/ssm/spring/事务配置参数.png)
 
 上面这些属性都可以在`@Transactional`注解的参数上进行设置。
 
@@ -976,7 +975,7 @@ public class AccountServiceImpl implements AccountService {
 
 ## 事务传播行为
 
-![](/_images/project/study/spring/事务传播行为.png)
+![](/_images/project/study/ssm/spring/事务传播行为.png)
 
 对于上述案例的分析:
 
@@ -1012,6 +1011,6 @@ public class LogServiceImpl implements LogService {
 
 ### 2.事务传播行为的可选值
 
-![](/_images/project/study/spring/事务传播行为的可选值.png)
+![](/_images/project/study/ssm/spring/事务传播行为的可选值.png)
 
 实际开发中，因为默认值需要事务是常态的。根据开发过程选择其他的就可以了，例如案例中需要新事务就需要手工配置。其实入账和出账操作上也有事务，采用的就是默认值。

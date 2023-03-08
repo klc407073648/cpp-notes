@@ -1,4 +1,4 @@
-# Spring整合
+# SSM框架 - Spring整合
 
 课程学习到这里，已经对Spring有一个简单的认识了，Spring有一个容器，叫做IoC容器，里面保存bean。在进行企业级开发的时候，其实除了将自己写的类让Spring管理之外，还有一部分重要的工作就是使用第三方的技术。前面已经讲了如何管理第三方bean了，下面结合IoC和DI，整合2个常用技术，进一步加深对Spring的使用理解。
 
@@ -8,13 +8,13 @@
 
 * Mybatis程序核心对象分析
 
-  ![](/_images/project/study/spring/Mybatis程序核心对象.png)
+  ![](/_images/project/study/ssm/spring/Mybatis程序核心对象.png)
 
 从图中可以获取到，真正需要交给Spring管理的是**SqlSessionFactory**
 
 * 整合Mybatis，就是将Mybatis用到的内容交给Spring管理，分析下配置文件
 
-  ![](/_images/project/study/spring/Mybatis配置文件.png)
+  ![](/_images/project/study/ssm/spring/Mybatis配置文件.png)
 
 **说明:**
 
@@ -133,7 +133,7 @@ public class App2 {
 
 #### 步骤8:运行程序
 
-![](/_images/project/study/spring/Spring_Mybatis运行结果.png)
+![](/_images/project/study/ssm/spring/Spring_Mybatis运行结果.png)
 
 支持Spring与Mybatis的整合就已经完成了，其中主要用到的两个类分别是:
 

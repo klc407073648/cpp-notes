@@ -1,4 +1,4 @@
-# MyBatisPlus
+# SSM框架 - MyBatisPlus
 
 # MybatisPlus简介
 
@@ -27,7 +27,7 @@ MySQL，Oracle，DB2，H2，HSQL，SQLite，PostgreSQL，SQLServer，Phoenix，G
 
 ## 框架结构
 
-![](/_images/project/study/mybatisplus/mybatis-plus-framework.png)
+![](/_images/project/study/ssm/mybatisplus/mybatis-plus-framework.png)
 
 # 标准数据层开发
 
@@ -44,7 +44,7 @@ MyBatisPlus 提供两种类型的CRUD接口：`Service CRUD 接口` 和 `Mapper 
 
 MP提供的标准的Mapper CRUD功能:
 
-![](/_images/project/study/mybatisplus/Mapper_CRUD功能.png)
+![](/_images/project/study/ssm/mybatisplus/Mapper_CRUD功能.png)
 
 Dao接口 
 
@@ -491,7 +491,7 @@ class Mybatisplus02DqlApplicationTests {
 
 MP给我们提供了一个注解`@TableField`,使用该注解可以实现模型类属性名和表的列名之间的映射关系
 
-![](/_images/project/study/mybatisplus/表字段与编码属性设计不同步.png)
+![](/_images/project/study/ssm/mybatisplus/表字段与编码属性设计不同步.png)
 
 ### 问题2:编码中添加了数据库中未定义的属性
 
@@ -564,7 +564,7 @@ IdType有如下几种生成策略:
 
 雪花算法(SnowFlake),是Twitter官方给出的算法实现 是用Scala写的。其生成的结果是一个64bit大小整数，它的结构如下图:
 
-![](/_images/project/study/mybatisplus/雪花算法.png)
+![](/_images/project/study/ssm/mybatisplus/雪花算法.png)
 
 1. 1bit,不用,因为二进制中最高位是符号位，1表示负数，0表示正数。生成的id一般都是用整数，所以最高位固定为0。
 2. 41bit-时间戳，用来记录时间戳，毫秒级
@@ -631,7 +631,7 @@ List<T> selectBatchIds(@Param(Constants.COLLECTION) Collection<? extends Seriali
 
 接下来要讲解是删除中比较重要的一个操作，逻辑删除，先来分析下问题:
 
-![](/_images/project/study/mybatisplus/逻辑删除_1.png)
+![](/_images/project/study/ssm/mybatisplus/逻辑删除_1.png)
 
 * 这是一个员工和其所签的合同表，关系是一个员工可以签多个合同，是一个一(员工)对多(合同)的表
 
@@ -639,7 +639,7 @@ List<T> selectBatchIds(@Param(Constants.COLLECTION) Collection<? extends Seriali
 
 * 如果表在设计的时候有主外键关系，那么同时也得将合同表中的前三条数据也删除掉
 
-  ![](/_images/project/study/mybatisplus/逻辑删除_2.png)
+  ![](/_images/project/study/ssm/mybatisplus/逻辑删除_2.png)
 
 * 后期要统计所签合同的总金额，就会发现对不上，原因是已经将员工1签的合同信息删除掉了
 
@@ -647,7 +647,7 @@ List<T> selectBatchIds(@Param(Constants.COLLECTION) Collection<? extends Seriali
 
 * 所以经过分析，我们不应该将表中的数据删除掉，而是需要进行保留，但是又得把离职的人和在职的人进行区分，这样就解决了上述问题，如:
 
-  ![](/_images/project/study/mybatisplus/逻辑删除_3.png)
+  ![](/_images/project/study/ssm/mybatisplus/逻辑删除_3.png)
 
 * 区分的方式，就是在员工表中添加一列数据`deleted`，如果为0说明在职员工，如果离职则将其改完1，（0和1所代表的含义是可以自定义的）
 
@@ -774,7 +774,7 @@ class Mybatisplus03DqlApplicationTests {
 }
 ```
 
-![](/_images/project/study/mybatisplus/乐观锁更新.png)
+![](/_images/project/study/ssm/mybatisplus/乐观锁更新.png)
 
 大概分析完乐观锁的实现步骤以后，我们来模拟一种加锁的情况，看看能不能实现多个人修改同一个数据的时候，只能有一个人修改成功。
 
@@ -800,7 +800,7 @@ class Mybatisplus03DqlApplicationTests {
 
 运行程序，分析结果：
 
-![](/_images/project/study/mybatisplus/乐观锁测试.png)
+![](/_images/project/study/ssm/mybatisplus/乐观锁测试.png)
 
 乐观锁就已经实现完成了，如果对于上面的这些步骤记不住咋办呢?
 
@@ -893,6 +893,6 @@ public class CodeGenerator {
 
 运行成功后，会在当前项目中生成很多代码，代码包含`controller`,`service`，`mapper`和`entity`
 
-![](/_images/project/study/mybatisplus/生成代码目录.png)
+![](/_images/project/study/ssm/mybatisplus/生成代码目录.png)
 
 至此代码生成器就已经完成工作，我们能快速根据数据库表来创建对应的类，简化我们的代码开发。

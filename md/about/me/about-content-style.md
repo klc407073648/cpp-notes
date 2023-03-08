@@ -105,3 +105,6 @@ docs/.vuepress/templates/ssr.html: 构建时基于 Vue SSR 的 HTML 模板文件
 docs/.vuepress/config.js: 配置文件的入口文件，也可以是 YML 或 toml。
 docs/.vuepress/enhanceApp.js: 客户端应用的增强。
 ```
+
+
+collapsable: true  设置折叠属性

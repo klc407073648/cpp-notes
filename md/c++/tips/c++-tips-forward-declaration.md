@@ -1,5 +1,3 @@
-
-
 # C++ Tips - 前向声明（forward declaration）
 
 > 本文讲解C++前向声明的含义。

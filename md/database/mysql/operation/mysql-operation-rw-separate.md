@@ -8,7 +8,7 @@
 
 通过MyCat即可轻易实现上述功能，不仅可以支持MySQL，也可以支持Oracle和SQL Server。
 
-[](/_images/database/mysql/operation/读写分离.png)
+![](/_images/database/mysql/operation/读写分离.png)
 
 ## 一主一从
 
@@ -16,7 +16,7 @@
 
 MySQL的主从复制，是基于二进制日志（binlog）实现的。
 
-[](/_images/database/mysql/operation/主从复制原理.png)
+![](/_images/database/mysql/operation/主从复制原理.png)
 
 ### 准备
 
@@ -36,7 +36,7 @@ MyCat控制后台数据库的读写分离和负载均衡由schema.xml文件datah
 
 上述配置的具体关联对应情况如下：
 
-[](/_images/database/mysql/operation/schema配置关系.png)
+![](/_images/database/mysql/operation/schema配置关系.png)
 
 参数：
 
@@ -79,7 +79,7 @@ bin/mycat start
 
 架构图如下:
 
-[](/_images/database/mysql/operation/双主双从.png)
+![](/_images/database/mysql/operation/双主双从.png)
 
 ### 准备
 
@@ -98,7 +98,7 @@ bin/mycat start
 
 主从复制搭建过程，参考主从复制.md
 
-[](/_images/database/mysql/operation/双主双从搭建.png)
+![](/_images/database/mysql/operation/双主双从搭建.png)
 
 1. 主库配置修改
 
@@ -172,7 +172,7 @@ MyCat控制后台数据库的读写分离和负载均衡由schema.xml文件datah
 
 具体的对应情况如下：
 
-[](/_images/database/mysql/operation/schema_2配置关系.png)
+![](/_images/database/mysql/operation/schema_2配置关系.png)
 
 属性说明：
 

@@ -1,4 +1,4 @@
-# IOC/DI配置管理第三方bean
+# SSM框架 - IOC/DI配置管理第三方bean
 
 以Alibaba的Druid库为例，来介绍如何管理第三方jar包中的类
 
@@ -67,7 +67,7 @@ public class App {
 
 打印如下结果: 说明第三方bean对象已经被spring的IOC容器进行管理
 
-![](/_images/project/study/spring/DruidDataSource.png)
+![](/_images/project/study/ssm/spring/DruidDataSource.png)
 
 总结：这里的第三方的类指的是 DruidDataSource ；通过setter注入：数据库连接四要素
 
@@ -120,11 +120,11 @@ BookDao bookDao = ctx.getBean(BookDao.class);
 
 (1)在IDEA中双击`shift`,输入BeanFactory
 
-![](/_images/project/study/spring/BeanFactory.png)
+![](/_images/project/study/ssm/spring/BeanFactory.png)
 
 (2)点击进入BeanFactory类，`ctrl+h` , 就能查看到如下结构的层次关系
 
-![](/_images/project/study/spring/BeanFactory层次关系.png)
+![](/_images/project/study/ssm/spring/BeanFactory层次关系.png)
 
 从图中可以看出，容器类也是从无到有根据需要一层层叠加上来的，重点理解下这种设计思想。
 
@@ -153,13 +153,13 @@ BookDao bookDao = ctx.getBean(BookDao.class);
 
 #### bean相关
 
-![](/_images/project/study/spring/bean配置.png)
+![](/_images/project/study/ssm/spring/bean配置.png)
 
 其实整个配置中最常用的就两个属性**id**和**class**。
 
 #### 依赖注入相关
 
-![](/_images/project/study/spring/bean依赖注入.png)
+![](/_images/project/study/ssm/spring/bean依赖注入.png)
 
 ## IOC/DI注解开发
 
@@ -192,7 +192,7 @@ public class BookDaoImpl implements BookDao {
 
 XML与注解配置的对应关系:
 
-![](/_images/project/study/spring/beanXML与注解配置的对应关系.png)
+![](/_images/project/study/ssm/spring/beanXML与注解配置的对应关系.png)
 
 #### 步骤3:配置Spring的注解包扫描
 
@@ -723,4 +723,4 @@ public class JdbcConfig {
 
 XML配置和注解的对比:
 
-![](/_images/project/study/spring/beanXML配置和注解的对比.png)
+![](/_images/project/study/ssm/spring/beanXML配置和注解的对比.png)
