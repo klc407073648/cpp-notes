@@ -1,4 +1,4 @@
-# ngx-admin安装
+# 实践 - ngx-admin安装
 
 [[toc]]
 

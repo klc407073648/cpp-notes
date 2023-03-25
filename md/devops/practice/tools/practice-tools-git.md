@@ -1,4 +1,4 @@
-# Linux下git安装以及配置
+# 实践 - Linux下git安装以及配置
 
 [[toc]]
 
