@@ -25,5 +25,21 @@ module.exports =
     /*['sitemap', {
         hostname: 'https://stibel.icu'
     }],*/
-    ['vuepress-plugin-baidu-autopush', {}]
+    ['vuepress-plugin-baidu-autopush', {}],
+    /* 锚点导航栏 showDepth=2 显示H2和H3标签*/
+    ['vuepress-plugin-right-anchor',
+        {
+          showDepth: 2,
+          ignore: [
+            '/',
+            '/api/'
+            // more...
+          ],
+          expand: {
+            trigger: 'hover',
+            clickModeDefaultOpen: true
+          },
+          //customClass: 'your-customClass',
+        }
+    ]
 ]

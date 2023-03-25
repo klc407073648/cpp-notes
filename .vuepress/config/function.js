@@ -1,5 +1,19 @@
 
 // C++ page
+function genSidebar4Guide() {
+    return [
+        {
+            title: "导航地图",
+            collapsable: false,
+            sidebarDepth: 0,
+            children: [
+                "guide-overview.md"
+            ]
+        }
+    ];
+}
+
+// C++ page
 function genSidebar4Cplusplus() {
     return [
         {
@@ -8,7 +22,8 @@ function genSidebar4Cplusplus() {
             sidebarDepth: 0,
             children: [
                 "basic/c++-basic-use.md",
-                "basic/c++-basic-oop.md"
+                "basic/c++-basic-oop.md",
+                "basic/c++-basic-macro-definition.md"
             ]
         },
         {
@@ -174,7 +189,6 @@ function genSidebar4Alg() {
             ]
         }
     ];
-
 }
 
 // Program page
@@ -353,7 +367,7 @@ function genSidebar4microServices() {
             ]
         },
         {
-            title: "中间件 - ZeroMQ",
+            title: "中间件 - ZeroMQ - 消息队列",
             collapsable: false,
             sidebarDepth: 0,
             children: [
@@ -466,18 +480,20 @@ function genSidebar4method() {
     return [
         {
             title: "概念",
-            collapsable: false,
+            collapsable: true,
             sidebarDepth: 0,
             children: [
                 "concept/concept-basic.md",
-                "concept/concept-tech-use.md",
                 "concept/concept-communication.md",
-                "concept/concept-agent.md"
+                "concept/concept-agent.md",
+                "concept/concept-cloud-network.md",
+                "concept/concept-rest-api.md",
+                "concept/concept-split-brain.md"
             ]
         },
         {
             title: "理论",
-            collapsable: false,
+            collapsable: true,
             sidebarDepth: 0,
             children: [
                 "theory/theory-acid.md",
@@ -487,7 +503,7 @@ function genSidebar4method() {
         },
         {
             title: "架构设计原则",
-            collapsable: false,
+            collapsable: true,
             sidebarDepth: 0,
             children: [
                 "arch-principle/arch-principle-design.md",
@@ -503,18 +519,20 @@ function genSidebar4method() {
         },
         {
             title: "协议",
-            collapsable: false,
+            collapsable: true,
             sidebarDepth: 0,
             children: [
                 "protocol/protocol-http",
                 "protocol/protocol-snmp.md",
                 "protocol/protocol-netconf.md",
                 "protocol/protocol-ssl-tls.md",
+                "protocol/protocol-http-wiki.md",
+                "protocol/protocol-tcp-ip.md",
             ]
         },
         {
             title: "技术选型",
-            collapsable: false,
+            collapsable: true,
             sidebarDepth: 0,
             children: [
                 "tech/tech-select.md",
@@ -523,10 +541,14 @@ function genSidebar4method() {
         },
         {
             title: "编码规范",
-            collapsable: false,
+            collapsable: true,
             sidebarDepth: 0,
             children: [
-                "code-style/code-style-google-c++.md"
+                "code-style/code-style-google-c++.md",
+                "code-style/code-style-code-style.md",
+                "code-style/code-style-head-file.md",
+                "code-style/code-style-naming-rule.md",
+                "code-style/code-style-naming-specification.md"
             ]
         }
     ];
@@ -537,7 +559,7 @@ function genSidebar4Devops() {
     return [
         {
             title: "Linux",
-            collapsable: false,
+            collapsable: true,
             sidebarDepth: 0,
             children: [
                 "linux/linux-cmd.md",
@@ -551,18 +573,33 @@ function genSidebar4Devops() {
         },
         {
             title: "Nginx",
-            collapsable: false,
+            collapsable: true,
             sidebarDepth: 0,
             children: [
                 "nginx/nginx-study-note.md",
                 "nginx/nginx-staic-web.md",
                 "nginx/nginx-reverse-proxy-server.md",
-                "nginx/nginx-error-log.md"
+                "nginx/nginx-error-log.md",
+                "nginx/nginx-image-server-cfg.md"
+            ]
+        },
+        {
+            title: "实践",
+            collapsable: true,
+            sidebarDepth: 0,
+            children: [
+                "practice/docker/jenkins/practice-docker-jenkins.md",
+                "practice/docker/mysql/practice-docker-mysql.md",
+                "practice/docker/redis/practice-docker-redis.md",
+                "practice/tools/practice-tools-git.md",
+                "practice/tools/practice-tools-gitbook.md",
+                "practice/practice-ngx-admin-install",
+                "practice/practice-Robot-Framework-install.md"
             ]
         },
         {
             title: "常用快捷键",
-            collapsable: false,
+            collapsable: true,
             sidebarDepth: 0,
             children: [
                 "shortcut/linux.md",
@@ -573,7 +610,7 @@ function genSidebar4Devops() {
         },
         {
             title: "容器化 - Docker",
-            collapsable: false,
+            collapsable: true,
             sidebarDepth: 0,
             children: [
                 "docker/docker.md",
@@ -583,7 +620,7 @@ function genSidebar4Devops() {
         },
         {
             title: "容器编排 - Kubernetes",
-            collapsable: false,
+            collapsable: true,
             sidebarDepth: 0,
             children: [
                 "k8s/k8s.md",
@@ -594,7 +631,7 @@ function genSidebar4Devops() {
         },
         {
             title: "服务网格 - Service Mesh Istio",
-            collapsable: false,
+            collapsable: true,
             sidebarDepth: 0,
             children: [
                 "istio/istio-basic.md",
@@ -613,7 +650,7 @@ function genSidebar4project() {
     return [
         {
             title: "开源项目 - libco",
-            collapsable: false,
+            collapsable: true,
             sidebarDepth: 0,
             children: [
                 "opensource/libco/libco.md"
@@ -621,7 +658,7 @@ function genSidebar4project() {
         },
         {
             title: "开源项目 - buttonrpc",
-            collapsable: false,
+            collapsable: true,
             sidebarDepth: 0,
             children: [
                 "opensource/buttonrpc/buttonrpc-basic.md",
@@ -631,7 +668,7 @@ function genSidebar4project() {
         },
         {
             title: "开源项目 - Tars",
-            collapsable: false,
+            collapsable: true,
             sidebarDepth: 0,
             children: [
                 "opensource/tars/tars-brief.md",
@@ -644,7 +681,7 @@ function genSidebar4project() {
         },
         {
             title: "学习项目 - hmdp",
-            collapsable: false,
+            collapsable: true,
             sidebarDepth: 0,
             children: [
                 "opensource/hmdp/hmdp-overview.md",
@@ -664,7 +701,7 @@ function genSidebar4project() {
         },
         {
             title: "学习项目 - SSM框架",
-            collapsable: false,
+            collapsable: true,
             sidebarDepth: 0,
             children: [
                 "study/ssm/spring/spring-basic.md",
@@ -680,7 +717,7 @@ function genSidebar4project() {
         },
         {
             title: "个人项目 - build_lib",
-            collapsable: false,
+            collapsable: true,
             sidebarDepth: 0,
             children: [
                 "person/build_lib/build_lib.md"
@@ -688,13 +725,26 @@ function genSidebar4project() {
         },
         {
             title: "项目开发",
-            collapsable: false,
+            collapsable: true,
             sidebarDepth: 0,
             children: [
+                "develop/develop-demo.md",
                 "develop/develop-process.md",
                 "develop/develop-opt.md",
                 "develop/develop-notice.md",
+                "develop/develop-version.md",
                 "develop/uml/develop-uml.md",
+            ]
+        },
+        {
+            title: "项目开发的Idea",
+            collapsable: true,
+            sidebarDepth: 0,
+            children: [
+                "idea/idea-basic.md",
+                "idea/idea-tech-use.md",
+                "idea/idea-tips.md",
+                "idea/idea-doublewrite-buffer"
             ]
         }
     ];
@@ -731,7 +781,7 @@ function genSidebar4booknote() {
         },
         {
             title: "重构改善既有代码的设计 详解",
-            collapsable: false,
+            collapsable: true,
             sidebarDepth: 0,
             children: [
                 "refactor/refactor-chapter-1.md",
@@ -749,7 +799,7 @@ function genSidebar4booknote() {
         },
         {
             title: "Effective C++:改善程序与设计的55个具体做法 详解",
-            collapsable: false,
+            collapsable: true,
             sidebarDepth: 0,
             children: [
                 "effectivecpp/effectivecpp-chapter-2-1.md",
@@ -766,7 +816,7 @@ function genSidebar4booknote() {
         },
         {
             title: "STL源码剖析 详解",
-            collapsable: false,
+            collapsable: true,
             sidebarDepth: 0,
             children: [
                 "stlsource/stlsource-chapter-1.md",
@@ -791,7 +841,7 @@ function genSidebar4booknote() {
         },
         {
             title: "Linux多线程服务端编程——使用muduo C++ 网络库 详解",
-            collapsable: false,
+            collapsable: true,
             sidebarDepth: 0,
             children: [
                 "muduo/muduo-chapter-1.md",
@@ -811,7 +861,7 @@ function genSidebar4booknote() {
         },
         {
             title: "大型网站技术架构——核心原理与案例分析 详解",
-            collapsable: false,
+            collapsable: true,
             sidebarDepth: 0,
             children: [
                 "websiteTechArch/websiteTechArch-index.md",
@@ -827,13 +877,39 @@ function genSidebar4booknote() {
         },
         {
             title: "代码大全2",
-            collapsable: false,
+            collapsable: true,
             sidebarDepth: 0,
             children: [
                 "codeComplete/codeComplete-chapter-1.md",
                 "codeComplete/codeComplete-chapter-2.md",
                 "codeComplete/codeComplete-chapter-3.md",
                 "codeComplete/codeComplete-chapter-4.md",
+                "codeComplete/codeComplete-chapter-5.md",
+            ]
+        },
+        {
+            title: "数据密集型应用系统设计",
+            collapsable: true,
+            sidebarDepth: 0,
+            children: [
+                "dataIntensiveApp/dataIntensiveApp-chapter-1.md",
+                "dataIntensiveApp/dataIntensiveApp-chapter-2.md",
+                "dataIntensiveApp/dataIntensiveApp-chapter-3.md",
+                "dataIntensiveApp/dataIntensiveApp-chapter-4.md",
+                "dataIntensiveApp/dataIntensiveApp-chapter-5.md",
+                "dataIntensiveApp/dataIntensiveApp-chapter-6.md",
+                "dataIntensiveApp/dataIntensiveApp-chapter-7.md",
+            ]
+        },
+        {
+            title: "从零开始学架构",
+            collapsable: true,
+            sidebarDepth: 0,
+            children: [
+                "learnArchFromZero/learnArchFromZero-chapter-1.md",
+                "learnArchFromZero/learnArchFromZero-chapter-2.md",
+                "learnArchFromZero/learnArchFromZero-chapter-3.md",
+                "learnArchFromZero/learnArchFromZero-chapter-4.md",
                 "codeComplete/codeComplete-chapter-5.md",
             ]
         }
@@ -937,7 +1013,13 @@ function genSidebar4Article() {
             children: [
                 "knowledge/article-knowledge-service-mesh.md",
                 "knowledge/article-knowledge-share-bike.md",
-                "knowledge/article-knowledge-software-architecture.md"
+                "knowledge/article-knowledge-software-architecture.md",
+                "knowledge/article-knowledge-cors-sop.md",
+                "knowledge/article-knowledge-share-bike.md",
+                "knowledge/article-knowledge-feeddog-watchdog.md",
+                "knowledge/article-knowledge-return-temp-var.md",
+                "knowledge/article-knowledge-time.md",
+                "knowledge/article-knowledge-vm-bm.md",
             ]
         },
         {
@@ -948,7 +1030,8 @@ function genSidebar4Article() {
                 "problem/article-problem-top.md",
                 "problem/article-problem-pstack.md",
                 "problem/article-problem-cache-update.md",
-                "problem/article-problem-iptables.md"
+                "problem/article-problem-multi-define.md",
+                "problem/article-problem-three-high.md"
             ]
         }
     ];
@@ -1188,7 +1271,7 @@ function genSidebar4Vue() {
 }
 
 module.exports = {
-    genSidebar4Cplusplus, genSidebar4Database, genSidebar4Alg, genSidebar4Program, genSidebar4develop, genSidebar4microServices,
+    genSidebar4Guide,genSidebar4Cplusplus, genSidebar4Database, genSidebar4Alg, genSidebar4Program, genSidebar4develop, genSidebar4microServices,
     genSidebar4method, genSidebar4Devops, genSidebar4project, genSidebar4booknote, genSidebar4interview, genSidebar4Article,
     genSidebar4dailyUse, genSidebar4About, genSidebar4Grow,genSidebar4Vue
 };

@@ -1,10 +1,11 @@
 let {
-    genSidebar4Cplusplus, genSidebar4Database, genSidebar4Alg, genSidebar4Program, genSidebar4develop, genSidebar4microServices,
+    genSidebar4Guide,genSidebar4Cplusplus, genSidebar4Database, genSidebar4Alg, genSidebar4Program, genSidebar4develop, genSidebar4microServices,
     genSidebar4method, genSidebar4Devops, genSidebar4project, genSidebar4booknote, genSidebar4interview, genSidebar4Article,
     genSidebar4dailyUse, genSidebar4About, genSidebar4Grow, genSidebar4Vue
 } = require('./function.js')
 
 module.exports = {
+    "/md/guide/": genSidebar4Guide(),
     "/md/c++/": genSidebar4Cplusplus(),
     "/md/database/": genSidebar4Database(),
     "/md/algorithm/": genSidebar4Alg(),

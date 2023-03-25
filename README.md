@@ -10,7 +10,6 @@ features:
   details: 碎片化知识总结，逐步完善自己的知识体系
 - title: 后端开发
   details: 以C++开发为主, 业余学习前端知识
-footer: 浙ICP备2021037738号-1 | © 2022-present stibel
 ---
 
 ![](https://img.shields.io/badge/c++-学习路线-brightgreen.svg)
@@ -87,3 +86,7 @@ vuepress build
 直接搜: StillBelieve 或者 可以扫下面图片
 
 ![微信公众号](/_images/微信公众号.png)
+
+<div style="text-align:center" >
+  <a href="https://beian.miit.gov.cn/" target="_blank">浙ICP备2021037738号-1</a> | © 2022-present stibel
+</div>

@@ -13,7 +13,9 @@
     "@vuepress/plugin-search": "^1.9.7",
     "vuepress": "^1.0.2",
     "vuepress-plugin-baidu-autopush": "^1.0.1",
-    "vuepress-plugin-container": "^2.1.5"
+    "vuepress-plugin-container": "^2.1.5",
+    "vuepress-plugin-right-anchor": "^0.5.5",
+    "vuepress-plugin-side-anchor": "^1.0.6"
   },
   "dependencies": {
     "vuepress-plugin-baidu-tongji": "^1.0.1",
