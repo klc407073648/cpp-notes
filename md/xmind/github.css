@@ -1,0 +1,320 @@
+/*标题自动添加序号*/
+.sidebar-content {
+    counter-reset: h1
+}
+
+.outline-h1 {
+    counter-reset: h2
+}
+
+.outline-h2 {
+    counter-reset: h3
+}
+
+.outline-h3 {
+    counter-reset: h4
+}
+
+.outline-h4 {
+    counter-reset: h5
+}
+
+.outline-h5 {
+    counter-reset: h6
+}
+
+.outline-h1>.outline-item>.outline-label:before {
+    counter-increment: h1;
+    content: counter(h1) " "
+}
+
+.outline-h2>.outline-item>.outline-label:before {
+    counter-increment: h2;
+    content: counter(h1) "."counter(h2) " "
+}
+
+.outline-h3>.outline-item>.outline-label:before {
+    counter-increment: h3;
+    content: counter(h1) "."counter(h2) "."counter(h3) " "
+}
+
+.outline-h4>.outline-item>.outline-label:before {
+    counter-increment: h4;
+    content: counter(h1) "."counter(h2) "."counter(h3) "."counter(h4) " "
+}
+
+.outline-h5>.outline-item>.outline-label:before {
+    counter-increment: h5;
+    content: counter(h1) "."counter(h2) "."counter(h3) "."counter(h4) "."counter(h5) " "
+}
+
+.outline-h6>.outline-item>.outline-label:before {
+    counter-increment: h6;
+    content: counter(h1) "."counter(h2) "."counter(h3) "."counter(h4) "."counter(h5) "."counter(h6) " "
+}
+
+#write {
+    counter-reset: h1
+}
+
+h1 {
+    counter-reset: h2
+}
+
+h2 {
+    counter-reset: h3
+}
+
+h3 {
+    counter-reset: h4
+}
+
+h4 {
+    counter-reset: h5
+}
+
+h5 {
+    counter-reset: h6
+}
+
+#write h1:before {
+    counter-increment: h1;
+    content: counter(h1) " "
+}
+
+#write h2:before {
+    counter-increment: h2;
+    content: counter(h1) "."counter(h2) " "
+}
+
+#write h3:before,
+h3.md-focus.md-heading:before
+
+    {
+    counter-increment: h3;
+    content: counter(h1) "."counter(h2) "."counter(h3) " "
+}
+
+#write h4:before,
+h4.md-focus.md-heading:before {
+    counter-increment: h4;
+    content: counter(h1) "."counter(h2) "."counter(h3) "."counter(h4) " "
+}
+
+#write h5:before,
+h5.md-focus.md-heading:before {
+    counter-increment: h5;
+    content: counter(h1) "."counter(h2) "."counter(h3) "."counter(h4) "."counter(h5) " "
+}
+
+#write h6:before,
+h6.md-focus.md-heading:before {
+    counter-increment: h6;
+    content: counter(h1) "."counter(h2) "."counter(h3) "."counter(h4) "."counter(h5) "."counter(h6) " "
+}
+
+#write>h3.md-focus:before,
+#write>h4.md-focus:before,
+#write>h5.md-focus:before,
+#write>h6.md-focus:before,
+h3.md-focus:before,
+h4.md-focus:before,
+h5.md-focus:before,
+h6.md-focus:before {
+    color: inherit;
+    border: inherit;
+    border-radius: inherit;
+    position: inherit;
+    left: initial;
+    float: none;
+    top: initial;
+    font-size: inherit;
+    padding-left: inherit;
+    padding-right: inherit;
+    vertical-align: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+}
+/*因为不同主题的代码块部分不一样，code部分统一*/
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+
+
+/*深色背景*/
+
+#write .md-fences:not([mermaid-type])  {
+    padding-top: 7px;
+    border-radius: 10px;
+    background-color: #282c34;
+    color: #eeeeee;
+}
+
+.code-tooltip .ty-input,
+.code-tooltip input {
+    color: #eee;
+}
+
+
+/*MAC的三个图标*/
+.CodeMirror-wrap .CodeMirror-scroll {
+    padding-top: 20px;
+}
+
+#write .md-fences:before {
+    content: "";
+    z-index: 4;
+    display: block;
+    position: absolute;
+    top: 7px;
+    left: 13px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    float: left;
+    background-color: #fa3534;
+}
+
+#write .CodeMirror-scroll:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 29px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    float: left;
+    z-index: 999;
+    background-color: #ff9900;
+}
+#write .md-fences::after {
+    content: "";
+    z-index: 4;
+    display: block;
+    position: absolute;
+    top: 7px;
+    left: 53px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    float: left;
+    background-color: #19be6b;
+}
+
+/*配色*/
+.CodeMirror-line .cm-number,/*数字*/
+.CodeMirror-line .cm-property {/*被调用的方法*/
+    color: #f08d49;
+}
+.CodeMirror-line .cm-variable-3,/*形参,类型*/
+.CodeMirror-line .cm-qualifier,/*css class*/
+.CodeMirror-line .cm-variable-2 {/*被使用的形参*/
+    color: #FFCB6B;
+}
+.CodeMirror-line .cm-meta,/*省略号,注解等*/
+.CodeMirror-line .cm-atom,/*css属性值，布尔值等等*/
+.CodeMirror-line .cm-keyword{/*关键字*/
+    color: #cc99cd;
+}
+.CodeMirror-line .cm-def,/*变量名*/
+.CodeMirror-line .cm-variable {/*被使用的变量名*/
+    color: #FFCB6B;
+}
+.CodeMirror-line .cm-builtin {/*被调用的属性*/
+    color: #82AAFF;
+}
+.CodeMirror-line .cm-comment {/*注释*/
+    color: #888;
+}
+.CodeMirror-line .cm-string,/*字符串*/
+.CodeMirror-line .cm-string-2 {/*正则表达式*/
+    color: #7ec699
+}
+.CodeMirror-line .cm-operator {/*运算符*/
+    color: #67cdcc
+}
+.CodeMirror div.CodeMirror-cursor {/*光标*/
+    border-left: 1px solid #fff;
+    z-index: 3;
+}
+.CodeMirror-selected,/*选中的背景*/
+.CodeMirror-selectedtext {
+    background: #666 !important;
+}
+
+/*html*/
+.CodeMirror-line .cm-tag{/*标签名字*/
+    color: #F07178;
+}
+.CodeMirror-line .cm-bracket{/*标签尖括号*/
+    color: #FFF;
+}
+.CodeMirror-line .cm-attribute{/*属性*/
+    color: #FFCB6B;
+}

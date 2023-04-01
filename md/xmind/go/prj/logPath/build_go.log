@@ -1,0 +1,34 @@
+2021-08-15 19:08:28 -- MAIN begin --
+2021-08-15 19:08:28 -- buildGoProject begin --
+2021-08-15 19:08:28 -- buildGoProject end --
+2021-08-15 19:08:28 -- MAIN end --
+2021-08-15 19:09:09 -- MAIN begin --
+2021-08-15 19:09:09 -- parseConfigFile begin --
+2021-08-15 19:09:09 -- parse var from go_config --
+2021-08-15 19:09:09 -- build_list is datastructure libuse main --
+2021-08-15 19:09:09 -- parseConfigFile end --
+2021-08-15 19:09:09 -- buildGoProject begin --
+2021-08-15 19:09:09 -- begin to build src/datastructure --
+2021-08-15 19:09:09 -- list.go begin --
+2021-08-15 19:09:09 -- list.go end --
+2021-08-15 19:09:09 -- map.go begin --
+2021-08-15 19:09:09 -- map.go end --
+2021-08-15 19:09:09 -- switch.go begin --
+2021-08-15 19:09:09 -- switch.go end --
+2021-08-15 19:09:09 -- end to build src/datastructure --
+2021-08-15 19:09:09 -- begin to build src/libuse --
+2021-08-15 19:09:09 -- flag.go begin --
+2021-08-15 19:09:10 -- flag.go end --
+2021-08-15 19:09:10 -- os.go begin --
+2021-08-15 19:09:10 -- os.go end --
+2021-08-15 19:09:10 -- regexp.go begin --
+2021-08-15 19:09:10 -- regexp.go end --
+2021-08-15 19:09:10 -- time.go begin --
+2021-08-15 19:09:11 -- time.go end --
+2021-08-15 19:09:11 -- end to build src/libuse --
+2021-08-15 19:09:11 -- begin to build src/main --
+2021-08-15 19:09:11 -- main.go begin --
+2021-08-15 19:09:11 -- main.go end --
+2021-08-15 19:09:11 -- end to build src/main --
+2021-08-15 19:09:11 -- buildGoProject end --
+2021-08-15 19:09:11 -- MAIN end --

@@ -1,0 +1,4 @@
+log_path=logPath
+log_name=build_go.log
+
+build_list=datastructure libuse main
