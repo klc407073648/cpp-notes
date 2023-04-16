@@ -1,4 +1,4 @@
-# C++ Tips - 写时拷贝技术(copy-on-write)
+# C++ 知识点 - 写时拷贝技术(copy-on-write)
 
 > 本文包含写时拷贝技术的内容。
 

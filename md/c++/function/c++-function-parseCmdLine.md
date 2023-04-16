@@ -51,7 +51,9 @@ int getopt(int argc,char * const argv[ ],const char * optstring);
 
 测试程序1: 
 
-[main.cpp](./src/parseCmdLine/main.cpp)
+::: details
+<<< @/md/c++/function/src/parseCmdLine/main.cpp
+::: 
 
 执行结果: bash
 ```
@@ -66,8 +68,6 @@ msg: Test
 ```
 
 测试程序2，解析输入的"abcde":
-
-[main.cpp](./src/parseCmdLine/main.cpp)
 
 执行结果: 
 ```bash

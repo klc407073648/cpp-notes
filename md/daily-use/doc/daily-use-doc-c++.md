@@ -4,6 +4,41 @@
 
 # 经典网站
 
+## C++ 专题资源
+
+* ⭐ GitHub C++ 专区：https://github.com/topics/cpp
+* ⭐ GitHub C++ 内容合集：https://github.com/fffaraz/awesome-cpp
+* 掘金 C++ 专区：https://juejin.cn/tag/C++
+
+## Fluent C++：
+
+> 这个博客涵盖了与 C++ 编程相关的广泛主题，包括高级特性、最佳实践和性能优化。
+* 官网：[https://www.fluentcpp.com/](https://www.fluentcpp.com/)
+
+## C++ Insights  ⭐调试必备 
+
+> 用编译器的眼睛看你的源代码。
+
+* 官网：[https://cppinsights.io/](https://cppinsights.io/)
+
+## Bartek's Coding Blog
+
+> 这个博客涵盖了各种 C++ 编程主题，包括内存管理、模板和算法。
+
+## Meeting C++ Blog
+
+> 这个博客提供有关 C++ 编程语言及其社区的新闻、教程和更新。
+
+* 官网：[https://www.meetingcpp.com/](https://www.meetingcpp.com/)
+
+## C++ Truths
+
+> 这个博客提供了关于各种 C++ 编程概念的深入讨论和解释，包括模板、移动语义和 Lambda 表达式。
+
+## 云风的 BLOG
+
+* 官网：[https://blog.codingnow.com/](https://blog.codingnow.com/)
+
 ## cplusplus
 
 > 一个学习 C++ 的优秀网站，除了提供相应的教程之外，还有一个很棒的论坛。和其它网站相比，它的价值更多体现在参考上，因为里面解释了许多编程概念，如果对某个特定的东西感到困惑，那么这些概念将会很有帮助。

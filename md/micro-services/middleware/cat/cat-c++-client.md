@@ -1,4 +1,4 @@
-# 制作CAT-C++客户端 的docker镜像
+# Cat - C++客户端的docker镜像
 
 ## 参考资料
 

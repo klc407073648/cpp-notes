@@ -38,8 +38,6 @@
     
     * Ajax即Asynchronous Javascript And XML（异步JavaScript和XML）在 2005年被Jesse James Garrett提出的新术语，用来描述一种使用现有技术集合的‘新’方法，包括: HTML 或 XHTML, CSS, JavaScript, DOM, XML, XSLT, 以及最重要的XMLHttpRequest。 [3]  使用Ajax技术网页应用能够快速地将增量更新呈现在用户界面上，而不需要重载（刷新）整个页面，这使得程序能够更快地回应用户的操作
 
-
-
 * [云网络](./concept-cloud-network.md)
 
 * [脑裂(Split-brain)](./concept-split-brain.md)
@@ -57,3 +55,16 @@ xxx_lock()
 //临界区
 xxx_unlock()
 ```
+
+# 墨菲定律
+
+墨菲定律: 简单来说就是事情往往会向你所想到的不好的方向发展，只要有这个可能性。
+
+西方的"墨菲定律"是这样说的: Anything that can go wrong will go wrong: "凡事只要有可能出错，那就一定会出错。"
+
+根据"墨菲定律"可以得出4条结论：
+
+1. 任何事都没有表面看起来那么简单；
+2. 所有的事都会比你预计的时间长；
+3. 会出错的事总会出错；
+4. 如果你担心某种情况发生，那么它就更有可能发生。

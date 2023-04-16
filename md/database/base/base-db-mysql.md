@@ -1,4 +1,4 @@
-# MySQL
+# 数据库基础 -MySQL概述
 
 # 查询的执行流程
 
@@ -32,7 +32,7 @@
 
 流程图:
 
-![](/_images/database/sql/base/查询流程图.png)
+![](/_images/database/base/work-theory/查询流程图.png)
 
 简述流程, MySQL整个查询执行过程：
 
@@ -218,12 +218,6 @@ workbench               管理、备份、监控、分析、优化工具（比�
 		11. Using where：如果我们不是读取表的所有数据，或者不是仅仅通过索引就可以获取所有需要的数据，则会出现Using where 信息；
 		12. Using where with pushed condition：这是一个仅仅在NDBCluster 存储引擎中才会出现的信息，而且还需要通过打开Condition Pushdown 优化功能才可能会被使用。控制参数为engine_condition_pushdown 。
 
-
-
-
-
-
-
 ### 2. Profiling:可以用来准确定位一条SQL的性能瓶颈；
 
 1. 开启profiling：set profiling=1;
@@ -239,9 +233,6 @@ CPU_system：系统CPU时间；
 Block_ops_in：IO输入次数；
 Block_ops_out：IO输出次数；
 profiling只对本次会话有效；
-
-
-
 
 ## JOIN的原理
 

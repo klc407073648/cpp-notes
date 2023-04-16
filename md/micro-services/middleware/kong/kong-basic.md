@@ -1,4 +1,4 @@
-# Kong - 简介
+# Kong - 概述
 
 > Kong是一款基于OpenResty（Nginx + Lua模块）编写的高可用、易扩展的，由Mashape公司开源的API Gateway项目。Kong是基于NGINX和Apache Cassandra或PostgreSQL构建的，<font color='red'>能提供易于使用的RESTful API来操作和配置API管理系统</font>，所以它可以水平扩展多个Kong服务器，通过前置的负载均衡配置把请求均匀地分发到各个Server，来应对大批量的网络请求。
 

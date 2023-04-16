@@ -28,7 +28,10 @@ typedef <元素类型关键字><数组类型名>[<常量表达式1>][<常量表�
 3. typedef char* chPointer;
 
 例子:
-[main.cpp](./src/typedefUse/main.cpp)
+
+::: details
+<<< @/md/c++/function/src/typedefUse/main.cpp
+::: 
 
 执行结果:
 ```

@@ -28,7 +28,9 @@ vasprintf()函数 :int vasprintf (char **buf, const char *format, va_list ap)
 
 下述实例，采用了myFun1和myFun2两种方式讲述了va_list的具体实现过程。myFun1主要采用根据格式format（即可变参数类型顺序已经确定），将可变参数一个个赋值到最终的string中，myFun2采用执行时指定可变参数类型，从而完成处理。
 
+::: details
 <<< @/md/c++/function/src/va_listFun/main.cpp
+::: 
 
 执行结果: 
 ```

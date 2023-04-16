@@ -46,6 +46,10 @@
 这是一个详情块，在 IE / Edge 中不生效
 :::
 
+::: details
+<<< @/md/c++/function/src/scopeFun/main.cpp
+::: 
+
 # 代码块中的行高亮
 
 ``` js {4}
