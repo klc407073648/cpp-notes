@@ -29,7 +29,7 @@ module.exports =
     /* 锚点导航栏 showDepth=2 显示H2和H3标签*/
     ['vuepress-plugin-right-anchor',
         {
-          showDepth: 2,
+          showDepth: 3,
           ignore: [
             '/',
             '/api/'
@@ -41,5 +41,10 @@ module.exports =
           },
           //customClass: 'your-customClass',
         }
-    ]
+    ],
+    //<global-RightBar/>
+    /*{
+        name: 'page-plugin',
+        globalUIComponents: ['global-RightBar'],
+    },*/
 ]

@@ -6,7 +6,7 @@
 
 # 数据聚合
 
-**[聚合（aggregations)](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations.html)**可以让我们极其方便的实现对数据的统计、分析、运算。例如：
+[**聚合(aggregations)**](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations.html)可以让我们极其方便的实现对数据的统计、分析、运算。例如：
 
 - 什么品牌的手机最受欢迎？
 - 这些手机的平均价格、最高价格、最低价格？
@@ -18,18 +18,18 @@
 
 聚合常见的有三类：
 
-- **桶（Bucket）**聚合：用来对文档做分组
+- **桶(Bucket)聚合**：用来对文档做分组
   - TermAggregation：按照文档字段值分组，例如按照品牌值分组、按照国家分组
   - Date Histogram：按照日期阶梯分组，例如一周为一组，或者一月为一组
 
-- **度量（Metric）**聚合：用以计算一些值，比如：最大值、最小值、平均值等
+- **度量(Metric)聚合**：用以计算一些值，比如：最大值、最小值、平均值等
   - Avg：求平均值
   - Max：求最大值
   - Min：求最小值
   - Stats：同时求max、min、avg、sum等
-- **管道（pipeline）**聚合：其它聚合的结果为基础做聚合
+- **管道(pipeline)聚合**：其它聚合的结果为基础做聚合
 
-> **注意：**参加聚合的字段必须是keyword、日期、数值、布尔类型
+> **注意**：参加聚合的字段必须是keyword、日期、数值、布尔类型
 
 ## DSL实现聚合
 
@@ -215,10 +215,10 @@ POST /_analyze
 
 默认的拼音分词器会将每个汉字单独分为拼音，而我们希望的是每个词条形成一组拼音，需要对拼音分词器做个性化定制，形成自定义分词器。
 
-elasticsearch中分词器（analyzer）的组成包含三部分：
+elasticsearch中分词器(analyzer)的组成包含三部分：
 
 - character filters：在tokenizer之前对文本进行处理。例如删除字符、替换字符
-- tokenizer：将文本按照一定的规则切割成词条（term）。例如keyword，就是不分词；还有ik_smart
+- tokenizer：将文本按照一定的规则切割成词条(term)。例如keyword，就是不分词；还有ik_smart
 - tokenizer filter：将tokenizer输出的词条做进一步处理。例如大小写转换、同义词处理、拼音处理等
 
 文档分词时会依次由这三部分来处理文档：

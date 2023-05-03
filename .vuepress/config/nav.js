@@ -1,10 +1,10 @@
 module.exports = 
 [
     {
-        text: '导航',
-        items: [
-            { text: '导航地图', link: '/md/guide/guide-overview.md' },
-        ]
+        text: '✿导航', link: '/md/guide/guide-overview.md' ,
+    },
+    {
+        text: '♥面试', link: '/md/interview/knowledge/cplusplus-knowledge.md',
     },
     {
         text: 'C++',
@@ -54,7 +54,7 @@ module.exports =
             {
                 text: '数据库基础和原理',
                 items: [
-                    { text: '数据库原理', link: '/md/database/base/db-work-theory.md' },
+                    { text: '数据库原理', link: '/md/database/base/base-db-work-theory.md' },
                     { text: 'SQL语言', link: '/md/database/sql/sql-overview.md' }
                 ]
             },
@@ -78,7 +78,7 @@ module.exports =
         items: [
             { text: '数据结构与算法', link: '/md/programming/data-structure/data-structure-overview.md' },
             { text: '计算机网络', link: '/md/programming/network/network-physical.md' },
-            { text: '操作系统', link: '/md/programming/system/doc.md' },
+            { text: '操作系统', link: '/md/programming/system/system-overview.md' },
             { text: '设计模式', link: '/md/programming/designpattern/designpattern-overview' }
         ]
     },
@@ -200,25 +200,6 @@ module.exports =
         ]
     },
     {
-        text: '面试',
-        items: [
-            {
-                text: '八股文',
-                items: [
-                    { text: '八股文 详解', link: '/md/interview/knowledge/cplusplus-knowledge.md' }
-                ]
-            },
-            {
-                text: 'LeetCode编程题',
-                items: [
-                    { text: '数据结构', link: '/md/interview/code/data-structure/data-structure-overview.md' },
-                    { text: '刷题套路', link: '/md/interview/code/question-routine/question-routine-backtrack.md' },
-                    { text: '题型分类', link: '/md/interview/code/question-type/question-type-array.md' }
-                ]
-            }
-        ]
-    },
-    {
         text: '读书笔记',
         items: [
             {
@@ -238,7 +219,8 @@ module.exports =
                     { text: '大型网站技术架构——核心原理与案例分析', link: '/md/book-note/websiteTechArch/websiteTechArch-index.md' },
                     { text: '代码大全2', link: '/md/book-note/codeComplete/codeComplete-chapter-1.md' },
                     { text: '数据密集型应用系统设计', link: '/md/book-note/dataIntensiveApp/dataIntensiveApp-chapter-1.md' },
-                    { text: '从零开始学架构', link: '/md/book-note/learnArchFromZero/learnArchFromZero-chapter-1.md' }
+                    { text: '从零开始学架构', link: '/md/book-note/learnArchFromZero/learnArchFromZero-chapter-1.md' },
+                    { text: '程序员的自我修养————链接、装载与库', link: '/md/book-note/linkersAndLoaders/linkersAndLoaders-chapter-1.md' }
                 ]
             }
         ]

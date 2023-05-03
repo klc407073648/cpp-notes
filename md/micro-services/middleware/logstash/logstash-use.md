@@ -259,3 +259,55 @@ docker.io/klc407073648/stibel-logstash        latest              c846fc9d99c0  
 [root@iZuf61kbf845xt6tz10abgZ logstash]# docker push  docker.io/klc407073648/stibel-logstash:v1.0  The push refers to a repository [docker.io/klc407073648/stibel-logstash]
 ```
 
+# 将MySQL数据同步给Elasticsearch
+
+sql_last_value 是取上次查到的数据的最后一行的指定的字段，如果要全量更新，只要删除掉
+
+E:\software\ElasticStack\logstash-7.17.9\data\plugins\inputs\jdbc\logstash_jdbc_last_run文件即可（这个文件存储了上次同步到的数据）
+
+注意查询浯句中要按updateTime排序，保证最后一条是最大的
+
+字段变小写，通过rename修正
+
+不需要的字段，可以remove_field删除
+
+```
+input{
+	jdbc{
+	jdbc_driver_library => "E:\softwar\mysql-connector-java-8.0.29.jar"
+	jdbc_driver_class => "com.mysql.jdbc.Driver"
+	jdbc_connection_string => "jdbc:mysql://localhost:3306/my_db"
+	jdbc_user => "root"
+	jdbc_password => "123456"
+	statement=>"SELECT * from post where updateTime > :sql_lastvalue and updateTime < now() order by updateTime desc"
+	tracking_column => "updatetime"
+	tracking_column_type => "timestamp"
+	use_column_va1ue => true
+	parameters => { "favoriteartist" => "Beethoven" }
+	schedule => "*/5 * * * * *"
+	jdbc_default_timezone=>"Asia/Shanghai"
+	}
+}
+
+filter {
+    mutate {
+        rename => {
+            "updatetime" => "updateTime"
+            "userid" => "userId"
+            "createtime" => "createTime"
+            "isdelete" => "isDelete"
+        }
+        remove_field => ["thumbnum","favournum"]
+    }
+}
+
+output{
+	stdout{ codec=>rubydebug }
+
+  elasticsearch {
+    host => "127.0.0.1:9200"
+    index => "post_v1"
+    document_id => "%{id}"
+  }
+}
+```

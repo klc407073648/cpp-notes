@@ -30,6 +30,13 @@ ik分词器包含两种模式：
  - ik_smart：最少切分，粗粒度
  - ik_max_word：最细切分，细粒度
 
+示例：输入“小黑子”
+
+* ik_smart拆分结果："小"，"黑子"
+* ik_max_word拆分结果："小黑"、"黑子"
+
+而且会有打分机制，根据分词的匹配程度score字段。
+
 **ik分词器-拓展词库**
 
 ![ik分词器-拓展词库](/_images/database/es/elasticsearch/ik分词器-拓展词库.png)

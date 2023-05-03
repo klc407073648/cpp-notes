@@ -14,7 +14,7 @@ module.exports = {
         "/": {
             lang: "zh-CN",
             title: "C++ 全栈知识体系",
-            description: "包含：C++ 基础, 算法, 数据库,MySQL, ElasticSearch, Redis, 编程四大件, 微服务 , 中间件, ZeroMQ, 部署工具, Docker, k8s, Istio, Linux, 实践|项目,  开源项目, 个人项目, 读书笔记, 面试题, 优质文章, 博客推荐..."
+            description: "包含：C++, 算法, 数据库, 编程四大件, 开发, 架构|微服务|中间件, 方法论, 工具|部署, 项目, 读书笔记, 文章, 成长, 前端学习, 日常使用 ..."
         }
     },
     head: [

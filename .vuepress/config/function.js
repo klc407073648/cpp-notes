@@ -1,5 +1,6 @@
 
-// C++ page
+// guide page
+// 不需要
 function genSidebar4Guide() {
     return [
         {
@@ -7,7 +8,12 @@ function genSidebar4Guide() {
             collapsable: false,
             sidebarDepth: 0,
             children: [
-                "guide-overview.md"
+                "guide-overview.md",
+                "c++-overview.md",
+                "database-overview.md",
+                "programming-overview.md",
+                "micro-services-overview.md",
+                "method-overview.md"
             ]
         }
     ];
@@ -86,8 +92,8 @@ function genSidebar4Database() {
             collapsable: false,
             sidebarDepth: 0,
             children: [
-                "base/db-work-theory.md",
-                "base/MySQL.md",
+                "base/base-db-work-theory.md",
+                "base/base-db-mysql.md",
             ]
         },
         {
@@ -107,7 +113,7 @@ function genSidebar4Database() {
         },
         {
             title: "SQL - MySQL",
-            collapsable: false,
+            collapsable: true,
             sidebarDepth: 0,
             children: [
                 "mysql/mysql-overview.md",
@@ -157,9 +163,9 @@ function genSidebar4Database() {
             collapsable: false,
             sidebarDepth: 0,
             children: [
+                "es/es-cluster.md",
                 "es/es-install.md",
                 "es/es-cluster-deployment.md",
-                "es/es-cluster.md",
                 "es/es-data-analysis-process.md",
                 "es/es-data-search.md",
                 "es/es-data-store.md",
@@ -259,12 +265,15 @@ function genSidebar4Program() {
             collapsable: false,
             sidebarDepth: 0,
             children: [
-                "system/doc.md"
+                "system/system-overview.md",
+                "system/system-thread-process.md",
+                "system/system-sync-mode.md",
+                "system/system-deadlock.md"
             ]
         },
         {
             title: "设计模式",
-            collapsable: false,
+            collapsable: true,
             sidebarDepth: 0,
             children: [
                 "designpattern/designpattern-overview",
@@ -480,7 +489,7 @@ function genSidebar4method() {
     return [
         {
             title: "概念",
-            collapsable: true,
+            collapsable: false,
             sidebarDepth: 0,
             children: [
                 "concept/concept-basic.md",
@@ -493,7 +502,7 @@ function genSidebar4method() {
         },
         {
             title: "理论",
-            collapsable: true,
+            collapsable: false,
             sidebarDepth: 0,
             children: [
                 "theory/theory-acid.md",
@@ -503,7 +512,7 @@ function genSidebar4method() {
         },
         {
             title: "架构设计原则",
-            collapsable: true,
+            collapsable: false,
             sidebarDepth: 0,
             children: [
                 "arch-principle/arch-principle-design.md",
@@ -519,7 +528,7 @@ function genSidebar4method() {
         },
         {
             title: "协议",
-            collapsable: true,
+            collapsable: false,
             sidebarDepth: 0,
             children: [
                 "protocol/protocol-http",
@@ -532,7 +541,7 @@ function genSidebar4method() {
         },
         {
             title: "技术选型",
-            collapsable: true,
+            collapsable: false,
             sidebarDepth: 0,
             children: [
                 "tech/tech-select.md",
@@ -541,7 +550,7 @@ function genSidebar4method() {
         },
         {
             title: "编码规范",
-            collapsable: true,
+            collapsable: false,
             sidebarDepth: 0,
             children: [
                 "code-style/code-style-google-c++.md",
@@ -559,7 +568,7 @@ function genSidebar4Devops() {
     return [
         {
             title: "Linux",
-            collapsable: true,
+            collapsable: false,
             sidebarDepth: 0,
             children: [
                 "linux/linux-cmd.md",
@@ -573,7 +582,7 @@ function genSidebar4Devops() {
         },
         {
             title: "Nginx",
-            collapsable: true,
+            collapsable: false,
             sidebarDepth: 0,
             children: [
                 "nginx/nginx-study-note.md",
@@ -585,7 +594,7 @@ function genSidebar4Devops() {
         },
         {
             title: "实践",
-            collapsable: true,
+            collapsable: false,
             sidebarDepth: 0,
             children: [
                 "practice/docker/jenkins/practice-docker-jenkins.md",
@@ -599,7 +608,7 @@ function genSidebar4Devops() {
         },
         {
             title: "常用快捷键",
-            collapsable: true,
+            collapsable: false,
             sidebarDepth: 0,
             children: [
                 "shortcut/linux.md",
@@ -610,7 +619,7 @@ function genSidebar4Devops() {
         },
         {
             title: "容器化 - Docker",
-            collapsable: true,
+            collapsable: false,
             sidebarDepth: 0,
             children: [
                 "docker/docker.md",
@@ -620,7 +629,7 @@ function genSidebar4Devops() {
         },
         {
             title: "容器编排 - Kubernetes",
-            collapsable: true,
+            collapsable: false,
             sidebarDepth: 0,
             children: [
                 "k8s/k8s.md",
@@ -631,7 +640,7 @@ function genSidebar4Devops() {
         },
         {
             title: "服务网格 - Service Mesh Istio",
-            collapsable: true,
+            collapsable: false,
             sidebarDepth: 0,
             children: [
                 "istio/istio-basic.md",
@@ -650,7 +659,7 @@ function genSidebar4project() {
     return [
         {
             title: "开源项目 - libco",
-            collapsable: true,
+            collapsable: false,
             sidebarDepth: 0,
             children: [
                 "opensource/libco/libco.md"
@@ -658,7 +667,7 @@ function genSidebar4project() {
         },
         {
             title: "开源项目 - buttonrpc",
-            collapsable: true,
+            collapsable: false,
             sidebarDepth: 0,
             children: [
                 "opensource/buttonrpc/buttonrpc-basic.md",
@@ -668,7 +677,7 @@ function genSidebar4project() {
         },
         {
             title: "开源项目 - Tars",
-            collapsable: true,
+            collapsable: false,
             sidebarDepth: 0,
             children: [
                 "opensource/tars/tars-brief.md",
@@ -681,7 +690,7 @@ function genSidebar4project() {
         },
         {
             title: "学习项目 - hmdp",
-            collapsable: true,
+            collapsable: false,
             sidebarDepth: 0,
             children: [
                 "opensource/hmdp/hmdp-overview.md",
@@ -701,7 +710,7 @@ function genSidebar4project() {
         },
         {
             title: "学习项目 - SSM框架",
-            collapsable: true,
+            collapsable: false,
             sidebarDepth: 0,
             children: [
                 "study/ssm/spring/spring-basic.md",
@@ -717,7 +726,7 @@ function genSidebar4project() {
         },
         {
             title: "个人项目 - build_lib",
-            collapsable: true,
+            collapsable: false,
             sidebarDepth: 0,
             children: [
                 "person/build_lib/build_lib.md"
@@ -725,7 +734,7 @@ function genSidebar4project() {
         },
         {
             title: "项目开发",
-            collapsable: true,
+            collapsable: false,
             sidebarDepth: 0,
             children: [
                 "develop/develop-demo.md",
@@ -738,7 +747,7 @@ function genSidebar4project() {
         },
         {
             title: "项目开发的Idea",
-            collapsable: true,
+            collapsable: false,
             sidebarDepth: 0,
             children: [
                 "idea/idea-basic.md",
@@ -911,6 +920,14 @@ function genSidebar4booknote() {
                 "learnArchFromZero/learnArchFromZero-chapter-3.md",
                 "learnArchFromZero/learnArchFromZero-chapter-4.md",
                 "codeComplete/codeComplete-chapter-5.md",
+            ]
+        },
+        {
+            title: "程序员的自我修养————链接、装载与库",
+            collapsable: true,
+            sidebarDepth: 0,
+            children: [
+                "linkersAndLoaders/linkersAndLoaders-chapter-1.md",
             ]
         }
     ];
