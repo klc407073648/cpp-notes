@@ -1,0 +1,50 @@
+{
+    "is_partial": false,
+    "is_running": false,
+    "took": 60,
+    "timed_out": false,
+    "hits": {
+        "total": {
+            "value": 2,
+            "relation": "eq"
+        },
+        "events": [
+            {
+                "_index": ".ds-my-data-stream-2099.12.07-000001",
+                "_id": "OQmfCaduce8zoHT93o4H",
+                "_source": {
+                    "@timestamp": "2099-12-07T11:07:09.000Z",
+                    "event": {
+                        "category": "process",
+                        "id": "aR3NWVOs",
+                        "sequence": 4
+                    },
+                    "process": {
+                        "pid": 2012,
+                        "name": "regsvr32.exe",
+                        "command_line": "regsvr32.exe  /s /u /i:https://...RegSvr32.sct scrobj.dll",
+                        "executable": "C:\\Windows\\System32\\regsvr32.exe"
+                    }
+                }
+            },
+            {
+                "_index": ".ds-my-data-stream-2099.12.07-000001",
+                "_id": "xLkCaj4EujzdNSxfYLbO",
+                "_source": {
+                    "@timestamp": "2099-12-07T11:07:10.000Z",
+                    "event": {
+                        "category": "process",
+                        "id": "GTSmSqgz0U",
+                        "sequence": 6,
+                        "type": "termination"
+                    },
+                    "process": {
+                        "pid": 2012,
+                        "name": "regsvr32.exe",
+                        "executable": "C:\\Windows\\System32\\regsvr32.exe"
+                    }
+                }
+            }
+        ]
+    }
+}

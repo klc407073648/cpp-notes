@@ -1,0 +1,73 @@
+{
+    "query": {
+        "bool": {
+            "must_not": {
+                "match": {
+                    "title": ""
+                }
+            },
+            "should": [
+                {
+                    "match": {
+                        "title": ""
+                    }
+                },
+                {
+                    "match": {
+                        "desc": ""
+                    }
+                }
+            ],
+            "filter": [
+                {
+                    "term": {
+                        "isDelete": 0
+                    }
+                },
+                {
+                    "term": {
+                        "id": 1
+                    }
+                },
+                {
+                    "term": {
+                        "tags": "java"
+                    }
+                },
+                {
+                    "term": {
+                        "tags": "框架"
+                    }
+                }
+            ],
+            "minimum_should_match": 1
+        }
+    },
+    "from": 0, //分页
+    "size": 5, //分页
+    "_source": [
+        "name",
+        "_createTime",
+        "desc",
+        "reviewStatus",
+        "priority",
+        "tags"
+    ], //需要查询的字段
+    "sort": [ //排序
+        {
+            "priority": {
+                "order": "desc"
+            }
+        },
+        {
+            "_score": {
+                "order": "desc"
+            }
+        },
+        {
+            "_createTime": {
+                "order": "desc"
+            }
+        }
+    ]
+}
