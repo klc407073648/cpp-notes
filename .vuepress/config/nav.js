@@ -85,7 +85,7 @@ module.exports =
     {
         text: '开发',
         items: [
-            { text: '开发 - 常用库', link: '/md/develop/library/library-cppcheck.md' },
+            { text: '开发 - 常用库', link: '/md/develop/library/library-overview.md' },
             { text: '开发 - 工具安装', link: '/md/develop/tools/tools-install.md' },
         ]
     },
@@ -240,7 +240,7 @@ module.exports =
         text: '成长',
         items: [
             { text: '个人', link: '/md/grow/person/person-better-than-others.md' },
-            { text: '产品', link: '/md/grow/product/product.md' },
+            { text: '产品', link: '/md/grow/product/product-requirement-instantiation.md' },
             { text: '团队', link: '/md/grow/team/team-system-arch.md' },
         ]
     },

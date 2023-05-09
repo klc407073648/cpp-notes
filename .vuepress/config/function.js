@@ -54,7 +54,9 @@ function genSidebar4Cplusplus() {
             children: [
                 "tips/c++-tips-copy-on-write.md",
                 "tips/c++-tips-forward-declaration.md",
-                "tips/c++-tips-search-head-lib.md"
+                "tips/c++-tips-search-head-lib.md",
+                "tips/c++-tips-spec-template.md",
+                "tips/c++-tips-override.md"
             ]
         },
         {
@@ -169,7 +171,8 @@ function genSidebar4Database() {
                 "es/es-data-analysis-process.md",
                 "es/es-data-search.md",
                 "es/es-data-store.md",
-                "es/es-db-syn.md"
+                "es/es-db-syn.md",
+                "es/es-use.md"
             ]
         }
     ];
@@ -322,15 +325,20 @@ function genSidebar4develop() {
             collapsable: false,
             sidebarDepth: 0,
             children: [
+                "library/library-overview.md",
                 "library/library-cppcheck.md",
                 "library/library-cppunit.md",
+                "library/library-drogon.md",
                 "library/library-fastcgi.md",
+                "library/library-googletest.md",
                 "library/library-hiredis.md",
                 "library/library-jsoncpp.md",
                 "library/library-log4cpp.md",
-                "library/library-mysql.md",
                 "library/library-poco.md",
-                "library/library-redis_plus_plus.md",
+                "library/library-protobuf.md",
+                "library/library-tinyxml.md",
+                "library/library-yamlcpp.md",
+                "library/library-zeromq.md",
             ]
         },
         {
@@ -577,7 +585,8 @@ function genSidebar4Devops() {
                 "linux/linux-process.md",
                 "linux/linux-process-thread-syn.md",
                 "linux/linux-cmd-tips.md",
-                "linux/linux-output-with-color.md"
+                "linux/linux-output-with-color.md",
+                "linux/linux-authority.md"
             ]
         },
         {
@@ -1166,7 +1175,8 @@ function genSidebar4Grow() {
             collapsable: false,
             sidebarDepth: 0,
             children: [
-                "product/product.md",
+                "product/product-requirement-instantiation.md",
+                "product/product-compatibility-principle.md",
             ]
         },{
             title: "团队",
@@ -1176,6 +1186,7 @@ function genSidebar4Grow() {
                 "team/team-cross-life-valley.md",
                 "team/team-system-arch.md",
                 "team/team-tech-share.md",
+                "team/team-member-define.md",
             ]
         }
     ];
