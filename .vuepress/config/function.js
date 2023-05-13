@@ -313,14 +313,6 @@ function genSidebar4Program() {
 function genSidebar4develop() {
     return [
         {
-            title: "开发",
-            collapsable: false,
-            sidebarDepth: 0,
-            children: [
-                "todo.md"
-            ]
-        },
-        {
             title: "常用开发库",
             collapsable: false,
             sidebarDepth: 0,
@@ -339,14 +331,6 @@ function genSidebar4develop() {
                 "library/library-tinyxml.md",
                 "library/library-yamlcpp.md",
                 "library/library-zeromq.md",
-            ]
-        },
-        {
-            title: "工具安装",
-            collapsable: false,
-            sidebarDepth: 0,
-            children: [
-                "tools/tools-install.md",
             ]
         }
     ];
@@ -620,10 +604,10 @@ function genSidebar4Devops() {
             collapsable: false,
             sidebarDepth: 0,
             children: [
-                "shortcut/linux.md",
-                "shortcut/vim.md",
-                "shortcut/vscode.md",
-                "shortcut/idea.md"
+                "shortcut/shortcut-linux.md",
+                "shortcut/shortcut-vim.md",
+                "shortcut/shortcut-vscode.md",
+                "shortcut/shortcut-idea.md"
             ]
         },
         {
@@ -631,8 +615,8 @@ function genSidebar4Devops() {
             collapsable: false,
             sidebarDepth: 0,
             children: [
-                "docker/docker.md",
-                "docker/docker-use.md",
+                "docker/docker-evolution.md",
+                "docker/docker-dockerfile.md",
                 "docker/docker-cmd.md"
             ]
         },
@@ -641,7 +625,7 @@ function genSidebar4Devops() {
             collapsable: false,
             sidebarDepth: 0,
             children: [
-                "k8s/k8s.md",
+                "k8s/k8s-concept.md",
                 "k8s/k8s-base-use.md",
                 "k8s/k8s-cmd.md",
                 "k8s/k8s-probe.md"
@@ -671,7 +655,7 @@ function genSidebar4project() {
             collapsable: false,
             sidebarDepth: 0,
             children: [
-                "opensource/libco/libco.md"
+                "opensource/libco/libco-learn.md"
             ]
         },
         {
@@ -726,15 +710,15 @@ function genSidebar4project() {
                 "study/ssm/spring/spring-concept.md",
                 "study/ssm/spring/spring-integrate.md",
                 "study/ssm/spring/spring-aop.md",
-                "study/ssm/springmvc/springmvc-01.md",
-                "study/ssm/springmvc/springmvc-02.md",
+                "study/ssm/springmvc/springmvc-basic.md",
+                "study/ssm/springmvc/springmvc-application.md",
                 "study/ssm/maven/maven.md",
                 "study/ssm/springboot/springboot.md",
                 "study/ssm/mybatisplus/mybatisplus.md",
             ]
         },
         {
-            title: "个人项目 - build_lib",
+            title: "个人项目 - github",
             collapsable: false,
             sidebarDepth: 0,
             children: [
@@ -746,7 +730,7 @@ function genSidebar4project() {
             collapsable: false,
             sidebarDepth: 0,
             children: [
-                "develop/develop-demo.md",
+                "develop/develop-cpp-recommend.md",
                 "develop/develop-process.md",
                 "develop/develop-opt.md",
                 "develop/develop-notice.md",
@@ -755,7 +739,7 @@ function genSidebar4project() {
             ]
         },
         {
-            title: "项目开发的Idea",
+            title: "Idea",
             collapsable: false,
             sidebarDepth: 0,
             children: [
@@ -780,7 +764,7 @@ function genSidebar4booknote() {
             ]
         },
         {
-            title: "深入理解计算机系统 详解",
+            title: "深入理解计算机系统",
             collapsable: true,
             sidebarDepth: 0,
             children: [
@@ -798,7 +782,7 @@ function genSidebar4booknote() {
             ]
         },
         {
-            title: "重构改善既有代码的设计 详解",
+            title: "重构改善既有代码的设计",
             collapsable: true,
             sidebarDepth: 0,
             children: [
@@ -816,7 +800,7 @@ function genSidebar4booknote() {
             ]
         },
         {
-            title: "Effective C++:改善程序与设计的55个具体做法 详解",
+            title: "Effective C++:改善程序与设计的55个具体做法",
             collapsable: true,
             sidebarDepth: 0,
             children: [
@@ -833,7 +817,7 @@ function genSidebar4booknote() {
             ]
         },
         {
-            title: "STL源码剖析 详解",
+            title: "STL源码剖析",
             collapsable: true,
             sidebarDepth: 0,
             children: [
@@ -858,7 +842,7 @@ function genSidebar4booknote() {
             ]
         },
         {
-            title: "Linux多线程服务端编程——使用muduo C++ 网络库 详解",
+            title: "Linux多线程服务端编程——使用muduo C++ 网络库",
             collapsable: true,
             sidebarDepth: 0,
             children: [
@@ -878,11 +862,10 @@ function genSidebar4booknote() {
             ]
         },
         {
-            title: "大型网站技术架构——核心原理与案例分析 详解",
+            title: "大型网站技术架构——核心原理与案例分析",
             collapsable: true,
             sidebarDepth: 0,
             children: [
-                "websiteTechArch/websiteTechArch-index.md",
                 "websiteTechArch/websiteTechArch-chapter-1-1.md",
                 "websiteTechArch/websiteTechArch-chapter-1-2.md",
                 "websiteTechArch/websiteTechArch-chapter-1-3.md",
@@ -928,7 +911,6 @@ function genSidebar4booknote() {
                 "learnArchFromZero/learnArchFromZero-chapter-2.md",
                 "learnArchFromZero/learnArchFromZero-chapter-3.md",
                 "learnArchFromZero/learnArchFromZero-chapter-4.md",
-                "codeComplete/codeComplete-chapter-5.md",
             ]
         },
         {
@@ -1041,11 +1023,11 @@ function genSidebar4Article() {
                 "knowledge/article-knowledge-share-bike.md",
                 "knowledge/article-knowledge-software-architecture.md",
                 "knowledge/article-knowledge-cors-sop.md",
-                "knowledge/article-knowledge-share-bike.md",
                 "knowledge/article-knowledge-feeddog-watchdog.md",
                 "knowledge/article-knowledge-return-temp-var.md",
                 "knowledge/article-knowledge-time.md",
                 "knowledge/article-knowledge-vm-bm.md",
+                "knowledge/article-knowledge-loadbalance.md",
             ]
         },
         {
@@ -1097,7 +1079,8 @@ function genSidebar4dailyUse() {
             collapsable: false,
             sidebarDepth: 0,
             children: [
-                "tools/daily-use-tools-overview.md"
+                "tools/daily-use-tools-overview.md",
+                "tools/daily-use-tools.md"
             ]
         }
     ];

@@ -1,4 +1,6 @@
-# SSM框架 - Maven高级
+# SSM - Maven高级
+
+[[toc]]
 
 # 分模块开发
 

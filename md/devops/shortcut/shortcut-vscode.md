@@ -3,7 +3,7 @@
 
 [[toc]]
 
-
+```
 注释：
 　　a) 单行注释：[ctrl+k,ctrl+c] 或 ctrl+/
 　　b) 取消单行注释：[ctrl+k,ctrl+u] (按下ctrl不放，再按k + u)
@@ -46,7 +46,7 @@
 当前文件替换：ctrl + h
 打开最近打开的文件：ctrl + r
 打开新的命令窗：ctrl + shift + c
-
+```
 
 
 # 编辑器与窗口管理
@@ -124,9 +124,9 @@
 ```
 
 
+# vs code 的常用插件
 
-二、vs code 的常用插件
-
+```
 1、Auto Rename Tag 修改html标签，自动帮你完成尾部闭合标签的同步修改，和webstorm一样。
 
 2、Auto Close Tag 自动闭合HTML标签
@@ -194,6 +194,7 @@
 34、EverMonkey 印象笔记
 
 35、atom one dark atom的一个高亮主题(个人推荐)
+```
 
 
 

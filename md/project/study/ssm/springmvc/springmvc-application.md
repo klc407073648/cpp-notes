@@ -1,4 +1,6 @@
-# SSM框架 - SpringMVC应用
+# SSM - SpringMVC 应用
+
+[[toc]]
 
 # SSM整合
 

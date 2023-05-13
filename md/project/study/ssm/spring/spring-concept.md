@@ -1,6 +1,8 @@
-# SSM框架 - IOC/DI配置管理第三方bean
+# SSM - IOC/DI配置管理第三方bean
 
-以Alibaba的Druid库为例，来介绍如何管理第三方jar包中的类
+> 以Alibaba的Druid库为例，来介绍如何管理第三方jar包中的类
+
+[[toc]]
 
 ## 数据库对象管理
 

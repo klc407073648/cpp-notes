@@ -1,8 +1,8 @@
-# Nginx应用 - 在centOs 上搭建nginx来部署静态页面网站
+# Nginx - 部署静态页面网站
 
 [[toc]]
 
-## Nginx简介
+# Nginx简介
 
 轻量级、高性能的HTTP及反向代理服务器，占用内存少，并发能力强。
 
@@ -18,6 +18,7 @@ nginx -v
 nginx 
 
 ## 配置服务器的访问地址
+
 启动好的nginx服务器默认访问的是它自己的目录，即/usr/share/nginx/html目录，可以在/etc/nginx/nginx.conf配置文件中配置你自己的项目目录，并让nginx正确访问。
 
 主要修改以下字段：

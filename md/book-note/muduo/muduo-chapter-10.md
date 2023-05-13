@@ -1,8 +1,12 @@
-# muduo学习总结
+# muduo - 学习总结
 
 [[toc]]
 
-> muduo是基于非阻塞的IO和事件驱动的网络库（Reactor模式），其核心是一个事件循环EventLoop，用于响应计时器和IO事件。muduo采用**基于对象（object-based）而非面向对象（object-oriented）的设计风格，其事件回调接口多以boost::function+boost::bind表达**，用户在使用muduo的时候不需要继承其中的class，其总体结构是 one loop per thread+threadpool，描述如下：
+# 概述
+
+> muduo是基于非阻塞的IO和事件驱动的网络库（Reactor模式），其核心是一个事件循环EventLoop，用于响应计时器和IO事件。muduo采用**基于对象（object-based）而非面向对象（object-oriented）的设计风格，其事件回调接口多以boost::function+boost::bind表达**，用户在使用muduo的时候不需要继承其中的class，其总体结构是 one loop per thread+threadpool，
+
+描述如下：
 
 ![线程模型](/_images/book-note/muduo/线程模型.JPG)
 

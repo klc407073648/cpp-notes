@@ -1,4 +1,8 @@
-# SSM框架 - SpringMVC基础
+# SSM - SpringMVC 基础
+
+[[toc]]
+
+# 概述
 
 > SpringMVC是隶属于Spring框架的一部分，主要是用来进行Web开发，是对Servlet进行了封装。
 

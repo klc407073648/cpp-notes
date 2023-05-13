@@ -86,7 +86,6 @@ module.exports =
         text: '开发',
         items: [
             { text: '开发 - 常用库', link: '/md/develop/library/library-overview.md' },
-            { text: '开发 - 工具安装', link: '/md/develop/tools/tools-install.md' },
         ]
     },
     {
@@ -176,14 +175,14 @@ module.exports =
                 items: [
                     { text: 'Linux', link: '/md/devops/linux/linux-cmd-tips.md' },
                     { text: 'Nginx', link: '/md/devops/nginx/nginx-study-note.md' },
-                    { text: 'Shortcut', link: '/md/devops/shortcut/linux.md' }
+                    { text: 'Shortcut', link: '/md/devops/shortcut/shortcut-linux.md' }
                 ]
             },
             {
                 text: '部署',
                 items: [
-                    { text: 'Docker', link: '/md/devops/docker/docker.md' },
-                    { text: 'Kubernetes', link: '/md/devops/k8s/k8s.md' },
+                    { text: 'Docker', link: '/md/devops/docker/docker-evolution.md' },
+                    { text: 'Kubernetes', link: '/md/devops/k8s/k8s-concept.md' },
                     { text: 'Service Mesh Istio', link: '/md/devops/istio/istio-basic.md' },
                 ]
             }
@@ -192,7 +191,7 @@ module.exports =
     {
         text: '项目',
         items: [
-            { text: '开源项目', link: '/md/project/opensource/libco/libco.md' },
+            { text: '开源项目', link: '/md/project/opensource/libco/libco-learn.md' },
             { text: '学习项目', link: '/md/project/study/ssm/spring/spring-basic.md' },
             { text: '个人github项目', link: '/md/project/person/build_lib/build_lib.md' },
             { text: '项目开发', link: '/md/project/develop/develop-process.md' },
@@ -216,7 +215,7 @@ module.exports =
                     { text: 'Effective C++:改善程序与设计的55个具体做法', link: '/md/book-note/effectivecpp/effectivecpp-chapter-2-1.md' },
                     { text: 'STL源码剖析', link: '/md/book-note/stlsource/stlsource-chapter-1.md' },
                     { text: 'Linux多线程服务端编程——使用muduo C++ 网络库', link: '/md/book-note/muduo/muduo-chapter-1.md' },
-                    { text: '大型网站技术架构——核心原理与案例分析', link: '/md/book-note/websiteTechArch/websiteTechArch-index.md' },
+                    { text: '大型网站技术架构——核心原理与案例分析', link: '/md/book-note/websiteTechArch/websiteTechArch-chapter-1-1.md' },
                     { text: '代码大全2', link: '/md/book-note/codeComplete/codeComplete-chapter-1.md' },
                     { text: '数据密集型应用系统设计', link: '/md/book-note/dataIntensiveApp/dataIntensiveApp-chapter-1.md' },
                     { text: '从零开始学架构', link: '/md/book-note/learnArchFromZero/learnArchFromZero-chapter-1.md' },
@@ -245,7 +244,7 @@ module.exports =
         ]
     },
     {
-        text: '前端学习',
+        text: '前端',
         items: [
             {
                 text: 'Vue2学习',

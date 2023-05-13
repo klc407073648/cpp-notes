@@ -1,8 +1,8 @@
-# Nginx应用 - 错误日志配置及信息详解
+# Nginx - 错误日志配置及信息详解
 
 [[toc]]
 
-## 1.Nginx错误日志信息介绍
+# Nginx错误日志信息介绍
 
 Nginx的错误信息是调试Nginx服务的重要手段，属于核心功能模块（ngx_core_module）的参数，该参数的名字为error_log，可以放在Main区块中全局配置，也可以放在不同的虚拟主机中单独记录虚拟主机的错误信息
 
@@ -31,7 +31,7 @@ error_log参数的标签段位置：
 main, http, server, location
 ```
 
-## 2.Nginx配置错误日志过程介绍
+# Nginx配置错误日志过程介绍
 
 1. 插入error_log语句
 ```

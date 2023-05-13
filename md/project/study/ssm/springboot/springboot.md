@@ -1,4 +1,6 @@
-# SSM框架 - SpringBoot
+# SSM - SpringBoot
+
+[[toc]]
 
 ## 简介
 

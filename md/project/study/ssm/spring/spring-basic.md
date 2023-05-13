@@ -1,6 +1,10 @@
-# SSM框架 - Spring框架学习
+# SSM - Spring框架学习
 
-Spring框架主要的优势是在<font color='red'>**简化开发**</font>和 <font color='red'>**框架整合**</font>上，其主要内容包括以下几点：
+[[toc]]
+
+# 概述
+
+> Spring框架主要的优势是在<font color='red'>**简化开发**</font>和 <font color='red'>**框架整合**</font>上，其主要内容包括以下几点：
 
 * 简化开发: 
 

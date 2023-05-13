@@ -1,4 +1,4 @@
-# Nginx应用 -nginx图片服务器配置
+# Nginx - 图片服务器配置
 
 [[toc]]
 

@@ -1,4 +1,6 @@
-# SSM框架 - MyBatisPlus
+# SSM - MyBatisPlus
+
+[[toc]]
 
 # MybatisPlus简介
 

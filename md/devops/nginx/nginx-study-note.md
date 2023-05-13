@@ -1,4 +1,4 @@
-# Nginx应用 - nginx反向代理服务器
+# Nginx - 学习笔记
 
 [[toc]]
 
