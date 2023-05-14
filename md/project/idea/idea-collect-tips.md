@@ -1,4 +1,4 @@
-# 个人成长 - 编程中的idea
+# Idea - 编程中的tips
 
 # github网页查看方式
 

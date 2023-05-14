@@ -10,10 +10,19 @@ function genSidebar4Guide() {
             children: [
                 "guide-overview.md",
                 "c++-overview.md",
+                "algorithm-overview.md",
                 "database-overview.md",
                 "programming-overview.md",
                 "micro-services-overview.md",
-                "method-overview.md"
+                "method-overview.md",
+                "devops-overview.md",
+                "project-overview.md",
+                "book-note-overview.md",
+                "article-overview.md",
+                "grow-overview.md",
+                "vue-overview.md",
+                "daily-use-overview.md",
+                "person-github-overview.md",
             ]
         }
     ];
@@ -56,7 +65,9 @@ function genSidebar4Cplusplus() {
                 "tips/c++-tips-forward-declaration.md",
                 "tips/c++-tips-search-head-lib.md",
                 "tips/c++-tips-spec-template.md",
-                "tips/c++-tips-override.md"
+                "tips/c++-tips-override.md",
+                "tips/c++-tips-return-temp-var.md",
+                "tips/c++-tips-multi-define.md"
             ]
         },
         {
@@ -746,7 +757,8 @@ function genSidebar4project() {
                 "idea/idea-basic.md",
                 "idea/idea-tech-use.md",
                 "idea/idea-tips.md",
-                "idea/idea-doublewrite-buffer"
+                "idea/idea-doublewrite-buffer",
+                "idea/idea-collect-tips"
             ]
         }
     ];
@@ -1038,7 +1050,6 @@ function genSidebar4Article() {
                 "problem/article-problem-top.md",
                 "problem/article-problem-pstack.md",
                 "problem/article-problem-cache-update.md",
-                "problem/article-problem-multi-define.md",
                 "problem/article-problem-three-high.md"
             ]
         }
@@ -1149,7 +1160,6 @@ function genSidebar4Grow() {
                 "person/person-tech-grow.md",
                 "person/person-grow-Stay_hungry_Stay_young.md",
                 "person/person-grow-Stay_hungry_Stay_foolish.md",
-                "person/person-ideas.md",
                 "person/person-learn-new-things.md",
             ]
         },

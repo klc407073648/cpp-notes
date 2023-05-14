@@ -8,7 +8,6 @@
 * [个人 - 陈皓(技术人员的发展之路)](/md/grow/person/person-better-than-others.md)
 * [个人 - 张一鸣(Stay hungry, Stay young)](/md/grow/person/person-better-than-others.md)
 * [个人 - 乔布斯(Stay hungry, Stay foolish)](/md/grow/person/person-better-than-others.md)
-* [个人 - 编程中的idea](md/grow/person/person-ideas.md)    TODO 改成C++下
 * [个人 - 学习方法](/md/grow/person/person-learn-new-things.md)
 
 # 产品

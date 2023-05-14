@@ -72,5 +72,6 @@
 * [Idea - 常用技术检索](/md/project/idea/idea-tech-use.md)
 * [Idea - 小技巧tips](/md/project/idea/idea-tips.md)
 * [Idea - 双写缓冲区](/md/project/idea/idea-doublewrite-buffer.md)
+* [Idea - 编程中的tips](/md/project/idea/idea-collect-tips.md)
 
 

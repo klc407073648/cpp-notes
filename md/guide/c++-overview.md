@@ -24,6 +24,10 @@
 * [C++ 知识点 - 写时拷贝技术(copy-on-write)](/md/c++/tips/c++-tips-copy-on-write.md)
 * [C++ 知识点 - 前向声明（forward declaration）](/md/c++/tips/c++-tips-forward-declaration.md)
 * [C++ 知识点 - linux下c/c++头文件和动态库的搜索](/md/c++/tips/c++-tips-search-head-lib.md)
+* [C++ 知识点 - 模板特化与偏特化](/md/c++/tips/c++-tips-spec-template.md)
+* [C++ 知识点 - 为什么C语言不支持函数重载，C++又是如何支持的](/md/c++/tips/c++-tips-override.md)
+* [C++ 知识点 - return 局部变量](/md/article/knowledge/c++-tips-return-temp-var.md)
+* [C++ 知识点 - 头文件.h 和 源文件.cpp 以及多重定义(multiple definition)](/md/article/knowledge/c++-tips-multi-define.md)
 
 # C++ IO框架
 

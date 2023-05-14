@@ -1,4 +1,4 @@
-# 问题 - C++ 头文件.h 和 源文件.cpp 以及多重定义(multiple definition)
+# C++ 知识点 - 头文件.h 和 源文件.cpp 以及多重定义(multiple definition)
 
 > 头文件(.h)和源文件(.cpp)以及变量或函数的多重定义问题
 
@@ -19,15 +19,15 @@
 
 test.h
 
-<<< @/md/article/problem/src/multidefine/test.h
+<<< @/md/c++/tips/src/multidefine/test.h
 
 test.cpp
 
-<<< @/md/article/problem/src/multidefine/test.cpp
+<<< @/md/c++/tips/src/multidefine/test.cpp
 
 main.cpp
 
-<<< @/md/article/problem/src/multidefine/main.cpp
+<<< @/md/c++/tips/src/multidefine/main.cpp
 
 编译报错：
 

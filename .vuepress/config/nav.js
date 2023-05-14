@@ -30,13 +30,13 @@ module.exports =
             {
                 text: 'C++ 新版本特性',
                 items: [
-                    { text: '新版本特性 详解', link: '/md/c++/features/c++-features-index.md' }
+                    { text: '新版本特性', link: '/md/c++/features/c11/c++-features-c11.md' }
                 ]
             },
             {
                 text: 'C++ IO框架',
                 items: [
-                    { text: 'IO框架 详解', link: '/md/c++/io/c++-io-reuse.md' }
+                    { text: 'IO框架', link: '/md/c++/io/c++-io-reuse.md' }
                 ]
             }
         ]
