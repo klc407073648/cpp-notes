@@ -1,4 +1,4 @@
-# postman使用
+# 测试工具 - postman使用
 
 [[toc]]
 
@@ -42,7 +42,7 @@
 18. Tests - 这些脚本是在请求期间执行的。进行测试非常重要，因为它设置检查点来验证响应状态是否正常、检索的数据是否符合预期以及其他测试。
 19. Settings - 最新版本的有设置，一般用不到。
 
-![base_use](/_images/test/postman/base_use.png)
+![base_use](/_images/test/tools/postman/base_use.png)
 
 # 基础使用方法
 
@@ -55,7 +55,7 @@
 4. 你将看到下方返回200状态码
 5. 返回对应请求的结构。
 
-![get请求](/_images/test/postman/get请求.png)
+![get请求](/_images/test/tools/postman/get请求.png)
 
 # 创建测试集合
 
@@ -63,15 +63,15 @@
 
 利用 Collection 创建测试集合，以 `用户中心` 接口测试为例:
 
-![usercenter_Collection](/_images/test/postman/usercenter_Collection.png)
+![usercenter_Collection](/_images/test/tools/postman/usercenter_Collection.png)
 
 Collection Runner 运行集合：
 
-![usercenter_Collection_Runner](/_images/test/postman/usercenter_Collection_Runner.png)
+![usercenter_Collection_Runner](/_images/test/tools/postman/usercenter_Collection_Runner.png)
 
 运行结果：
 
-![usercenter_Collection_Runner_Result](/_images/test/postman/usercenter_Collection_Runner_Result.png)
+![usercenter_Collection_Runner_Result](/_images/test/tools/postman/usercenter_Collection_Runner_Result.png)
 
 对应的 Collection 和 运行结果 见：
 
