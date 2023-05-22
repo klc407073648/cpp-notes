@@ -1,6 +1,10 @@
 # 导航地图 - 架构/微服务/中间件
 
-# 知识体系结构 TODO
+[[toc]]
+
+# 知识体系结构
+
+![](/_images/micro-services/架构_微服务_中间件.png)
 
 # 架构
 
@@ -81,5 +85,3 @@
 * [Kong - 概述](/md/micro-services/middleware/kong/kong-basic.md)
 * [Kong - Docker快速部署](/md/micro-services/middleware/kong/kong-plugin.md)
 * [Kong - C++客户端的docker镜像](/md/micro-services/middleware/kong/kong-install-use.md)
-
-

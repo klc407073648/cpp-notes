@@ -1,4 +1,4 @@
-# C++ 知识点 - 前向声明（forward declaration）
+# C++ 知识点 - 前向声明(forward declaration)
 
 > 本文讲解C++前向声明的含义。
 

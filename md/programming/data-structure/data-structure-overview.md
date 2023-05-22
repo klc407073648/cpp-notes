@@ -8,7 +8,7 @@
 
 # 知识体系
 
-![邻接表](/_images/programming/data-structure/数据结构与算法.png)
+![数据结构与算法](/_images/programming/data-structure/数据结构与算法.png)
 
 ## 数据结构的存储⽅式
 

@@ -13,6 +13,7 @@ function genSidebar4Guide() {
                 "algorithm-overview.md",
                 "database-overview.md",
                 "programming-overview.md",
+                "develop-overview.md",
                 "micro-services-overview.md",
                 "method-overview.md",
                 "devops-overview.md",
@@ -733,7 +734,7 @@ function genSidebar4project() {
             collapsable: false,
             sidebarDepth: 0,
             children: [
-                "person/build_lib/build_lib.md"
+                "person/person-overview.md"
             ]
         },
         {
@@ -745,7 +746,6 @@ function genSidebar4project() {
                 "develop/develop-process.md",
                 "develop/develop-opt.md",
                 "develop/develop-notice.md",
-                "develop/develop-version.md",
                 "develop/uml/develop-uml.md",
             ]
         },
@@ -1170,6 +1170,7 @@ function genSidebar4Grow() {
             children: [
                 "product/product-requirement-instantiation.md",
                 "product/product-compatibility-principle.md",
+                "product/product-version.md",
             ]
         },{
             title: "团队",

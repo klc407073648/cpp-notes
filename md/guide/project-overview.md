@@ -1,6 +1,10 @@
 # 导航地图 - 项目
 
-# 知识体系结构 TODO
+[[toc]]
+
+# 知识体系结构
+
+![](/_images/project/项目.png)
 
 # 开源项目
 
@@ -55,7 +59,16 @@
 
 # 个人项目
 
-* [person - build_lib](/md/project/person/build_lib/build_lib.md)
+* [person - 概述](/md/project/person/project-overview.md)
+    
+> 详细项目链接地址。
+
+* [person - 知识总结(个人博客) - cpp-notes](https://github.com/klc407073648/cpp-notes)
+* [person - 项目公共库依赖 - build_lib](https://github.com/klc407073648/build_lib)
+* [person - 镜像使用 - docker_project](https://github.com/klc407073648/docker_project)
+* [person - 伙伴匹配系统(APP) - friendFinder](https://github.com/klc407073648/friendFinder)
+* [person - 命令终端(Web) - cmd-terminal](https://github.com/klc407073648/cmd-terminal)
+* [person - 开发API平台 - openApi](https://github.com/klc407073648/openApi)
 
 # 项目开发
 
@@ -63,7 +76,6 @@
 * [项目开发 - 整体开发流程](/md/project/develop/develop-process.md)
 * [项目开发 - 优化项目内容](/md/project/develop/develop-opt.md)
 * [项目开发 - 注意事项](/md/project/develop/develop-notice.md)
-* [项目开发 - 版本号](/md/project/develop/develop-version.md)
 * [项目开发 - 统一建模语言UML类图](/md/project/develop/develop-uml.md)
 
 # Idea
@@ -71,7 +83,4 @@
 * [Idea - 思维框架图](/md/project/idea/idea-basic.md)
 * [Idea - 常用技术检索](/md/project/idea/idea-tech-use.md)
 * [Idea - 小技巧tips](/md/project/idea/idea-tips.md)
-* [Idea - 双写缓冲区](/md/project/idea/idea-doublewrite-buffer.md)
 * [Idea - 编程中的tips](/md/project/idea/idea-collect-tips.md)
-
-

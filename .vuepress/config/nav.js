@@ -16,9 +16,9 @@ module.exports =
                 ]
             },
             {
-                text: 'C++ 函数学习',
+                text: 'C++ 函数',
                 items: [
-                    { text: '函数学习', link: '/md/c++/function/c++-function-Linux_Hook.md' }
+                    { text: '函数', link: '/md/c++/function/c++-function-Linux_Hook.md' }
                 ]
             },
             {
@@ -83,9 +83,22 @@ module.exports =
         ]
     },
     {
-        text: '开发',
+        text: '开发|测试',
         items: [
-            { text: '开发 - 常用库', link: '/md/develop/library/library-overview.md' },
+            {
+                text: '开发',
+                items: [
+                    { text: '常用库', link: '/md/develop/library/library-overview.md' },
+                ]
+            },
+            {
+                text: '测试',
+                items: [
+                    { text: '测试理论', link: '/md/test/basic/basic-develop.md' },
+                    { text: '测试用例', link: '/md/test/testCase/testCase-concept.md' },
+                    { text: '测试工具', link: '/md/test/tools/postman/postman-use.md' }
+                ]
+            },
         ]
     },
     {
@@ -193,7 +206,7 @@ module.exports =
         items: [
             { text: '开源项目', link: '/md/project/opensource/libco/libco-learn.md' },
             { text: '学习项目', link: '/md/project/study/ssm/spring/spring-basic.md' },
-            { text: '个人github项目', link: '/md/project/person/build_lib/build_lib.md' },
+            { text: '个人github项目', link: '/md/project/person/person-overview.md' },
             { text: '项目开发', link: '/md/project/develop/develop-process.md' },
             { text: '项目Idea', link: '/md/project/idea/idea-basic.md' }
         ]
@@ -230,7 +243,6 @@ module.exports =
             { text: '并发', link: '/md/article/concurrent/article-concurrent-lock.md' },
             { text: '部署', link: '/md/article/deploy/article-deploy-blue-green.md' },
             { text: '分布式', link: '/md/article/distribute/article-distributed-cellular.md' },
-            { text: '成长', link: '/md/article/grow/article-grow-Stay_hungry_Stay_foolish.md' },
             { text: '知识', link: '/md/article/knowledge/article-knowledge-service-mesh.md' },
             { text: '问题', link: '/md/article/problem/article-problem-top.md' }
         ]

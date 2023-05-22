@@ -1,6 +1,8 @@
 # 导航地图 - 前端
 
-# ♥Vue知识体系详解♥
+[[toc]]
+
+# 知识体系结构
 
 Vue2学习基础内容:
 
@@ -80,5 +82,5 @@ Vue2扩展学习:
 * [Vue3 - 生命周期对比](/md/vue/vue3/vue3-lifecycle.md)
 * [Vue3 - 其它 Composition API](/md/vue/vue3/vue3-other-composition.md)
 * [Vue3 - Composition API 的优势](/md/vue/vue3/vue3-options-composition.md)
-* [Vue3 - 新的组件](/md/vue/vue3/vue3-new-component.md )
-* [Vue3 - 其他](/md/vue/vue3/vue3-other.md )
+* [Vue3 - 新的组件](/md/vue/vue3/vue3-new-component.md)
+* [Vue3 - 其他](/md/vue/vue3/vue3-other.md)

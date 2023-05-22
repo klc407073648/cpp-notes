@@ -1,6 +1,24 @@
 # 导航地图 - 编程四大件
 
-# 知识体系结构 TODO
+[[toc]]
+
+# 知识体系结构
+
+**数据结构与算法:**
+
+![数据结构与算法](/_images/programming/data-structure/数据结构与算法.png)
+
+**计算机网络:**
+
+![](/_images/programming/network/application/应用层结构.png)
+
+**操作系统:**
+
+TODO
+
+**设计模式:**
+
+![](/_images/programming/designpattern/设计模式.png)
 
 # 数据结构与算法
 
@@ -84,5 +102,3 @@
 * [行为型 - 迭代器(Iterator)](/md/programming/designpattern/designpattern-behave-iterator.md)  
 * [行为型 - 中介者(Mediator)](/md/programming/designpattern/designpattern-behave-mediator.md) 
 * [行为型 - 备忘录(Memento)](/md/programming/designpattern/designpattern-behave-memento.md)
-
-
