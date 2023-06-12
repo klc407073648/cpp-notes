@@ -2,39 +2,34 @@
 
 [[toc]]
 
+# 参考
+
+* [C++核心准则T.144:不要特化函数模板](https://blog.csdn.net/craftsman1970/article/details/110684813)
+
 # 模板特化
 
 > 模板特化（template specialization）不同于模板的实例化，模板参数在某种特定类型下的具体实现称为模板特化。模板特化有时也称之为模板的具体化，分别有函数模板特化和类模板特化。
 
-## 函数模板特化
+## 函数模板
 
 函数模板特化指函数模板在模板参数为特定类型下的特定实现。
 
-```cpp
-#include <iostream>
-#include <string.h>
-using namespace std;
+备注：
 
-template<typename T> 
-T compareMax(T t1,T t2) {
-	return (t1>t2)?t1:t2;
-}
+* C++标准并不支持函数模板偏特化，因为偏特化的功能可以通过函数的重载完成。
+* C++核心准则: T.144: Don't specialize function templates
 
-template<> 
-const char* compareMax<const char*>(const char* s1,const char* s2) {
-	return (strcmp(s1,s2)>0)?s1:s2;
-}
+::: details
+You can't partially specialize a function template per language rules. You can fully specialize a function template but you almost certainly want to overload instead -- because function template specializations don't participate in overloading, they don't act as you probably wanted. Rarely, you should actually specialize by delegating to a class template that you can specialize properly.
 
-int main() {
-	// 隐式调用实例：int max<int>(int,int)
-	int i=compareMax(10,5);
-	
-	// 显式调用特化版本：const char* max<const char*>(const char*,const char*)
-	const char* p=compareMax<const char*>("abc","bcd");
-	cout<<"i:"<<i<<endl;
-	cout<<"p:"<<p<<endl;
-}
-```
+你无法为每条语言规则部分特化函数模板。你可以完全特化函数模板，但是几乎一定想要重载函数--因为函数模板特化不算重载，它们不会像你可能期待的那样动作。极特殊情况下，你应该通过委托给一个你可以正确特化的模板类来实现特化。
+:::
+
+代码:
+
+::: details
+<<< @/md/c++/tips/c++-tips-spec-template/fun_temp.cpp
+::: 
 
 运行结果：
 
@@ -58,7 +53,7 @@ const char* compareMax<const char*>(const char* s1,const char* s2) {
 }
 ```
 
-程序运行结果和使用函数模板特化相同。但是，使用普通函数重载和使用模板特化还是有不同之处，主要表现在如下两个方面：
+**程序运行结果和使用函数模板特化相同**。但是，使用普通函数重载和使用模板特化还是有不同之处，主要表现在如下两个方面：
 
 1. 如果使用普通重载函数，那么不管是否发生实际的函数调用，都会在目标文件中生成该函数的二进制代码。而如果使用模板的特化版本，除非发生函数调用，否则不会在目标文件中包含特化模板函数的二进制代码。这符合**函数模板的“惰性实例化”准则**。
 
@@ -68,44 +63,9 @@ const char* compareMax<const char*>(const char* s1,const char* s2) {
 
 > 类模板特化类似于函数模板的特化，即类模板参数在某种特定类型下的具体实现。
 
-```cpp
-#include <iostream>
-using namespace std;
-
-template<class T>
-class A {
-	T num;
-public:
-	A(){
-		num=T(0);
-	}
-	void print(){
-		cout<<"A'num:"<<num<<endl;
-	}
-};
-
-template<> 
-class A<char*> 
-{
-	char* str;
-public:
-	A() {
-		str="A' special definition: char*";
-	}
-	void print() {
-		cout<<str<<endl;
-	}
-};
-
-int main() {
-	A<int> a1;      //显示模板实参的隐式实例化
-	a1.print();
-	A<char*> a2;    //使用特化的类模板
-	a2.print();
-	
-	return 0;
-}
-```
+::: details
+<<< @/md/c++/tips/c++-tips-spec-template/class_temp.cpp
+:::
 
 运行结果：
 ```
@@ -123,79 +83,20 @@ A' special definition: char*
 1. 对部分模板参数进行全特化;
 2. 对模板参数特性进行特化，包括将模板参数特化为指针、引用或是另外一个模板类。
 
-##  函数模板偏特化
+## 函数模板偏特化
 
- compare 函数模板，在比较数值大小时没有问题，但是如果传入的是数值的地址，需要比较两个数值的大小，而非比较传入的地址大小。此时需要对compare函数模板进行偏特化。考察如下代码：
+compare 函数模板，在比较数值大小时没有问题，但是如果传入的是数值的地址，需要比较两个数值的大小，而非比较传入的地址大小。此时需要对compare函数模板进行偏特化(**不建议使用**)。考察如下代码：
 
-```cpp
-#include <vector>
-#include <iostream> 
-using namespace std;
-
-// 函数模板
-template<class T, class N> 
-void compare(T num1, N num2) {
-	cout << "standard function template" << endl;
-	if(num1>num2) {
-		cout << "num1:" << num1 << " > num2:" << num2 <<endl;
-	} else {
-		cout << "num1:" << num1 << " <= num2:" << num2 << endl;
-	}
-}
-
-//对部分模板参数进行特化
-template<class N> 
-void compare(int num1, N num2) {
-	cout<< "partitial specialization" <<endl;
-	if (num1>num2)
-		cout << "num1:" << num1 << " > num2:" << num2 << endl;
-	else
-		cout << "num1:" << num1 << " <= num2:" << num2 << endl;
-}
-
-//将模板参数特化为指针(模板参数的部分特性)
-template<class T, class N> 
-void compare(T* num1, N* num2) {
-	cout << "new partitial specialization" << endl;
-	if (*num1>*num2)
-		cout << "num1:" << *num1 << " > num2:" << *num2 << endl;
-	else
-		cout << "num1:" << *num1 << " <= num2:" << *num2 << endl;
-}
-
-// 将模板参数特化为另一个模板类
-template<class T, class N> 
-void compare(std::vector<T>& vecLeft, std::vector<T>& vecRight) {
-	cout << "to vector partitial specialization" << endl;
-	if (vecLeft.size()>vecRight.size())
-		cout << "vecLeft.size()" << vecLeft.size() << " > vecRight.size():" << vecRight.size() << endl;
-	else
-		cout << "vecLeft.size()" << vecLeft.size() << " <= vecRight.size():" << vecRight.size() << endl;
-}
-
-int main() {
-	// 调用非特化版本 compare<int,int>(int num1, int num2)
-	compare<int,int>(30,31);
-
-	// 调用偏特化版本 compare<char>(int num1, char num2)
-	compare(30,'10');
-
-	int a = 30;
-	char c = '1';
-	// 调用偏特化版本 compare<int,char>(int* num1, char* num2)
-	compare(&a, &c);
-
-	vector<int> vecLeft{0};
-	vector<int> vecRight{1,2,3};
-	// 调用偏特化版本 compare<int,char>(int* num1, char* num2)
-	compare<int,int>(vecLeft,vecRight);
-
-    return 0;
-}
-```
+::: details
+<<< @/md/c++/tips/c++-tips-spec-template/fun_part_temp.cpp
+:::
 
 运行结果：
 ```
+[root@VM-16-6-centos test]# g++ fun_part_temp.cpp -o fun_part_temp --std=c++11
+fun_part_temp.cpp:52:13: warning: multi-character character constant [-Wmultichar]
+  compare(30,'10');
+             ^
 [root@VM-16-6-centos test]# ./fun_part_temp
 standard function template
 num1:30 <= num2:31
@@ -205,77 +106,16 @@ new partitial specialization
 num1:30 <= num2:1
 to vector partitial specialization
 vecLeft.size()1 <= vecRight.size():3
+
 ```
 
 ## 类模板偏特化
 
 > 类模板的偏特化与函数模板的偏特化类似。
 
-```cpp
-#include <vector>
-#include <iostream> 
-using namespace std;
-
-// 类模板
-template<class T, class N> 
-class Test {
-public:
-	static bool comp(T num1, N num2) {
-		cout <<"standard class template"<< endl;
-		return (num1<num2) ? true : false;
-	}
-};
-
-// 对部分模板参数进行特化
-template<class N> 
-class Test<int, N> {
-public:
-	static bool comp(int num1, N num2) {
-		cout << "partitial specialization" << endl;
-		return (num1<num2) ? true : false;
-	}
-};
-
-// 将模板参数特化为指针
-template<class T, class N> 
-class Test<T*, N*> {
-public:
-	static bool comp(T* num1, N* num2) {
-		cout << "new partitial specialization" << endl;
-		return (*num1<*num2) ? true : false;
-	}
-};
-
-// 将模板参数特化为另一个模板类
-template<class T, class N> 
-class Test<vector<T>,vector<N>> {
-public:
-	static bool comp(const vector<T>& vecLeft, const vector<N>& vecRight) {
-		cout << "to vector partitial specialization" << endl;
-		return (vecLeft.size()<vecRight.size()) ? true : false;
-	}
-};
-
-int main() {
-	// 调用非特化版本
-	cout << Test<char, char>::comp('0', '1') << endl;	
-	
-	// 调用部分模板参数特化版本
-	cout << Test<int,char>::comp(30, '10') << endl;		
-
-	// 调用模板参数特化为指针版本
-	int a = 30;
-	char c = '10';
-	cout << Test<int*, char*>::comp(&a, &c) << endl;		
-
-	// 调用模板参数特化为另一个模板类版本
-	vector<int> vecLeft{1,2,3,4};
-	vector<int> vecRight{5,6};
-	cout << Test<vector<int>, vector<int>>::comp(vecLeft,vecRight) << endl;	
-
-    return 0;
-}
-```
+::: details
+<<< @/md/c++/tips/c++-tips-spec-template/class_part_temp.cpp
+:::
 
 运行结果：
 ```

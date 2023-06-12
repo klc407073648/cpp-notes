@@ -4,11 +4,11 @@
 
 # 知识体系结构
 
-**常用开发库:**
+## 常用开发库
 
 ![常用开发库](/_images/develop/library/常用开发库.png)
 
-**测试:**
+## 测试
 
 ![测试理论](/_images/test/测试理论.png)
 
@@ -45,7 +45,7 @@
 
 * [测试用例 - 概念](/md/test/testCase/testCase-concept.md)
 * [测试用例 - 等价类划分法](/md/test/testCase/testCase-equal-class.md)
-* [测试用例 - 边界值测试法](/md/test/testCase/testCase-boundary-value.md )
+* [测试用例 - 边界值测试法](/md/test/testCase/testCase-boundary-value.md)
 * [测试用例 - 判定表法](/md/test/testCase/testCase-decision-table.md)
 * [测试用例 - 因果图法](/md/test/testCase/testCase-cause-effect.md)
 * [测试用例 - 正交法](/md/test/testCase/testCase-allpairs.md)

@@ -344,6 +344,42 @@ function genSidebar4develop() {
                 "library/library-yamlcpp.md",
                 "library/library-zeromq.md",
             ]
+        },
+        {
+            title: "测试理论",
+            collapsable: false,
+            sidebarDepth: 0,
+            children: [
+                "test/basic/basic-develop.md",
+                "test/basic/basic-process-model.md",
+                "test/basic/basic-test-model.md",
+                "test/basic/basic-class.md",
+                "test/basic/basic-principle.md",
+            ]
+        },
+        {
+            title: "测试用例",
+            collapsable: false,
+            sidebarDepth: 0,
+            children: [
+                "test/testCase/testCase-concept.md",
+                "test/testCase/testCase-equal-class.md",
+                "test/testCase/testCase-boundary-value.md",
+                "test/testCase/testCase-decision-table.md",
+                "test/testCase/testCase-cause-effect.md",
+                "test/testCase/testCase-allpairs.md",
+                "test/testCase/testCase-scene.md",
+                "test/testCase/testCase-error-procedure.md",
+            ]
+        },
+        {
+            title: "测试工具",
+            collapsable: false,
+            sidebarDepth: 0,
+            children: [
+                "test/tools/postman/postman-use.md",
+                "test/tools/robotframework/robotframework-use.md",
+            ]
         }
     ];
 }
@@ -1109,40 +1145,7 @@ function genSidebar4About() {
                 "me/about-me.md",
                 "me/about-blog-changelist.md",
                 "me/about-content-style.md",
-            ]
-        },
-        {
-            title: "电影",
-            collapsable: false,
-            sidebarDepth: 0,
-            children: [
-                "movie/about-movie-like.md",
-            ]
-        },
-        {
-            title: "音乐",
-            collapsable: false,
-            sidebarDepth: 0,
-            children: [
-                "music/about-music-like.md",
-            ]
-        },
-        {
-            title: "阅读",
-            collapsable: false,
-            sidebarDepth: 0,
-            children: [
-                "read/about-read-list.md",
-                "read/about-read-thinking.md",
-                "read/about-read-the-courage-to-be-hate.md",
-            ]
-        },
-        {
-            title: "风景",
-            collapsable: false,
-            sidebarDepth: 0,
-            children: [
-                "scenery/about-scenery-record.md",
+                "me/about-problem.md",
             ]
         }
     ];

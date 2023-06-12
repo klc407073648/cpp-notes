@@ -4,19 +4,19 @@
 
 # 知识体系结构
 
-**SQL语言:**
+## SQL语言
 
 ![](/_images/database/sql/SQL语言.png)
 
-**SQL - MySQL:**
+## SQL - MySQL
 
 ![](/_images/database/mysql/MySQL.png)
 
-**NoSQL - Redis:**
+## NoSQL - Redis
 
 ![](/_images/database/redis/Redis.png)
 
-**NoSQL - ElasticSearch:**
+## NoSQL - ElasticSearch
 
 ![](/_images/database/es/ElasticSearch.png)
 

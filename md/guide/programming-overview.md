@@ -4,19 +4,19 @@
 
 # 知识体系结构
 
-**数据结构与算法:**
+## 数据结构与算法
 
 ![数据结构与算法](/_images/programming/data-structure/数据结构与算法.png)
 
-**计算机网络:**
+## 计算机网络
 
 ![](/_images/programming/network/application/应用层结构.png)
 
-**操作系统:**
+## 操作系统
 
 TODO
 
-**设计模式:**
+## 设计模式
 
 ![](/_images/programming/designpattern/设计模式.png)
 
