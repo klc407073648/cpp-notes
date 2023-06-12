@@ -1,0 +1,13 @@
+*** Variables ***
+${IMAGE PATH}     ${CURDIR}/../Image
+${SSH_HOST}       139.196.82.84
+${SSH_USERNAME}    root
+${SSH_PASSWORD}    KLCzxas789
+${MYSQL_HOST}     81.68.132.31
+${MYSQL_PORT}     3308
+${MYSQL_USER}     root
+${MYSQL_PASSWORD}    456789
+${MYSQL_DATABASE}    student
+${REDIS_HOST}     81.68.132.31
+${REDIS_PORT}     6380
+${REDIS_PASSWORD}    456789
