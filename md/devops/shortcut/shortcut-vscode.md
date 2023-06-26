@@ -1,4 +1,3 @@
-
 # 快捷键 - vscode
 
 [[toc]]
@@ -47,7 +46,6 @@
 打开最近打开的文件：ctrl + r
 打开新的命令窗：ctrl + shift + c
 ```
-
 
 # 编辑器与窗口管理
 
@@ -122,7 +120,6 @@
 显示 Debug:    Ctrl+Shift+D
 显示 Output:    Ctrl+Shift+U
 ```
-
 
 # vs code 的常用插件
 
