@@ -15,7 +15,7 @@
 
 国际软件质量评价标准ISO/IEC 25010:2011弥补了ISO/IEC9126质量模型的不足，描述了8个质量特性和31个子特性。
 
-![](/_images/grow/team/product/软件产品质量.png)
+![](/_images/grow/product/软件产品质量.png)
 
 ## 软件兼容性
 
@@ -46,4 +46,4 @@ Software Compatibility，由于系列内各档机器从程序设计者看都具�
 
 ### 原则细化
 
-![](/_images/grow/team/product/兼容性细化.png)
+![](/_images/grow/product/兼容性细化.png)
