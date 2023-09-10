@@ -16,6 +16,8 @@ GDB 是一个由GNU开源组织发布的、UNIX/LINUX 操作系统下的、基�
 
 `cd ./build && cmake .. && make`
 
+`gdb -tui --args ./myprj`
+
 **进行gdb测试**
 
 ```

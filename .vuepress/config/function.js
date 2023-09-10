@@ -39,7 +39,8 @@ function genSidebar4Cplusplus() {
             children: [
                 "basic/c++-basic-use.md",
                 "basic/c++-basic-oop.md",
-                "basic/c++-basic-macro-definition.md"
+                "basic/c++-basic-macro-definition.md",
+                "basic/c++-basic-learn-route.md"
             ]
         },
         {
@@ -399,6 +400,20 @@ function genSidebar4microServices() {
             ]
         },
         {
+            title: "架构",
+            collapsable: false,
+            sidebarDepth: 0,
+            children: [
+                "arch/distributedsystem/arch-distrbuted-system-basic.md",
+                "arch/distributedsystem/arch-distrbuted-system-design.md",
+                "arch/distributedsystem/arch-distrbuted-system-cache.md",
+                "arch/distributedsystem/arch-distrbuted-system-communication-mode.md",
+                "arch/distributedsystem/arch-distrbuted-system-consistency.md",
+                "arch/distributedsystem/arch-distrbuted-system-lock.md",
+                "arch/distributedsystem/arch-distrbuted-system-three-high.md"
+            ]
+        },
+        {
             title: "微服务",
             collapsable: false,
             sidebarDepth: 0,
@@ -618,7 +633,8 @@ function genSidebar4Devops() {
                 "linux/linux-process-thread-syn.md",
                 "linux/linux-cmd-tips.md",
                 "linux/linux-output-with-color.md",
-                "linux/linux-authority.md"
+                "linux/linux-authority.md",
+                "linux/linux-a-z.md"
             ]
         },
         {
@@ -656,6 +672,16 @@ function genSidebar4Devops() {
                 "shortcut/shortcut-vim.md",
                 "shortcut/shortcut-vscode.md",
                 "shortcut/shortcut-idea.md"
+            ]
+        },
+        {
+            title: "tools",
+            collapsable: false,
+            sidebarDepth: 0,
+            children: [
+                "tools/tools-docker.md",
+                "tools/tools-gcc.md",
+                "tools/tools-gdb.md"
             ]
         },
         {
@@ -967,8 +993,27 @@ function genSidebar4booknote() {
             sidebarDepth: 0,
             children: [
                 "linkersAndLoaders/linkersAndLoaders-chapter-1.md",
+                "linkersAndLoaders/linkersAndLoaders-chapter-2.md",
+                "linkersAndLoaders/linkersAndLoaders-chapter-3.md",
+                "linkersAndLoaders/linkersAndLoaders-chapter-4.md",
+                "linkersAndLoaders/linkersAndLoaders-chapter-7.md",
+                "linkersAndLoaders/linkersAndLoaders-chapter-8.md",
+                "linkersAndLoaders/linkersAndLoaders-chapter-10.md",
+                "linkersAndLoaders/linkersAndLoaders-chapter-11.md",
+                "linkersAndLoaders/linkersAndLoaders-chapter-12.md",
+                "linkersAndLoaders/linkersAndLoaders-chapter-13.md",
             ]
-        }
+        },
+        {
+            title: "深度探索C++对象模型",
+            collapsable: true,
+            sidebarDepth: 0,
+            children: [
+                "objectModel/objectModel-chapter-1.md",
+                "objectModel/objectModel-chapter-2.md",
+                "objectModel/objectModel-chapter-3.md",
+            ]
+        },
     ];
 
 }

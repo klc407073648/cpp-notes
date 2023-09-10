@@ -17,6 +17,13 @@ const 使用
 
 <<< @/md/c++/basic/src/const_use.cpp
 
+```cpp
+const int& funs() const
+```
+
+<font color='red'>第一个const 代表该函数的返回值无法被改变。</font>
+<font color='red'>第二个const代表该函数不会对调用者（如classA a; a->funs()中的a对象）内部成员进行更改。</font>
+
 # static
 
 ## 作用

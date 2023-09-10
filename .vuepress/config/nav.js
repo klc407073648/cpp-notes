@@ -94,9 +94,9 @@ module.exports =
             {
                 text: '测试',
                 items: [
-                    { text: '测试理论', link: '/md/test/basic/basic-develop.md' },
-                    { text: '测试用例', link: '/md/test/testCase/testCase-concept.md' },
-                    { text: '测试工具', link: '/md/test/tools/postman/postman-use.md' }
+                    { text: '测试理论', link: '/md/develop/test/basic/basic-develop.md' },
+                    { text: '测试用例', link: '/md/develop/test/testCase/testCase-concept.md' },
+                    { text: '测试工具', link: '/md/develop/test/tools/postman/postman-use.md' }
                 ]
             },
         ]
@@ -188,7 +188,8 @@ module.exports =
                 items: [
                     { text: 'Linux', link: '/md/devops/linux/linux-cmd-tips.md' },
                     { text: 'Nginx', link: '/md/devops/nginx/nginx-study-note.md' },
-                    { text: 'Shortcut', link: '/md/devops/shortcut/shortcut-linux.md' }
+                    { text: 'Shortcut', link: '/md/devops/shortcut/shortcut-linux.md' },
+                    { text: 'Tools', link: '/md/devops/tools/tools-docker.md' }
                 ]
             },
             {
