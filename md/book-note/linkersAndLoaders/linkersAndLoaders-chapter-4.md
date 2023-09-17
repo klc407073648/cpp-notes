@@ -2,6 +2,10 @@
 
 [[toc]]
 
+# 文章总结
+
+![](/_images/book-note/linkersAndLoaders/静态链接.png)
+
 # 概述
 
 使用下面这两个源代码文件“a.c”和“b.c”作为例子展开分析：

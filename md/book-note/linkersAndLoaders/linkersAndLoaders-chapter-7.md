@@ -2,6 +2,10 @@
 
 [[toc]]
 
+# 文章总结
+
+![](/_images/book-note/linkersAndLoaders/动态链接.png)
+
 # 为什么需要动态链接
 
 静态链接存在的问题：**浪费内存和磁盘空间、模块更新困难**。

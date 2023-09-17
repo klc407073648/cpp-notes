@@ -2,6 +2,10 @@
 
 [[toc]]
 
+# 文章总结
+
+![](/_images/book-note/linkersAndLoaders/运行库实现.png)
+
 # C语言运行库
 
 在开始实现MiniCRT之前，首先要对它进行基本的规划。“麻雀虽小五脏俱全”，虽MiniCRT很小，但它应该具备CRT的基本功能以及遵循几个基本设计原则，这些我们归结为如下几个方曲：

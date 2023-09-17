@@ -2,6 +2,10 @@
 
 [[toc]]
 
+# 文章总结
+
+![](/_images/book-note/linkersAndLoaders/系统调用与API.png)
+
 # 系统调用介绍
 
 每个操作系统都会提供一套接口，以供应用程序使用。这些接口往往通过中断来实现，比如Linux使用0x80号中断作为系统调用的入口，Windows采用0x2E号中断作为系统调用入口。
