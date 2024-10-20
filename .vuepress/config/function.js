@@ -702,7 +702,8 @@ function genSidebar4Devops() {
                 "k8s/k8s-concept.md",
                 "k8s/k8s-base-use.md",
                 "k8s/k8s-cmd.md",
-                "k8s/k8s-probe.md"
+                "k8s/k8s-probe.md",
+                "k8s/k8s-pod-controller.md"
             ]
         },
         {

@@ -158,7 +158,7 @@ void operator+=(const Point2d& rhs)
 多重继承的复杂度在于 derived class 和 其上一个base class乃至上上一个base class之间的非自然关系。
 
 ::: details
-<<< @/md/book-note/objectModel/Point2d.cpp
+<<< @/md/book-note/objectModel/src/Point2d.cpp
 :::
 
 多重继承关系图：

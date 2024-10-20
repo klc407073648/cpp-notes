@@ -192,7 +192,7 @@ typeid 运算符用来获取一个表达式的类型信息。
 **应用: type_info类**
 
 ::: details
-<<< @/md/c++/basic/src/type_info.cpp
+<<< @/md/c++/basic/src/typeinfo.cpp
 :::
 
 结果

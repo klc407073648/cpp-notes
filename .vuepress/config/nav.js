@@ -233,7 +233,7 @@ module.exports =
                     { text: '代码大全2', link: '/md/book-note/codeComplete/codeComplete-chapter-1.md' },
                     { text: '数据密集型应用系统设计', link: '/md/book-note/dataIntensiveApp/dataIntensiveApp-chapter-1.md' },
                     { text: '从零开始学架构', link: '/md/book-note/learnArchFromZero/learnArchFromZero-chapter-1.md' },
-                    { text: '程序员的自我修养————链接、装载与库', link: '/md/book-note/linkersAndLoaders/linkersAndLoaders-chapter-1.md' }
+                    { text: '程序员的自我修养————链接、装载与库', link: '/md/book-note/linkersAndLoaders/linkersAndLoaders-chapter-1.md' },
                     { text: '深度探索C++对象模型', link: '/md/book-note/objectModel/objectModel-chapter-1.md' }
                 ]
             }
@@ -287,6 +287,9 @@ module.exports =
             { text: '常用软件', link: '/md/daily-use/software/daily-use-software-overview.md' },
             { text: '在线工具', link: '/md/daily-use/tools/daily-use-tools-overview.md' }
         ]
+    },
+    {
+        text: 'GitHub', link: 'https://github.com/klc407073648/cpp-notes'
     },
     {
         text: '关于', link: '/md/about/me/about-me.md'
