@@ -187,7 +187,7 @@ inline void advanced(InputIterator& i, Distance n)
 }
 ```
 
-任何一个迭代器，其类型永远应该落在“该迭代器所隶属之各种类型中”，最强化的那个。同时，STL算法命名规则：**以算法所能接受之最低阶迭代器类型，来为其迭代器型别参数命名**，因此advance（）中template参数名称为InputIterator。
+任何一个迭代器，其类型永远应该落在“该迭代器所隶属之各种类型中”，最强化的那个。同时，STL算法命名规则**：以算法所能接受之最低阶迭代器类型，来为其迭代器型别参数命名**，因此advance（）中template参数名称为InputIterator。
 
 消除“单纯传递调用的函数”：
 

@@ -48,7 +48,7 @@ C++语言要求以member objects在class中的声明次序"来调用各个constr
 
 ## 带有 “Default Constructor” 的 Base Class 
 
-类似的道理，如果一个没有任何constructors的class派生自一个“带有的base class，那么这个derived class的default constructor会被视为nontnvial，并因此需要被合成出来，它将调用上一层base classes的 default constructor（根据它们的声明次序）。对一个后继派生的class而言，这个合成的constructor和一个“被明确提供的default constructor”没有什么差异。
+类似的道理，如果一个没有任何constructors的class派生自一个“带有的base class”，那么这个derived class的default constructor会被视为nontnvial，并因此需要被合成出来，它将调用上一层base classes的 default constructor（根据它们的声明次序）。对一个后继派生的class而言，这个合成的constructor和一个“被明确提供的default constructor”没有什么差异。
 
 同理，如果 derived class 已提供多个 constructors ，但都没有base class的default constructor，那么编译器会扩张现有的每一个constructors，将“用以调用所有必要之default constructor”的程序代码加进去。
 
@@ -58,8 +58,8 @@ C++语言要求以member objects在class中的声明次序"来调用各个constr
 
 下面两个扩张行动会在编译期间发生：
 
-1．一个virtual function table 会被编译器产生出来，内放class的 virtual functions 地址。
-2．在每一个class object中，一个额外的pointer member会被编译器合成出来，内含相关的class vtbl的地址。
+1. 一个virtual function table 会被编译器产生出来，内放class的 virtual functions 地址。
+2. 在每一个class object中，一个额外的pointer member会被编译器合成出来，内含相关的class vtbl的地址。
 
 为了让这个机制发挥功效，编译器必须为每一个Widget（或其派生类之）object的vptr设定初值，放置适当的virtual table地址，对于class所定义的每
 一个constructor，编译器会安插一些码来做这样的事情。对于那些未声明任何constructors的classes，编译器会为它们合成一个 default constructor，以便正确地初始化每一个class object的vptr。
@@ -95,7 +95,7 @@ __vbcX是在class object建构期间被完成的。对于class所定义的每一
 
 如果class没有提供一个explicit copy constructor又当如何？当class object以“相同class的另一个object”作为初值时，其内部是以所谓的default memberwise initialization 手法完成的，也就是把每一个内建的或派生的data member的值，从某个object拷贝一份到另一个object身上。不过它不会栲贝其的member class object，而是以递归的方式施行memberwise initialization。
 
-一个class object可以从两种方式复制得到，一种是被初始化，另一种是被指定。从概念上而言这两个操作分别是以copy constructor copy assignment operator完成的。
+一个class object可以从两种方式复制得到，一种是被初始化，另一种是被指定。从概念上而言这两个操作分别是以copy constructor 、copy assignment operator完成的。
 
 ## Bitwise Copy Semantics(位逐次拷贝)
 
@@ -136,7 +136,7 @@ class Word{
 class String{
     public:
         String(const char*)
-        String()(const String&)
+        String(const String&)
         //...
 ```
 
@@ -152,9 +152,9 @@ inline Word::Word(const Word& wd)
 
 class 不展现 “Bitwise Copy Semantics” 的四种情况：
 
-1．当class内含一个member object而后者的class声明有一个时。
-2．当class继承自一个base class而后者存在有一个copy constructor时。
-3．当class声明了一个或多个virtual functions时。
+1. 当class内含一个member object而后者的class声明有一个copy constructor时。
+2. 当class继承自一个base class而后者存在有一个copy constructor时。
+3. 当class声明了一个或多个virtual functions时。
 4. 当class派生自一个继承串链，其中有一个或多个virtual base classes时。
 
 ## 重新设定 Virtual Table 的指针copy constructor
@@ -239,7 +239,7 @@ X xx;
 foo(xx);
 ```
 
-将会要求局部实体（local instance）x0 以 memberwise 的方式将xx当做初值。在编译器实现技术上，有一种策略是导人所谓的暂时性 object ，并调用copy constructor 将它初始化，然后将该暂时性 object 交给函数。
+将会要求局部实体（local instance）x0 以 memberwise 的方式将xx当做初值。在编译器实现技术上，有一种策略是导入所谓的暂时性 object ，并调用copy constructor 将它初始化，然后将该暂时性 object 交给函数。
 
 ```
 X __temp0;
@@ -251,8 +251,7 @@ foo(__temp0);
 
 `void foo(X& x0);`
 
-另一种实现方法是以“拷贝建构”（copy construct）的方式把实际参数直接建构在其应该的位置上，该位置视函数活动范围的不同记录于程序堆栈中。在函
-数返回之前，局部对象(local object)的destructor（如果有定义的话）会被执行。
+另一种实现方法是以“拷贝建构”（copy construct）的方式把实际参数直接建构在其应该的位置上，该位置视函数活动范围的不同记录于程序堆栈中。在函数返回之前，局部对象(local object)的destructor（如果有定义的话）会被执行。
 
 ## 返回值的初始化(Return Value Initialization)
 
@@ -395,7 +394,7 @@ class Shape{
 编译器为此 constructor 扩张的内容看起来像是：
 
 ```cpp
-Shape()::Shape() 
+Shape::Shape() 
 {
     __vptr__Shape = __vtbl__Shape;
 

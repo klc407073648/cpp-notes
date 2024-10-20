@@ -118,7 +118,7 @@ public:
 
 由于base class构造函数执行更早于derived class构造函数，当base class构造函数执行时derived class的成员变量尚未初始化。如果此期间调用的virtual函数下降至derived class 阶层，要知道derived class的函数几乎必然取用local成员变量，而那些成员变量尚未初始化。
 
-注意事项：**在构造和析构期间不要调用virtual函数，因为这类调用从不下降至derived class。**
+注意事项**：在构造和析构期间不要调用virtual函数，因为这类调用从不下降至derived class。**
 
 # 令operator= 返回一个reference to *this
 

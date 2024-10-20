@@ -70,7 +70,7 @@ SHOW CREATE TABLE 表名;
 
 <<< @/md/database/sql/base/DDL-表操作-查询.sql
 
-**创建表结构：**
+**创建表结构**：
 
 ```mysql
 CREATE TABLE 表名(
@@ -82,7 +82,7 @@ CREATE TABLE 表名(
 )[ COMMENT 表注释 ];
 ```
 
-注意：**最后一个字段后面没有逗号**
+注意**：最后一个字段后面没有逗号**
 
 #### 表操作-案例
 
@@ -340,7 +340,7 @@ SELECT 聚合函数(字段列表) FROM 表名;
 
 注意 : NULL值是不参与所有聚合函数运算的。
 
-**案例：**
+**案例**：
 
 <<< @/md/database/sql/base/DQL-聚合函数案例.sql
 

@@ -123,4 +123,17 @@
 # 程序员的自我修养————链接、装载与库
 
 * [第1章 简介](/md/book-note/linkersAndLoaders/linkersAndLoaders-chapter-1.md)
+* [第2章 静态链路](/md/book-note/linkersAndLoaders/linkersAndLoaders-chapter-2.md)
+* [第3章 目标文件里有什么](/md/book-note/linkersAndLoaders/linkersAndLoaders-chapter-3.md)
+* [第4章 静态链接](/md/book-note/linkersAndLoaders/linkersAndLoaders-chapter-4.md)
+* [第7章 动态链接](/md/book-note/linkersAndLoaders/linkersAndLoaders-chapter-7.md)
+* [第8章 共享库版本](/md/book-note/linkersAndLoaders/linkersAndLoaders-chapter-8.md)
+* [第10章 内存](/md/book-note/linkersAndLoaders/linkersAndLoaders-chapter-10.md)
+* [第11章 运行库](/md/book-note/linkersAndLoaders/linkersAndLoaders-chapter-11.md)
+* [第12章 系统调用与API](/md/book-note/linkersAndLoaders/linkersAndLoaders-chapter-12.md)
+* [第13章 运行库实现](/md/book-note/linkersAndLoaders/linkersAndLoaders-chapter-13.md)
+
+::: details
+![](/_images/book-note/linkersAndLoaders/链接、装载与库.png)
+::: 
 

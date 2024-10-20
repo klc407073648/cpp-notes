@@ -16,7 +16,9 @@
 
 具体例子如下：
 
+::: details
 <<< @/md/article/knowledge/src/returnVal.cpp
+::: 
 
 执行结果：
 

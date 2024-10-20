@@ -20,7 +20,7 @@
 
 ![](/_images/book-note/linkersAndLoaders/ELF文件类型.png)
 
-**Linux下可以通过file命令查看相应的文件格式：**
+**Linux下可以通过file命令查看相应的文件格式**：
 
 ![](/_images/book-note/linkersAndLoaders/file查看文件类型.png)
 
@@ -63,7 +63,9 @@ C语言的编译后执行语句都编译成机器代码，保存在.text段：�
 
 以 SimpleSection.c 为例，分析目标文件内容
 
+::: details
 <<< @/md/book-note/linkersAndLoaders/src/SimpleSection.c
+::: 
 
 使用GCC来编译文件：
 
@@ -95,7 +97,9 @@ C语言的编译后执行语句都编译成机器代码，保存在.text段：�
 
 objdump的“-s”参数可以将所有段的内容以十六进制的方式打印出来，“-d”参数可以将所有包含指令的段反汇编。我
 
+::: details
 <<< @/md/book-note/linkersAndLoaders/src/objdump_SimpleSection
+::: 
 
 ### 数据段和只读数据段
 
@@ -262,7 +266,9 @@ SimpleSection.o中有一个叫做“.rel.text”的段，它的类型（sh-type�
 
 **C语言符号修饰**
 
+::: details
 <<< @/md/book-note/linkersAndLoaders/src/test.c 
+::: 
 
 ```
 gcc test.c -o testc

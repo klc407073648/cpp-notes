@@ -42,7 +42,7 @@ struct结构体里一般只定义数据类型，或构造函数？ TODO
 
 ## 加上封装后的布局成本(Layout Costs for Adding Encapsulation)
 
-data members直接内含在每一个class object之中，就像C strct的情况一样，而member functions虽然含在class的声明之内，却不出现在object之中，每一个non-inline member function只会诞生一个函数实体，至于每一个"拥有零个或一个定义"的inline function 则会在其每一个使用者（模块）身上产生一个函数实体。
+data members直接内含在每一个class object之中，就像C struct的情况一样，而member functions虽然含在class的声明之内，却不出现在object之中，每一个non-inline member function只会诞生一个函数实体，至于每一个"拥有零个或一个定义"的inline function 则会在其每一个使用者（模块）身上产生一个函数实体。
 
 C++在布局以及存取时间上主要的额外负担是由**virtual引起**，包括：
 
@@ -53,9 +53,9 @@ C++在布局以及存取时间上主要的额外负担是由**virtual引起**，
 
 # C++ 对象模式
 
-在C++中，有两种class data members：static和nonstatic，以及三种class member functions：static、和virtual。已知下面这个class Point声明:
+在C++中，有两种class data members：static和nonstatic，以及三种class member functions：static、nonstatic和virtual。已知下面这个class Point声明:
 
-```
+```cpp
 class Point{
     public:
         Point(float xval);
@@ -83,11 +83,11 @@ class Point{
 
 ## 表格驱动对象模型(A Table-driven Object Model)
 
-为了对所有classes的所有objects都有一致的表达方式，另一种对象模型是把所有与members相关的信息抽出来，放在一个data member table和一个member function table之中，class obJect本身则内含指向这两个表格的指针，Member function table是一系列的slots，每一个slot指出一个member function：Data member table则直接含有data本身。
+为了对所有classes的所有objects都有一致的表达方式，另一种对象模型是把所有与members相关的信息抽出来，放在一个data member table和一个member function table之中，class object本身则内含指向这两个表格的指针，Member function table是一系列的slots，每一个slot指出一个member function：Data member table则直接含有data本身。
 
 ![](/_images/book-note/objectModel/表格驱动对象模型.png)
 
-虽然这个模型也没有实际应用于真正的C++编译器身上，但member functio ntable这个观念却成为支持virtual functions的一个有效方案。
+虽然这个模型也没有实际应用于真正的C++编译器身上，但member function table这个观念却成为支持virtual functions的一个有效方案。
 
 ## C++对象模型(The C++ Object Model)
 
@@ -104,6 +104,8 @@ vtbl属于类，vptr属于类对象。
 ![](/_images/book-note/objectModel/C++对象模型.png)
 
 这个模型的主要优点在于它的空间和存取时间的效率；主要缺点则是，如果应用程序代码本身未曾改变，但所用到的class objects的nonstatic data members有所修改（可能是增加、移除或更改），那么那些应用程序代码同样得重新编译，关于这点，前述的双表格模型就提供了较大的弹性，因为它多提供了一层间接性，不过它也因此付出空间和执行效率两方面的代价就是了。
+
+**sizeof(ClassName)= Non static data members 的大小 + vptr的大小（如果有虚函数的话） + 字节对齐**
 
 ### 加上继承
 
@@ -285,7 +287,7 @@ pb->cell_block;
 
 # 总结
 
-<font color='red'>**重要：**</font>
+<font color='red'>**重要**：</font>
 
 * 当一个base class object被直接初始化为（或是被指定为）一个 derived class object时，derived object 就会被**切割（sliced）**以塞人较小的base type内存中, 多态不再呈现。
 

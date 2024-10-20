@@ -6,8 +6,7 @@
 
 ## 整体框架
 
- ![动态库制作](/_images/project/person/build_lib/动态库制作.png)
-
+![动态库制作](/_images/project/person/build_lib/动态库制作.png)
 
 ## 主要构建逻辑
 

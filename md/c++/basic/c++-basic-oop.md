@@ -6,7 +6,7 @@
 
 面向对象程序设计（Object-oriented programming，OOP）是种具有对象概念的程序编程典范，同时也是一种程序开发的抽象方针。
 
-![面向对象基本特征](/_images/c++/basic/面向对象基本特征.png)
+![面向对象基本特征](/_images/c++/basic/面向对象特征.png)
 
 面向对象三大特征 —— 封装、继承、多态
 
@@ -51,7 +51,7 @@ public:
 
 * 虚函数：用 virtual 修饰成员函数，使其成为虚函数
 
-**注意：**
+**注意**：
 
 * 普通函数（非类成员函数）不能是虚函数
 * 静态函数（static）不能是虚函数
@@ -60,7 +60,9 @@ public:
 
 动态多态使用
 
+::: details
 <<< @/md/c++/basic/src/Shape.cpp
+::: 
 
 ### 虚析构函数
 
@@ -68,11 +70,15 @@ public:
 
 虚析构函数使用
 
+::: details
 <<< @/md/c++/basic/src/virtual_shape.cpp
+::: 
 
 运行结果:
 
+::: details
 <<< @/md/c++/basic/res/virtual_shape.txt
+::: 
 
 ### 纯虚函数
 

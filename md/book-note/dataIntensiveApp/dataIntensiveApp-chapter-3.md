@@ -10,7 +10,9 @@
 
 # 数据库核心：数据结构
 
+::: details
 <<< @/md/book-note/dataIntensiveApp/src/database.sh
+::: 
 
 对应简单场景，追加到文件结尾的方式足够高效，许多数据库使用的日志也是采用追加式更新方式。
 

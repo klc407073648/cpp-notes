@@ -21,7 +21,7 @@ docker pull logstash:7.2.0
 [root@iZuf61kbf845xt6tz10abgZ logstash]# docker cp logstash:/usr/share/logstash/pipeline  ./tmp/
 ```
 
-**3.修改配置文件logstash.conf：**
+**3.修改配置文件logstash.conf**：
 
 配置文件目录结构：
 

@@ -94,7 +94,7 @@ Shipping的getCost(order)
 
 ## LSP 里式替换原则
 
-> 里式替换原则（Liskov Substitution Principle）：**子类对象（object of subtype/derived class）能够替换程序（program）中父类对象（object of base/parent class）出现的任何地方，并且保证原来程序的逻辑行为（behavior）不变（正确性不被破坏）**。
+> 里式替换原则（Liskov Substitution Principle）**：子类对象（object of subtype/derived class）能够替换程序（program）中父类对象（object of base/parent class）出现的任何地方，并且保证原来程序的逻辑行为（behavior）不变（正确性不被破坏）**。
 
 > If S is a subtype of T, then objects of type T may be replaced with objects of type S, without breaking the program。
 
@@ -136,4 +136,4 @@ Shipping的getCost(order)
 
 > High-level modules shouldn’t depend on low-level modules. Both modules should depend on abstractions. In addition, abstractions shouldn’t depend on details. Details depend on abstractions.
 
-所谓高层模块和底层模块是指：**在调用链上，调用者属于高层，被调用者属于底层。**
+所谓高层模块和底层模块是指**：在调用链上，调用者属于高层，被调用者属于底层。**

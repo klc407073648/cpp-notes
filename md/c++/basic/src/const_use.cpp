@@ -8,6 +8,7 @@ public:
     // const可用于对重载函数的区分
     int getValue();             // 普通成员函数
     int getValue() const;       // 常成员函数，不得修改类中的任何数据成员的值
+    const int& fun() const;     // 第一个const代表该函数的返回值无法被改变。第二个const代表该函数不会对调用者内部成员进行更改。
 private:
     const int a;                // 常对象成员，只能在初始化列表赋值
 };
@@ -56,4 +57,4 @@ void fun(char * const a);
 //原因是第一个i引用的是一个变量，而第二个i引用的是一个常量，两者是不一样的，类似于上面的指向变量的指针的指向常量的指针。
 void fun(int &i);  
 void fun(const int &i);   
- 
+

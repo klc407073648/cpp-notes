@@ -182,16 +182,16 @@ C++ 和 Java 都是非常优秀的主流编程语言，编程语言和技术没�
 
 # 编程四大件
 
-* [数据结构与算法](https://stibel.icu/md/programming/data-structure/data-structure-overview.html)
-* [计算机网络](https://stibel.icu/md/programming/network/network-physical.html)
-* [操作系统](https://stibel.icu/md/programming/system/system-overview.html)
-* [设计模式](https://stibel.icu/md/programming/designpattern/designpattern-overview.html)
+* [数据结构与算法](/md/programming/data-structure/data-structure-overview.md)
+* [计算机网络](/md/programming/network/network-physical.md)
+* [操作系统](/md/programming/system/system-overview.md)
+* [设计模式](/md/programming/designpattern/designpattern-overview.md)
 
 # 软件开发通用
 
 企业项目研发流程:
 
-* [技术选型 - 如何写一个自己的项目](https://stibel.icu/md/method/tech/tech-per-prj.html)
+* [技术选型 - 如何写一个自己的项目](/md/method/tech/tech-per-prj.md)
 * Git & GitHub 
 * Linux 系统 <https://www.code-nav.cn/post/1640586295529324545>
 * 设计模式 <https://www.code-nav.cn/post/1640588392073150465>

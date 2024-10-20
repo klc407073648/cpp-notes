@@ -38,11 +38,13 @@ ANSI C标准中有几个标准预定义宏（也是常用的）：
 
 示例：
 
+::: details
 <<< @/md/c++/basic/src/c++_marco_define.cpp
+::: 
 
 执行结果：
 
-```
+::: details
 [root@VM-16-6-centos multidefine]# g++ test1.cpp -o test1
 [root@VM-16-6-centos multidefine]# ./test1
 __LINE__: 6
@@ -62,4 +64,4 @@ __TIME__: 22:19:39
 __STDC__: 1
 __cplusplus: 201103
 __FUNCTION__: main
-```
+::: 

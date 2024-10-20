@@ -2,37 +2,6 @@
 
 [[toc]]
 
-# const
-
-## 作用
-
-1. 修饰变量，说明该变量不可以被改变；
-2. 修饰指针，分为指向常量的指针和指针常量；
-3. 常量引用，经常用于形参类型，即避免了拷贝，又避免了函数对值的修改；
-4. 修饰成员函数，说明该成员函数内不能修改成员变量。
-
-## 使用
-
-const 使用
-
-<<< @/md/c++/basic/src/const_use.cpp
-
-```cpp
-const int& funs() const
-```
-
-<font color='red'>第一个const 代表该函数的返回值无法被改变。</font>
-<font color='red'>第二个const代表该函数不会对调用者（如classA a; a->funs()中的a对象）内部成员进行更改。</font>
-
-# static
-
-## 作用
-
-1. 修饰普通变量，修改变量的存储区域和生命周期，使变量存储在静态区，在 main 函数运行前就分配了空间，如果有初始值就用初始值初始化它，如果没有初始值系统用默认值初始化它。
-2. 修饰普通函数，表明函数的作用范围，仅在定义该函数的文件内才能使用。在多人开发项目时，为了防止与他人命名空间里的函数重名，可以将函数定位为 static。
-3. 修饰成员变量，修饰成员变量使所有的对象只保存一个该变量，而且不需要生成对象就可以访问该成员。
-4. 修饰成员函数，修饰成员函数使得不需要生成对象就可以访问该函数，但是在 static 函数内不能访问非静态成员。
-
 # this 指针
 
 1. `this` 指针是一个隐含于每一个非静态成员函数中的特殊指针。它指向调用该成员函数的那个对象。
@@ -59,7 +28,9 @@ const int& funs() const
 
 inline 使用
 
+::: details
 <<< @/md/c++/basic/src/inline_use.cpp
+::: 
 
 ## 编译器对 inline 函数的处理步骤
 
@@ -91,18 +62,9 @@ inline 使用
 
 虚函数内联使用
 
+::: details
 <<< @/md/c++/basic/src/virtual_inline_use.cpp
-
-# volatile
-
-```cpp
-volatile int i = 10; 
-```
-
-* volatile 关键字是一种类型修饰符，用它声明的类型变量表示可以被某些编译器未知的因素（操作系统、硬件、其它线程等）更改。所以使用 volatile 告诉编译器不应对这样的对象进行优化。
-* volatile 关键字声明的变量，每次访问时都必须从内存中取出值（没有被 volatile 修饰的变量，可能由于编译器的优化，从 CPU 寄存器中取值）
-* const 可以是 volatile （如只读的状态寄存器）
-* 指针可以是 volatile
+::: 
 
 # assert()
 
@@ -119,43 +81,14 @@ assert( p != NULL );    // assert 不可用
 
 assert() 使用:
 
+::: details
 <<< @/md/c++/basic/src/assert_use.cpp
+::: 
 
 # sizeof()
 
 * sizeof 对数组，得到整个数组所占空间大小。
 * sizeof 对指针，得到指针本身所占空间大小。
-
-# extern "C"
-
-* 被 extern 限定的函数或变量是 extern 类型的
-* 被 `extern "C"` 修饰的变量和函数是按照 C 语言方式编译和链接的
-
-`extern "C"` 的作用是让 C++ 编译器将 `extern "C"` 声明的代码当作 C 语言代码处理，可以避免 C++ 因符号修饰导致代码不能和C语言库中的符号进行链接的问题。
-
-extern "C" 使用
-
-```cpp
-#ifdef __cplusplus
-extern "C" {
-#endif
-
-void *memset(void *, int, size_t);
-
-#ifdef __cplusplus
-}
-#endif
-```
-
-# C++ 中 struct 和 class
-
-总的来说，struct 更适合看成是一个数据结构的实现体，class 更适合看成是一个对象的实现体。
-
-## 区别
-
-* 最本质的一个区别就是默认的访问控制
-    1. 默认的继承访问权限。struct 是 public 的，class 是 private 的。  
-    2. struct 作为数据结构的实现体，它默认的数据访问控制是 public 的，而 class 作为对象的实现体，它默认的成员变量访问控制是 private 的。
 
 # union 联合
 
@@ -172,89 +105,9 @@ void *memset(void *, int, size_t);
 
 union 使用
 
+::: details
 <<< @/md/c++/basic/src/union_use.cpp
-
-# explicit（显式）关键字
-
-* explicit 修饰构造函数时，可以防止隐式转换和复制初始化
-* explicit 修饰转换函数时，可以防止隐式转换
-
-<<< @/md/c++/basic/src/explicit_use.cpp
-
-# friend 友元类和友元函数
-
-* 能访问私有成员  
-* 破坏封装性
-* 友元关系不可传递
-* 友元关系的单向性
-* 友元声明的形式及数量不受限制
-
-# using
-
-## using 声明
-
-一条 `using 声明` 语句一次只引入命名空间的一个成员。它使得我们可以清楚知道程序中所引用的到底是哪个名字。如：
-
-```cpp
-using namespace_name::name;
-```
-
-## 构造函数的 using 声明
-
-在 C++11 中，派生类能够重用其直接基类定义的构造函数。
-
-```cpp
-class Derived : Base {
-public:
-    using Base::Base;
-    /* ... */
-};
-```
-
-如上 using 声明，对于基类的每个构造函数，编译器都生成一个与之对应（形参列表完全相同）的派生类构造函数。生成如下类型构造函数：
-
-```cpp
-Derived(parms) : Base(args) { }
-```
-
-## using 指示
-
-`using 指示` 使得某个特定命名空间中所有名字都可见，这样我们就无需再为它们添加任何前缀限定符了。如：
-
-```cpp
-using namespace name;
-```
-
-## 尽量少使用 `using 指示` 污染命名空间
-
-> 一般说来，使用 using 命令比使用 using 编译命令更安全，这是由于它**只导入了指定的名称**。如果该名称与局部名称发生冲突，编译器将**发出指示**。using编译命令导入所有的名称，包括可能并不需要的名称。如果与局部名称发生冲突，则**局部名称将覆盖名称空间版本**，而编译器**并不会发出警告**。另外，名称空间的开放性意味着名称空间的名称可能分散在多个地方，这使得难以准确知道添加了哪些名称。
-
-using 使用
-
-尽量少使用 `using 指示`
-
-```cpp
-using namespace std;
-```
-
-应该多使用 `using 声明`
-
-```cpp
-int x;
-std::cin >> x ;
-std::cout << x << std::endl;
-```
-
-或者
-
-```cpp
-using std::cin;
-using std::cout;
-using std::endl;
-int x;
-cin >> x;
-cout << x << endl;
-```
+::: 
 
 # :: 范围解析运算符
 
@@ -266,4 +119,6 @@ cout << x << endl;
 
 :: 使用
 
+::: details
 <<< @/md/c++/basic/src/space_use.cpp
+::: 

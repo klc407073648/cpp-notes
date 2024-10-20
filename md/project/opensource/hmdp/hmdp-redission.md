@@ -12,7 +12,7 @@
 
 **超时释放**：在加锁时增加了过期时间，这样可以防止死锁，但是如果卡顿的时间超长，虽然采用了lua表达式防止删锁的时候，误删别人的锁，但是毕竟没有锁住，有安全隐患
 
-**主从一致性：** 如果Redis提供了主从集群，当我们向集群写数据时，主机需要异步的将数据同步给从机，而万一在同步过去之前，主机宕机了，就会出现死锁问题。
+**主从一致性**： 如果Redis提供了主从集群，当我们向集群写数据时，主机需要异步的将数据同步给从机，而万一在同步过去之前，主机宕机了，就会出现死锁问题。
 
 ![](/_images/project/opensource/hmdp/Redisson/基于setnx实现的分布式锁存在的问题.png)
 
@@ -270,7 +270,7 @@ private void renewExpiration() {
 }
 ```
 
-**Redisson分布式锁原理：**
+**Redisson分布式锁原理**：
 
 ![](/_images/project/opensource/hmdp/Redisson/Redisson分布式锁原理.png)
 

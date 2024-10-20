@@ -29,13 +29,13 @@ docker pull mysql       # 拉取最新版mysql镜像
 docker.io/mysql             5.7                 87eca374c0ed        13 days ago         447 MB
 ```
 
-**一般来说数据库容器不需要建立目录映射：**
+**一般来说数据库容器不需要建立目录映射**：
 
 ```bash
 sudo docker run -p 3306:3306 --name mysql -e MYSQL_ROOT_PASSWORD=123456 -d mysql:5.7
 ```
 
-**详细说明：**
+**详细说明**：
 ```
 –name：容器名，此处命名为mysql
 -e：配置信息，此处配置mysql的root用户的登陆密码
@@ -43,7 +43,7 @@ sudo docker run -p 3306:3306 --name mysql -e MYSQL_ROOT_PASSWORD=123456 -d mysql
 -d：后台运行容器，保证在退出终端后容器继续运行
 ```
 
-**如果要建立目录映射：**
+**如果要建立目录映射**：
 ```
 sudo docker run -p 3306:3306 --name mysql \
 -v /usr/local/docker/mysql/conf:/etc/mysql \
@@ -65,7 +65,7 @@ sudo docker run -p 3306:3306 --name mysql \
 
 ## 连接mysql
 
-**进入docker本地连接mysql客户端：**
+**进入docker本地连接mysql客户端**：
 ```bash
 sudo docker exec -it mysql bash
 mysql -uroot -p123456
@@ -85,7 +85,7 @@ mysql -h 127.0.0.1  -u root -P 3307 -p123456
 
 防火墙阻拦
 
-**开放端口：**
+**开放端口**：
 ```
 $ systemctl status firewalld
 $ firewall-cmd  --zone=public --add-port=3307/tcp -permanent
@@ -102,7 +102,7 @@ mysql> grant all privileges on *.* to root@'%' identified by "password";
 grant all privileges on *.* to root@'%' identified by 123456;
 ```
 
-**原理：**
+**原理**：
 * mysql使用mysql数据库中的user表来管理权限，修改user表就可以修改权限（只有root账号可以修改）
 
 ```
@@ -154,7 +154,7 @@ https://github.com/sprintcube/docker-compose-lamp
 `-- setup.sh		————容器启动运行脚本
 ```
 
-**1.Dockerfile详细内容：**
+**1.Dockerfile详细内容**：
 
 ```
 FROM mysql:5.7
@@ -286,13 +286,13 @@ grant all privileges on *.* to root@'%' identified by "123456";
 flush privileges;
 ```
 
-**5、创建镜像,在源文件所在路径下，执行以下命令：**
+**5、创建镜像,在源文件所在路径下，执行以下命令**：
 
 ```bash
 docker build -t docker-mysql .
 ```
 
-**6、启动容器,并将端口映射到本地的3307端口：**
+**6、启动容器,并将端口映射到本地的3307端口**：
 
 ```bash
 docker run -d -p 3307:3306 docker-mysql
@@ -306,7 +306,7 @@ docker run -d -p 3307:3306 docker-mysql
 
 ![docker_logs](./images/docker_logs.png)
 
-**7、验证结果：**
+**7、验证结果**：
 
 ![docker_result](./images/docker_result.png)
 

@@ -30,7 +30,7 @@ Y和Z的大小受到三个因素的影响：
 如果Virtual base class X中放置一个以上的data member，两种编译器（有特殊处理 和 没有特殊处理）就会产生出完全相同的对象布局。
 
 C++对象模型尽量以空间优化和存取速度优化的考虑来表现non static data members，并且保持和c语言struct数据配置的兼容性，它把数据直接存放在每
-一个class object之中。对于继承而来的non static datamembers（不管是virtual或non virtual base class)也是如此。不过并没有强制定义其间的排列顺序。
+一个class object之中。对于继承而来的non static data members（不管是virtual或non virtual base class)也是如此。不过并没有强制定义其间的排列顺序。
 
 ## Data Member的绑定(The Binding of a Date Member)
 
@@ -81,7 +81,7 @@ inline float Point3d::X() const { return x; }
 
 ![](/_images/book-note/objectModel/Point3d的数据成员绑定.png)
 
-上述这种语言状况，仍然需要某种防御性程序风格：**请始终把“nested type声明”放在class的起始处**，在上述例子中，如果把length的nested typedf定义于“在class中被参考”之前，就可以确保非直觉绑定的正确性。
+上述这种语言状况，仍然需要某种防御性程序风格**：请始终把“nested type声明”放在class的起始处**，在上述例子中，如果把length的nested typedf定义于“在class中被参考”之前，就可以确保非直觉绑定的正确性。
 
 ## Data Member 的布局(Data Member Layout)
 
@@ -152,3 +152,73 @@ void operator+=(const Point2d& rhs)
 把vptr放在class object的哪里比较好：
 
 早期时将vptr放在class object的尾端，随着开始之初虚拟继承以及抽象基类等，某些编译器开始将**vptr放在class object的头部**。
+
+## 多重继承（Multiple Inheritance）
+
+多重继承的复杂度在于 derived class 和 其上一个base class乃至上上一个base class之间的非自然关系。
+
+::: details
+<<< @/md/book-note/objectModel/Point2d.cpp
+:::
+
+多重继承关系图：
+
+![](/_images/book-note/objectModel/继承关系.png)
+
+![](/_images/book-note/objectModel/多重继承_数据布局.png)
+
+成员的位置在编译时就固定了，因此存取成员只是一个简单的offset运算，就像单一继承一样简单——不管是经由指针、引用还是对象来存取。
+
+## 虚拟继承（Virtual Inheritance）
+
+多重继承的一个副作用是，他必须支持某种形式的shared subobject继承。比如：
+
+```cpp
+class ios{};
+class istream : public ios{};
+class ostream : public ios{};
+class istream : 
+	public istream, public ostream {};
+```
+
+不管istream还是ostream都内含一个ios subobject。然而在iostream的对象布局中，我们只需要单一一份ios subobject就好。解决方法是**引入虚拟继承**:
+
+```cpp
+class ios{};
+class istream : public virtual ios{};
+class ostream : public virtual  ios{};
+class istream : 
+	public istream, public ostream {};
+
+```
+
+![](/_images/book-note/objectModel/多重继承_虚拟继承.png)
+
+虚拟继承技术要求必须能够找到一个有效的方法：
+
+将istream和ostream各自维护的一个ios subobject，折叠成一个由iostream维护的单一ios subobject，并且还可以保存基类和派生类的指针(或者引用)之间的多态指定操作。
+
+一般的实现方法如下：
+
+* 类如果内含一个或多个虚基类子对象，将被分割成两部分：一个不变区域和一个共享区域。
+* 不变区域中的数据，不管后继如何演化，总是有固定的偏移量(从对象的开头算起)，所以这一部分的数据可以被直接存取。
+* 共享区域表现的就是虚基类子对象。这部分的数据，其位置会因为每次的派生操作而变化，所以它们只可以被间接存取。
+
+一般的布局策略是先安排好派生类的不变部分，然后再建立其共享部分。
+
+> 怎么存取类的共享部分呢？
+
+cfront编译器会在每一个派生类对象中安插一些指针，每一个指针指向一个虚基类要存取继承到的虚基类成员，可以用指针间接完成。
+
+
+这个实现模型有两个缺点：
+
+* 每一个对象必须针对每个虚基类背负一个额外的指针。然而理想上我们却希望类对象有固定的负担，不因为其虚基类的数目而变化。这应该怎么解决呢？
+    * 引入虚基类表。每一个类对象如果有虚基类，就会由编译器安插一个指针，指向这个虚基类表。
+    * 在虚函数表中放置虚基类的偏移量。
+* 由于虚拟继承串链的加长，导致间接存取层次增加。比如如果有3层虚拟衍化，就需要3次间接存取(经由三个虚基类指针)。然而理想上我们希望有固定的存取时间。这应该怎么解决呢？
+    * 拷贝所有的nested virtual base class指针，放到派生类对象中。这就解决了“固定存取时间”的间隔，虽然付出了一些空间上的代价。
+
+一般来说，虚基类最有效的一种运用形式是：一个抽象的虚基类，没有任何数据成员。
+
+## 对象成员的效率（Object Member Effciency）

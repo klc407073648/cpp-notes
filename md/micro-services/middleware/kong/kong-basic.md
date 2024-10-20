@@ -10,7 +10,7 @@
 
 ## Kong网关组件
 
-**Kong主要有三个组件：**
+**Kong主要有三个组件**：
 
 1. Kong Server ：基于nginx的服务器，用来接收API请求。
 2. Apache Cassandra/PostgreSQL ：用来存储操作数据，推荐使用PostgreSQL 。

@@ -18,6 +18,9 @@
     "vuepress-plugin-side-anchor": "^1.0.6"
   },
   "dependencies": {
+    "@vssue/api-github-v3": "^1.4.7",
+    "@vssue/api-github-v4": "^1.4.7",
+    "@vssue/vuepress-plugin-vssue": "^1.4.8",
     "vuepress-plugin-baidu-tongji": "^1.0.1",
     "vuepress-plugin-code-copy": "^1.0.6",
     "vuepress-plugin-copyright": "^1.0.2"

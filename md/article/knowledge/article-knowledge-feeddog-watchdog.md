@@ -15,7 +15,9 @@
 
 两者想结合完成对客户端及服务器端的保护。守护进程中用shell语言编写了protect函数，输入参数为$1，即进程名。启动守护脚本后，将分先后运行服务器和客户端可执行文件并运行在后台，再在主循环中轮询守护对应的进程。
 
+::: details
 <<< @/md/article/knowledge/src/swd.sh
+::: 
 
 ## 安卓系统中WatchDog工作原理
 
@@ -33,7 +35,7 @@ Watchdog的初始化是在SystemServer init的后期，如果SystemServer在init
 
 Watchdog是一个单例线程，在SystemServer启动时就会获取它并初始化和启动（init/start）.
 
-```c++
+```cpp
   private void startOtherServices() {
       ...
           traceBeginAndSlog("InitWatchdog");
@@ -50,7 +52,7 @@ Watchdog是一个单例线程，在SystemServer启动时就会获取它并初始
 
 Watchdog继承于Thread，创建的线程名为”watchdog”。mHandlerCheckers队列包括、 主线程，fg, ui, io, display线程的HandlerChecker对象。
 
-```c++
+```cpp
 private Watchdog() {
 	super("watchdog");
     mMonitorChecker = new HandlerChecker(FgThread.getHandler(),
@@ -192,7 +194,7 @@ public final class HandlerChecker implements Runnable {
 
 ## 总结
 
-**总体流程：**
+**总体流程**：
 
 Watchdog是一个运行在system_server进程的名为”watchdog”的线程:：
 

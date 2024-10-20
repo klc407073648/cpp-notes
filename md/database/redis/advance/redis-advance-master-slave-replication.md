@@ -19,7 +19,7 @@
 
 ![主从复制数据同步](/_images/database/redis/主从复制数据同步.png)
 
-主从复制概念：**将master中的数据即时、有效的复制到slave中。**
+主从复制概念**：将master中的数据即时、有效的复制到slave中。**
 
 特征：一个master可以拥有多个slave，一个slave只对应一个master。
 

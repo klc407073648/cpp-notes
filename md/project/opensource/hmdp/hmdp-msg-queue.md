@@ -124,7 +124,7 @@ STREAM类型消息队列的XREAD命令特点：
 
 ![](/_images/project/opensource/hmdp/msg-queue/消费者组.png)
 
-**创建消费者组：**
+**创建消费者组**：
 
 ```bash
 XGROUP CREATE  key groupName ID [MKSTREAM]
@@ -148,7 +148,7 @@ XGROUP CREATECONSUMER key groupname consumername
 XGROUP DELCONSUMER key groupname consumername
 ```
 
-**从消费者组读取消息：**
+**从消费者组读取消息**：
 
 ```java
 XREADGROUP GROUP group consumer [COUNT count] [BLOCK milliseconds] [NOACK] STREAMS key [key ...] ID [ID ...]
@@ -208,7 +208,7 @@ STREAM类型消息队列的XREADGROUP命令特点：
 * 没有消息漏读的风险
 * 有消息确认机制，保证消息至少被消费一次
 
-**三者对比：**
+**三者对比**：
 
 |              | List                                     | PubSub             | Stream                                                 |
 | ------------ | ---------------------------------------- | ------------------ | ------------------------------------------------------ |

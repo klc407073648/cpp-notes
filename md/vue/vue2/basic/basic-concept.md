@@ -11,7 +11,7 @@
 * 中文官网: https://cn.vuejs.org/
 * v2.x版本: https://v2.cn.vuejs.org/
 
-概念：**动态构建用户界面**的渐进式`JavaScript`框架
+概念**：动态构建用户界面**的渐进式`JavaScript`框架
 
 特点:
 

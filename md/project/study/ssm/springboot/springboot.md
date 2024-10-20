@@ -324,7 +324,7 @@ public class Springboot01QuickstartApplication {
 
 ![](/_images/project/study/ssm/springboot/jetty服务器.png)
 
-**小结：**
+**小结**：
 
 通过切换服务器，我们不难发现在使用 `SpringBoot` 换技术时只需要导入该技术的起步依赖即可。
 
@@ -346,7 +346,7 @@ public class Springboot01QuickstartApplication {
 
 **`application.properties`  >  `application.yml`   >  `application.yaml`**
 
-**注意：**
+**注意**：
 
 * `SpringBoot` 核心配置文件名为 `application`
 * `SpringBoot` 内置属性过多，且所有属性集中在一起修改，在使用时，通过提示键+关键字修改属性
@@ -385,14 +385,14 @@ enterprise:
     tel: 4006184000
 ```
 
-**yml优点：**
+**yml优点**：
 
 * 容易阅读
 * 容易与脚本语言交互
 * 以数据为核心，重数据轻格式
     * `yaml` 更注重数据，而 `xml` 更注重格式
 
-**YAML 文件扩展名：**
+**YAML 文件扩展名**：
 
 * `.yml` (主流)
 * `.yaml`
@@ -543,7 +543,7 @@ public class BookController {
 
 * 在 `BookController` 中进行注入
 
-**具体代码如下：**
+**具体代码如下**：
 
 `Enterprise` 实体类内容如下：
 
@@ -621,7 +621,7 @@ server:
 ---
 ```
 
-**注意：**
+**注意**：
 
 在上面配置中给不同配置起名字的 `spring.profiles` 配置项已经过时，最新用来起名字的配置项是 
 
@@ -684,7 +684,7 @@ java –jar springboot.jar –-spring.profiles.active=test --server.port=85 --se
 * 3级：file ：application.yml
 * 4级：file ：config/application.yml 
 
-> **说明：**级别越高优先级越高
+> **说明**：级别越高优先级越高
 
 ## SpringBoot整合junit
 
@@ -714,7 +714,7 @@ public class UserServiceTest {
 * 定义测试方法进行测试
 
 
-**注意：**这里的引导类所在包必须是测试类所在包及其子包。
+**注意**：这里的引导类所在包必须是测试类所在包及其子包。
 
 例如：
 

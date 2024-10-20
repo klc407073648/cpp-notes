@@ -107,7 +107,7 @@ public Result queryBlogById(Long id) {
 
 ![](/_images/project/opensource/hmdp/talent-shop/点赞功能.png)
 
-**初始代码：**
+**初始代码**：
 
 ```java
 @GetMapping("/likes/{id}")

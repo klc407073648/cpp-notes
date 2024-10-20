@@ -6,7 +6,7 @@
 
 ## 控制方式
 
-**控制事务一：**
+**控制事务一**：
 
 查看/设置事务提交方式
 `SELECT @@autocommit ;`
@@ -16,7 +16,7 @@
 回滚事务
 `ROLLBACK;`
 
-**控制事务二：**
+**控制事务二**：
 
 开启事务：
 `START TRANSACTION 或 BEGIN TRANSACTION;`

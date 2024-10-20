@@ -42,6 +42,17 @@ module.exports =
           //customClass: 'your-customClass',
         }
     ],
+    ['@vssue/vuepress-plugin-vssue', {
+        // 设置平台，而不是 `api` 
+        platform: 'github-v4',
+        // 其他的 Vssue 配置
+        owner: 'klc407073648', // 仓库的拥有者的名称
+        repo: 'C++全栈知识体系', 
+        clientId: 'b7c43bb6b9b38ea67c09', //Client ID  
+        clientSecret: '9ea7a28c16600b06211061693996400bbdc49eb9', //Client secrets
+        autoCreateIssue: true,//自动创建评论
+      },
+    ]
     //<global-RightBar/>
     /*{
         name: 'page-plugin',

@@ -234,6 +234,7 @@ module.exports =
                     { text: '数据密集型应用系统设计', link: '/md/book-note/dataIntensiveApp/dataIntensiveApp-chapter-1.md' },
                     { text: '从零开始学架构', link: '/md/book-note/learnArchFromZero/learnArchFromZero-chapter-1.md' },
                     { text: '程序员的自我修养————链接、装载与库', link: '/md/book-note/linkersAndLoaders/linkersAndLoaders-chapter-1.md' }
+                    { text: '深度探索C++对象模型', link: '/md/book-note/objectModel/objectModel-chapter-1.md' }
                 ]
             }
         ]

@@ -122,7 +122,7 @@ public Result queryBlogByUserId(
 }
 ```
 
-**共同关注的实现：**
+**共同关注的实现**：
 
 * 需求：利用Redis中恰当的数据结构，实现共同关注功能。在博主个人页面展示出当前用户与博主的共同关注呢。
 
@@ -166,7 +166,7 @@ public Result follow(Long followUserId, Boolean isFollow) {
 }
 ```
 
-**具体的关注代码：**
+**具体的关注代码**：
 
 FollowServiceImpl
 
@@ -203,7 +203,7 @@ public Result followCommons(Long id) {
 
 ![](/_images/project/opensource/hmdp/friend-follow/传统VSFeed.png)
 
-**Feed流产品有两种常见模式：**
+**Feed流产品有两种常见模式**：
 
 * Timeline：不做内容筛选，简单的按照内容发布时间排序，常用于好友或关注。例如朋友圈
 

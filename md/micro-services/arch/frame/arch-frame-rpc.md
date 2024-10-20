@@ -54,7 +54,7 @@ A stub in distributed computing is a piece of code that converts parameters pass
 
 ## 角色
 
-在RPC框架中主要有三个角色：**Provider、Consumer和Registry**。
+在RPC框架中主要有三个角色**：Provider、Consumer和Registry**。
 
 节点角色说明：
 

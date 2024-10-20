@@ -21,7 +21,7 @@
 * 阿里技术团队:[https://102.alibaba.com/tech/list/](https://102.alibaba.com/tech/list/)
 * 有赞技术团队:[https://tech.youzan.com/taq/back-end](https://tech.youzan.com/taq/back-end)
 
-* 维基百科(查询名称定义):[https://en.wikipedia.org/](https://en.wikipedia.org/)
+* **维基百科(查询名称定义)**:[https://en.wikipedia.org/](https://en.wikipedia.org/)
 
 # 资讯
 

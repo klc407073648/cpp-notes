@@ -15,7 +15,7 @@ RPC(Remote Procedure Call)即远程过程调用，允许一台计算机调用另
 
 ## RPC的角色
 
-在RPC框架中主要有三个角色：**Provider、Consumer和Registry**。
+在RPC框架中主要有三个角色**：Provider、Consumer和Registry**。
 
 节点角色说明：
 

@@ -1,0 +1,54 @@
+# Linux - Shell脚本解析参数
+
+# 方法一：直接处理
+
+Linux shell中常见的几种变量
+
+```
+$0    命令本身，即脚本文件名
+$1 $2 $3 $4  第1、2、3、4个参数，依次类推
+$#    参数个数，不包括命令本身
+$*    参数本身的列表，不包括命令本身，是一个字符串
+$@    和 $* 相同，但"$@"(加双引号)时是一个参数数组
+$!    进程PID
+$?    上一条命令执行的结果
+```
+
+方法二：使用getopts获取
+
+```
+#!/bin/bash
+
+usage() {
+    echo "
+usage:
+  -d  文件夹
+  -f  文件
+  -u  更新
+  -h  帮助
+"
+}
+
+while getopts 'd:f:uh' OPT; do
+    case $OPT in
+        d)
+            DIR="$OPTARG"
+            ;;
+        f)
+            FILE="$OPTARG"
+            ;;
+        u)
+            UPDATE="true"
+            ;;
+        h)
+            usage
+            exit
+            ;;
+        ?)
+            echo 'unregistered argument'
+            usage
+            exit
+            ;;
+    esac
+done
+```

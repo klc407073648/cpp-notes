@@ -95,12 +95,12 @@ docker run -d --name jenkins -p 9090:8080 -p 50000:50000 -v /home/jenkins/data/j
 
 # 运行测试
 
-1）New Project，名字可自定义(type：**Directoy**；Format：**ROBOT**)
+1）New Project，名字可自定义(type**：Directoy**；Format**：ROBOT**)
 
 - 若选择Directoy，目录下面可以新增Suite，Suite下可新增CASE
 - 若选择FILE，目录下只能创建CASE
 
-2) New Suite，名字可自定义，可配置CASE中使用的关键字。(type：**File**；Format：**ROBOT**)
+2) New Suite，名字可自定义，可配置CASE中使用的关键字。(type**：File**；Format**：ROBOT**)
 
 - 若选择Directoy，目录下还可以创建suite
 - 若选择FILE，目录下只能创建CASE

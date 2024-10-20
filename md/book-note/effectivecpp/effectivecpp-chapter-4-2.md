@@ -28,7 +28,7 @@ const Rational operator*(const Rational& lhs,const Rational& rhs)
 }
 ```
 
-注意：**任何函数如果返回一个reference指向某个local对象，而local对象回在函数退出前被销毁，因此返回值无效。**（返回一个指针指向某个local对象也是同理）
+注意**：任何函数如果返回一个reference指向某个local对象，而local对象回在函数退出前被销毁，因此返回值无效。**（返回一个指针指向某个local对象也是同理）
 
 heap空间:
 
