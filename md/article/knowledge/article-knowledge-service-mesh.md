@@ -21,13 +21,13 @@ Service Mesh革命先驱、Buoyant公司CEO —— William Morgan，以及他对
 
 # 发展过程
 
-Phil Calçado的文章[《Pattern: Service Mesh》](https://philcalcado.com/2017/08/03/pattern_![](/_images/article/knowledge/service_mesh.html)，详细的介绍了从开发者视角来看，服务开发模式和Service Mesh技术的演化过程。
+Phil Calçado的文章[《Pattern: Service Mesh》](https://philcalcado.com/2017/08/03/pattern_![](/_images/article/read/service_mesh.html)，详细的介绍了从开发者视角来看，服务开发模式和Service Mesh技术的演化过程。
 
 1. 初期
 
 两台电脑之间的通信
 
-![](/_images/article/knowledge/service_mesh_1.png)
+![](/_images/article/read/service_mesh_1.png)
 
 2. 原始通信时代
 
@@ -38,7 +38,7 @@ Phil Calçado的文章[《Pattern: Service Mesh》](https://philcalcado.com/2017
     
 因此服务实现中，除了业务逻辑外，还夹杂着对网络传输问题的处理逻辑。
 
-![](/_images/article/knowledge/service_mesh_2.png)
+![](/_images/article/read/service_mesh_2.png)
 
 3. TCP时代
 
@@ -46,7 +46,7 @@ Phil Calçado的文章[《Pattern: Service Mesh》](https://philcalcado.com/2017
 
 TCP协议的出现解决了网络传输中通用的流量控制问题。将流控的问题下移，从服务的实现中抽离出来，成为操作系统网络层的一部分。
 
-![](/_images/article/knowledge/service_mesh_3.png)
+![](/_images/article/read/service_mesh_3.png)
 
 4. 第一代微服务
 
@@ -59,7 +59,7 @@ TCP协议的出现解决了网络传输中通用的流量控制问题。将流�
 * 负载均衡（Load Balancing）：通过均匀分配流量，让请求处理更加及时。
 * 安全通讯：包括协议加密（TLS）、身份认证（证书/签名）、访问鉴权（RBAC）等。
 
-![](/_images/article/knowledge/service_mesh_4.png)
+![](/_images/article/read/service_mesh_4.png)
 
 
 5. 第二代微服务
@@ -68,7 +68,7 @@ TCP协议的出现解决了网络传输中通用的流量控制问题。将流�
 
 因此一定程度上屏蔽了这些通信细节，使得开发人员使用较少的框架代码就能开发出健壮的分布式系统。
 
-![](/_images/article/knowledge/service_mesh_5.png)
+![](/_images/article/read/service_mesh_5.png)
 
 6. 第一代Service Mesh
 
@@ -80,15 +80,15 @@ TCP协议的出现解决了网络传输中通用的流量控制问题。将流�
 
 因此以Linkerd，Envoy，NginxMesh为代表的代理模式（边车模式）应运而生，这就是第一代Service Mesh，它将分布式服务的通信抽象为单独一层，在这一层中实现负载均衡、服务发现、认证授权、监控追踪、流量控制等分布式系统所需要的功能，作为一个和服务对等的代理服务，和服务部署在一起，接管服务的流量，通过代理之间的通信间接完成服务之间的通信请求，这样上边所说的三个问题也迎刃而解。
 
-![](/_images/article/knowledge/service_mesh_6.png)
+![](/_images/article/read/service_mesh_6.png)
 
 从一个全局视角来看，就会得到如下部署图：
 
-![](/_images/article/knowledge/service_mesh_7.png)
+![](/_images/article/read/service_mesh_7.png)
 
 如果暂时略去服务，只看Service Mesh的单机组件组成的网络：
 
-![](/_images/article/knowledge/service_mesh_8.png)
+![](/_images/article/read/service_mesh_8.png)
 
 服务网格，即一个由若干服务代理所组成的错综复杂的网格。
 
@@ -96,12 +96,12 @@ TCP协议的出现解决了网络传输中通用的流量控制问题。将流�
 
 第一代Service Mesh由一系列独立运行的单机代理服务构成，为了提供统一的上层运维入口，演化出了集中式的控制面板，所有的单机代理组件通过和控制面板交互进行网络拓扑策略的更新和单机数据的汇报。这就是以Istio为代表的第二代Service Mesh。
 
-![](/_images/article/knowledge/service_mesh_9.png)
+![](/_images/article/read/service_mesh_9.png)
 
 
 只看单机代理组件(数据面板)和控制面板的Service Mesh全局部署视图如下：
 
-![](/_images/article/knowledge/service_mesh_10.png)
+![](/_images/article/read/service_mesh_10.png)
 
 
 # 总结

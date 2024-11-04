@@ -125,7 +125,8 @@ module.exports =
                     { text: 'Apollo', link: '/md/micro-services/middleware/apollo/apollo-basic.md' },
                     { text: 'Cat', link: '/md/micro-services/middleware/cat/cat-basic.md' },
                     { text: 'Logstash', link: '/md/micro-services/middleware/logstash/logstash-basic.md' },
-                    { text: 'Kong', link: '/md/micro-services/middleware/kong/kong-basic.md' }
+                    { text: 'Kong', link: '/md/micro-services/middleware/kong/kong-basic.md' },
+                    { text: 'Rocketmq', link: '/md/micro-services/middleware/rocketmq/rocketmq-basic.md' }
                 ]
             },
         ]
@@ -195,6 +196,7 @@ module.exports =
             {
                 text: '部署',
                 items: [
+                    { text: 'CI', link: '/md/devops/ci/ci-base.md' },
                     { text: 'Docker', link: '/md/devops/docker/docker-evolution.md' },
                     { text: 'Kubernetes', link: '/md/devops/k8s/k8s-concept.md' },
                     { text: 'Service Mesh Istio', link: '/md/devops/istio/istio-basic.md' },

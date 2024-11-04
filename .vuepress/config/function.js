@@ -40,7 +40,10 @@ function genSidebar4Cplusplus() {
                 "basic/c++-basic-use.md",
                 "basic/c++-basic-oop.md",
                 "basic/c++-basic-macro-definition.md",
-                "basic/c++-basic-learn-route.md"
+                "basic/c++-basic-learn-route.md",
+                "basic/c++-basic-function.md",
+                "basic/c++-basic-keyword.md",
+                "basic/c++-basic-syntactic-sugar.md"
             ]
         },
         {
@@ -55,7 +58,8 @@ function genSidebar4Cplusplus() {
                 "function/c++-function-structUse.md",
                 "function/c++-function-typedefUse.md",
                 "function/c++-function-va_listFun.md",
-                "function/c++-function-ptr.md"
+                "function/c++-function-ptr.md",
+                "function/c++-function-close.md"
             ]
         },
         {
@@ -137,6 +141,17 @@ function genSidebar4Database() {
                 "mysql/basic/mysql-basic-datatype.md",
                 "mysql/basic/mysql-basic-view.md",
                 "mysql/basic/mysql-basic-procedure.md",
+                "mysql/basic/mysql-basic-procedure.md",
+                "mysql/basic/mysql-basic-procedure.md",
+                "mysql/basic/mysql-basic-cursor.md",
+                "mysql/basic/mysql-basic-store-procedure.md",
+                "mysql/basic/mysql-basic-tips.md",
+                "mysql/basic/mysql-basic-use.md",
+                "mysql/basic/mysql-basic-view.md",
+                "mysql/basic/mysql-cond-judge.md",
+                "mysql/basic/mysql-group-query.md",
+                "mysql/basic/mysql-join-query.md",
+                "mysql/basic/mysql-sub-query.md",
                 "mysql/advance/mysql-advance-store-engine.md",
                 "mysql/advance/mysql-advance-innodb.md",
                 "mysql/advance/mysql-advance-index-basic.md",
@@ -148,6 +163,9 @@ function genSidebar4Database() {
                 "mysql/advance/mysql-advance-trigger.md",
                 "mysql/advance/mysql-advance-transaction.md",
                 "mysql/advance/mysql-advance-manage.md",
+                "mysql/advance/mysql-advance-db-devide.md",
+                "mysql/advance/mysql-advance-index-design.md",
+                "mysql/advance/mysql-advance-performance-opt-two.md",
                 "mysql/operation/mysql-operation-log.md",
                 "mysql/operation/mysql-operation-master-slave.md",
                 "mysql/operation/mysql-operation-db-devide.md",
@@ -164,6 +182,7 @@ function genSidebar4Database() {
             children: [
                 "redis/basic/redis-basic-concept.md",
                 "redis/basic/redis-basic-command.md",
+                "redis/basic/redis-basic-application.md",
                 "redis/advance/redis-advance-persistence.md",
                 "redis/advance/redis-advance-transaction-operation.md",
                 "redis/advance/redis-advance-delete-policy.md",
@@ -232,6 +251,7 @@ function genSidebar4Program() {
                 "data-structure/data-structure-tree-balance.md",
                 "data-structure/data-structure-tree-redblack.md",
                 "data-structure/data-structure-tree-trie.md",
+                "data-structure/data-structure-tree-hafman.md",
                 "data-structure/data-structure-graph-overview.md",
                 "data-structure/data-structure-graph-bfs-dfs.md",
                 "data-structure/data-structure-use.md",
@@ -503,6 +523,27 @@ function genSidebar4microServices() {
                 "middleware/kong/kong-plugin.md",
                 "middleware/kong/kong-install-use.md",
             ]
+        },
+        {
+            title: "中间件 - RocketMQ - 消息队列",
+            collapsable: false,
+            sidebarDepth: 0,
+            children: [
+                "middleware/rocketmq/rocketmq-basic.md",
+                "middleware/rocketmq/rocketmq-broker-cluster.md",
+                "middleware/rocketmq/rocketmq-msg-consume.md",
+                "middleware/rocketmq/rocketmq-msg-filter.md",
+                "middleware/rocketmq/rocketmq-msg-send.md",
+                "middleware/rocketmq/rocketmq-msg-subscribe.md",
+                "middleware/rocketmq/rocketmq-namesrv.md",
+                "middleware/rocketmq/rocketmq-order-msg.md",
+                "middleware/rocketmq/rocketmq-problem.md",
+                "middleware/rocketmq/rocketmq-protocol.md",
+                "middleware/rocketmq/rocketmq-queue.md",
+                "middleware/rocketmq/rocketmq-rocketmq-kafka.md",
+                "middleware/rocketmq/rocketmq-store.md",
+                "middleware/rocketmq/rocketmq-zero-cpoy.md
+            ]
         }
     ];
 
@@ -579,6 +620,7 @@ function genSidebar4method() {
                 "arch-principle/arch-principle-anemia-model.md",
                 "arch-principle/arch-principle-ddd.md",
                 "arch-principle/arch-principle-arch-develop.md",
+                "arch-principle/arch-principle-solid.md",
             ]
         },
         {
@@ -681,7 +723,25 @@ function genSidebar4Devops() {
             children: [
                 "tools/tools-docker.md",
                 "tools/tools-gcc.md",
-                "tools/tools-gdb.md"
+                "tools/tools-gdb.md",
+                "tools/tools-cmake-install.md",
+                "tools/tools-cmake.md",
+                "tools/tools-conan.md",
+                "tools/tools-curl.md",
+                "tools/tools-gcc-warning-opt.md",
+                "tools/tools-install.md",
+                "tools/tools-vscode-plugin.md"
+            ]
+        },
+        {
+            title: "流水线构建 - CI",
+            collapsable: false,
+            sidebarDepth: 0,
+            children: [
+                "ci/ci-base.md",
+                "ci/ci-deployment.md",
+                "ci/ci-local-repository.md",
+                "ci/ci-remote-repository.md"
             ]
         },
         {
@@ -809,6 +869,8 @@ function genSidebar4project() {
                 "develop/develop-process.md",
                 "develop/develop-opt.md",
                 "develop/develop-notice.md",
+                "develop/develop-use.md",
+                "develop/develop-version.md",
                 "develop/uml/develop-uml.md",
             ]
         },
@@ -864,6 +926,7 @@ function genSidebar4booknote() {
                 "refactor/refactor-chapter-1.md",
                 "refactor/refactor-chapter-2.md",
                 "refactor/refactor-chapter-3.md",
+                "refactor/refactor-chapter-4.md",
                 "refactor/refactor-chapter-5.md",
                 "refactor/refactor-chapter-6.md",
                 "refactor/refactor-chapter-7.md",
@@ -1055,6 +1118,7 @@ function genSidebar4interview() {
                 "code/question-routine/question-routine-binsearch.md",
                 "code/question-routine/question-routine-dfs.md",
                 "code/question-routine/question-routine-dp.md",
+                "code/question-routine/question-routine-heap.md",
                 //"code/question-routine/question-routine-graph.md",
                 "code/question-routine/question-routine-hashmap.md",
                 "code/question-routine/question-routine-list.md",
@@ -1087,7 +1151,7 @@ function genSidebar4Article() {
             collapsable: false,
             sidebarDepth: 0,
             children: [
-                "article-overview.md",
+                "article-recommend-overview.md",
                 "concurrent/article-concurrent-lock.md"
             ]
         },
@@ -1122,6 +1186,8 @@ function genSidebar4Article() {
                 "knowledge/article-knowledge-time.md",
                 "knowledge/article-knowledge-vm-bm.md",
                 "knowledge/article-knowledge-loadbalance.md",
+                "knowledge/article-knowledge-config-file.md",
+                "knowledge/article-knowledge-harddisk.md",
             ]
         },
         {
@@ -1132,7 +1198,8 @@ function genSidebar4Article() {
                 "problem/article-problem-top.md",
                 "problem/article-problem-pstack.md",
                 "problem/article-problem-cache-update.md",
-                "problem/article-problem-three-high.md"
+                "problem/article-problem-three-high.md",
+                "problem/article-problem-iptables.md"
             ]
         }
     ];
@@ -1173,6 +1240,7 @@ function genSidebar4dailyUse() {
             sidebarDepth: 0,
             children: [
                 "tools/daily-use-tools-overview.md",
+                "tools/daily-use-tools-introduce.md",
                 "tools/daily-use-tools.md"
             ]
         }
