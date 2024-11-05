@@ -31,11 +31,13 @@
 
 最常用的2种实现方式(List可用Set代替)
 
+```
 * List<T>[n]
   * adjList[i]:All neighbors of node i
   * Need to know number of nodes(n) beforehand
 * Map<T,List<T>>
   * adjList.get(i):All neighbors of node i
+```
 
 ## BFS (Breadth-First Search)
 
@@ -68,7 +70,7 @@ Time Complexity O(V+E)
 
 ### 542. 01 矩阵
 
- ![矩阵](/_images/interview/code/question-routine/Graph/矩阵.png)
+![矩阵](/_images/interview/code/question-routine/Graph/矩阵.png)
 
 解题思路：
 
@@ -252,6 +254,7 @@ public:
 以下为解题代码：
 
 ```
+
 ```
 
 # DFS (Depth-First Search)
