@@ -401,7 +401,16 @@ function genSidebar4develop() {
                 "test/tools/postman/postman-use.md",
                 "test/tools/robotframework/robotframework-use.md",
             ]
-        }
+        },
+        {
+            title: "工具",
+            collapsable: false,
+            sidebarDepth: 0,
+            children: [
+                "tools/tools-conan.md",
+                "tools/tools-install.md",
+            ]
+        },
     ];
 }
 
@@ -726,10 +735,8 @@ function genSidebar4Devops() {
                 "tools/tools-gdb.md",
                 "tools/tools-cmake-install.md",
                 "tools/tools-cmake.md",
-                "tools/tools-conan.md",
                 "tools/tools-curl.md",
                 "tools/tools-gcc-warning-opt.md",
-                "tools/tools-install.md",
                 "tools/tools-vscode-plugin.md"
             ]
         },

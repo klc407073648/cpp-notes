@@ -4,6 +4,67 @@
 
 [[toc]]
 
+# Centos搭建过程
+
+## 安装docker
+
+```sh
+sudo yum install -y yum-utils device-mapper-persistent-data lvm2
+sudo yum-config-manager --add-repo http://mirrors.cloud.tencent.com/docker-ce/linux/centos/docker-ce.repo
+sudo yum install -y docker-ce docker-ce-cli containerd.io
+sudo systemctl start docker
+sudo systemctl enable docker
+```
+
+## 安装docker-compose
+
+```sh
+sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+chmod 777 /usr/local/bin/docker-compose
+docker-compose  version
+```
+
+## 修改docker配置文件
+
+```sh
+sudo mkdir -p /etc/docker
+vi /etc/docker/daemon.json
+```
+
+json内容
+```json
+{
+    "registry-mirrors": [
+        "https://hub-mirror.c.163.com",
+        "https://mirror.ccs.tencentyun.com",
+        "https://05f073ad3c0010ea0f4bc00b7105ec20.mirror.swr.myhuaweicloud.com",
+        "https://registry.docker-cn.com",
+        "https://docker.m.daocloud.io",
+        "https://docker.1panel.live",
+        "https://hub.rat.dev",
+        "https://dockerpull.com",
+        "https://dockerproxy.cn",
+        "https://docker.rainbond.cc",
+        "https://docker.udayun.com",
+        "https://docker.211678.top"
+    ]
+}
+```
+
+## 重启docker
+
+```sh
+sudo systemctl daemon-reload
+sudo systemctl restart docker
+```
+
+## 配置git
+
+```
+ssh-keygen -t rsa -b 4096 -C "407073648@qq.com"
+cat ~/.ssh/id_rsa.pub
+```
+
 # 搭建docker环境
 
 ## 问题
@@ -22,7 +83,8 @@ docker: Error response from daemon: Get “https://registry-1.docker.io/v2/
 
 ```sh
 sudo mkdir -p /etc/docker
-sudo tee /etc/docker/daemon.json <<EOF
+vi /etc/docker/daemon.json
+
 {
     "registry-mirrors": [
         "https://hub-mirror.c.163.com",
